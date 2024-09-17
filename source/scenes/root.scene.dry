@@ -194,6 +194,7 @@ Q.budget = 5;
 Q.workers = 25; // industry and trade
 Q.old_middle = 25; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
+
 Q.new_middle = 15; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
