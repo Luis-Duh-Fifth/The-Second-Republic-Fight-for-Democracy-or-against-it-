@@ -114,8 +114,8 @@ Q.z_leader = "Brüning";
 Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
 
-// hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
+// hmm... maybe we can play nice with Zamora???
+Q.Zamora_relation = 25;
 
 
 // Does the SPD lead in Prussia?
@@ -194,7 +194,7 @@ Q.budget = 5;
 Q.workers = 25; // industry and trade
 Q.new_middle = 15; // "Middle Class"
 Q.old_middle = 25; // "Rural Landholders"
-Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
+Q.rural = 25; // Unlanded Peasents
 Q.unemployed = 8.6;
 Q.catholics = 10;
 
@@ -308,9 +308,9 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
+Q.president = "Zamora";
 // starting chancellor: Wilhelm Marx
-Q.chancellor = "Marx";
+Q.chancellor = "Azaña";
 Q.chancellor_party = 'Z';
 Q.spd_in_government = 0;
 Q.z_in_government = 1;
@@ -349,8 +349,6 @@ Q.spd_toleration = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
-// is the agricultural ministry useful at all?
 Q.foreign_minister = 'Streseman';
 Q.foreign_minister_party = 'DVP';
 Q.interior_minister = 'von Keudell';
@@ -542,28 +540,28 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *"We all fit in the Republic, no one is banned for their ideas; but the Republic will be republican, that is, designed and governed by republicans, new or old, who all accept the doctrine that bases the State on freedom of conscience, equality before the law, free discussion, predominance of the freely expressed will of the majority. The Republic will be democratic, or it will not be."*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Manuel Azaña, *Hitlerism and Social Democracy*, 1934
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+For more information on the politics and government of the Second Spanish Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1928_easy: Begin (easy difficulty)
-- @1928_main: Begin (normal difficulty)
-- @1928_hard: Begin (hard difficulty)
-- @1928_historical: Begin (historical mode)
+- @1931_easy: Begin (easy difficulty)
+- @1931_main: Begin (normal difficulty)
+- @1931_hard: Begin (hard difficulty)
+- @1931_historical: Begin (historical mode)
 
-@1928_easy
+@1931_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49;
 go-to: 1928_main
 
-@1928_hard
+@1931_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31;
 go-to: 1928_main
 
-@1928_historical
+@1931_historical
 subtitle: Saving and loading will be disabled.
 on-arrival: {!
 Q.difficulty = 2;
@@ -590,8 +588,8 @@ go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
 = 1928
 
-It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
+It is a bright time for Spanish democracy. After a period of struggle, the new constitution has been approved, the first elections are being called. Economically, the situation leaves for better, however, now we can attempt to reform it, especially our disfunctional agrarian sector. In foreign policy, we must strive to get more recognition and support from forign goverments, many who see us with suspicion. 
 
-Now, the task of Social Democracy is to prepare for the next election. The bourgeois-right government of Wilhelm Marx is unpopular, and we stand to gain. Perhaps the next government will have a socialist majority.
+Now, the task of the Left Republicans, from revolutionaries to liberals, is to prepare for the next election. Our provisional goverment coalition has passed the first fully democratic constitution, and we stand to gain. Perhaps the next government will have a left majority.
 
 
