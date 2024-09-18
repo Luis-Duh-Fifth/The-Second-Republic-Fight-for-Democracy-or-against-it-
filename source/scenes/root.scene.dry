@@ -23,7 +23,7 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
+Q.year = 1931;
 Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
@@ -75,11 +75,11 @@ Q.nazi_urgency = 0;
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
 Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1928
+// Support for Pacifism within the SPD relative to 1931
 Q.pacifism = 0;
-// Support for democratic reform within the SPD relative to 1928
+// Support for democratic reform within the SPD relative to 1931
 Q.democratization = 0;
-// Support for a communist coalition relative to 1928
+// Support for a communist coalition relative to 1931
 Q.communist_coalition = 0;
 // economic_plan: have we adopted *any* economic plan?
 // 1 - WTB plan, 2 - AfA-bund plan, 3 - radical plan (mass nationalization of industries)
@@ -110,7 +110,7 @@ Q.NSDAP_relation = 0;
 
 Q.kpd_leader = "Thälmann";
 Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
+// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1931 December conference. Joos will be most friendly to the SPD.
 Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
 
@@ -124,7 +124,7 @@ Q.spd_prussia = 1;
 Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
-// Number of members in 1928 (in thousands)
+// Number of members in 1931 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
 Q.rb_strength = 2000;
 Q.rb_militancy = 0.01;
@@ -200,14 +200,14 @@ Q.catholics = 10;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
-// income for industrial workers in reichsmarks/year - 1928 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
+// income for industrial workers in reichsmarks/year - 1931 = 1600 Reichsmarks/year; 1931 = 1440 Reichsmarks/year; 1933 = 1138 Reichsmarks/year - source: https://babel.hathitrust.org/cgi/pt?id=uiug.30112104147985&seq=50
 Q.income = 1600;
 // what about incomes for different classes? rural workers? middle-class workers?
 
-// inflation (in %; 1928: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
+// inflation (in %; 1931: 2.9; 1929: 0; 1930: -5%; 1931: -10%; 1932: -10%) - source: https://en.wikipedia.org/wiki/File:BSPDRWeltkriseEngl.PNG, derived from https://www.destatis.de/DE/Methoden/WISTA-Wirtschaft-und-Statistik/2009/03/rezession-betrachtung-032009.pdf?__blob=publicationFile
 Q.inflation = 2.9;
 
-// quality of life (as % of 1928 - currently unused - should be welfare-adjusted.)
+// quality of life (as % of 1931 - currently unused - should be welfare-adjusted.)
 Q.workers_qol = 100;
 Q.rural_qol = 100;
 Q.unemployed_qol = 100;
@@ -275,7 +275,7 @@ Q.catholics_other = 12;
 
 
 // Current Reichstag composition
-// % of Reichstag in Jan 1928
+// % of Reichstag in Jan 1931
 // source: wikipedia
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
@@ -309,7 +309,7 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Zamora";
-// starting chancellor: Wilhelm Marx
+// starting President: Manuel Azaña
 Q.chancellor = "Azaña";
 Q.chancellor_party = 'Z';
 Q.spd_in_government = 0;
@@ -378,7 +378,7 @@ Q.judicial_reform = 0;
 Q.bureaucratic_reform = 0;
 Q.military_reform = 0;
 Q.womens_rights = 0;
-// level of welfare relative to 1928 (can go negative)
+// level of welfare relative to 1931 (can go negative)
 Q.welfare = 0;
 // level of support for farmers
 Q.agricultural_policy = 0;
@@ -407,7 +407,7 @@ Q.factory_takeovers = 0;
 // progress on the moderate economic plan
 Q.moderate_plan_progress = 0;
 
-// Tax rates relative to 1928 baseline
+// Tax rates relative to 1931 baseline
 Q.lower_tax_rates = 0;
 Q.upper_tax_rates = 0;
 
@@ -467,7 +467,7 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_election_year = 1928;
+Q.next_election_year = 1931;
 Q.next_election_month = 5;
 Q.next_election_time = 5;
 // government affairs timers
@@ -555,11 +555,11 @@ For more information on the politics and government of the Second Spanish Republ
 
 @1931_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49;
-go-to: 1928_main
+go-to: 1931_main
 
 @1931_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31;
-go-to: 1928_main
+go-to: 1931_main
 
 @1931_historical
 subtitle: Saving and loading will be disabled.
@@ -579,14 +579,14 @@ Q.dvp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}
-go-to: 1928_main
+go-to: 1931_main
 
-@1928_main
+@1931_main
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= 1931
 
 It is a bright time for Spanish democracy. After a period of struggle, the new constitution has been approved, the first elections are being called. Economically, the situation leaves for better, however, now we can attempt to reform it, especially our disfunctional agrarian sector. In foreign policy, we must strive to get more recognition and support from forign goverments, many who see us with suspicion. 
 
