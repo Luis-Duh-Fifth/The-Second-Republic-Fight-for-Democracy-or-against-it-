@@ -192,8 +192,8 @@ Q.budget = 5;
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
 Q.workers = 25; // industry and trade
-Q.new_middle = 15; // "Middle Class"
-Q.old_middle = 25; // "Rural Landholders"
+Q.middle = 15; // "Middle Class"
+Q.landholders = 25; // "Rural Landholders"
 Q.rural = 25; // Unlanded Peasents
 Q.unemployed = 8.6;
 Q.catholics = 10;
@@ -211,10 +211,10 @@ Q.inflation = 2.9;
 Q.workers_qol = 100;
 Q.rural_qol = 100;
 Q.unemployed_qol = 100;
-Q.old_middle_qol = 100;
-Q.new_middle_qol = 100;
+Q.landholders_qol = 100;
+Q.middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'landholders', 'middle', 'rural', 'unemployed', 'catholics'];
 Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 // Support for party by social group
@@ -228,23 +228,23 @@ Q.workers_dnvp = 5;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
-Q.old_middle_spd = 5;
-Q.old_middle_kpd = 0;
-Q.old_middle_z = 5;
-Q.old_middle_ddp= 10;
-Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
-Q.old_middle_nsdap = 10;
-Q.old_middle_other = 10;
+Q.landholders_spd = 5;
+Q.landholders_kpd = 0;
+Q.landholders_z = 5;
+Q.landholders_ddp= 10;
+Q.landholders_dvp = 25;
+Q.landholders_dnvp = 25;
+Q.landholders_nsdap = 10;
+Q.landholders_other = 10;
 
-Q.new_middle_spd = 5;
-Q.new_middle_kpd = 1;
-Q.new_middle_z = 10;
-Q.new_middle_ddp= 25;
-Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
-Q.new_middle_nsdap = 5;
-Q.new_middle_other = 15;
+Q.middle_spd = 5;
+Q.middle_kpd = 1;
+Q.middle_z = 10;
+Q.middle_ddp= 25;
+Q.middle_dvp = 25;
+Q.middle_dnvp = 10;
+Q.middle_nsdap = 5;
+Q.middle_other = 15;
 
 Q.rural_spd = 10;
 Q.rural_kpd = 0;
