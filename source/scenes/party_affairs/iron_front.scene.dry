@@ -42,7 +42,7 @@ The Iron Front rallies in defense of the democratic republic and against dictato
 
 @wtb
 view-if: wtb_adopted == 1
-on-arrival: workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); new_middle_spd += 5*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent);
+on-arrival: workers_spd += 8*(1-dissent); unemployed_spd += 8*(1-dissent); new_middle_spd += 5*(1-dissent); landholders_spd += 3*(1-dissent); rural_spd += 3*(1-dissent);
 
 The WTB-Plan is the rallying point for the entire SPD and its affiliated organizations, including the Iron Front.
 

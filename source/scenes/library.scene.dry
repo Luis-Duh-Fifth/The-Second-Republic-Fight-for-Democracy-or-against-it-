@@ -100,9 +100,9 @@ Others: [+ other_votes +]%
 
 Workers: SPD: [+ workers_spd_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, DDP: [+ workers_ddp_normalized +]%, DVP: [+ workers_dvp_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]%
 
-New Middle Class: SPD: [+ new_middle_spd_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, DDP: [+ new_middle_ddp_normalized +]%, DVP: [+ new_middle_dvp_normalized +]%; DNVP: [+ new_middle_dnvp_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
+Middle Class: SPD: [+ new_middle_spd_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, DDP: [+ new_middle_ddp_normalized +]%, DVP: [+ new_middle_dvp_normalized +]%; DNVP: [+ new_middle_dnvp_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Old Middle Class: SPD: [+ old_middle_spd_normalized +]%, Z: [+ old_middle_z_normalized +]%, KPD: [+ old_middle_kpd_normalized +]%, DDP: [+ old_middle_ddp_normalized +]%, DVP: [+ old_middle_dvp_normalized +]%; DNVP: [+ old_middle_dnvp_normalized +]%, NSDAP: [+ old_middle_nsdap_normalized +]%, Others: [+ old_middle_other_normalized +]%
+Rural Landholders: SPD: [+ landholders_spd_normalized +]%, Z: [+ landholders_z_normalized +]%, KPD: [+ landholders_kpd_normalized +]%, DDP: [+ landholders_ddp_normalized +]%, DVP: [+ landholders_dvp_normalized +]%; DNVP: [+ landholders_dnvp_normalized +]%, NSDAP: [+ landholders_nsdap_normalized +]%, Others: [+ landholders_other_normalized +]%
 
 Rural: SPD: [+ rural_spd_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, DDP: [+ rural_ddp_normalized +]%, DVP: [+ rural_dvp_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]%
 

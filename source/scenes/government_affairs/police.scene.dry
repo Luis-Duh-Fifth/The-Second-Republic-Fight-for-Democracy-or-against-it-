@@ -45,7 +45,7 @@ Unfortunately, our investigations have failed to turn up anything. Rumors are th
 go-to: investigate_far_right_success if interior_police_loyalty >= 0.55; investigate_far_right_failure if interior_police_loyalty < 0.55
 
 @investigate_far_right_success
-on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_nsdap -= 3; new_middle_nsdap -= 3; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_nsdap -= 3 if investigate_far_right == 3; new_middle_nsdap -= 3 if investigate_far_right == 3; old_middle_nsdap -= 3 if investigate_far_right == 3; unemployed_spd -= 3 if investigate_far_right == 3;
+on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_nsdap -= 3; new_middle_nsdap -= 3; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_nsdap -= 3 if investigate_far_right == 3; new_middle_nsdap -= 3 if investigate_far_right == 3; landholders_nsdap -= 3 if investigate_far_right == 3; unemployed_spd -= 3 if investigate_far_right == 3;
 
 [? if investigate_far_right == 1 : We have discovered collusion between Hjalmar Schacht, president of the Reichsbank, and the Nazis. This is very useful information. ?]
 [? if investigate_far_right == 2 : We have discovered illegal arms smuggling by the SA, the Nazi paramilitary. ?]

@@ -62,7 +62,7 @@ Mass rallies are a common feature of social democratic life, especially in the l
 - @easy_discard
 
 @class_struggle
-on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if left_strength > reformist_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; old_middle_spd -= 3; new_middle_spd -= 2;
+on-arrival: workers_spd += 4*(1-dissent); unemployed_spd += 3*(1-dissent) if left_strength > reformist_strength; workers_spd += 4*(1-dissent) if nationalization_progress > 0; unemployed_spd += 3*(1-dissent) if nationalization_progress > 0; left_strength += 5; left_dissent -= 5; landholders_spd -= 3; new_middle_spd -= 2;
 
 Our message of class struggle appeals to the left wing of the working class, while potentially alienating the middle class. [? if nationalization_progress > 0 : Our achievements in nationalization have assisted our messaging. ?]
 
@@ -89,12 +89,12 @@ Our speakers denounce the military establishment and all the spending entering t
 
 @wtb
 view-if: wtb_adopted = 1
-on-arrival: wtb_support += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); rural_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent);
+on-arrival: wtb_support += 1; workers_spd += 6*(1-dissent); unemployed_spd += 6*(1-dissent); rural_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); landholders_spd += 3*(1-dissent);
 
 The WTB plan has become a popular rallying cry for our party. The workers are eager to go back to work, and that is exactly what the plan promises.
 
 
 @local
-on-arrival: workers_spd += 3*(1-dissent); old_middle_spd += 1*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent);
+on-arrival: workers_spd += 3*(1-dissent); landholders_spd += 1*(1-dissent); new_middle_spd += 2*(1-dissent); unemployed_spd += 3*(1-dissent);
 
 Our speakers have gauged the mood and are speaking to the issues that seem to most affect the workers in this moment.

@@ -412,6 +412,6 @@ on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party
 
 
 @braun_wins
-on-arrival: president = "Braun"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
+on-arrival: president = "Braun"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_spd += 8*(1-dissent); landholders_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent); rural_spd += 5*(1-dissent); unemployed_spd += 5*(1-dissent);
 
 Otto Braun of the SPD has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.

@@ -17,7 +17,7 @@ The workers are still a key part of our constituency, and we must not alienate t
 
 @campaign_middle
 title: Campaign among the middle classes.
-on-arrival: old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent)
+on-arrival: landholders_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent)
 
 As a people's party, we represent the employees and small businesspeople of the middle class, and they are becoming receptive to our messages.
 
@@ -37,7 +37,7 @@ As a people's party, the urban poor are still a key part of our constituency.
 
 @campaign_women
 title: Campaign among women of all classes.
-on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent);
+on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); landholders_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent);
 
 As a people's party, we represent women of all classes.
 
