@@ -55,7 +55,7 @@ is-deck: true
 @govt
 title: Government Affairs
 view-if: time >= 6
-card-image: img/reichstag_2.jpg
+card-image: img/Cortes_1.jpg
 is-deck: true
 
 - #govt_affairs
