@@ -55,7 +55,7 @@ is-deck: true
 @govt
 title: Government Affairs
 view-if: time >= 6
-card-image: img/Cortes_2.jpg
+card-image: img/Cortes_3.jpg
 is-deck: true
 
 - #govt_affairs
