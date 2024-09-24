@@ -1,6 +1,6 @@
 title: All Quiet on the Western Front
 subtitle: Censorship and violence over a movie...
-view-if: year = 1930 and month = 12 and spd_prussia
+view-if: year = 2000 and month = 12 and spd_prussia
 max-visits: 1
 tags: event
 new-page: true
