@@ -100,7 +100,7 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.pnv_relation = 50;
+Q.z_relation = 50;
 Q.KPD_relation = 25;
 Q.DDP_relation = 60;
 Q.DVP_relation = 35;
@@ -109,9 +109,9 @@ Q.DNVP_relation = 10;
 Q.NSDAP_relation = 0;
 
 Q.KPD_leader = "Thälmann";
-Q.pnv_leader = "Brüning";
+Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1931 December conference. Joos will be most friendly to the SPD.
-Q.pnv_party_leader = "Marx";
+Q.z_party_leader = "Marx";
 Q.NSDAP_leader = "Jose Antonio";
 
 // hmm... maybe we can play nice with Zamora???
@@ -120,7 +120,7 @@ Q.Zamora_relation = 25;
 
 // Does the SPD lead in Prussia?
 Q.SPD_prussia = 1;
-// Options: SPD, pnv, DNVP, papen, NSDAP
+// Options: SPD, z, DNVP, papen, NSDAP
 Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
@@ -215,13 +215,13 @@ Q.landholders_qol = 100;
 Q.middle_qol = 100;
 
 Q.classes = ['workers', 'landholders', 'middle', 'rural', 'unemployed', 'minorites'];
-Q.parties = ['cnt', 'KPD', 'SPD', 'erc', 'DDP', 'pnv', 'DVP', 'Others', 'DNVP', 'NSDAP', 're+ct'];
+Q.parties = ['cnt', 'KPD', 'SPD', 'erc', 'DDP', 'z', 'DVP', 'Others', 'DNVP', 'NSDAP', 're+ct'];
 
 // Support for party by social group
-// they don't have to sum to 100 since the electoral calculations will be normalipnved.
+// they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_SPD = 60;
 Q.workers_KPD = 20;
-Q.workers_pnv = 5;
+Q.workers_z = 5;
 Q.workers_DDP = 0;
 Q.workers_DVP = 0;
 Q.workers_DNVP = 5;
@@ -230,7 +230,7 @@ Q.workers_Others = 10;
 
 Q.landholders_SPD = 5;
 Q.landholders_KPD = 0;
-Q.landholders_pnv = 5;
+Q.landholders_z = 5;
 Q.landholders_DDP= 10;
 Q.landholders_DVP = 25;
 Q.landholders_DNVP = 25;
@@ -239,7 +239,7 @@ Q.landholders_Others = 10;
 
 Q.middle_SPD = 5;
 Q.middle_KPD = 1;
-Q.middle_pnv = 10;
+Q.middle_z = 10;
 Q.middle_DDP= 25;
 Q.middle_DVP = 25;
 Q.middle_DNVP = 10;
@@ -248,7 +248,7 @@ Q.middle_Others = 15;
 
 Q.rural_SPD = 10;
 Q.rural_KPD = 0;
-Q.rural_pnv = 5;
+Q.rural_z = 5;
 Q.rural_DDP= 5;
 Q.rural_DVP = 15;
 Q.rural_DNVP = 45;
@@ -257,7 +257,7 @@ Q.rural_Others = 10;
 
 Q.unemployed_SPD = 25;
 Q.unemployed_KPD = 55;
-Q.unemployed_pnv = 1;
+Q.unemployed_z = 1;
 Q.unemployed_DDP = 0;
 Q.unemployed_DVP = 0;
 Q.unemployed_DNVP = 5;
@@ -266,7 +266,7 @@ Q.unemployed_Others = 9;
 
 Q.minorites_SPD = 15;
 Q.minorites_KPD = 2;
-Q.minorites_pnv = 50;
+Q.minorites_z = 50;
 Q.minorites_DDP = 0;
 Q.minorites_DVP = 5;
 Q.minorites_DNVP = 5;
@@ -281,7 +281,7 @@ Q.minorites_Others = 12;
 // They did not have a CDU/CSU-style relationship.
 Q.SPD_r = 26;
 Q.KPD_r = 9;
-Q.pnv_r = 17;
+Q.z_r = 17;
 Q.DDP_r = 6;
 Q.DVP_r = 10;
 Q.DNVP_r = 20;
@@ -291,7 +291,7 @@ Q.Others_r = 9;
 // diff from prev
 Q.old_SPD_r = 26;
 Q.old_KPD_r = 9;
-Q.old_pnv_r = 17;
+Q.old_z_r = 17;
 Q.old_DDP_r = 6;
 Q.old_DVP_r = 10;
 Q.old_DNVP_r = 20;
@@ -319,12 +319,12 @@ Q.DNVP_in_government = 1;
 Q.KPD_in_government = 0;
 Q.NSDAP_in_government = 0;
 
-// Weimar coalition = SPD + PNV + DDP
+// Weimar coalition = SPD + z + DDP
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + PNV + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + PNV + BVP + DDP + DVP + Others
+// Grand coalition = SPD + z + BVP + DDP + DVP
+// also includes the "new grand coalition" of SPD + z + BVP + DDP + DVP + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + PNV + DDP
+// Popular front = SPD + KPD + z + DDP
 Q.in_popular_front = 0;
 // left coalition = SPD + KPD + left-splinters
 Q.in_left_front = 0;
@@ -355,13 +355,13 @@ Q.interior_minister_party = 'DNVP';
 Q.justice_minister = 'Hergt';
 Q.justice_minister_party = 'DNVP';
 Q.labor_minister = 'Brauns';
-Q.labor_minister_party = 'PNV';
+Q.labor_minister_party = 'z';
 Q.reichswehr_minister = 'Groener';
 Q.reichswehr_minister_party = 'I';
 Q.economic_minister = 'Curtius';
 Q.economic_minister_party = 'DVP';
 Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'PNV';
+Q.finance_minister_party = 'z';
 Q.agriculture_minister = 'Schiele';
 Q.agriculture_minister_party = 'DNVP';
 
