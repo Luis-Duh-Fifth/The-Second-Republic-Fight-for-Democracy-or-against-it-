@@ -563,20 +563,20 @@ This is a game of alternate history. While historical accuracy is a major concer
 
 For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-- @1928_easy: Begin (easy difficulty)
-- @1928_main: Begin (normal difficulty)
-- @1928_hard: Begin (hard difficulty)
-- @1928_historical: Begin (historical mode)
+- @1931_easy: Begin (easy difficulty)
+- @1931_main: Begin (normal difficulty)
+- @1931_hard: Begin (hard difficulty)
+- @1931_historical: Begin (historical mode)
 
-@1928_easy
+@1931_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49;
 go-to: 1928_main
 
-@1928_hard
+@1931_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31;
 go-to: 1928_main
 
-@1928_historical
+@1931_historical
 subtitle: Saving and loading will be disabled.
 on-arrival: {!
 Q.difficulty = 2;
