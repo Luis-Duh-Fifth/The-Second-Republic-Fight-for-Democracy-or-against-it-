@@ -1,6 +1,6 @@
 title: High Inflation
 subtitle: Workers are seeing their purchasing power decline.
-view-if: inflation >= 8 and high_inflation_timer = 0 and spd_in_government
+view-if: inflation >= 8 and high_inflation_timer = 0 and psoe_in_government
 new-page: true
 max-visits: 1
 on-arrival: capital_strike_progress += 1; workers_spd -= 4; landholders_spd -= 6; new_middle_spd -= 6; rural_spd -= 5; unemployed_spd -= 4; high_inflation_timer = 6; pro_republic -= 5

@@ -1,7 +1,7 @@
 title: Banking Crisis
 subtitle: The collapse of the German banking system...
 new-page: true
-on-arrival: banking_crisis_seen = 1; workers_kpd += 5; workers_nsdap += 3; new_middle_nsdap += 3; landholders_nsdap += 4; rural_nsdap += 3; unemployed += 3; crisis_urgency += 1; workers_spd -= 4 if spd_in_government; new_middle_spd -= 5 if spd_in_government; landholders_spd -= 5 if spd_in_government; rural_spd -= 4 if spd_in_government
+on-arrival: banking_crisis_seen = 1; workers_kpd += 5; workers_nsdap += 3; new_middle_nsdap += 3; landholders_nsdap += 4; rural_nsdap += 3; unemployed += 3; crisis_urgency += 1; workers_spd -= 4 if psoe_in_government; new_middle_spd -= 5 if psoe_in_government; landholders_spd -= 5 if psoe_in_government; rural_spd -= 4 if psoe_in_government
 tags: event
 view-if: customs_union = 1 and banking_crisis_timer = 0
 max-visits: 1
@@ -18,13 +18,13 @@ This is a bourgeois dispute, but the costs will be borne by the proletariat. The
 - @end_toleration: We are tired of austerity. End the toleration arrangement!
 
 @nothing_to_do
-view-if: spd_in_government = 1
+view-if: psoe_in_government = 1
 on-arrival: welfare -= 1; workers_spd -= 3; unemployed_spd -= 3; pro_republic -= 3
 
 There is, essentially, nothing we can do.
 
 @stabilization
-view-if: spd_in_government = 1
+view-if: psoe_in_government = 1
 subtitle: -1 budget
 choose-if: budget >= 1
 on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); landholders_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_nsdap -= 3
@@ -32,14 +32,14 @@ on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); landh
 In the face of the banking crisis, we have taken emergency action to stabilize the economy. It might not be not enough.
 
 @austerity
-view-if: spd_in_government = 0
+view-if: psoe_in_government = 0
 on-arrival: welfare -= 1; workers_spd -= 3; unemployed_spd -= 3; pro_republic -= 3
 
 Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare.
 
 @end_toleration
-view-if: spd_toleration = 1
-on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0;
+view-if: psoe_toleration = 1
+on-arrival: next_election_time = time+3 if next_election_time >= time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; psoe_in_government = 0; in_grand_coalition = 0; psoe_toleration = 0;
 
 We are tired of [+ chancellor +]'s policy of austerity. After [+ chancellor +]'s attempt to use emergency powers to pass another welfare cut, we have worked with the other parties to reverse this policy. In response, the Reichstag has been dissolved, and new elections called.
 

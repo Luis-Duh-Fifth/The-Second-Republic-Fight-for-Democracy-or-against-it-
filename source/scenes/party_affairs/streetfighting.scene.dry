@@ -46,7 +46,7 @@ max-visits: 2
 As part of the Iron Front, we are increasing coordination between the Reichsbanner and the unions, and many union members want to become more involved.
 
 @prussian_police_training
-view-if: spd_prussia == 1 and prussian_police_loyalty > 0.5
+view-if: psoe_prussia == 1 and prussian_police_loyalty > 0.5
 on-arrival: rb_militancy += 0.05; sa_strength += 50; 
 
 The loyal sections of the Prussian police can help train the Reichsbanner.

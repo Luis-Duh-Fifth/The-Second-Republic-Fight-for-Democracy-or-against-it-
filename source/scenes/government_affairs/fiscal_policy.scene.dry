@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 tags: govt_affairs
 on-arrival: fiscal_policy_timer += 6; month_actions += 1
-view-if: spd_in_government = 1 and finance_minister_party = "SPD" and fiscal_policy_timer = 0
+view-if: psoe_in_government = 1 and finance_minister_party = "SPD" and fiscal_policy_timer = 0
 card-image: img/portraits/HilferdingRudolf.jpg
 
 = Fiscal Policy

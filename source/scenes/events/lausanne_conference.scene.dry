@@ -10,6 +10,6 @@ tags: event
 
 At the Lausanne Conference, the Allies have met with Germany's representatives in order to deal with the issue of war reparations once and for all. In light of the current economic crisis, the Allies believe that Germany is unable to make the reparation payments.
 
-Therefore, our reparations have been paused indefinitely! This should reduce the strain on our budget. [? if spd_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not spd_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
+Therefore, our reparations have been paused indefinitely! This should reduce the strain on our budget. [? if psoe_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not psoe_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
 
 

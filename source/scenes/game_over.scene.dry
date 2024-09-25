@@ -9,7 +9,7 @@ Q.game_over = 1;
 this.achieve('game_completed');
 
 // Roter Zar von Preußen - At the end of the game, Otto Braun is president, chancellor, and minister-president of prussia at the same time.
-if (Q.president == 'Braun' && Q.chancellor == 'Braun' && Q.spd_prussia) {
+if (Q.president == 'Braun' && Q.chancellor == 'Braun' && Q.psoe_prussia) {
     this.achieve('red_tzar_of_prussia');
 }
 // Bürgerkrieg - enter a long civil war.
@@ -70,20 +70,20 @@ for (var c of Q.classes) {
 }
 
 // Die Rote Fahne - join the KPD in the May Day march.
-// Mehrheitspartei - form an SPD majority government in the Reichstag.
+// Mehrheitspartei - form an PSOE majority government in the Reichstag.
 // Panik im Mittelstand - have over 50% of New Middle Class support.
-if (Q.new_middle_spd_normalized && Q.new_middle_spd_normalized >= 50) {
+if (Q.new_middle_psoe_normalized && Q.new_middle_psoe_normalized >= 50) {
     this.achieve('panik_im_mittelstand');
 }
 // Bauernrevolution - have over 50% rural support.
-if (Q.rural_spd_normalized && Q.rural_spd_normalized >= 50) {
+if (Q.rural_psoe_normalized && Q.rural_psoe_normalized >= 50) {
     this.achieve('bauernrevolution');
 }
-if (Q.catholics_spd_normalized && Q.catholics_spd_normalized >= 50) {
+if (Q.catholics_psoe_normalized && Q.catholics_psoe_normalized >= 50) {
     this.achieve('katholischer_sozialismus');
 }
 // Räterepublik - begin the transformation to a socialist economy.
-if (Q.spd_in_government && ((Q.nationalization_progress >= 2 && Q.economic_democracy >= 3) || (Q.nationalization_progress >= 1 && Q.economic_democracy >= 4))) {
+if (Q.psoe_in_government && ((Q.nationalization_progress >= 2 && Q.economic_democracy >= 3) || (Q.nationalization_progress >= 1 && Q.economic_democracy >= 4))) {
     this.achieve('raterepublik');
 }
 // Polykrise - survive both a fascist coup and a capital strike.
@@ -123,7 +123,7 @@ title: Adolf Hitler is in undisputed control over Germany.
 tags: endings
 go-to: eg_menu
 
-Adolf Hitler is in undisputed control over Germany. The SPD, along with all of the democratic forces, have failed.
+Adolf Hitler is in undisputed control over Germany. The PSOE, along with all of the democratic forces, have failed.
 
 [? if civil_war_seen == 1 : At the very least, we fought back. Perhaps our resistance will be celebrated in an impossible-to-forsee future. ?]
 
@@ -190,13 +190,13 @@ go-to: eg_menu
 
 Otto Braun has been elected as President of Germany. He had never desired to be the most powerful man in Germany, but now he is. 
 
-@spd_victorious
-title: SPD still in government
-view-if: spd_in_government == 1 and chancellor_party == "SPD" and total_defeat == 0 and long_war == 0
+@psoe_victorious
+title: psoe still in government
+view-if: psoe_in_government == 1 and chancellor_party == "PSOE" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
-The SPD is still in government, under Chancellor [+ chancellor +]. Given the circumstances, this is a substantial accomplishment.
+The PSOE is still in government, under Chancellor [+ chancellor +]. Given the circumstances, this is a substantial accomplishment.
 
 @communist_victory
 title: Communist victory

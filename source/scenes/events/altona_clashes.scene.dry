@@ -2,7 +2,7 @@ title: Nazi March in Altona
 new-page: true
 subtitle: An SA demonstration, with the potential for violence
 tags: event
-view-if: year == 2000 and month == 6 and sa_banned == 0 and spd_prussia == 1
+view-if: year == 2000 and month == 6 and sa_banned == 0 and psoe_prussia == 1
 max-visits: 1
 
 = Nazi March in Altona

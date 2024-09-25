@@ -2,7 +2,7 @@ title: Women's Rights
 new-page: true
 is-card: true
 tags: govt_affairs
-view-if: spd_in_government = 1 and womens_rights_timer = 0 and chancellor_party == "SPD"
+view-if: psoe_in_government = 1 and womens_rights_timer = 0 and chancellor_party == "SPD"
 on-arrival: womens_rights_timer += 10; month_actions += 1
 card-image: img/portraits/PfülfAntonie.jpg
 frequency: 50
@@ -12,7 +12,7 @@ max-visits: 4
 
 According to the Constitution, women are equal to men, but this is not followed in practice. Women in the workforce are not paid equally for the same work, in addition to often being pushed out of employment after marriage. Men are still favored in marriage and family policy, and there are restrictions on women's rights in many other domains. And that is not to mention the overwhelming patriarchal culture present in Germany.
 
-For better or for worse, the Socialists stand virtually alone in supporting increased rights for women, and even within the party, the leadership does not consider it a priority. [? if spd_r < 50 : Unfortunately, women still disproportionately support the bourgeois parties. ?]
+For better or for worse, the Socialists stand virtually alone in supporting increased rights for women, and even within the party, the leadership does not consider it a priority. [? if psoe_r < 50 : Unfortunately, women still disproportionately support the bourgeois parties. ?]
 
 - @labor: Institute policies that help women in the workforce.
 - @family: Reform marriage, divorce, and property law.

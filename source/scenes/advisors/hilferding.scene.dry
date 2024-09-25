@@ -28,8 +28,8 @@ We have reduced the strength of the dissident factions in the party.
 @toleration
 title: Defending Toleration
 subtitle: Hilferding supports cooperation with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The SPD is not in toleration. ?]
-choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_toleration: The PSOE is not in toleration. ?]
+choose-if: psoe_in_government = 0 and psoe_toleration = 1 and advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_dissent -= 10; neorevisionist_dissent -= 8; center_dissent -= 5
 
 We have reduced dissent among the anti-toleration factions.
@@ -37,15 +37,15 @@ We have reduced dissent among the anti-toleration factions.
 @finance_ministry_
 title: Fiscal Policy
 subtitle: As Finance Minister, Hilferding can enact tax policies.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_in_government = 0 : SPD not in government: ?] [? if finance_minister_party != "SPD" : The SPD does not control the finance ministry. ?]
-choose-if: advisor_action_timer == 0 and spd_in_government == 1 and finance_minister_party == "SPD"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if psoe_in_government = 0 : PSOE not in government: ?] [? if finance_minister_party != "PSOE" : The PSOE does not control the finance ministry. ?]
+choose-if: advisor_action_timer == 0 and psoe_in_government == 1 and finance_minister_party == "PSOE"
 on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6
 go-to: fiscal_policy
 
 @economic_democracy_
 title: Economic Democracy
 subtitle: Enact policies to build a more democratic economy.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_in_government = 0 : SPD not in government: ?] [? if labor_minister_party != "SPD" or (finance_minister_party != "SPD" and economic_minister_party != "SPD") : We do not have the necessary government ministers. ?]
-choose-if: advisor_action_timer == 0 and spd_in_government == 1 and (economic_minister_party == "SPD" or finance_minister_party == "SPD") and (labor_minister_party == "SPD")
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if psoe_in_government = 0 : PSOE not in government: ?] [? if labor_minister_party != "PSOE" or (finance_minister_party != "PSOE" and economic_minister_party != "PSOE") : We do not have the necessary government ministers. ?]
+choose-if: advisor_action_timer == 0 and psoe_in_government == 1 and (economic_minister_party == "SPD" or finance_minister_party == "SPD") and (labor_minister_party == "SPD")
 on-arrival: advisor_action_timer = 6; economic_democracy_timer -= 10
 go-to: economic_democracy

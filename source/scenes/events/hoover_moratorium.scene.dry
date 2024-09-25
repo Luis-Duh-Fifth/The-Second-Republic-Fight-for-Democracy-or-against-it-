@@ -10,5 +10,5 @@ max-visits: 1
 
 In light of the current economic situation, and the German banking crisis, President Herbert Hoover of the United States has issued a moratorium on war debt payments from the Great War, including Germany's. Our budget situation should improve somewhat.
 
-[? if spd_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not spd_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
+[? if psoe_in_government and foreign_minister_party == "SPD": Even though this is not our accomplishment, our foreign ministry is eager to take credit for this accomplishment. ?][? if not psoe_in_government and foreign_minister_party != "SPD": Even though this is not the work of the foreign ministry, it is eager to take credit for this accomplishment. ?]
 

@@ -1,10 +1,10 @@
 title: March on Berlin
 subtitle: Right-wing militants are taking action...
-view-if: (spd_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and nsdap_normalized + dnvp_normalized >= 0.5)
+view-if: (psoe_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and nsdap_normalized + dnvp_normalized >= 0.5)
 new-page: true
 max-visits: 1
 on-arrival: march_on_berlin_seen = 1; sa_strength += 80; sh_strength += 80
-go-to: ask_resign if spd_in_government and president != "Braun"; govt_menu if president = "Braun"; non_govt_menu if spd_in_government = 0 and president != "Braun"
+go-to: ask_resign if psoe_in_government and president != "Braun"; govt_menu if president = "Braun"; non_govt_menu if psoe_in_government = 0 and president != "Braun"
 tags: event
 
 = March on Berlin
@@ -31,7 +31,7 @@ President [+ president +] has called for emergency elections, to be held next mo
 
 
 @accept_hitler
-on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; spd_in_government = 0
+on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; psoe_in_government = 0
 
 After the resignation of the chancellor, Hitler has been appointed chancellor[? if hitler_deported: , after being made a citizen again ?].
 
@@ -56,12 +56,12 @@ President [+ president +] has asked our government to resign.
 
 @fight
 title: Deploy the Reichsbanner and call a general strike to resist the fascists!
-on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if spd_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += workers_spd_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and spd_in_government
+on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if psoe_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += workers_psoe_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and psoe_in_government
 go-to: fight_2_win if defense_strength >= enemy_strength; fight_2_pre_civil_war if defense_strength < enemy_strength
 
 The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to counter the fascist demonstration.
 
-[? if spd_prussia: The Prussian police has been deployed against the fascists. ?] [? if spd_in_government and president == "Braun" : The portions of the Reichswehr that are loyal are also deployed. ?]
+[? if psoe_prussia: The Prussian police has been deployed against the fascists. ?] [? if psoe_in_government and president == "Braun" : The portions of the Reichswehr that are loyal are also deployed. ?]
 
 
 @fight_2_win
@@ -137,7 +137,7 @@ Influenced by his inner circle and by the fascists in the streets, President Hin
 title: Resign our positions in the government.
 choose-if: president != "Braun"
 unavailable-subtitle: President Braun cannot resign.
-on-arrival: chancellor = "Papen"; chancellor_party = "I"; spd_in_government = 0;
+on-arrival: chancellor = "Papen"; chancellor_party = "I"; psoe_in_government = 0;
 go-to: accept
 
 We have resigned our positions in the government.
@@ -149,7 +149,7 @@ title: We cannot do anything but appoint Hitler chancellor.
 view-if: president == "Braun"
 choose-if: nsdap_normalized >= 0.5 or largest_party == "NSDAP"
 unavailable-subtitle: There is no way President [+ president +] could do such a blatantly undemocratic act.
-on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; spd_in_government = 0
+on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; psoe_in_government = 0
 
 Threatened with a civil war, and unwilling to fight anymore, President [+ president +] dismisses the current government and appoints Hitler of the NSDAP as chancellor.
 

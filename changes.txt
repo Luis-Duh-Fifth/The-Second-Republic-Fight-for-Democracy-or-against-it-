@@ -20,8 +20,8 @@ Minor changes:
 - New advisor actions: End toleration (for some left advisors)
 - Added descriptions of the internal party factions.
 - Some more tax options.
-- Abortion rights and homosexual rights can be passed with a "progressive coalition" of the SPD, KPD, and DDP.
-- Can only use the Shuffle Cabinet and Women's Rights cards if the chancellor is SPD.
+- Abortion rights and homosexual rights can be passed with a "progressive coalition" of the PSOE, KPD, and DDP.
+- Can only use the Shuffle Cabinet and Women's Rights cards if the chancellor is PSOE.
 - Low relations with the DVP results in less leverage in a grand coalition.
 - Papen being appointed as chancellor reduces judicial reform.
 - Changed frequencies of some cards.
@@ -50,7 +50,7 @@ Minor changes:
 Future changes:
 
 - I didn't get to any of the future changes listed in the previous update, so all of those are carrying over.
-- For the post-1933 update, coups can be initiated in 1933 if the SPD is in power and is unpopular.
+- For the post-1933 update, coups can be initiated in 1933 if the PSOE is in power and is unpopular.
 - Add ability to break toleration without using a event or advisor action.
 
 
@@ -72,7 +72,7 @@ Minor changes:
 Future changes:
 
 - Government with the popular front without civil war is possible (but might have votes of no confidence from both the right and the left, and a higher likelihood of right-wing coups).
-- "Historical" difficulty that constrains SPD actions to be more historically accurate.
+- "Historical" difficulty that constrains PSOE actions to be more historically accurate.
 - Record of previous actions in the library
 - Tariffs
 - Investigating paramilitaries after banning.
@@ -113,9 +113,9 @@ Potential future changes:
 
 Notes on the Popular Front:
 
-I don't know how the KPD would contend themselves in government. A KPD that is willing to support an SPD government would necessarily be different from Thälmann's Stalinist organization, so I looked to the earlier Paul Levi KPD as well as the French Popular Front for ideas. Originally I had the KPD ministers implementing certain policies, but reading about Paul Levi, I think that the KPD would be abstentionist in government, in that they would not have any ministers to preserve their independent course of action, and disavow themselves from any unpopular course the government may take. 
+I don't know how the KPD would contend themselves in government. A KPD that is willing to support an PSOE government would necessarily be different from Thälmann's Stalinist organization, so I looked to the earlier Paul Levi KPD as well as the French Popular Front for ideas. Originally I had the KPD ministers implementing certain policies, but reading about Paul Levi, I think that the KPD would be abstentionist in government, in that they would not have any ministers to preserve their independent course of action, and disavow themselves from any unpopular course the government may take. 
 
-Ironically the hypothetical KPD position towards the Popular Front is basically analogous to the SPD position towards the Brüning government (i.e. toleration).
+Ironically the hypothetical KPD position towards the Popular Front is basically analogous to the PSOE position towards the Brüning government (i.e. toleration).
 
 Sources: Gaido, Daniel. “Paul Levi and the Origins of the United-Front Policy in the Communist International.” Historical Materialism 25, no. 1 (2017): 131–74. https://doi.org/10.1163/1569206x-12341515.
 
@@ -253,7 +253,7 @@ v0.14.2 - Heidelberg Program, bug fixes, minority government
 Changes:
 
 - New achievement: Heidelberger Programm (fulfill most of the historical goals of the Heidelberg Program)
-- New achievement: Minderheitsregierung (successfully form an SPD minority government)
+- New achievement: Minderheitsregierung (successfully form an PSOE minority government)
 - Minority/emergency governments can get votes of no confidence.
 - Tolerating Brüning cannot happen if the constitutional parties do not have a majority.
 - Bug fix: advisor actions should not reset card timers.

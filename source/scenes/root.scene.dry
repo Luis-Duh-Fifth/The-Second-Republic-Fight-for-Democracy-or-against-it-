@@ -119,9 +119,9 @@ Q.hindenburg_relation = 25;
 
 
 // Does the SPD lead in Prussia?
-Q.spd_prussia = 1;
+Q.psoe_prussia = 1;
 // Options: spd, z, dnvp, papen, nsdap
-Q.prussian_government = "SPD";
+Q.prussian_government = "PSOE";
 
 // The array of forces - paramilitary groups
 // Number of members in 1931 (in thousands)
@@ -217,14 +217,14 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['spd', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['psoe', 'kpd', 'z', 'ddp', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_spd = 60;
+Q.workers_psoe = 60;
 Q.workers_kpd = 20;
 Q.workers_z = 5;
 Q.workers_ddp = 0;
@@ -233,7 +233,7 @@ Q.workers_dnvp = 5;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
-Q.old_middle_spd = 5;
+Q.old_middle_psoe = 5;
 Q.old_middle_kpd = 0;
 Q.old_middle_z = 5;
 Q.old_middle_ddp= 10;
@@ -242,7 +242,7 @@ Q.old_middle_dnvp = 25;
 Q.old_middle_nsdap = 10;
 Q.old_middle_other = 10;
 
-Q.new_middle_spd = 5;
+Q.new_middle_psoe = 5;
 Q.new_middle_kpd = 1;
 Q.new_middle_z = 10;
 Q.new_middle_ddp= 25;
@@ -251,7 +251,7 @@ Q.new_middle_dnvp = 10;
 Q.new_middle_nsdap = 5;
 Q.new_middle_other = 15;
 
-Q.rural_spd = 10;
+Q.rural_psoe = 10;
 Q.rural_kpd = 0;
 Q.rural_z = 5;
 Q.rural_ddp= 5;
@@ -260,7 +260,7 @@ Q.rural_dnvp = 45;
 Q.rural_nsdap = 5;
 Q.rural_other = 10;
 
-Q.unemployed_spd = 25;
+Q.unemployed_psoe = 25;
 Q.unemployed_kpd = 55;
 Q.unemployed_z = 1;
 Q.unemployed_ddp = 0;
@@ -269,7 +269,7 @@ Q.unemployed_dnvp = 5;
 Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
 
-Q.catholics_spd = 15;
+Q.catholics_psoe = 15;
 Q.catholics_kpd = 2;
 Q.catholics_z = 50;
 Q.catholics_ddp = 0;
@@ -285,7 +285,7 @@ Q.catholics_other = 12;
 // note: the Z figures also include the BVP (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.spd_r = 26;
+Q.psoe_r = 26;
 Q.kpd_r = 9;
 Q.z_r = 17;
 Q.ddp_r = 6;
@@ -295,7 +295,7 @@ Q.nsdap_r = 3;
 Q.other_r = 9;
 
 // diff from prev
-Q.old_spd_r = 26;
+Q.old_psoe_r = 26;
 Q.old_kpd_r = 9;
 Q.old_z_r = 17;
 Q.old_ddp_r = 6;
@@ -311,7 +311,7 @@ Q.old_sapd_r = 0;
 // for changing the DDP's name to the DStP
 Q.ddp_name = "DDP";
 
-// array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
+// array of objects of the form {date: Date(), psoe: 10, kpd: 12, ...} for each election
 Q.election_records = [];
 // party support records for every month
 Q.party_support_records = [];
@@ -324,7 +324,7 @@ Q.president = "Hindenburg";
 // starting chancellor: Wilhelm Marx
 Q.chancellor = "Marx";
 Q.chancellor_party = 'Z';
-Q.spd_in_government = 0;
+Q.psoe_in_government = 0;
 Q.z_in_government = 1;
 Q.ddp_in_government = 0;
 Q.dvp_in_government = 1;
@@ -333,20 +333,20 @@ Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
 
 Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
+// Weimar coalition = PSOE + Z + DDP
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
+// Grand coalition = PSOE + Z + BVP + DDP + DVP
+// also includes the "new grand coalition" of PSOE + Z + BVP + DDP + DVP + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
+// Popular front = PSOE + KPD + Z + DDP
 Q.in_popular_front = 0;
-// left coalition = SPD + KPD + left-splinters
+// left coalition = PSOE + KPD + left-splinters
 Q.in_left_front = 0;
-// emergency government containing the SPD: only president Braun can do this.
+// emergency government containing the PSOE: only president Braun can do this.
 Q.in_emergency_government = 0;
-Q.in_spd_majority = 0;
+Q.in_psoe_majority = 0;
 Q.grand_coalition_failed = 0;
-// if the SPD is ruling as part of a minority government
+// if the PSOE is ruling as part of a minority government
 Q.in_minority_government = 0;
 // national unity governmet
 
@@ -355,8 +355,8 @@ Q.coalition_dissent = 0;
 // dissent from the KPD, in a popular front or left front government
 Q.kpd_coalition_dissent = 0;
 
-// does the SPD tolerate the government even if it is not a participant?
-Q.spd_toleration = 0;
+// does the PSOE tolerate the government even if it is not a participant?
+Q.psoe_toleration = 0;
 
 // is the current government a presidential minority government?
 Q.minority_government = 0;
@@ -429,10 +429,10 @@ Q.upper_tax_rates = 0;
 Q.electoral_threshold = 0;
 
 // our conduct in the government, and the conduct of our coalition opponents.
-// did the SPD vote against the previous government in a vote of no confidence?
-Q.spd_no_confidence = 0;
-// was the last SPD government taken down in a vote of no confidence by right-wing coalition partners?
-Q.no_confidence_against_spd = 0;
+// did the PSOE vote against the previous government in a vote of no confidence?
+Q.psoe_no_confidence = 0;
+// was the last PSOE government taken down in a vote of no confidence by right-wing coalition partners?
+Q.no_confidence_against_psoe = 0;
 
 // Advisors/Leaders
 Q.n_advisors = 3;

@@ -7,7 +7,7 @@ new-page: true
 
 = Otto Braun
 
-Braun [? if spd_prussia = 1 : is ?][? if spd_prussia = 0 : was ?] the Minister-President of Prussia, the largest state in Germany. He is a reformist leader who seeks to work with the bourgeois parties.
+Braun [? if psoe_prussia = 1 : is ?][? if psoe_prussia = 0 : was ?] the Minister-President of Prussia, the largest state in Germany. He is a reformist leader who seeks to work with the bourgeois parties.
 
 - @coalition
 - @prussian_bulwark
@@ -17,17 +17,17 @@ Braun [? if spd_prussia = 1 : is ?][? if spd_prussia = 0 : was ?] the Minister-P
 @coalition
 title: Negotiating with the Coalition
 subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
-choose-if: advisor_action_timer <= 0 and (spd_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not spd_prussia : The SPD does not control the Prussian government. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1; z_relation += 6; ddp_relation += 6; dvp_relation += 2; dvp_relation += 3 if in_grand_coalition
+choose-if: advisor_action_timer <= 0 and (psoe_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not psoe_prussia : The psoe does not control the Prussian government. ?]
+on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if psoe_in_government = 1; z_relation += 6; ddp_relation += 6; dvp_relation += 2; dvp_relation += 3 if in_grand_coalition
 
 We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, DDP, and DVP, ?][? if not in_grand_coalition: Center (Zentrum) Party and DDP, ?] and reduced tensions with the coalition.
 
 @prussian_bulwark
 title: The Prussian Bulwark
 subtitle: As the Minister-President of Prussia, Braun has power over the Prussian bureaucracy and security services.
-choose-if: advisor_action_timer <= 0 and spd_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if spd_prussia == 0 : The SPD does not control Prussia. ?]
+choose-if: advisor_action_timer <= 0 and psoe_prussia = 1
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if psoe_prussia == 0 : The PSOE does not control Prussia. ?]
 on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6
 go-to: prussian_affairs
 

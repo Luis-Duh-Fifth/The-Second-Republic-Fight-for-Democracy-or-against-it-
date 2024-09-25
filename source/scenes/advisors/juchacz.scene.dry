@@ -42,4 +42,4 @@ on-arrival: womens_rights += 1; workers_spd += 4*(1-dissent); rural_spd += 3*(1-
 
 Juchacz's strategies for organizing women are aimed at working-class housewives, and acknowledge women's traditional household roles. We argue that our economic welfare programs will improve the livelihoods of women and their families.
 
-[? if spd_r < 50 : Unfortunately, women still disproportionately support the bourgeois parties. ?]
+[? if psoe_r < 50 : Unfortunately, women still disproportionately support the bourgeois parties. ?]

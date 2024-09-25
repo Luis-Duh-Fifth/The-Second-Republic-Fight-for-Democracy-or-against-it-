@@ -3,7 +3,7 @@ subtitle: A political question
 tags: event
 on-arrival: panzerkreuzer_b_seen = 1
 new-page: true
-view-if: panzerkreuzer_b_seen = 0 and year = 1931 and month >= 2 and (spd_in_government = 1 or spd_toleration = 1)
+view-if: panzerkreuzer_b_seen = 0 and year = 1931 and month >= 2 and (psoe_in_government = 1 or psoe_toleration = 1)
 
 = Panzerkreuzer B
 
@@ -25,9 +25,9 @@ The vote in favor of the battlecruiser easily passes, with opposition only from 
 
 @vote_no
 on-arrival: dvp_relation -= 8; z_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; workers_spd += 4*(1-dissent) if nationalism < 49;
-go-to: built if spd_r + kpd_r + ddp_r < 50; not_built if spd_r + kpd_r + ddp_r >= 50
+go-to: built if psoe_r + kpd_r + ddp_r < 50; not_built if psoe_r + kpd_r + ddp_r >= 50
 
-Our vote against the battlecruiser is unpopular among the right-wing parties[? if in_grand_coalition or in_weimar_coalition: , including our coalition partners ?][? if spd_toleration: , including the minority government that we are currently supporting ?].
+Our vote against the battlecruiser is unpopular among the right-wing parties[? if in_grand_coalition or in_weimar_coalition: , including our coalition partners ?][? if psoe_toleration: , including the minority government that we are currently supporting ?].
 
 @abstain
 on-arrival: dvp_relation -= 5; z_relation -= 3; left_dissent += 5; labor_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpd_relation -= 3

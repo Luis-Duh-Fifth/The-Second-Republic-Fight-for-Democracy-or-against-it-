@@ -7,7 +7,7 @@ new-page: true
 
 = Fritz Baade
 
-Baade is one of the few agricultural experts in the SPD, and an unorthodox economist.
+Baade is one of the few agricultural experts in the PSOE, and an unorthodox economist.
 
 - @agriculture
 - @rural_campaign
@@ -17,8 +17,8 @@ Baade is one of the few agricultural experts in the SPD, and an unorthodox econo
 @agriculture
 title: Agricultural Policy
 subtitle: Baade is the Minister of Agriculture.
-choose-if: advisor_action_timer <= 0 and spd_in_government and agriculture_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not in government. ?][? if agriculture_minister_party != "SPD": The SPD does not have the Agriculture Ministry. ?]
+choose-if: advisor_action_timer <= 0 and psoe_in_government and agriculture_minister_party == "PSOE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_in_government : The PSOE is not in government. ?][? if agriculture_minister_party != "PSOE": The PSOE does not have the Agriculture Ministry. ?]
 on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6
 go-to: agricultural_policy
 
@@ -28,7 +28,7 @@ title: Rural Campaign
 subtitle: Try to campaign among the rural populace.
 choose-if: advisor_action_timer == 0 and rural_policy > 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if rural_policy == 0 : We have not enacted any rural policies. ?]
-on-arrival: advisor_action_timer = 6; rural_spd += 5*(1-dissent); peoples_party_support += 1
+on-arrival: advisor_action_timer = 6; rural_psoe += 5*(1-dissent); peoples_party_support += 1
 
 We have increased our campaigning among farmers and the rural populace.
 

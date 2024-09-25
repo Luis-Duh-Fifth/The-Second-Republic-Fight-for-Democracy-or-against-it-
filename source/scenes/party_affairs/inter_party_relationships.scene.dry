@@ -14,7 +14,7 @@ The SPD cannot govern by itself yet. Because we do not have an electoral majorit
 - @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
 - @center: Strengthen our bonds with the Catholic Center Party.
 - @kpd: Work towards repairing relationships with the Communist Party.
-- @spd_alone: The SPD can stand alone for now.
+- @psoe_alone: The SPD can stand alone for now.
 - @easy_discard
 
 
@@ -45,7 +45,7 @@ subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; z_relation += 2 if z_party_leader == "Joos"
-go-to: center_op if z_in_government = 1 and spd_in_government = 0 and chancellor != "Brüning"; center_coalition if spd_in_government = 1 and z_in_government = 1; center_bruning if chancellor = "Brüning"
+go-to: center_op if z_in_government = 1 and psoe_in_government = 0 and chancellor != "Brüning"; center_coalition if psoe_in_government = 1 and z_in_government = 1; center_bruning if chancellor = "Brüning"
 
 @center_op
 on-arrival: z_relation += 5*(1 - dissent)
@@ -90,7 +90,7 @@ The liberal parties (both the DDP and DVP) are electorally moribund, so perhaps 
 
 However, given the influence of the DVP among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
 
-@spd_alone
+@psoe_alone
 
 Whether it is because we *cannot* or *will not*, we do not make ties with other parties at this moment.
 
