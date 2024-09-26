@@ -25,7 +25,7 @@ title: There is nothing we can do.
 go-to: accept_election if nsdap_normalized + dnvp_normalized >= 0.45; accept_hitler if nsdap_normalized + dnvp_normalized < 0.45
 
 @accept_election
-on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; landholders_nsdap += 10; new_middle_nsdap += 10; workers_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 8; workers_spd -= 10; workers_kpd -= 10; sa_strength += 100;
+on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; landholders_nsdap += 10; new_middle_nsdap += 10; workers_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 8; workers_psoe -= 10; workers_kpd -= 10; sa_strength += 100;
 
 President [+ president +] has called for emergency elections, to be held next month, under a caretaker government. The SA is permitted to act with impunity, intimidating voters into supporting the fascists.
 
@@ -45,7 +45,7 @@ President [+ president +] has asked our government to resign.
 - @fight_constitution
 - @resign
 
-# TODO: if Hindenburg is president, he will always ask the govt to resign. If the SPD refuses, this causes a constitutional crisis. If there is a constitutional crisis, then if judicial reform >= 4, then the courts intervene against Hindenburg and preserves the government.
+# TODO: if Hindenburg is president, he will always ask the govt to resign. If the PSOE refuses, this causes a constitutional crisis. If there is a constitutional crisis, then if judicial reform >= 4, then the courts intervene against Hindenburg and preserves the government.
 
 # if Reichsbanner + Prussian Police >= SA + Stahlhelm, then the fascists retreat.
 
@@ -65,12 +65,12 @@ The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to cou
 
 
 @fight_2_win
-on-arrival: coup_progress = 0; sa_strength *= 0.6; sh_strength *= 0.6; workers_nsdap -= 12*(1-dissent); unemployed_nsdap -= 10*(1-dissent); new_middle_nsdap -= 6*(1-dissent); workers_spd += 8*(1-dissent); unemployed_spd += 6*(1-dissent); pro_republic += 15
+on-arrival: coup_progress = 0; sa_strength *= 0.6; sh_strength *= 0.6; workers_nsdap -= 12*(1-dissent); unemployed_nsdap -= 10*(1-dissent); new_middle_nsdap -= 6*(1-dissent); workers_psoe += 8*(1-dissent); unemployed_psoe += 6*(1-dissent); pro_republic += 15
 achievement: drei_pfeile
 
 Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
 
-The show of force has reinvigorated support for the republic and for the SPD, and has weakened the fascists.
+The show of force has reinvigorated support for the republic and for the PSOE, and has weakened the fascists.
 
 
 @fight_2_pre_civil_war

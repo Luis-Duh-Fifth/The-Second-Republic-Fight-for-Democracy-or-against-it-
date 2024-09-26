@@ -19,7 +19,7 @@ Magnus Hirschfeld is the founder of the Institut für Sexualwissenschaft and an 
 title: Homosexual rights
 subtitle: Enact policy that supports homosexual rights.
 choose-if: advisor_action_timer = 0 and psoe_in_government and progressive_coalition >= 50
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_in_government : The SPD is not currently in government. ?][? if progressive_coalition < 50 : We do not have the votes to enact these policies. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_in_government : The PSOE is not currently in government. ?][? if progressive_coalition < 50 : We do not have the votes to enact these policies. ?]
 on-arrival: advisor_action_timer = 6; homosexual_rights_timer -= 11
 go-to: homosexual_rights
 
@@ -28,7 +28,7 @@ go-to: homosexual_rights
 title: Women's rights
 subtitle: Enact policy with regards to women's rights.
 choose-if: advisor_action_timer = 0 and psoe_in_government
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_in_government : The SPD is not currently in government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_in_government : The PSOE is not currently in government. ?]
 on-arrival: advisor_action_timer = 6; womens_rights_timer -= 10
 go-to: womens_rights
 

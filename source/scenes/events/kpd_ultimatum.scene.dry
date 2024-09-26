@@ -59,7 +59,7 @@ At the start of this government, the KPD presented a list of goals for the coali
 [? if reichswehr_goal = 1 : - Reduce funding for the Reichswehr. - [? if reichswehr_goal_completed : success ?][? if not reichswehr_goal_completed: failed ?] ?]
 
 @goals_failed
-on-arrival: kpd_relation -= 10; workers_spd -= 8; unemployed_spd -= 8;
+on-arrival: kpd_relation -= 10; workers_psoe -= 8; unemployed_psoe -= 8;
 
 Unfortunately, we have failed to accomplish all of the goals the KPD set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the workers.
 
@@ -77,7 +77,7 @@ We argue that we have already achieved most of the coalition's goals, and in the
 
 
 @goals_success
-on-arrival: workers_spd += 8; unemployed_spd += 8; kpd_relation += 10; workers_kpd += 5; kpd_coalition_success += 1
+on-arrival: workers_psoe += 8; unemployed_psoe += 8; kpd_relation += 10; workers_kpd += 5; kpd_coalition_success += 1
 go-to: popular_front_achievement if in_popular_front; united_front_achievement if in_left_front
 
 Against all expectations, the KPD's goals have all been met! Apparently the Communists did not prepare for this eventuality, a worker's government successfully built through democratic means. They will continue to "tolerate" our government for the rest of our term, while still acting as a watchdog against bourgeois backsliding.

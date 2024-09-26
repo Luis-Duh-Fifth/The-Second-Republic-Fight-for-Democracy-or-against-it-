@@ -46,6 +46,6 @@ go-to: fiscal_policy
 title: Economic Democracy
 subtitle: Enact policies to build a more democratic economy.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if psoe_in_government = 0 : PSOE not in government: ?] [? if labor_minister_party != "PSOE" or (finance_minister_party != "PSOE" and economic_minister_party != "PSOE") : We do not have the necessary government ministers. ?]
-choose-if: advisor_action_timer == 0 and psoe_in_government == 1 and (economic_minister_party == "SPD" or finance_minister_party == "SPD") and (labor_minister_party == "SPD")
+choose-if: advisor_action_timer == 0 and psoe_in_government == 1 and (economic_minister_party == "PSOE" or finance_minister_party == "PSOE") and (labor_minister_party == "PSOE")
 on-arrival: advisor_action_timer = 6; economic_democracy_timer -= 10
 go-to: economic_democracy

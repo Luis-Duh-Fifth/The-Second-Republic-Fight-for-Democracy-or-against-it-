@@ -1,7 +1,7 @@
 title: Constitutional Reform
 new-page: true
 is-card: true
-view-if: psoe_in_government = 1 and justice_minister_party = "SPD" and constitutional_reform_timer = 0 and judicial_reform >= 4 and neorevisionism and ((in_weimar_coalition) or (in_psoe_majority) or (in_left_front) or (in_popular_front)) and constitutional_reform < 3
+view-if: psoe_in_government = 1 and justice_minister_party = "PSOE" and constitutional_reform_timer = 0 and judicial_reform >= 4 and neorevisionism and ((in_weimar_coalition) or (in_psoe_majority) or (in_left_front) or (in_popular_front)) and constitutional_reform < 3
 frequency: 25
 on-arrival: month_actions += 1; constitutional_reform_timer = 12; pass_threshold = 0.51; pass_threshold = 0.6 if pro_republic < 65;
 card-image: img/portraits/RadbruchGustav.jpg
@@ -51,7 +51,7 @@ Some political thinkers believe that the proliferation of minor parties is respo
 
 The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform, while their BVP partners oppose it. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if nsdap_normalized >= 0.2 : The NSDAP supports this reform, as they believe they have something to gain. ?]
 
-The SPD Left opposes this change, as they believe it to be anti-democratic.
+The PSOE Left opposes this change, as they believe it to be anti-democratic.
 
 - @vote_threshold_2: Call a constitutional referendum to pass the reform!
 - @reforms_menu: See other reform options.

@@ -17,7 +17,7 @@ Severing has been Interior Minister for both the German Republic and for the sta
 title: Prussian Bulwark
 subtitle: Severing has influence over Prussian politics.
 choose-if: advisor_action_timer <= 0 and psoe_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_prussia : The SPD is not in control of Prussia. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_prussia : The PSOE is not in control of Prussia. ?]
 on-arrival: advisor_action_timer = 6; prussian_affairs_timer -= 6
 go-to: prussian_affairs
 
@@ -25,8 +25,8 @@ go-to: prussian_affairs
 @police_affairs
 title: Police affairs 
 subtitle: We can set our police policy. 
-choose-if: advisor_action_timer == 0 and psoe_in_government and interior_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_in_government : The SPD is not in government. ?][? if interior_minister_party != "SPD": The SPD does not have the Interior ministry. ?]
+choose-if: advisor_action_timer == 0 and psoe_in_government and interior_minister_party == "PSOE"
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_in_government : The PSOE is not in government. ?][? if interior_minister_party != "PSOE": The PSOE does not have the Interior ministry. ?]
 on-arrival: advisor_action_timer = 6; police_timer -= 6
 go-to: police
 

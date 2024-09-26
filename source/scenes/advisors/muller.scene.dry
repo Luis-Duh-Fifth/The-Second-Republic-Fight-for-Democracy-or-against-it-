@@ -19,7 +19,7 @@ Müller is a former [? if chancellor = "Müller": and current ?] Chancellor, and
 title: Negotiating with the Coalition
 subtitle: Müller can improve our relationships with our coalition partners.
 choose-if: advisor_action_timer <= 0 and psoe_in_government = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_in_government: The SPD is not in government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_in_government: The PSOE is not in government. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if psoe_in_government = 1; z_relation += 5; ddp_relation += 5; dvp_relation += 5
 
 We have improved our relations with the Z, DDP, and DVP, and reduced tensions with the coalition.
@@ -28,7 +28,7 @@ We have improved our relations with the Z, DDP, and DVP, and reduced tensions wi
 @toleration
 title: Defending Toleration
 subtitle: Müller supports the toleration arrangement with the bourgeois parties.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_toleration: The SPD is not in toleration. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_toleration: The PSOE is not in toleration. ?]
 choose-if: psoe_in_government = 0 and psoe_toleration = 1 and advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
 

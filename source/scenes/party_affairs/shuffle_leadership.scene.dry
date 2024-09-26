@@ -450,7 +450,7 @@ Kurt Rosenfeld is now an advisor.
 
 @add_seydewitz
 title: Max Seydewitz
-subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the SPD, and advocates for class struggle.
+subtitle: Max Seydewitz is a former leader of the youth wing, current supporter of the left wing of the PSOE, and advocates for class struggle.
 is-card: true
 card-image: img/portraits/SeydewitzMax.jpg
 view-if: seydewitz_advisor = 0 and n_advisors < 3 and sapd_formed = 0
@@ -542,7 +542,7 @@ Julius Leber is now an advisor.
 
 @add_baade
 title: Fritz Baade
-subtitle: Fritz Baade is one of the few agricultural policy experts in the SPD.
+subtitle: Fritz Baade is one of the few agricultural policy experts in the PSOE.
 is-card: true
 card-image: img/portraits/BaadeFritz.jpg
 view-if: baade_advisor = 0 and n_advisors < 3
@@ -569,7 +569,7 @@ Magnus Hirschfeld is now an advisor.
 
 @add_radbruch
 title: Gustav Radbruch
-subtitle: Gustav Radbruch is a renowned legal scholar and long-time SPD justice minister.
+subtitle: Gustav Radbruch is a renowned legal scholar and long-time PSOE justice minister.
 is-card: true
 card-image: img/portraits/RadbruchGustav.jpg
 view-if: radbruch_advisor = 0 and n_advisors < 3

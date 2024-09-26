@@ -242,20 +242,20 @@ Unemployment is still at dangerously high levels. Even though Hitler is not in p
 
 
 @emergency_government
-title: SPD ruling in an emergency government.
+title: PSOE ruling in an emergency government.
 view-if: in_emergency_government == 1
 tags: endings
 go-to: eg_menu
 
-The SPD is ruling as part of an emergency minority government, led by President [+ president +] and Chancellor [+ chancellor +]. This is a temporary and unstable arrangement, leaving the door open to further authoritarianism.
+The PSOE is ruling as part of an emergency minority government, led by President [+ president +] and Chancellor [+ chancellor +]. This is a temporary and unstable arrangement, leaving the door open to further authoritarianism.
 
 @peoples_party_achieved
-title: The SPD is a "People's Party".
+title: The PSOE is a "People's Party".
 view-if: peoples_party == 1
 tags: endings
 go-to: eg_menu
 
-The SPD has been declared a "People's Party", representing all of the people, not just the working class. This policy has many supporters and detractors, and what will become of the party is still unclear.
+The PSOE has been declared a "People's Party", representing all of the people, not just the working class. This policy has many supporters and detractors, and what will become of the party is still unclear.
 
 @nationalization_achieved
 title: Socialization of the economy has commenced.
@@ -308,11 +308,11 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
-[? if game_achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the SPD and KPD. ?]
+[? if game_achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and KPD. ?]
 
 [? if game_achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
 
-[? if game_achievement_volksfront: **Volksfront** - Form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if game_achievement_volksfront: **Volksfront** - Form a government consisting of the PSOE, KPD, Z, and DDP. ?]
 
 [? if game_achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
 
@@ -320,11 +320,11 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
 
-[? if game_achievement_majority_party: **Mehrheitspartei** - form an SPD-only majority government. ?]
+[? if game_achievement_majority_party: **Mehrheitspartei** - form an PSOE-only majority government. ?]
 
-[? if game_achievement_minderheitsregierung: **Minderheitsregierung** - form an SPD minority government. ?]
+[? if game_achievement_minderheitsregierung: **Minderheitsregierung** - form an PSOE minority government. ?]
 
-[? if game_achievement_volkspartei: **Volkspartei** - the SPD is a People's Party. ?]
+[? if game_achievement_volkspartei: **Volkspartei** - the PSOE is a People's Party. ?]
 
 [? if game_achievement_sohn_seiner_klasse: **Sohn seiner Klasse** - Ernst Thälmann is either president or chancellor. ?]
 
@@ -348,11 +348,11 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_die_rote_fahne: **Die Rote Fahne** - join the KPD in their May Day march. ?]
 
-[? if game_achievement_panik_im_mittelstand: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
+[? if game_achievement_panik_im_mittelstand: **Panik im Mittelstand** - PSOE new middle class support is at least 50%. ?]
 
-[? if game_achievement_bauernrevolution: **Bauernrevolution** - SPD rural support is at least 50%. ?]
+[? if game_achievement_bauernrevolution: **Bauernrevolution** - PSOE rural support is at least 50%. ?]
 
-[? if game_achievement_katholischer_sozialismus: **Katholischer Sozialismus** - SPD Catholic support is at least 50%. ?]
+[? if game_achievement_katholischer_sozialismus: **Katholischer Sozialismus** - PSOE Catholic support is at least 50%. ?]
 
 [? if game_achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
 
@@ -366,7 +366,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_eu: **Vereinigte Staaten von Europa** - form a "European Union". ?]
 
-[? if game_achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the SPD's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
+[? if game_achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the PSOE's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
 
 [? if game_achievement_verfassungsreform: **Verfassungsreform** - pass a constitutional amendment. ?]
 
@@ -395,11 +395,11 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
-[? if achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the SPD and KPD. ?]
+[? if achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and KPD. ?]
 
 [? if achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
 
-[? if achievement_volksfront: **Volksfront** - Form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if achievement_volksfront: **Volksfront** - Form a government consisting of the PSOE, KPD, Z, and DDP. ?]
 
 [? if achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
 
@@ -407,11 +407,11 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
 
-[? if achievement_majority_party: **Mehrheitspartei** - form an SPD-only majority government. ?]
+[? if achievement_majority_party: **Mehrheitspartei** - form an PSOE-only majority government. ?]
 
-[? if achievement_minderheitsregierung: **Minderheitsregierung** - form an SPD minority government. ?]
+[? if achievement_minderheitsregierung: **Minderheitsregierung** - form an PSOE minority government. ?]
 
-[? if achievement_volkspartei: **Volkspartei** - the SPD is a People's Party. ?]
+[? if achievement_volkspartei: **Volkspartei** - the PSOE is a People's Party. ?]
 
 [? if achievement_sohn_seiner_klasse: **Sohn seiner Klasse** - Ernst Thälmann is either president or chancellor. ?]
 
@@ -435,11 +435,11 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_die_rote_fahne: **Die Rote Fahne** - join the KPD in their May Day march. ?]
 
-[? if achievement_panik_im_mittelstand: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
+[? if achievement_panik_im_mittelstand: **Panik im Mittelstand** - PSOE new middle class support is at least 50%. ?]
 
-[? if achievement_bauernrevolution: **Bauernrevolution** - SPD rural support is at least 50%. ?]
+[? if achievement_bauernrevolution: **Bauernrevolution** - PSOE rural support is at least 50%. ?]
 
-[? if achievement_katholischer_sozialismus: **Katholischer Sozialismus** - SPD Catholic support is at least 50%. ?]
+[? if achievement_katholischer_sozialismus: **Katholischer Sozialismus** - PSOE Catholic support is at least 50%. ?]
 
 [? if achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
 
@@ -453,7 +453,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_eu: **Vereinigte Staaten von Europa** - form a "European Union". ?]
 
-[? if achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the SPD's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
+[? if achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the PSOE's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
 
 [? if achievement_verfassungsreform: **Verfassungsreform** - pass a constitutional amendment. ?]
 
@@ -480,11 +480,11 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
-[? if not achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the SPD and KPD. ?]
+[? if not achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and KPD. ?]
 
 [? if not achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
 
-[? if not achievement_volksfront: **Volksfront** - Form a government consisting of the SPD, KPD, Z, and DDP. ?]
+[? if not achievement_volksfront: **Volksfront** - Form a government consisting of the PSOE, KPD, Z, and DDP. ?]
 
 [? if not achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
 
@@ -492,11 +492,11 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_weimar_coalition: **Weimarer Koalition** - form a Weimar coalition. ?]
 
-[? if not achievement_majority_party: **Mehrheitspartei** - form an SPD-only majority government. ?]
+[? if not achievement_majority_party: **Mehrheitspartei** - form an PSOE-only majority government. ?]
 
-[? if not achievement_minderheitsregierung: **Minderheitsregierung** - form an SPD minority government. ?]
+[? if not achievement_minderheitsregierung: **Minderheitsregierung** - form an PSOE minority government. ?]
 
-[? if not achievement_volkspartei: **Volkspartei** - the SPD is a People's Party. ?]
+[? if not achievement_volkspartei: **Volkspartei** - the PSOE is a People's Party. ?]
 
 [? if not achievement_sohn_seiner_klasse: **Sohn seiner Klasse** - Ernst Thälmann is either president or chancellor. ?]
 
@@ -520,11 +520,11 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_die_rote_fahne: **Die Rote Fahne** - join the KPD in their May Day march. ?]
 
-[? if not achievement_panik_im_mittelstand: **Panik im Mittelstand** - SPD new middle class support is at least 50%. ?]
+[? if not achievement_panik_im_mittelstand: **Panik im Mittelstand** - PSOE new middle class support is at least 50%. ?]
 
-[? if not achievement_bauernrevolution: **Bauernrevolution** - SPD rural support is at least 50%. ?]
+[? if not achievement_bauernrevolution: **Bauernrevolution** - PSOE rural support is at least 50%. ?]
 
-[? if not achievement_katholischer_sozialismus: **Katholischer Sozialismus** - SPD Catholic support is at least 50%. ?]
+[? if not achievement_katholischer_sozialismus: **Katholischer Sozialismus** - PSOE Catholic support is at least 50%. ?]
 
 [? if not achievement_raterepublik: **Räterepublik** - begin the transformation to a socialist economy. ?]
 
@@ -538,7 +538,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_eu: **Vereinigte Staaten von Europa** - form a "European Union". ?]
 
-[? if not achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the SPD's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
+[? if not achievement_heidelberger_programm: **Heidelberger Programm** - achieve the goals of the PSOE's Heidelberg Program: social welfare, judicial reform, women's rights in the workplace and family, progressive taxation, works councils, and the formation of a European Union. ?]
 
 [? if not achievement_verfassungsreform: **Verfassungsreform** - pass a constitutional amendment. ?]
 

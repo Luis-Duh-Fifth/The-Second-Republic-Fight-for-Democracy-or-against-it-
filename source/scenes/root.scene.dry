@@ -65,17 +65,17 @@ Q.reformists_resigned = 0;
 // have we discovered neorevisionism?
 Q.neorevisionism = 0;
 
-// crisis_urgency indicates how seriously the SPD is taking the economic crisis - scale from 0 to 10.
+// crisis_urgency indicates how seriously the PSOE is taking the economic crisis - scale from 0 to 10.
 Q.crisis_urgency = 0;
-// nazi_urgency indicates how seriously the SPD takes the nazis - scale from 0 to 10.
+// nazi_urgency indicates how seriously the PSOE takes the nazis - scale from 0 to 10.
 Q.nazi_urgency = 0;
-// radicalization indicates how radical the SPD's rhetoric is - scale from 0 to 10.
+// radicalization indicates how radical the PSOE's rhetoric is - scale from 0 to 10.
 Q.radicalization = 0;
 // Support for the WTB plan and proto-Keynesian works creation plans in general
 Q.wtb_support = 0;
-// Support for Pacifism within the SPD relative to 1931
+// Support for Pacifism within the PSOE relative to 1931
 Q.pacifism = 0;
-// Support for democratic reform within the SPD relative to 1931
+// Support for democratic reform within the PSOE relative to 1931
 Q.democratization = 0;
 // Support for a communist coalition relative to 1931
 Q.communist_coalition = 0;
@@ -110,7 +110,7 @@ Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
 Q.kpd_party_leader = "Thälmann";
 Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1931 December conference. Joos will be most friendly to the SPD.
+// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1931 December conference. Joos will be most friendly to the PSOE.
 Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
 
@@ -118,9 +118,9 @@ Q.nsdap_leader = "Hitler";
 Q.hindenburg_relation = 25;
 
 
-// Does the SPD lead in Prussia?
+// Does the PSOE lead in Prussia?
 Q.psoe_prussia = 1;
-// Options: spd, z, dnvp, papen, nsdap
+// Options: psoe, z, dnvp, papen, nsdap
 Q.prussian_government = "PSOE";
 
 // The array of forces - paramilitary groups

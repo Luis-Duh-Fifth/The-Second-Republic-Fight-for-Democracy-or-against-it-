@@ -37,18 +37,18 @@ The Nazis are one of the foremost threats to the German republic. However, we ar
 
 @iron_front
 title: Form the Iron Front!
-subtitle: The Iron Front consists of the SPD, the trade unions, and the Reichsbanner.
+subtitle: The Iron Front consists of the PSOE, the trade unions, and the Reichsbanner.
 view-if: nazi_urgency >= 3 and iron_front_formed == 0
-on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
+on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_psoe += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
 achievement: eiserne_front
 
-The Nazi threat can no longer be ignored. We must build a new organization to confront them - the Iron Front - consisting of the SPD, the ADGB trade union federation, and the *Reichsbanner Schwarz-Rot-Gold*. We have a new symbol - the Three Arrows, pointing down towards the left.
+The Nazi threat can no longer be ignored. We must build a new organization to confront them - the Iron Front - consisting of the PSOE, the ADGB trade union federation, and the *Reichsbanner Schwarz-Rot-Gold*. We have a new symbol - the Three Arrows, pointing down towards the left.
 
 What do the three arrows stand for?
 
 - @unity: Unity, Activity, and Discipline.
 - @anti: Opposition to Fascism, Stalinism, and Monarchism.
-- @orgs: The SPD, ADGB, and Reichsbanner.
+- @orgs: The PSOE, ADGB, and Reichsbanner.
 - @wtb: Woytinsky, Tarnow, and Baade of the WTB-Plan
 - @all: All of the above.
 

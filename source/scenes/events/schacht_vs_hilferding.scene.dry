@@ -1,13 +1,13 @@
 title: Hjalmar Schacht against Hilferding
 new-page: true
-view-if: year = 1929 and month >= 11 and psoe_in_government = 1 and finance_minister = "Hilferding" and finance_minister_party = "SPD"
+view-if: year = 1929 and month >= 11 and psoe_in_government = 1 and finance_minister = "Hilferding" and finance_minister_party = "PSOE"
 tags: event
 max-visits: 1
 card-image: img/portraits/SchachtHjalmar.jpg
 
 = Schacht against Hilferding
 
-Reichsbank president Hjalmar Schacht has criticized Finance Minister Hilferding of the SPD for his budget, which he claims is unbalanced and contains too much social welfare and not enough tax cuts for top earners and businesses. More importantly, he is refusing to release loans necessary for the functioning of the government unless Hilferding either massively changes his budget or resigns.
+Reichsbank president Hjalmar Schacht has criticized Finance Minister Hilferding of the PSOE for his budget, which he claims is unbalanced and contains too much social welfare and not enough tax cuts for top earners and businesses. More importantly, he is refusing to release loans necessary for the functioning of the government unless Hilferding either massively changes his budget or resigns.
 
 Of course, this criticism is unfounded, but the bourgeois establishment does not care.
 

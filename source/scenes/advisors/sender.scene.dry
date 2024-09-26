@@ -29,7 +29,7 @@ title: Organizing women
 subtitle: Sender's strategies are aimed at young working women.
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: womens_rights += 1; workers_spd += 3*(1-dissent); new_middle_spd += 5*(1-dissent); advisor_action_timer = 6
+on-arrival: womens_rights += 1; workers_psoe += 3*(1-dissent); new_middle_psoe += 5*(1-dissent); advisor_action_timer = 6
 
 Sender's message is popular among young women working in the service sector, and we have recruited many white-collar employees.
 
@@ -39,9 +39,9 @@ Sender's message is popular among young women working in the service sector, and
 title: Against toleration
 view-if: not constructive_vonc
 subtitle: Break our current toleration arrangement, and bring down the government via a no-confidence vote.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if psoe_toleration == 0 : The SPD is not currently in toleration. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if psoe_toleration == 0 : The PSOE is not currently in toleration. ?]
 choose-if: advisor_action_timer == 0 and psoe_toleration
-on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; psoe_toleration = 0; left_strength += 8; pro_republic -= 4; new_middle_spd -= 3; rural_spd -= 3; landholders_spd -= 3; catholics_spd -= 3; reformist_dissent += 8
+on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; psoe_toleration = 0; left_strength += 8; pro_republic -= 4; new_middle_psoe -= 3; rural_psoe -= 3; landholders_psoe -= 3; catholics_psoe -= 3; reformist_dissent += 8
 
 We have grown tired of the burdens of toleration, and have called a vote of no confidence in the current minority government.
 

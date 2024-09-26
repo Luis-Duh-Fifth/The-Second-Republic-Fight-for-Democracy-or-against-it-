@@ -21,7 +21,7 @@ title: Organizing workers
 subtitle: Improve our standing among the workers.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; workers_spd += 4*(1-dissent); workers_spd += 3*(1-dissent) if wtb_adopted == 1; labor_strength += 2;
+on-arrival: advisor_action_timer = 6; workers_psoe += 4*(1-dissent); workers_psoe += 3*(1-dissent) if wtb_adopted == 1; labor_strength += 2;
 
 We have increased our organizing among the workers.
 

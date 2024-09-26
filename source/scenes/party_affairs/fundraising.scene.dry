@@ -30,7 +30,7 @@ Our current members appreciate this, but no one decides to join a party because 
 
 @increase
 subtitle: [+ dues + 1 +] resources gained. [? if unemployed >= 15 : Given the present economic situation, this may be painful. ?][? if dues >= 4 : Dues are already rather high; increasing them might reduce our membership. ?]
-on-arrival: dues += 1; resources += dues; workers_spd -= 3; unemployed_spd -= 3; workers_spd -= 10 if unemployed >= 15; unemployed_spd -= 10 if unemployed >= 15; workers_spd -= 3*dues if dues >= 5; unemployed_spd -= 3*dues if dues >= 5
+on-arrival: dues += 1; resources += dues; workers_psoe -= 3; unemployed_psoe -= 3; workers_psoe -= 10 if unemployed >= 15; unemployed_psoe -= 10 if unemployed >= 15; workers_psoe -= 3*dues if dues >= 5; unemployed_psoe -= 3*dues if dues >= 5
 view-if: dues <= 4
 
 Our members grumble at this, and some of the less committed members leave. But now, we have access to additional resources. 

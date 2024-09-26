@@ -11,7 +11,7 @@ new-page: true
 
 Wilhelm Marx, former Center Party chancellor and presidential candidate, has chosen to resign from leadership of the Center Party. Now, the party holds a conference to replace him.
 
-The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the SPD than most of the Center Party.
+The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the PSOE than most of the Center Party.
 
 - @kaas: The Center Party elects Ludwig Kaas as the party chair.
 - @joos: Influence the Center Party to select Joseph Joos as the party chair.
@@ -25,6 +25,6 @@ Ludwig Kaas has been selected as the chairman of the Center Party. He seems to r
 unavailable-subtitle: Our relations are not good enough.
 subtitle: Joos is likely to be friendlier to us than Kaas.
 choose-if: z_relation >= 70
-on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
+on-arrival: z_party_leader = "Joos"; catholics_psoe += 5; workers_z += 3
 
-With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas.
+With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the PSOE, and will be more inclined to collaborate with us compared to Kaas.

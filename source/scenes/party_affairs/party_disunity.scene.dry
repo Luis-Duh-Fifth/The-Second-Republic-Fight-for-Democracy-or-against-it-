@@ -3,7 +3,7 @@ new-page: true
 is-card: true
 view-if: party_disunity_timer = 0 and (dissent >= 0.3 or (reformist_dissent > 30 and not reformists_resign) or (center_dissent > 30 and not centrists_resign) or (left_dissent > 30 and not sapd_formed) or (labor_dissent > 30 and not unions_independent) or (neorevisionist_dissent > 30 and neorevisionism))
 on-arrival: month_actions += 1; party_disunity_timer = 4
-card-image: img/Reichstagsfraktion_der_SPD.jpg
+card-image: img/Reichstagsfraktion_der_psoe.jpg
 frequency: 200
 tags: party_affairs
 
@@ -32,7 +32,7 @@ Something must be done to reinforce party unity.
 
 @enforce_unity
 title: Enforce party discipline.
-on-arrival: reformist_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; left_dissent -= 5; neorevisionist_dissent -= 5; workers_spd -= 4; new_middle_spd -= 2; unemployed_spd -= 2
+on-arrival: reformist_dissent -= 5; center_dissent -= 5; labor_dissent -= 5; left_dissent -= 5; neorevisionist_dissent -= 5; workers_psoe -= 4; new_middle_psoe -= 2; unemployed_psoe -= 2
 
 Enforcing party discipline reduces dissent, but it could lead to an exit of dissenting members.
 
