@@ -146,7 +146,7 @@ The KPD now endorses Braun in the presidential election! We ask them to keep the
 max-visits: 1
 go-to: convince_liberals_success if dvp_relation >= 50; convince_liberals_fail if dvp_relation < 50
 
-The liberal vote (DDP and DVP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the DDP is already willing to support Braun.
+The liberal vote (IR and DVP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the IR is already willing to support Braun.
 
 @convince_liberals_success
 on-arrival: dvp_support_braun = 1
@@ -182,7 +182,7 @@ Q.hindenburg_votes += Q.dnvp_votes;
 
 if (Q.braun_campaign) {
     Q.braun_votes += Q.psoe_votes;
-    Q.braun_votes += Q.ddp_votes;
+    Q.braun_votes += Q.izqd_rep_votes;
     if (Q.z_support_braun && Q.z_support_braun == 1) {
         Q.braun_votes += Q.z_votes;
     } else {
@@ -202,12 +202,12 @@ if (Q.braun_campaign) {
     Q.thalmann_votes += Q.kpd_votes;
     Q.thalmann_votes += Q.psoe_votes;
     Q.hindenburg_votes += Q.z_votes;
-    Q.hindenburg_votes += Q.ddp_votes;
+    Q.hindenburg_votes += Q.izqd_rep_votes;
     Q.hindenburg_votes += Q.dvp_votes;
 } else {
     Q.hindenburg_votes += Q.psoe_votes;
     Q.hindenburg_votes += Q.z_votes;
-    Q.hindenburg_votes += Q.ddp_votes;
+    Q.hindenburg_votes += Q.izqd_rep_votes;
     Q.hindenburg_votes += Q.dvp_votes;
     Q.thalmann_votes += Q.kpd_votes;
 }

@@ -20,7 +20,7 @@ Minor changes:
 - New advisor actions: End toleration (for some left advisors)
 - Added descriptions of the internal party factions.
 - Some more tax options.
-- Abortion rights and homosexual rights can be passed with a "progressive coalition" of the PSOE, KPD, and DDP.
+- Abortion rights and homosexual rights can be passed with a "progressive coalition" of the PSOE, KPD, and IR.
 - Can only use the Shuffle Cabinet and Women's Rights cards if the chancellor is PSOE.
 - Low relations with the DVP results in less leverage in a grand coalition.
 - Papen being appointed as chancellor reduces judicial reform.
