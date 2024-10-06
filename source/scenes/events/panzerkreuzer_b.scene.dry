@@ -24,13 +24,13 @@ Our grassroots party members are highly critical of our decision. Many party bra
 The vote in favor of the battlecruiser easily passes, with opposition only from the KPD. The ship will be built.
 
 @vote_no
-on-arrival: dvp_relation -= 8; z_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; workers_psoe += 4*(1-dissent) if nationalism < 49;
+on-arrival: prp_relation -= 8; z_relation -= 5; pacifism += 1; nationalism -= 5*(1-dissent); coalition_dissent += 1; workers_psoe += 4*(1-dissent) if nationalism < 49;
 go-to: built if psoe_r + kpd_r + izqd_rep_r < 50; not_built if psoe_r + kpd_r + izqd_rep_r >= 50
 
 Our vote against the battlecruiser is unpopular among the right-wing parties[? if in_grand_coalition or in_weimar_coalition: , including our coalition partners ?][? if psoe_toleration: , including the minority government that we are currently supporting ?].
 
 @abstain
-on-arrival: dvp_relation -= 5; z_relation -= 3; left_dissent += 5; labor_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpd_relation -= 3
+on-arrival: prp_relation -= 5; z_relation -= 3; left_dissent += 5; labor_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; kpd_relation -= 3
 
 The center-right parties are critical of our decision to abstain, and the pressure from our left flank is not entirely assuaged. Despite our abstention, the vote in the Reichstag passes, with all parties in favor except the PSOE and KPD. The ship will be built.
 

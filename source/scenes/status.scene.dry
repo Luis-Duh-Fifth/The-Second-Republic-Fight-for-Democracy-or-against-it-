@@ -39,7 +39,7 @@ KPD: [+ kpd_r +]%
 # 1928: 5, 1930: 4 (as DstP)
 IR: [+ izqd_rep_r +]%
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
+PRP: [+ prp_r +]%
 # 1928: 14, 1930: 7
 DNVP: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
@@ -67,7 +67,7 @@ Z: [+ z_relation : relationships +]
 
 IR: [+ izqd_rep_relation : relationships +]
 
-DVP: [+ dvp_relation : relationships +]
+PRP: [+ prp_relation : relationships +]
 
 KPD: [+ kpd_relation : relationships +]
 
@@ -132,7 +132,7 @@ KPD: [+ kpd_votes +]%
 
 IR: [+ izqd_rep_votes +]%
 
-DVP: [+ dvp_votes +]%
+PRP: [+ prp_votes +]%
 
 DNVP: [+ dnvp_votes +]%
 
@@ -142,16 +142,16 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PSOE: [+ workers_psoe_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, DVP: [+ workers_dvp_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: PSOE: [+ workers_psoe_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]%
 
-Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, DVP: [+ new_middle_dvp_normalized +]%; DNVP: [+ new_middle_dnvp_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
+Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; DNVP: [+ new_middle_dnvp_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, Z: [+ landholders_z_normalized +]%, KPD: [+ landholders_kpd_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, DVP: [+ landholders_dvp_normalized +]%; DNVP: [+ landholders_dnvp_normalized +]%, NSDAP: [+ landholders_nsdap_normalized +]%, Others: [+ landholders_other_normalized +]%
+Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, Z: [+ landholders_z_normalized +]%, KPD: [+ landholders_kpd_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; DNVP: [+ landholders_dnvp_normalized +]%, NSDAP: [+ landholders_nsdap_normalized +]%, Others: [+ landholders_other_normalized +]%
 
-Unlanded Peasents: PSOE: [+ rural_psoe_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, DVP: [+ rural_dvp_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]%
+Unlanded Peasents: PSOE: [+ rural_psoe_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, DVP: [+ unemployed_dvp_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_nsdap_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_nsdap_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: PSOE: [+ catholics_psoe_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, DVP: [+ catholics_dvp_normalized +]%; DNVP: [+ catholics_dnvp_normalized +]%, NSDAP: [+ catholics_nsdap_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: PSOE: [+ catholics_psoe_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; DNVP: [+ catholics_dnvp_normalized +]%, NSDAP: [+ catholics_nsdap_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 Support for the Republic: [+ pro_republic +]%

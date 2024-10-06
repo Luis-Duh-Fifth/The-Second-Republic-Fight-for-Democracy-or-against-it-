@@ -85,7 +85,7 @@ KPD: [+ kpd_votes +]%
 IR: [+ izqd_rep_votes +]%
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_votes +]%
+PRP: [+ prp_votes +]%
 
 # 1928: 14, 1930: 7
 DNVP: [+ dnvp_votes +]%
@@ -98,17 +98,17 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PSOE: [+ workers_psoe_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, DVP: [+ workers_dvp_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: PSOE: [+ workers_psoe_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]%
 
-Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, DVP: [+ new_middle_dvp_normalized +]%; DNVP: [+ new_middle_dnvp_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
+Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; DNVP: [+ new_middle_dnvp_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, Z: [+ landholders_z_normalized +]%, KPD: [+ landholders_kpd_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, DVP: [+ landholders_dvp_normalized +]%; DNVP: [+ landholders_dnvp_normalized +]%, NSDAP: [+ landholders_nsdap_normalized +]%, Others: [+ landholders_other_normalized +]%
+Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, Z: [+ landholders_z_normalized +]%, KPD: [+ landholders_kpd_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; DNVP: [+ landholders_dnvp_normalized +]%, NSDAP: [+ landholders_nsdap_normalized +]%, Others: [+ landholders_other_normalized +]%
 
-Rural: PSOE: [+ rural_psoe_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, DVP: [+ rural_dvp_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: PSOE: [+ rural_psoe_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, DVP: [+ unemployed_dvp_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_nsdap_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_nsdap_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: PSOE: [+ catholics_psoe_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, DVP: [+ catholics_dvp_normalized +]%; DNVP: [+ catholics_dnvp_normalized +]%, NSDAP: [+ catholics_nsdap_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: PSOE: [+ catholics_psoe_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; DNVP: [+ catholics_dnvp_normalized +]%, NSDAP: [+ catholics_nsdap_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 @parties
 go-to: menu
@@ -124,9 +124,9 @@ Current relations: [+ z_relation : relationships +]
 
 Current relations: [+ izqd_rep_relation : relationships +]
 
-**DVP** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
+**PRP** - *Partido Republicano Progresista* (Republican Progressive Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
 
-Current relations: [+ dvp_relation : relationships +]
+Current relations: [+ prp_relation : relationships +]
 
 **DNVP** - *Deutschnationale Volkspartei* (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
 
@@ -140,7 +140,7 @@ Current relations: [+ kpd_relation : relationships +]
 
 Current relations: [+ nsdap_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and DNVP. 
+**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRP and DNVP. 
 
 @paramilitaries
 on-arrival: {!
@@ -276,10 +276,10 @@ data = [
         "seats": 3*5,
     },
     {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Q.dvp_r*5,
+        "id": "prp",
+        "legend": "PRP",
+        "name": "PRP",
+        "seats": Q.prp_r*5,
     },
     {
         "id": "other",
@@ -356,7 +356,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} BVP: {!</td><td>!} 3% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} PRP: {!</td><td>!} [+ prp_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
 

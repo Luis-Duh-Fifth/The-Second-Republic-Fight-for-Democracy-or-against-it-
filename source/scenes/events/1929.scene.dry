@@ -10,7 +10,7 @@ if (Q.old_demographics) {
 Q.new_middle_nsdap += 10;
 Q.landholders_nsdap += 10;
 Q.new_middle_izqd_rep -= 5;
-Q.new_middle_dvp -= 5;
+Q.new_middle_prp -= 5;
 Q.workers_kpd += 5;
 Q.sa_strength += 50;
 Q.sh_strength += 100;

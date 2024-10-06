@@ -101,7 +101,7 @@ Q.moderate_plan_adopted = 0;
 Q.z_relation = 50;
 Q.kpd_relation = 25;
 Q.izqd_rep_relation = 60;
-Q.dvp_relation = 35;
+Q.prp_relation = 35;
 // DNVP and NSDAP are invariably hostile
 Q.DNVP_relation = 10;
 Q.NSDAP_relation = 0;
@@ -217,7 +217,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['psoe', 'kpd', 'z', 'izqd_rep', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['psoe', 'kpd', 'z', 'izqd_rep', 'prp', 'dnvp', 'nsdap', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
@@ -228,7 +228,7 @@ Q.workers_psoe = 60;
 Q.workers_kpd = 20;
 Q.workers_z = 5;
 Q.workers_izqd_rep = 0;
-Q.workers_dvp = 0;
+Q.workers_prp = 0;
 Q.workers_dnvp = 5;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
@@ -237,7 +237,7 @@ Q.old_middle_psoe = 5;
 Q.old_middle_kpd = 0;
 Q.old_middle_z = 5;
 Q.old_middle_izqd_rep= 10;
-Q.old_middle_dvp = 25;
+Q.old_middle_prp = 25;
 Q.old_middle_dnvp = 25;
 Q.old_middle_nsdap = 10;
 Q.old_middle_other = 10;
@@ -246,7 +246,7 @@ Q.new_middle_psoe = 5;
 Q.new_middle_kpd = 1;
 Q.new_middle_z = 10;
 Q.new_middle_izqd_rep= 25;
-Q.new_middle_dvp = 25;
+Q.new_middle_prp = 25;
 Q.new_middle_dnvp = 10;
 Q.new_middle_nsdap = 5;
 Q.new_middle_other = 15;
@@ -255,7 +255,7 @@ Q.rural_psoe = 10;
 Q.rural_kpd = 0;
 Q.rural_z = 5;
 Q.rural_izqd_rep= 5;
-Q.rural_dvp = 15;
+Q.rural_prp = 15;
 Q.rural_dnvp = 45;
 Q.rural_nsdap = 5;
 Q.rural_other = 10;
@@ -264,7 +264,7 @@ Q.unemployed_psoe = 25;
 Q.unemployed_kpd = 55;
 Q.unemployed_z = 1;
 Q.unemployed_izqd_rep = 0;
-Q.unemployed_dvp = 0;
+Q.unemployed_prp = 0;
 Q.unemployed_dnvp = 5;
 Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
@@ -273,7 +273,7 @@ Q.catholics_psoe = 15;
 Q.catholics_kpd = 2;
 Q.catholics_z = 50;
 Q.catholics_izqd_rep = 0;
-Q.catholics_dvp = 5;
+Q.catholics_prp = 5;
 Q.catholics_dnvp = 5;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 12;
@@ -289,7 +289,7 @@ Q.psoe_r = 26;
 Q.kpd_r = 9;
 Q.z_r = 17;
 Q.izqd_rep_r = 6;
-Q.dvp_r = 10;
+Q.prp_r = 10;
 Q.dnvp_r = 20;
 Q.nsdap_r = 3;
 Q.other_r = 9;
@@ -299,7 +299,7 @@ Q.old_psoe_r = 26;
 Q.old_kpd_r = 9;
 Q.old_z_r = 17;
 Q.old_izqd_rep_r = 6;
-Q.old_dvp_r = 10;
+Q.old_prp_r = 10;
 Q.old_dnvp_r = 20;
 Q.old_nsdap_r = 3;
 Q.old_other_r = 9;
@@ -327,7 +327,7 @@ Q.chancellor_party = 'Z';
 Q.psoe_in_government = 0;
 Q.z_in_government = 1;
 Q.izqd_rep_in_government = 0;
-Q.dvp_in_government = 1;
+Q.prp_in_government = 1;
 Q.dnvp_in_government = 1;
 Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
@@ -335,8 +335,8 @@ Q.nsdap_in_government = 0;
 Q.in_right_coalition = 0;
 // Weimar coalition = PSOE + Z + IR
 Q.in_weimar_coalition = 0;
-// Grand coalition = PSOE + Z + BVP + IR + DVP
-// also includes the "new grand coalition" of PSOE + Z + BVP + IR + DVP + Others
+// Grand coalition = PSOE + Z + BVP + IR + PRP
+// also includes the "new grand coalition" of PSOE + Z + BVP + IR + PRP + Others
 Q.in_grand_coalition = 0;
 // Popular front = PSOE + KPD + Z + IR
 Q.in_popular_front = 0;
@@ -365,7 +365,7 @@ Q.minority_government = 0;
 // starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
 // is the agricultural ministry useful at all?
 Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'DVP';
+Q.foreign_minister_party = 'PRP';
 Q.interior_minister = 'von Keudell';
 Q.interior_minister_party = 'DNVP';
 Q.justice_minister = 'Hergt';
@@ -375,7 +375,7 @@ Q.labor_minister_party = 'Z';
 Q.reichswehr_minister = 'Groener';
 Q.reichswehr_minister_party = 'I';
 Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'DVP';
+Q.economic_minister_party = 'PRP';
 Q.finance_minister = 'Köhler';
 Q.finance_minister_party = 'Z';
 Q.agriculture_minister = 'Schiele';
@@ -569,11 +569,11 @@ For more information on the politics and government of the German Republic, see 
 - @1931_historical: Begin (historical mode)
 
 @1931_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; prp_relation = 49;
 go-to: 1931_main
 
 @1931_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; prp_relation = 31;
 go-to: 1931_main
 
 @1931_historical
@@ -590,7 +590,7 @@ Q.labor_dissent = 25;
 Q.center_dissent = 25;
 Q.z_relation = 41;
 Q.kpd_relation = 16;
-Q.dvp_relation = 31;
+Q.prp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}

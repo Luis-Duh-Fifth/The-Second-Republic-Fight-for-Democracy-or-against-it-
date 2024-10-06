@@ -2,7 +2,7 @@ title: Hoover Moratorium
 subtitle: Owing to the economic crisis, our debt payments have been paused...
 new-page: true
 view-if: banking_crisis_seen = 1 and ((year == 1931 and month >= 6) or (year == 1932)) and reparations >= 0 and unemployed > 15
-on-arrival: budget += 1; reparations_negotiation += 2; hoover_moratorium_seen = 1; workers_dvp += 3 if foreign_minister_party == "DVP"; new_middle_dvp += 3 if foreign_minister_party == "DVP"; landholders_dvp += 3 if foreign_minister_party == "DVP"; rural_dvp += 3 if foreign_minister_party == "DVP"; workers_z += 3 if foreign_minister_party == "Z"; new_middle_z += 3 if foreign_minister_party == "Z"; landholders_z += 3 if foreign_minister_party == "Z"; rural_z += 3 if foreign_minister_party == "Z"; workers_psoe += 3 if foreign_minister_party == "PSOE"; new_middle_psoe += 3 if foreign_minister_party == "PSOE"; landholders_psoe += 3 if foreign_minister_party == "PSOE"; rural_psoe += 3 if foreign_minister_party == "PSOE";
+on-arrival: budget += 1; reparations_negotiation += 2; hoover_moratorium_seen = 1; workers_prp += 3 if foreign_minister_party == "PRP"; new_middle_prp += 3 if foreign_minister_party == "PRP"; landholders_prp += 3 if foreign_minister_party == "PRP"; rural_prp += 3 if foreign_minister_party == "PRP"; workers_z += 3 if foreign_minister_party == "Z"; new_middle_z += 3 if foreign_minister_party == "Z"; landholders_z += 3 if foreign_minister_party == "Z"; rural_z += 3 if foreign_minister_party == "Z"; workers_psoe += 3 if foreign_minister_party == "PSOE"; new_middle_psoe += 3 if foreign_minister_party == "PSOE"; landholders_psoe += 3 if foreign_minister_party == "PSOE"; rural_psoe += 3 if foreign_minister_party == "PSOE";
 tags: event
 max-visits: 1
 
