@@ -102,9 +102,9 @@ Q.z_relation = 50;
 Q.kpd_relation = 25;
 Q.izqd_rep_relation = 60;
 Q.prp_relation = 35;
-// CEDA and fe-jons are invariably hostile
+// CEDA and fe_jons are invariably hostile
 Q.CEDA_relation = 10;
-Q.fe-jons_relation = 0;
+Q.fe_jons_relation = 0;
 
 Q.kpd_leader = "Thälmann";
 // alternative is the Conciliators as party leader
@@ -112,7 +112,7 @@ Q.kpd_party_leader = "Thälmann";
 Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1931 December conference. Joos will be most friendly to the PSOE.
 Q.z_party_leader = "Marx";
-Q.fe-jons_leader = "Hitler";
+Q.fe_jons_leader = "Hitler";
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -120,7 +120,7 @@ Q.hindenburg_relation = 25;
 
 // Does the PSOE lead in Prussia?
 Q.psoe_prussia = 1;
-// Options: psoe, z, ceda, papen, fe-jons
+// Options: psoe, z, ceda, papen, fe_jons
 Q.prussian_government = "PSOE";
 
 // The array of forces - paramilitary groups
@@ -180,7 +180,7 @@ Q.presidential_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
 Q.kpd_banned = 0;
-Q.fe-jons_banned = 0;
+Q.fe_jons_banned = 0;
 
 // coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
 // when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
@@ -217,7 +217,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['psoe', 'kpd', 'z', 'izqd_rep', 'prp', 'ceda', 'fe-jons', 'other'];
+Q.parties = ['psoe', 'kpd', 'z', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
@@ -230,7 +230,7 @@ Q.workers_z = 5;
 Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
 Q.workers_ceda = 5;
-Q.workers_fe-jons = 0;
+Q.workers_fe_jons = 0;
 Q.workers_other = 10;
 
 Q.old_middle_psoe = 5;
@@ -239,7 +239,7 @@ Q.old_middle_z = 5;
 Q.old_middle_izqd_rep= 10;
 Q.old_middle_prp = 25;
 Q.old_middle_ceda = 25;
-Q.old_middle_fe-jons = 10;
+Q.old_middle_fe_jons = 10;
 Q.old_middle_other = 10;
 
 Q.new_middle_psoe = 5;
@@ -248,7 +248,7 @@ Q.new_middle_z = 10;
 Q.new_middle_izqd_rep= 25;
 Q.new_middle_prp = 25;
 Q.new_middle_ceda = 10;
-Q.new_middle_fe-jons = 5;
+Q.new_middle_fe_jons = 5;
 Q.new_middle_other = 15;
 
 Q.rural_psoe = 10;
@@ -257,7 +257,7 @@ Q.rural_z = 5;
 Q.rural_izqd_rep= 5;
 Q.rural_prp = 15;
 Q.rural_ceda = 45;
-Q.rural_fe-jons = 5;
+Q.rural_fe_jons = 5;
 Q.rural_other = 10;
 
 Q.unemployed_psoe = 25;
@@ -266,7 +266,7 @@ Q.unemployed_z = 1;
 Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
 Q.unemployed_ceda = 5;
-Q.unemployed_fe-jons = 15;
+Q.unemployed_fe_jons = 15;
 Q.unemployed_other = 9;
 
 Q.catholics_psoe = 15;
@@ -275,7 +275,7 @@ Q.catholics_z = 50;
 Q.catholics_izqd_rep = 0;
 Q.catholics_prp = 5;
 Q.catholics_ceda = 5;
-Q.catholics_fe-jons = 0;
+Q.catholics_fe_jons = 0;
 Q.catholics_other = 12;
 
 
@@ -291,7 +291,7 @@ Q.z_r = 17;
 Q.izqd_rep_r = 6;
 Q.prp_r = 10;
 Q.ceda_r = 20;
-Q.fe-jons_r = 3;
+Q.fe_jons_r = 3;
 Q.other_r = 9;
 
 // diff from prev
@@ -301,7 +301,7 @@ Q.old_z_r = 17;
 Q.old_izqd_rep_r = 6;
 Q.old_prp_r = 10;
 Q.old_ceda_r = 20;
-Q.old_fe-jons_r = 3;
+Q.old_fe_jons_r = 3;
 Q.old_other_r = 9;
 
 // sapd isn't formed yet, but it may be formed
@@ -330,7 +330,7 @@ Q.izqd_rep_in_government = 0;
 Q.prp_in_government = 1;
 Q.ceda_in_government = 1;
 Q.kpd_in_government = 0;
-Q.fe-jons_in_government = 0;
+Q.fe_jons_in_government = 0;
 
 Q.in_right_coalition = 0;
 // Weimar coalition = PSOE + Z + IR

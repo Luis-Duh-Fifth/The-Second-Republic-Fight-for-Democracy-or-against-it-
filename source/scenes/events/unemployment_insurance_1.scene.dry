@@ -48,11 +48,11 @@ Fine. If the bourgeoisie wish to blow up the government, let them do so. Sociali
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
 @accept
-on-arrival: workers_psoe -= 0.15*workers_psoe; umemployed_psoe -= 0.3*unemployed_psoe; workers_kpd += 7; workers_fe-jons += 7; unemployed_kpd += 5; unemployed_fe-jons += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; month += 1; pro_republic -= 4; kpd_relation -= 8; inflation -= 2
+on-arrival: workers_psoe -= 0.15*workers_psoe; umemployed_psoe -= 0.3*unemployed_psoe; workers_kpd += 7; workers_fe_jons += 7; unemployed_kpd += 5; unemployed_fe_jons += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; month += 1; pro_republic -= 4; kpd_relation -= 8; inflation -= 2
 
 Unfortunately, we must accept this ultimatum if we are to maintain this coalition. The Nazis and Communists are waiting in the wings for us to fail, ready to pounce upon the instability that would result from a breakup of the governing coalition.
 
-The workers are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the FE-JONS, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
+The workers are furious at our betrayal, as are a good portion of our membership throughout the factions. Our loss is the KPD's gain, and even the FE_JONS, those lapdogs of the bourgeoisie, have joined in criticizing us for our austerity.
 
 
 @compromise
@@ -65,6 +65,6 @@ Thanks to our good relations, the PRP have offered a compromise that raises some
 - @destroy: Reject the compromise and let this government fall.
 
 @accept_compromise
-on-arrival: workers_psoe -= 5; unemployed_psoe -= 6; workers_kpd += 5; unemployed_kpd += 3; unemployed_fe-jons += 3; left_dissent += 10; labor_dissent += 8; center_dissent += 5; welfare -= 1; budget += 1; month += 1; kpd_relation -= 4; inflation -= 1
+on-arrival: workers_psoe -= 5; unemployed_psoe -= 6; workers_kpd += 5; unemployed_kpd += 3; unemployed_fe_jons += 3; left_dissent += 10; labor_dissent += 8; center_dissent += 5; welfare -= 1; budget += 1; month += 1; kpd_relation -= 4; inflation -= 1
 
 We have accepted the compromise offered by the bourgeoisie. Many of the workers and unemployed see this as a betrayal, although we present it as the successful aversion of a much worse alternative.

@@ -17,13 +17,13 @@ As an anti-war film, it is the target of major protest by far-right actors, espe
 - @everyone: In fact, everyone needs to learn the lessons of this film. Give free tickets to students and government employees.
 
 @ban
-on-arrival: landholders_fe-jons += 5; new_middle_fe-jons += 4; workers_fe-jons += 2; unemployed_fe-jons += 2; sa_strength += 50; nationalism += 6; pro_republic -= 5
+on-arrival: landholders_fe_jons += 5; new_middle_fe_jons += 4; workers_fe_jons += 2; unemployed_fe_jons += 2; sa_strength += 50; nationalism += 6; pro_republic -= 5
 
 When we ban the film, the Nazis immediately celebrate it as a major victory; they claim that even the red Marxists agree with them! It is a major boost to their morale.
 
 
 @allow
-on-arrival: nationalism += 3; landholders_fe-jons += 4; new_middle_fe-jons += 3; workers_fe-jons += 1; sa_strength += 15; pro_republic -= 3
+on-arrival: nationalism += 3; landholders_fe_jons += 4; new_middle_fe_jons += 3; workers_fe_jons += 1; sa_strength += 15; pro_republic -= 3
 
 While we allow the film, showings are marred by violence. Showings of the film eventually stop, and the Nazis claim victory.
 
@@ -38,7 +38,7 @@ Under the protection of the police, the people are allowed to watch the film in 
 @everyone
 choose-if: prussian_police_loyalty >= 0.75
 unavailable-subtitle: The police are unable to guarantee the safety of all the attendees.
-on-arrival: nationalism -= 3; pro_republic += 3; workers_fe-jons -= 3; unemployed_fe-jons -= 3; new_middle_fe-jons -= 3
+on-arrival: nationalism -= 3; pro_republic += 3; workers_fe_jons -= 3; unemployed_fe_jons -= 3; new_middle_fe_jons -= 3
 
 Under police protection, crowds throng the film's showings. The reception is mixed, but a new national conversation develops, reexamining the right-wing histories of the war. Quietly, many minds are changed, or at least affected in subtle ways.
 

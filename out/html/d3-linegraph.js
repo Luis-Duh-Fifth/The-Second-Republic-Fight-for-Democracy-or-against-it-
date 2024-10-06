@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['psoe', 'kpd', 'izqd_rep', 'z', 'prp', 'ceda', 'fe-jons', 'other'];
+        parties = ['psoe', 'kpd', 'izqd_rep', 'z', 'prp', 'ceda', 'fe_jons', 'other'];
     }
     if (!partyColors) {
-        partyColors = {'psoe': '#E3000F', 'kpd': '#8B0000', 'izqd_rep': '#DCCA4A', 'z': '#000', 'prp': '#D5AC27', 'ceda': '#3f7bc1', 'fe-jons': '#954B00', 'other': '#a0a0a0'};
+        partyColors = {'psoe': '#E3000F', 'kpd': '#8B0000', 'izqd_rep': '#DCCA4A', 'z': '#000', 'prp': '#D5AC27', 'ceda': '#3f7bc1', 'fe_jons': '#954B00', 'other': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'psoe': 'PSOE', 'kpd': 'KPD', 'izqd_rep': 'izqd_rep', 'z': 'Z + BVP', 'prp': 'PRP', 'ceda': 'CEDA', 'fe-jons': 'FE-JONS', 'other': 'Others'};
+        partyNames = {'psoe': 'PSOE', 'kpd': 'KPD', 'izqd_rep': 'izqd_rep', 'z': 'Z + BVP', 'prp': 'PRP', 'ceda': 'CEDA', 'fe_jons': 'FE_JONS', 'other': 'Others'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
@@ -60,8 +60,8 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
       // Declare the y (vertical position) scale.
       if (!dataMax) {
           const maxPSOE = d3.max(data, d => d.psoe);
-          const maxFE-JONS = d3.max(data, d => d.fe-jons);
-          dataMax = maxPSOE >= maxFE-JONS ? maxPSOE + 10 : maxFE-JONS + 10;
+          const maxFE_JONS = d3.max(data, d => d.fe_jons);
+          dataMax = maxPSOE >= maxFE_JONS ? maxPSOE + 10 : maxFE_JONS + 10;
           dataMin = 0;
       }
       const yScale = d3.scaleLinear([dataMin, dataMax], [height - marginBottom, marginTop]);

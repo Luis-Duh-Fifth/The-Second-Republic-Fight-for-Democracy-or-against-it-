@@ -1,7 +1,7 @@
 title: Banking Crisis
 subtitle: The collapse of the German banking system...
 new-page: true
-on-arrival: banking_crisis_seen = 1; workers_kpd += 5; workers_fe-jons += 3; new_middle_fe-jons += 3; landholders_fe-jons += 4; rural_fe-jons += 3; unemployed += 3; crisis_urgency += 1; workers_psoe -= 4 if psoe_in_government; new_middle_psoe -= 5 if psoe_in_government; landholders_psoe -= 5 if psoe_in_government; rural_psoe -= 4 if psoe_in_government
+on-arrival: banking_crisis_seen = 1; workers_kpd += 5; workers_fe_jons += 3; new_middle_fe_jons += 3; landholders_fe_jons += 4; rural_fe_jons += 3; unemployed += 3; crisis_urgency += 1; workers_psoe -= 4 if psoe_in_government; new_middle_psoe -= 5 if psoe_in_government; landholders_psoe -= 5 if psoe_in_government; rural_psoe -= 4 if psoe_in_government
 tags: event
 view-if: customs_union = 1 and banking_crisis_timer = 0
 max-visits: 1
@@ -27,7 +27,7 @@ There is, essentially, nothing we can do.
 view-if: psoe_in_government = 1
 subtitle: -1 budget
 choose-if: budget >= 1
-on-arrival: workers_psoe += 3*(1-dissent); new_middle_psoe += 3*(1-dissent); landholders_psoe += 2*(1-dissent); rural_psoe += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_fe-jons -= 3
+on-arrival: workers_psoe += 3*(1-dissent); new_middle_psoe += 3*(1-dissent); landholders_psoe += 2*(1-dissent); rural_psoe += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_fe_jons -= 3
 
 In the face of the banking crisis, we have taken emergency action to stabilize the economy. It might not be not enough.
 

@@ -20,7 +20,7 @@ title: Build up the Iron Front
 subtitle: Increase our propaganda measures to recruit more members into the Reichsbanner. 
 choose-if: advisor_action_timer == 0 and iron_front_formed
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if iron_front_formed == 0 : The Iron Front has not yet been formed. ?]
-on-arrival: advisor_action_timer = 6; rb_strength += 200*workers_psoe/(workers_psoe+workers_kpd+workers_fe-jons+workers_z+workers_ceda+workers_other);
+on-arrival: advisor_action_timer = 6; rb_strength += 200*workers_psoe/(workers_psoe+workers_kpd+workers_fe_jons+workers_z+workers_ceda+workers_other);
 
 We have recruited more members into the Reichsbanner.
 
@@ -38,6 +38,6 @@ title: Warning about the Nazis
 subtitle: By warning the party about the Nazis, we can spur our members to action.
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-on-arrival: advisor_action_timer = 6; nazi_urgency += 1; rb_militancy += 0.01; fe-jons_workers -= 4*(1-dissent);
+on-arrival: advisor_action_timer = 6; nazi_urgency += 1; rb_militancy += 0.01; fe_jons_workers -= 4*(1-dissent);
 
 We have begun a propaganda campaign to warn our members away from the Nazis.
