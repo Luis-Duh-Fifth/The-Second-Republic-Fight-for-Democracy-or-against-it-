@@ -88,7 +88,7 @@ IR: [+ izqd_rep_votes +]%
 PRP: [+ prp_votes +]%
 
 # 1928: 14, 1930: 7
-DNVP: [+ dnvp_votes +]%
+CEDA: [+ ceda_votes +]%
 
 # 1928: 3, 1930: 18
 NSDAP: [+ nsdap_votes +]%
@@ -98,17 +98,17 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PSOE: [+ workers_psoe_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; DNVP: [+ workers_dnvp_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: PSOE: [+ workers_psoe_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, NSDAP: [+ workers_nsdap_normalized +]%, Others: [+ workers_other_normalized +]%
 
-Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; DNVP: [+ new_middle_dnvp_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
+Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, NSDAP: [+ new_middle_nsdap_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, Z: [+ landholders_z_normalized +]%, KPD: [+ landholders_kpd_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; DNVP: [+ landholders_dnvp_normalized +]%, NSDAP: [+ landholders_nsdap_normalized +]%, Others: [+ landholders_other_normalized +]%
+Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, Z: [+ landholders_z_normalized +]%, KPD: [+ landholders_kpd_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, NSDAP: [+ landholders_nsdap_normalized +]%, Others: [+ landholders_other_normalized +]%
 
-Rural: PSOE: [+ rural_psoe_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; DNVP: [+ rural_dnvp_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: PSOE: [+ rural_psoe_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, NSDAP: [+ rural_nsdap_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; DNVP: [+ unemployed_dnvp_normalized +]%, NSDAP: [+ unemployed_nsdap_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, NSDAP: [+ unemployed_nsdap_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: PSOE: [+ catholics_psoe_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; DNVP: [+ catholics_dnvp_normalized +]%, NSDAP: [+ catholics_nsdap_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: PSOE: [+ catholics_psoe_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; CEDA: [+ catholics_ceda_normalized +]%, NSDAP: [+ catholics_nsdap_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 @parties
 go-to: menu
@@ -128,9 +128,9 @@ Current relations: [+ izqd_rep_relation : relationships +]
 
 Current relations: [+ prp_relation : relationships +]
 
-**DNVP** - *Deutschnationale Volkspartei* (German National People's Party) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
+**CEDA** - *Confederacion Española de Derechas Autonomas* (Spanish Confederation of Autonomous Rights) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
 
-Current relations: [+ dnvp_relation : relationships +]
+Current relations: [+ ceda_relation : relationships +]
 
 **KPD** - *Kommunistische Partei Deutschlands* (German Communist Party) - an offshoot of the psoe that emerged in the aftermath of the Revolution, they follow the path of Moscow.
 
@@ -140,7 +140,7 @@ Current relations: [+ kpd_relation : relationships +]
 
 Current relations: [+ nsdap_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRP and DNVP. 
+**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRP and ceda. 
 
 @paramilitaries
 on-arrival: {!
@@ -164,7 +164,7 @@ Strength: [+ rfb_strength +] thousand
 
 Militarization: [+ rfb_militancy : militancy +]
 
-**Der Stahlhelm**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the DNVP.
+**Der Stahlhelm**: A right-wing nationalist organization of primarily Great War veterans, descended from the *Freikorps* that emerged after the war. Associated with the ceda.
 
 Strength: [+ sh_strength +] thousand
 
@@ -288,10 +288,10 @@ data = [
         "seats": Q.other_r*5,
     },
     {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Q.dnvp_r*5,
+        "id": "ceda",
+        "legend": "CEDA",
+        "name": "CEDA",
+        "seats": Q.ceda_r*5,
     },
     {
         "id": "nsdap",
@@ -360,7 +360,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td></tr>!}
 {!</table>!}

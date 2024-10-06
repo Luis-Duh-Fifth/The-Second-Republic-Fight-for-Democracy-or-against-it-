@@ -21,7 +21,7 @@ if (!Q.works_program) {
     Q.inflation -= 2;
     Q.catholics_z += 4;
     Q.workers -= 5;
-    Q.rural_dnvp -= 6;
+    Q.rural_ceda -= 6;
     Q.rural_nsdap += 8; 
     Q.new_middle_nsdap += 10; 
     Q.landholders_nsdap += 10;

@@ -102,8 +102,8 @@ Q.z_relation = 50;
 Q.kpd_relation = 25;
 Q.izqd_rep_relation = 60;
 Q.prp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
+// CEDA and NSDAP are invariably hostile
+Q.CEDA_relation = 10;
 Q.NSDAP_relation = 0;
 
 Q.kpd_leader = "Thälmann";
@@ -120,7 +120,7 @@ Q.hindenburg_relation = 25;
 
 // Does the PSOE lead in Prussia?
 Q.psoe_prussia = 1;
-// Options: psoe, z, dnvp, papen, nsdap
+// Options: psoe, z, ceda, papen, nsdap
 Q.prussian_government = "PSOE";
 
 // The array of forces - paramilitary groups
@@ -217,7 +217,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['psoe', 'kpd', 'z', 'izqd_rep', 'prp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['psoe', 'kpd', 'z', 'izqd_rep', 'prp', 'ceda', 'nsdap', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
@@ -229,7 +229,7 @@ Q.workers_kpd = 20;
 Q.workers_z = 5;
 Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
-Q.workers_dnvp = 5;
+Q.workers_ceda = 5;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
@@ -238,7 +238,7 @@ Q.old_middle_kpd = 0;
 Q.old_middle_z = 5;
 Q.old_middle_izqd_rep= 10;
 Q.old_middle_prp = 25;
-Q.old_middle_dnvp = 25;
+Q.old_middle_ceda = 25;
 Q.old_middle_nsdap = 10;
 Q.old_middle_other = 10;
 
@@ -247,7 +247,7 @@ Q.new_middle_kpd = 1;
 Q.new_middle_z = 10;
 Q.new_middle_izqd_rep= 25;
 Q.new_middle_prp = 25;
-Q.new_middle_dnvp = 10;
+Q.new_middle_ceda = 10;
 Q.new_middle_nsdap = 5;
 Q.new_middle_other = 15;
 
@@ -256,7 +256,7 @@ Q.rural_kpd = 0;
 Q.rural_z = 5;
 Q.rural_izqd_rep= 5;
 Q.rural_prp = 15;
-Q.rural_dnvp = 45;
+Q.rural_ceda = 45;
 Q.rural_nsdap = 5;
 Q.rural_other = 10;
 
@@ -265,7 +265,7 @@ Q.unemployed_kpd = 55;
 Q.unemployed_z = 1;
 Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
-Q.unemployed_dnvp = 5;
+Q.unemployed_ceda = 5;
 Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
 
@@ -274,7 +274,7 @@ Q.catholics_kpd = 2;
 Q.catholics_z = 50;
 Q.catholics_izqd_rep = 0;
 Q.catholics_prp = 5;
-Q.catholics_dnvp = 5;
+Q.catholics_ceda = 5;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 12;
 
@@ -290,7 +290,7 @@ Q.kpd_r = 9;
 Q.z_r = 17;
 Q.izqd_rep_r = 6;
 Q.prp_r = 10;
-Q.dnvp_r = 20;
+Q.ceda_r = 20;
 Q.nsdap_r = 3;
 Q.other_r = 9;
 
@@ -300,7 +300,7 @@ Q.old_kpd_r = 9;
 Q.old_z_r = 17;
 Q.old_izqd_rep_r = 6;
 Q.old_prp_r = 10;
-Q.old_dnvp_r = 20;
+Q.old_ceda_r = 20;
 Q.old_nsdap_r = 3;
 Q.old_other_r = 9;
 
@@ -328,7 +328,7 @@ Q.psoe_in_government = 0;
 Q.z_in_government = 1;
 Q.izqd_rep_in_government = 0;
 Q.prp_in_government = 1;
-Q.dnvp_in_government = 1;
+Q.ceda_in_government = 1;
 Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
 
@@ -367,9 +367,9 @@ Q.minority_government = 0;
 Q.foreign_minister = 'Streseman';
 Q.foreign_minister_party = 'PRP';
 Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'DNVP';
+Q.interior_minister_party = 'CEDA';
 Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'DNVP';
+Q.justice_minister_party = 'CEDA';
 Q.labor_minister = 'Brauns';
 Q.labor_minister_party = 'Z';
 Q.reichswehr_minister = 'Groener';
@@ -379,7 +379,7 @@ Q.economic_minister_party = 'PRP';
 Q.finance_minister = 'Köhler';
 Q.finance_minister_party = 'Z';
 Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'DNVP';
+Q.agriculture_minister_party = 'CEDA';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;

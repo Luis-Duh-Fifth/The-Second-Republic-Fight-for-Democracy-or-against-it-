@@ -49,8 +49,8 @@ if (Q.kpd_relation >= 60) {
 // general strike strength
 // maximum (given 25 labor strength) is 400
 // use normalized workers_psoe instead of labor_strength?
-Q.normalized_workers_psoe = 100*Q.workers_psoe/(Q.workers_psoe + Q.workers_kpd + Q.workers_nsdap + Q.workers_other + Q.workers_dnvp + Q.workers_z);
-Q.normalized_workers_kpd = 100*Q.workers_kpd/(Q.workers_psoe + Q.workers_kpd + Q.workers_nsdap + Q.workers_other + Q.workers_dnvp + Q.workers_z);
+Q.normalized_workers_psoe = 100*Q.workers_psoe/(Q.workers_psoe + Q.workers_kpd + Q.workers_nsdap + Q.workers_other + Q.workers_ceda + Q.workers_z);
+Q.normalized_workers_kpd = 100*Q.workers_kpd/(Q.workers_psoe + Q.workers_kpd + Q.workers_nsdap + Q.workers_other + Q.workers_ceda + Q.workers_z);
 Q.normalized_workers_total = Q.normalized_workers_psoe;
 if (Q.kpd_relation >= 60) {
     Q.normalized_workers_total += Q.normalized_workers_kpd;

@@ -10,7 +10,7 @@ if (Q.old_demographics) {
     Q.catholics_z += 3;
 }
 Q.rural_nsdap += 15; 
-Q.rural_dnvp -= 15;
+Q.rural_ceda -= 15;
 Q.new_middle_prp -= 5;
 Q.landholders_prp -= 5;
 Q.new_middle_izqd_rep -= 10;

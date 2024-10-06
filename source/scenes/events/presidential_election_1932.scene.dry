@@ -178,7 +178,7 @@ Q.thalmann_votes = 0;
 // initial phase:
 Q.hitler_votes += Q.nsdap_votes;
 Q.hindenburg_votes += Q.other_votes;
-Q.hindenburg_votes += Q.dnvp_votes;
+Q.hindenburg_votes += Q.ceda_votes;
 
 if (Q.braun_campaign) {
     Q.braun_votes += Q.psoe_votes;

@@ -13,20 +13,20 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the KPD, NSDAP, and DNVP.
-- @far_right: The far right - the NSDAP and DNVP.
+- @anti_dem: The anti-democratic parties of the far right and left - the KPD, NSDAP, and CEDA.
+- @far_right: The far right - the NSDAP and CEDA.
 - @nsdap: The NSDAP alone.
 - @kpd: The KPD.
 - @bourgeois: The bourgeois parties - the Center and PRP.
 - @easy_discard
 
 @anti_dem
-on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
+on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_ceda -= 2; kpd_relation -= 10
 
 Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
 
 @far_right
-on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
+on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_ceda -= 3;
 
 Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
 

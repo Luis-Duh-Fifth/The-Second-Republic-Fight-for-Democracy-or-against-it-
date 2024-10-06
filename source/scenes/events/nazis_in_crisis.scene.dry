@@ -1,7 +1,7 @@
 title: Nazis in Crisis
 subtitle: Finally, the internal contradictions of the NSDAP have caught up to it.
-view-if: year = 1933 and month >= 9 and nsdap_r >= 8 and nsdap_normalized + dnvp_normalized < 0.5
-on-arrival: workers_nsdap -= 12; new_middle_nsdap -= 12; landholders_nsdap -= 12; rural_nsdap -= 12; unemployed_nsdap -= 10; sa_strength *= 0.7; coup_progress -= 4 if coup_progress > 4; new_middle_izqd_rep += 6; new_middle_prp += 6; landholders_izqd_rep += 5; landholders_prp += 5; landholders_dnvp += 3; rural_dnvp += 6; rural_izqd_rep += 2; rural_prp += 2; unemployed_kpd += 4; unemployed_psoe += 4
+view-if: year = 1933 and month >= 9 and nsdap_r >= 8 and nsdap_normalized + ceda_normalized < 0.5
+on-arrival: workers_nsdap -= 12; new_middle_nsdap -= 12; landholders_nsdap -= 12; rural_nsdap -= 12; unemployed_nsdap -= 10; sa_strength *= 0.7; coup_progress -= 4 if coup_progress > 4; new_middle_izqd_rep += 6; new_middle_prp += 6; landholders_izqd_rep += 5; landholders_prp += 5; landholders_ceda += 3; rural_ceda += 6; rural_izqd_rep += 2; rural_prp += 2; unemployed_kpd += 4; unemployed_psoe += 4
 max-visits: 1
 new-page: true
 tags: event
