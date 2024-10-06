@@ -1,6 +1,6 @@
 title: March on Berlin
 subtitle: Right-wing militants are taking action...
-view-if: (psoe_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and nsdap_normalized + ceda_normalized >= 0.5)
+view-if: (psoe_in_government = 1 and coup_progress >= 10 and year >= 1930 and (sa_banned=0 or sh_banned=0)) or (year >= 1933 and month >= 2 and fe-jons_normalized + ceda_normalized >= 0.5)
 new-page: true
 max-visits: 1
 on-arrival: march_on_berlin_seen = 1; sa_strength += 80; sh_strength += 80
@@ -22,16 +22,16 @@ It appears that President [+ president +] is looking favorably upon the fascist 
 
 @accept
 title: There is nothing we can do.
-go-to: accept_election if nsdap_normalized + ceda_normalized >= 0.45; accept_hitler if nsdap_normalized + ceda_normalized < 0.45
+go-to: accept_election if fe-jons_normalized + ceda_normalized >= 0.45; accept_hitler if fe-jons_normalized + ceda_normalized < 0.45
 
 @accept_election
-on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; landholders_nsdap += 10; new_middle_nsdap += 10; workers_nsdap += 10; rural_nsdap += 10; unemployed_nsdap += 8; workers_psoe -= 10; workers_kpd -= 10; sa_strength += 100;
+on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; landholders_fe-jons += 10; new_middle_fe-jons += 10; workers_fe-jons += 10; rural_fe-jons += 10; unemployed_fe-jons += 8; workers_psoe -= 10; workers_kpd -= 10; sa_strength += 100;
 
 President [+ president +] has called for emergency elections, to be held next month, under a caretaker government. The SA is permitted to act with impunity, intimidating voters into supporting the fascists.
 
 
 @accept_hitler
-on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; psoe_in_government = 0
+on-arrival: chancellor = "Hitler"; chancellor_party = "FE-JONS"; psoe_in_government = 0
 
 After the resignation of the chancellor, Hitler has been appointed chancellor[? if hitler_deported: , after being made a citizen again ?].
 
@@ -65,7 +65,7 @@ The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to cou
 
 
 @fight_2_win
-on-arrival: coup_progress = 0; sa_strength *= 0.6; sh_strength *= 0.6; workers_nsdap -= 12*(1-dissent); unemployed_nsdap -= 10*(1-dissent); new_middle_nsdap -= 6*(1-dissent); workers_psoe += 8*(1-dissent); unemployed_psoe += 6*(1-dissent); pro_republic += 15
+on-arrival: coup_progress = 0; sa_strength *= 0.6; sh_strength *= 0.6; workers_fe-jons -= 12*(1-dissent); unemployed_fe-jons -= 10*(1-dissent); new_middle_fe-jons -= 6*(1-dissent); workers_psoe += 8*(1-dissent); unemployed_psoe += 6*(1-dissent); pro_republic += 15
 achievement: drei_pfeile
 
 Our forces confront the fascists, and somehow, the fascists retreat! They were overwhelmed by our display of strength, and have chosen to slink away. The attempted coup is over, at least for now.
@@ -98,7 +98,7 @@ go-to: new_elections_braun if president == "Braun"; new_elections_hindenburg if 
 
 
 @new_elections_braun
-go-to: new_elections_braun_2 if nsdap_normalized + ceda_normalized >= 0.5; new_elections_braun_reject if nsdap_normalized + ceda_normalized < 0.5
+go-to: new_elections_braun_2 if fe-jons_normalized + ceda_normalized >= 0.5; new_elections_braun_reject if fe-jons_normalized + ceda_normalized < 0.5
 
 
 @new_elections_braun_reject
@@ -147,10 +147,10 @@ We have resigned our positions in the government.
 @braun_appoints_hitler
 title: We cannot do anything but appoint Hitler chancellor.
 view-if: president == "Braun"
-choose-if: nsdap_normalized >= 0.5 or largest_party == "NSDAP"
+choose-if: fe-jons_normalized >= 0.5 or largest_party == "FE-JONS"
 unavailable-subtitle: There is no way President [+ president +] could do such a blatantly undemocratic act.
-on-arrival: chancellor = "Hitler"; chancellor_party = "NSDAP"; psoe_in_government = 0
+on-arrival: chancellor = "Hitler"; chancellor_party = "FE-JONS"; psoe_in_government = 0
 
-Threatened with a civil war, and unwilling to fight anymore, President [+ president +] dismisses the current government and appoints Hitler of the NSDAP as chancellor.
+Threatened with a civil war, and unwilling to fight anymore, President [+ president +] dismisses the current government and appoints Hitler of the FE-JONS as chancellor.
 
 - @hitler_takes_power

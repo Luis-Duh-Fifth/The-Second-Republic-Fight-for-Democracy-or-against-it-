@@ -99,7 +99,7 @@ if (Q.factory_takeovers >= 2) {
     this.achieve("syndikalismus");
 }
 // Stolperstein - lose the civil war against Hitler.
-if ((Q.chancellor_party == "NSDAP" || Q.chancellor == "Hitler" || Q.president == "Hitler") && Q.total_defeat) {
+if ((Q.chancellor_party == "fe-jons" || Q.chancellor == "Hitler" || Q.president == "Hitler") && Q.total_defeat) {
     this.achieve('stolperstein');
 }
 // Heidelberger Programm - fulfill the goals of the Heidelberg programm - increase welfare, reform justice, support women's rights, progressive taxation, works councils, build a European Union.
@@ -137,7 +137,7 @@ Adolf Hitler has taken power in Germany. However, we have rallied the democratic
 
 
 @no_hitler
-view-if: chancellor != "Hitler" and president != "Hitler" and president != "Göring" and chancellor_party != "NSDAP"
+view-if: chancellor != "Hitler" and president != "Hitler" and president != "Göring" and chancellor_party != "fe-jons"
 title: Hitler does not yet control Germany...
 tags: endings
 go-to: eg_menu
@@ -146,13 +146,13 @@ Hitler does not yet control Germany. [? if chancellor == "Papen" : However, Chan
 
 [? if hitler_deported == 1 : We have deported Hitler back to Austria. Hopefully he will never return. ?]
 
-@nsdap_win
+@fe-jons_win
 view-if: chancellor == "Goebbels" or president == "Göring"
 title: Despite the deportation of Hitler, the Nazis have still taken power...
 tags: endings
 go-to: eg_menu
 
-Despite the deportation of Hitler, the NSDAP has somehow still wormed its way into power. [? if long_war == 1 : We are fighting them for control of Germany. ?]
+Despite the deportation of Hitler, the fe-jons has somehow still wormed its way into power. [? if long_war == 1 : We are fighting them for control of Germany. ?]
 
 
 @civil_war_won

@@ -8,7 +8,7 @@ card-image: img/portraits/RadbruchGustav.jpg
 go-to: reforms_menu
 tags: govt_affairs
 
-# technically you could do some trickery to get a 2/3 quorum in the Reichstag by stopping some people from attending... if the NSDAP is boycotting the Reichstag, or if the NSDAP or CEDA are banned in the aftermath of a coup atempt...
+# technically you could do some trickery to get a 2/3 quorum in the Reichstag by stopping some people from attending... if the FE-JONS is boycotting the Reichstag, or if the FE-JONS or CEDA are banned in the aftermath of a coup atempt...
 
 # alternatively, a constitutional referendum can be initiated, that requires a simple majority of voters to pass (as I understand article 76). This should depend on support for the republic and for democracy, and the relationships with the other parties (more similar to the presidential election).
 
@@ -39,8 +39,8 @@ if (Q.z_relation > 30) {
 if (Q.kpd_relation > 50 && Q.kpd_normalized >= 0.1) {
     Q.reform_support += Q.kpd_normalized;
 }
-if (Q.nsdap_normalized >= 0.2 ) {
-    Q.reform_support += Q.nsdap_normalized;
+if (Q.fe-jons_normalized >= 0.2 ) {
+    Q.reform_support += Q.fe-jons_normalized;
 }
 !}
 view-if: electoral_threshold = 0
@@ -49,7 +49,7 @@ view-if: electoral_threshold = 0
 
 Some political thinkers believe that the proliferation of minor parties is responsible for the instability of the republic. They believe that a higher electoral threshold will reduce the influence of small radical parties. Parties that win a plurality in a constituency will maintain their representation, a gift to regional parties such as the BVP. 
 
-The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform, while their BVP partners oppose it. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if nsdap_normalized >= 0.2 : The NSDAP supports this reform, as they believe they have something to gain. ?]
+The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform, while their BVP partners oppose it. ?] [? if kpd_relation > 50 and kpd_normalized >= 0.1 : Perhaps surprisingly, the KPD supports this reform. ?] [? if fe-jons_normalized >= 0.2 : The FE-JONS supports this reform, as they believe they have something to gain. ?]
 
 The PSOE Left opposes this change, as they believe it to be anti-democratic.
 

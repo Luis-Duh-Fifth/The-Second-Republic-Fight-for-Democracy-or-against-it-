@@ -1,7 +1,7 @@
 title: 1932
 subtitle: A new year 
 on-arrival: {!
-// increase NSDAP vote share 
+// increase CEDA vote share 
 // TODO: if a public works program has started, unemployment is not so bad.
 if (Q.works_program && Q.works_program >= 2) {
     Q.unemployed -= 1;
@@ -10,9 +10,9 @@ if (Q.works_program && Q.works_program >= 2) {
 Q.sa_strength += 100;
 Q.sh_strength += 100;
 Q.sa_militancy += 0.05;
-Q.landholders_nsdap += 6;
-Q.rural_nsdap += 4;
-Q.unemployed_nsdap += 4;
+Q.landholders_ceda += 6;
+Q.rural_ceda += 4;
+Q.unemployed_ceda += 4;
 if (Q.old_demographics) {
     Q.catholics_z += 5;
 }
@@ -22,24 +22,24 @@ if (!Q.works_program) {
     Q.catholics_z += 4;
     Q.workers -= 5;
     Q.rural_ceda -= 6;
-    Q.rural_nsdap += 8; 
-    Q.new_middle_nsdap += 10; 
-    Q.landholders_nsdap += 10;
-    Q.unemployed_nsdap += 6;
-    Q.workers_nsdap += 5;
+    Q.rural_ceda += 8; 
+    Q.new_middle_ceda += 10; 
+    Q.landholders_ceda += 10;
+    Q.unemployed_ceda += 6;
+    Q.workers_ceda += 5;
     Q.workers_kpd += 5;
     Q.sa_strength += 200;
 } else if (Q.unemployed > 25) {
-    Q.rural_nsdap += 5;
-    Q.unemployed_nsdap += 5;
-    Q.landholders_nsdap += 5;
-    Q.new_middle_nsdap += 4;
+    Q.rural_ceda += 5;
+    Q.unemployed_ceda += 5;
+    Q.landholders_ceda += 5;
+    Q.new_middle_ceda += 4;
     Q.sa_strength += 50;
 } else if (Q.unemployed > 20) {
-    Q.rural_nsdap += 2;
-    Q.unemployed_nsdap += 2;
-    Q.landholders_nsdap += 2;
-    Q.new_middle_nsdap += 2;
+    Q.rural_ceda += 2;
+    Q.unemployed_ceda += 2;
+    Q.landholders_ceda += 2;
+    Q.new_middle_ceda += 2;
 }
 !}
 tags: event

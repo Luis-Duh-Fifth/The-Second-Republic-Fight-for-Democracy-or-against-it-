@@ -45,11 +45,11 @@ Unfortunately, our investigations have failed to turn up anything. Rumors are th
 go-to: investigate_far_right_success if interior_police_loyalty >= 0.55; investigate_far_right_failure if interior_police_loyalty < 0.55
 
 @investigate_far_right_success
-on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_nsdap -= 3; new_middle_nsdap -= 3; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_nsdap -= 3 if investigate_far_right == 3; new_middle_nsdap -= 3 if investigate_far_right == 3; landholders_nsdap -= 3 if investigate_far_right == 3; unemployed_psoe -= 3 if investigate_far_right == 3;
+on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_fe-jons -= 3; new_middle_fe-jons -= 3; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_fe-jons -= 3 if investigate_far_right == 3; new_middle_fe-jons -= 3 if investigate_far_right == 3; landholders_fe-jons -= 3 if investigate_far_right == 3; unemployed_psoe -= 3 if investigate_far_right == 3;
 
 [? if investigate_far_right == 1 : We have discovered collusion between Hjalmar Schacht, president of the Reichsbank, and the Nazis. This is very useful information. ?]
 [? if investigate_far_right == 2 : We have discovered illegal arms smuggling by the SA, the Nazi paramilitary. ?]
-[? if investigate_far_right == 3 : We have discovered a secret cache of documents from the NSDAP detailing their plan to violently take over the country if they enter into power. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
+[? if investigate_far_right == 3 : We have discovered a secret cache of documents from the FE-JONS detailing their plan to violently take over the country if they enter into power. This is an anti-constitutional plot, and will be publicized and persecuted. ?]
 [? if investigate_far_right > 3 : Of course the Nazis are doing crimes; everyone knows that. Now, we finally have proof. ?]
 
 

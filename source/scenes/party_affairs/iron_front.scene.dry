@@ -11,7 +11,7 @@ tags: party_affairs, antifascism
 
 The Iron Front is our new antifascist coordination front, consisting of the PSOE, the trade unions, and the Reichsbanner. How should we use the Iron Front?
 
-[? if workers_psoe < 45 or workers_psoe < workers_nsdap or workers_psoe < workers_kpd : Unfortunately, the Iron Front's effectiveness is dragged down by the PSOE's unpopularity, as the PSOE is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
+[? if workers_psoe < 45 or workers_psoe < workers_fe-jons or workers_psoe < workers_kpd : Unfortunately, the Iron Front's effectiveness is dragged down by the PSOE's unpopularity, as the PSOE is no longer the dominant party among the workers. Many Reichsbanner members have left, and many workers are not interested. ?]
 
 - @defense: Rally for defense against the fascists with the Reichsbanner.
 - @pacifism: Rally for pacifism, against nationalism and war.
@@ -49,7 +49,7 @@ The WTB-Plan is the rallying point for the entire PSOE and its affiliated organi
 @antisemitism
 title: Rally against antisemitism and in defense of Jewish Germans.
 view-if: confronting_antisemitism > 1
-on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_nsdap -= 4*(1-dissent); unemployed_nsdap -= 4*(1-dissent);
+on-arrival: nationalism -= 4*(1-dissent); pro_republic += 3*(1-dissent); confronting_antisemitism += 1; workers_fe-jons -= 4*(1-dissent); unemployed_fe-jons -= 4*(1-dissent);
 
 # TODO
 The Nazis and other far-right political movements are increasingly turning their hatred against the Jewish community of Germany. The Iron Front rallies in defense of individual Jews and the broader community against violence.

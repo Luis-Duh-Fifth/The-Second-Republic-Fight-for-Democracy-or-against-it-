@@ -4,7 +4,7 @@ view-if: year = 1932 and (month = 4 or month = 5) and presidential_election_seen
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: braun_campaign = 0; hitler_support_hindenburg = 0; presidential_election_seen = 1; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring";
+on-arrival: braun_campaign = 0; hitler_support_hindenburg = 0; presidential_election_seen = 1; fe-jons_candidate = "Hitler" if hitler_deported == 0 else fe-jons_candidate = "Göring";
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
@@ -13,7 +13,7 @@ set-jump: pres_election
 
 The presidential election is coming up soon. [? if psoe_in_government = 0 : While the position of Chancellor is typically more important, recent governments have depended on the president's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the KPD will run Thälmann. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Germany. Meanwhile, the KPD will run Ernst Thälmann. ?]
 
-# if hitler is deported, who would nsdap run? Duesterberg? or Goering?
+# if hitler is deported, who would fe-jons run? Duesterberg? or Goering?
 # Goering runs, essentially as a proxy for Hitler, who is now stateless.
 
 Many are calling for us to support the incumbent Hindenburg, despite his well-known reactionary tendencies. Is he truly the best bulwark against Hitler's ascension? On the other hand, many in our party are calling for Otto Braun to run again, but he is reluctant.
@@ -176,7 +176,7 @@ Q.hitler_votes = 0;
 Q.thalmann_votes = 0;
 
 // initial phase:
-Q.hitler_votes += Q.nsdap_votes;
+Q.hitler_votes += Q.fe-jons_votes;
 Q.hindenburg_votes += Q.other_votes;
 Q.hindenburg_votes += Q.ceda_votes;
 
@@ -212,8 +212,8 @@ if (Q.braun_campaign) {
     Q.thalmann_votes += Q.kpd_votes;
 }
 if (Q.hitler_support_hindenburg) {
-    Q.hitler_votes -= Q.nsdap_votes;
-    Q.hindenburg_votes += Q.nsdap_votes;
+    Q.hitler_votes -= Q.fe-jons_votes;
+    Q.hindenburg_votes += Q.fe-jons_votes;
 }
 
 if (Q.hindenburg_to_braun_bonus) {
@@ -246,7 +246,7 @@ Results:
 
 Hindenburg - [+ hindenburg_votes +]%
 
-[+ nsdap_candidate +] - [+ hitler_votes +]%
+[+ fe-jons_candidate +] - [+ hitler_votes +]%
 
 [? if kpd_support_braun == 0 : Thälmann - [+ thalmann_votes +]% ?]
 
@@ -258,7 +258,7 @@ go-to: round2_menu
 
 There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
 
-[? if braun_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ nsdap_candidate +] is no longer running in the second round, and has switched his endorsement to Hindenburg. ?]
+[? if braun_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ fe-jons_candidate +] is no longer running in the second round, and has switched his endorsement to Hindenburg. ?]
 
 
 @round2_menu
@@ -403,10 +403,10 @@ Ernst Thälmann of the KPD has won the presidency. Immediately, the far-right la
 - @civil_war: This is civil war.
 
 @hitler_wins
-on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party = "NSDAP"
+on-arrival: president = fe-jons_candidate; chancellor = "Hitler"; chancellor_party = "FE-JONS"
 
-[? if nsdap_candidate == "Hitler" : Adolf Hitler of the NSDAP has won the presidency. He wastes no time in consolidating power. ?]
-[? if nsdap_candidate != "Hitler" : The NSDAP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
+[? if fe-jons_candidate == "Hitler" : Adolf Hitler of the FE-JONS has won the presidency. He wastes no time in consolidating power. ?]
+[? if fe-jons_candidate != "Hitler" : The FE-JONS candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
 
 - @hitler_takes_power: What do we do now?
 

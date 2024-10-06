@@ -2,31 +2,29 @@ title: 1930
 subtitle: A new year 
 audio: clear shuffle music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1930_1933/ironfront_normalized.mp3 music/1930_1933/KommSusserTod.mp3 music/1930_1933/Warszawianka.mp3
 on-arrival: {!
-// increase NSDAP vote share 
+// increase CEDA vote share 
 Q.unemployed += 8; 
 Q.inflation -= 4;
 if (Q.old_demographics) {
     Q.catholics += 3;
     Q.catholics_z += 3;
 }
-Q.rural_nsdap += 15; 
-Q.rural_ceda -= 15;
 Q.new_middle_prp -= 5;
 Q.landholders_prp -= 5;
 Q.new_middle_izqd_rep -= 10;
 Q.landholders_izqd_rep -= 10;
-Q.new_middle_nsdap += 10; 
-Q.landholders_nsdap += 15;
+Q.new_middle_ceda += 10; 
+Q.landholders_ceda += 15;
 Q.new_middle_other += 5;
 Q.landholders_other += 5;
-Q.unemployed_nsdap += 7;
+Q.unemployed_ceda += 7;
 Q.rural_other += 5;
 Q.workers_other += 5;
 Q.workers_kpd += 3;
 Q.workers_z += 3;
 Q.landholders_z += 2;
 Q.new_middle_z += 2;
-Q.workers_nsdap += 3;
+Q.workers_ceda += 3;
 Q.sa_strength += 100;
 Q.sh_strength += 100;
 if (Q.budget > 0) {
@@ -38,4 +36,4 @@ view-if: year = 1930 and month = 1
 priority: 2
 max-visits: 1
 
-A new year begins. The economic crisis is worsening throughout the world, with no end in sight. The NSDAP seems to be strengthening in local elections. All very worrisome trends.
+A new year begins. The economic crisis is worsening throughout the world, with no end in sight. The CEDA seems to be strengthening in local elections. All very worrisome trends.
