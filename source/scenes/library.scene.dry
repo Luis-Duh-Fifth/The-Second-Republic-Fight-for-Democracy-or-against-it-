@@ -91,24 +91,24 @@ PRP: [+ prp_votes +]%
 CEDA: [+ ceda_votes +]%
 
 # 1928: 3, 1930: 18
-fe_jons: [+ fe_jons_votes +]%
+FE_JONS: [+ fe_jons_votes +]%
 
 # 1928: 9, 1930: 10
 Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PSOE: [+ workers_psoe_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, fe_jons: [+ workers_fe_jons_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: PSOE: [+ workers_psoe_normalized +]%, Z: [+ workers_z_normalized +]%, KPD: [+ workers_kpd_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, FE_JONS: [+ workers_fe_jons_normalized +]%, Others: [+ workers_other_normalized +]%
 
-Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, fe_jons: [+ new_middle_fe_jons_normalized +]%, Others: [+ new_middle_other_normalized +]%
+Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, Z: [+ new_middle_z_normalized +]%, KPD: [+ new_middle_kpd_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, FE_JONS: [+ new_middle_fe_jons_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, Z: [+ landholders_z_normalized +]%, KPD: [+ landholders_kpd_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, fe_jons: [+ landholders_fe_jons_normalized +]%, Others: [+ landholders_other_normalized +]%
+Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, Z: [+ landholders_z_normalized +]%, KPD: [+ landholders_kpd_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, FE_JONS: [+ landholders_fe_jons_normalized +]%, Others: [+ landholders_other_normalized +]%
 
-Rural: PSOE: [+ rural_psoe_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, fe_jons: [+ rural_fe_jons_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: PSOE: [+ rural_psoe_normalized +]%, Z: [+ rural_z_normalized +]%, KPD: [+ rural_kpd_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, FE_JONS: [+ rural_fe_jons_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, fe_jons: [+ unemployed_fe_jons_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, Z: [+ unemployed_z_normalized +]%, KPD: [+ unemployed_kpd_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, FE_JONS: [+ unemployed_fe_jons_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: PSOE: [+ catholics_psoe_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; CEDA: [+ catholics_ceda_normalized +]%, fe_jons: [+ catholics_fe_jons_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: PSOE: [+ catholics_psoe_normalized +]%, Z: [+ catholics_z_normalized +]%, KPD: [+ catholics_kpd_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; CEDA: [+ catholics_ceda_normalized +]%, FE_JONS: [+ catholics_fe_jons_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 @parties
 go-to: menu
@@ -136,7 +136,7 @@ Current relations: [+ ceda_relation : relationships +]
 
 Current relations: [+ kpd_relation : relationships +]
 
-**fe_jons** - *Nationalsozialistische Deutsche Arbeiterpartei* - (National Socialist German Worker's Party, or Nazis) - a far-right nationalist and antisemitic party.
+**FE_JONS** - *Falange Española de Las Juntas Ofensivas Nacional Syndicalistas* - (Spanish Falange of the Councils of the National Syndicalist Offensive) - a far-right nationalist and antisemitic party.
 
 Current relations: [+ fe_jons_relation : relationships +]
 
@@ -362,7 +362,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} fe_jons: {!</td><td>!} [+ fe_jons_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} FE_JONS: {!</td><td>!} [+ fe_jons_r +]% {!</td></tr>!}
 {!</table>!}
 
 = Election history
