@@ -143,7 +143,8 @@ Q.foreign_goal_completed = 0;
 Q.interior_goal_completed = 0;
 Q.reichswehr_goal_completed = 0;
 
-Q.z_minus_bvp_r = Q.z_r - 3;
+Q.bvp_r = Q.z_votes*0.3
+Q.z_r = Q.z_votes*0.7 
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
