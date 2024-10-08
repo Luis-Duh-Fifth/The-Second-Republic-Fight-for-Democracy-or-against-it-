@@ -184,7 +184,7 @@ data = [
         "legend": "BVP",
         "name": "BVP",
         "seats": Math.round(Q.z_r * 5 * 0.3),
-    }
+    },
     {
         "id": "prp",
         "legend": "PRP",
