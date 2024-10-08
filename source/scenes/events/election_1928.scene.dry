@@ -173,7 +173,7 @@ data = [
         "name": "IR",
         "seats": Math.round(Q.izqd_rep_r*5),
     },
-     {
+    {
         "id": "z",
         "legend": "Center",
         "name": "Center",
