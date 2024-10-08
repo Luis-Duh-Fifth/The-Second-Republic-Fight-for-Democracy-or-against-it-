@@ -144,8 +144,8 @@ Q.interior_goal_completed = 0;
 Q.reichswehr_goal_completed = 0;
 
 //To give ERC and PNV historical minority votes
-Q.bvp_r = Q.z_votes*0.3
-Q.z_r = Q.z_votes*0.7 
+Q.bvp_r = Math.round(Q.z_votes\*0.3)
+Q.z_r = Math.round(Q.z_votes\*0.7)
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
