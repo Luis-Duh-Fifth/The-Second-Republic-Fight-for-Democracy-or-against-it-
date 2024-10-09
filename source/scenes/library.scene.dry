@@ -76,7 +76,7 @@ go-to: menu
 PSOE: [+ psoe_votes +]%
 
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_votes +]%
+Z + PNV: [+ z_votes +]%
 
 # 1928: 10, 1930: 13
 KPD: [+ kpd_votes +]%
@@ -115,7 +115,7 @@ go-to: menu
 
 **PSOE** - *Partido Socialista Obrero Español* (Spanish Socialist Workers Party) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern PSOE was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" PSOE or USPD, which opposed the war.
 
-**Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **BVP** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
+**Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **PNV** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
 
 Current relations: [+ z_relation : relationships +]
 
@@ -242,7 +242,7 @@ Dissent: [+ neorevisionist_dissent : dissent +]
 @figures
 title: Figures and Charts
 go-to: menu
-on-arrival: z_minus_bvp_r = z_r - 3;
+on-arrival: z_minus_pnv_r = z_r - 3;
 on-display: {!
 data = [
     {
@@ -270,9 +270,9 @@ data = [
         "seats": (Q.z_r - 3)*5,
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
+        "id": "pnv",
+        "legend": "pnv",
+        "name": "pnv",
         "seats": 3*5,
     },
     {
@@ -352,9 +352,9 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} Z: {!</td><td>!} [+ z_minus_pnv_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} BVP: {!</td><td>!} 3% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} PNV: {!</td><td>!} 3% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} PRP: {!</td><td>!} [+ prp_r +]% {!</td></tr>!}
 

@@ -144,7 +144,7 @@ Q.interior_goal_completed = 0;
 Q.reichswehr_goal_completed = 0;
 
 //To give ERC and PNV historical minority votes
-Q.bvp_r = Math.round(Q.z_votes*0.3)
+Q.pnv_r = Math.round(Q.z_votes*0.3)
 Q.z_r = Math.round(Q.z_votes*0.7)
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
@@ -181,9 +181,9 @@ data = [
         "seats": Math.round(Q.z_r * 5 * 0.7),
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
+        "id": "pnv",
+        "legend": "PNV",
+        "name": "PNV",
         "seats": Math.round(Q.z_r * 5 * 0.3),
     },
     {
@@ -244,7 +244,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} [+ bvp_r +]% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} PNV: {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} PRP: {!</td><td>!} [+ prp_r +]% {!</td><td>!} [+ str_change_prp +] {!</td></tr>!}
  
@@ -259,11 +259,11 @@ go-to: coalition_menu
 
 Weimar Coalition (PSOE + Z + IR): [+ weimar_coalition +]%
 
-Grand Coalition (PSOE + Z + BVP + IR + PRP): [+ grand_coalition +]%
+Grand Coalition (PSOE + Z + PNV + IR + PRP): [+ grand_coalition +]%
 
-Bourgeois Coalition (Z + BVP + IR + PRP + Others): [+ bourgeois_coalition +]%
+Bourgeois Coalition (Z + PNV + IR + PRP + Others): [+ bourgeois_coalition +]%
 
-Right-wing Coalition (Z + BVP + PRP + Others + CEDA): [+ right_coalition +]%
+Right-wing Coalition (Z + PNV + PRP + Others + CEDA): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and fe_jons_r >= 15 : The rapid rise in FE_JONS votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
@@ -483,13 +483,13 @@ In response to the KPD's entrance into the government, the right-wing immediatel
 
 @right_coalition
 title: A right-wing coalition may be formed.
-subtitle: Z + BVP + PRP + CEDA + Others ([+ right_coalition +]%)
+subtitle: Z + PNV + PRP + CEDA + Others ([+ right_coalition +]%)
 unavailable-subtitle: The CEDA is not interested in a coalition with the Center.
 view-if: right_coalition >= 50
 choose-if: year < 1928
 go-to: no_right_coalition if year >= 1930; right_coalition_2 if year <= 1929
 
-There are enough votes for a right-wing coalition of the Center (+ BVP), PRP, CEDA, and minor conservative parties.
+There are enough votes for a right-wing coalition of the Center (+ PNV), PRP, CEDA, and minor conservative parties.
 
 @no_right_coalition
 go-to: no_majority
@@ -556,10 +556,10 @@ The third option is to have new elections.
 
 @new_grand_coalition
 title: A "New Grand Coalition" of all the constitutional parties?
-subtitle: PSOE + Z + BVP + IR + PRP + Others ([+ neo_weimar_coalition +]%)
+subtitle: PSOE + Z + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%)
 view-if: neo_weimar_coalition >= 50 and grand_coalition < 50
 choose-if: z_relation >= 50 and prp_relation >= 30
-unavailable-subtitle: PSOE + Z + BVP + IR + PRP + Others ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : We do not have adequate relations with the Center Party. ?][? if prp_relation < 30 : We do not have adequate relations with the PRP. ?]
+unavailable-subtitle: PSOE + Z + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : We do not have adequate relations with the Center Party. ?][? if prp_relation < 30 : We do not have adequate relations with the PRP. ?]
 
 How do we convince vehemently anti-socialist parties to allow us to form a majority coalition? Our largely benevolent relations with the Center and PRP may allow us some leverage.
 
@@ -597,7 +597,7 @@ We have assembled a new coalition under Otto Braun.
 
 @unity_government
 title: The Center Party offers a "Government of National Unity" under Chancellor Joseph Wirth.
-subtitle: PSOE + Z + BVP + IR + PRP + Others ([+ neo_weimar_coalition +]%)
+subtitle: PSOE + Z + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%)
 view-if: z_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50
 
 The Center Party leader, Joseph Joos, clearly sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Center Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
@@ -886,7 +886,7 @@ Rudolf Breitscheid has been appointed chancellor.
 @grand_coalition
 title: We can form a Grand Coalition.
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
-subtitle: PSOE + Z + BVP + IR + PRP
+subtitle: PSOE + Z + PNV + IR + PRP
 on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
 go-to: grand_coalition_psoe_lead if (n_elections <= 1 and largest_party == "PSOE") or (largest_party == "PSOE" and psoe_r >= 30) or president = "Braun"; grand_coalition_z_lead if president != "Braun" and ((n_elections > 1 and psoe_r < 30) or (n_elections <= 1 and largest_party != "PSOE"))
 
@@ -896,7 +896,7 @@ go-to: grand_coalition_psoe_lead if (n_elections <= 1 and largest_party == "PSOE
 @grand_coalition_z_lead
 go-to: grand_coalition_z_lead_2 if prp_relation >= 30; grand_coalition_fail if prp_relation < 30
 
-There are enough votes to form a majority coalition consisting of the PSOE, Center (Z), Bavarian People's (BVP), Democratic (IR), and People's (PRP) parties. Given our rather weak electoral performance, [? if psoe_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_psoe = 1 : and the vote of no confidence against us, ?] President Hindenburg has asked the Center Party to take the lead role in forming a government.
+There are enough votes to form a majority coalition consisting of the PSOE, Center (Z), Bavarian People's (PNV), Democratic (IR), and People's (PRP) parties. Given our rather weak electoral performance, [? if psoe_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_psoe = 1 : and the vote of no confidence against us, ?] President Hindenburg has asked the Center Party to take the lead role in forming a government.
 
 # TODO: if the PSOE participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
@@ -994,7 +994,7 @@ We have decided to tolerate Brüning's government. This means that we will vote 
 @grand_coalition_fail
 on-arrival: grand_coalition_failed = 1
 
-Unfortunately, the PRP and BVP are unwilling to enter into another coalition with the PSOE, so the grand coalition is unable to be formed.
+Unfortunately, the PRP and PNV are unwilling to enter into another coalition with the PSOE, so the grand coalition is unable to be formed.
 
 - @no_majority: Thus, there is no clear majority.
 - @brauns_dilemma
@@ -1011,7 +1011,7 @@ go-to: prp_conservative if stresemann_dead == 1; prp_majority if stresemann_dead
 @prp_majority
 go-to: join_bruning
 
-Under the influence of Gustav Stresemann, the PRP agrees to allow us into the coalition, and so does the BVP.
+Under the influence of Gustav Stresemann, the PRP agrees to allow us into the coalition, and so does the PNV.
 
 
 @prp_conservative
@@ -1045,7 +1045,7 @@ As expected, the PRP is too set in their anti-democratic ways.
 @grand_coalition_psoe_lead
 on-arrival: leverage -= 15 if prp_relation < 20
 
-As expected, the PSOE is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's (BVP), Democratic (IR), and People's (PRP) parties.
+As expected, the PSOE is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's (PNV), Democratic (IR), and People's (PRP) parties.
 
 [? if prp_relation < 20 : As our relation with the PRP is poor, they are demanding more minister posts in order to remain part of the coalition. ?]
 

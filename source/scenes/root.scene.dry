@@ -282,7 +282,7 @@ Q.catholics_other = 12;
 // Current Reichstag composition
 // % of Reichstag in Jan 1931
 // source: wikipedia
-// note: the Z figures also include the BVP (Bavarian people's party)
+// note: the Z figures also include the PNV (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.psoe_r = 26;
@@ -335,8 +335,8 @@ Q.fe_jons_in_government = 0;
 Q.in_right_coalition = 0;
 // Weimar coalition = PSOE + Z + IR
 Q.in_weimar_coalition = 0;
-// Grand coalition = PSOE + Z + BVP + IR + PRP
-// also includes the "new grand coalition" of PSOE + Z + BVP + IR + PRP + Others
+// Grand coalition = PSOE + Z + PNV + IR + PRP
+// also includes the "new grand coalition" of PSOE + Z + PNV + IR + PRP + Others
 Q.in_grand_coalition = 0;
 // Popular front = PSOE + KPD + Z + IR
 Q.in_popular_front = 0;

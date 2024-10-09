@@ -287,7 +287,7 @@ The electoral system is essentially proportional, with the proportion of Reichst
 PSOE: [+ psoe_r +]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]
+Z + PNV: [+ z_r +]
 
 # 1928: 10, 1930: 13
 KPD: [+ kpd_r +]
@@ -311,9 +311,9 @@ Other: [+ other_r +]
 
 Weimar Coalition (PSOE + Z + IR): [+ weimar_coalition +]
 
-Grand Coalition (PSOE + Z + BVP + IR + PRP): [+ grand_coalition +]
+Grand Coalition (PSOE + Z + PNV + IR + PRP): [+ grand_coalition +]
 
-Bourgeois Coalition (Z + BVP + IR + PRP + Others): [+ bourgeois_coalition +]
+Bourgeois Coalition (Z + PNV + IR + PRP + Others): [+ bourgeois_coalition +]
 
-Right-wing Coalition (Z + BVP + PRP + Others + CEDA): [+ right_coalition +]
+Right-wing Coalition (Z + PNV + PRP + Others + CEDA): [+ right_coalition +]
 
