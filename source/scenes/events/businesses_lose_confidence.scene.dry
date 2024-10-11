@@ -18,12 +18,12 @@ The business community has a variety of suggestions as to how we might improve t
 - @watch: Just watch us. The economy *will* improve.
 
 @taxes
-on-arrival: upper_tax_rates -= 1; budget -= 1; capital_strike_progress -= 1; unemployed -= 1; new_middle_psoe += 5*(1-dissent); landholders_psoe += 4*(1-dissent); kpd_coalition_dissent += 1; kpd_relation -= 5; left_dissent += 5
+on-arrival: upper_tax_rates -= 1; budget -= 1; capital_strike_progress -= 1; unemployed -= 1; new_middle_psoe += 5*(1-dissent); landholders_psoe += 4*(1-dissent); pce_coalition_dissent += 1; pce_relation -= 5; left_dissent += 5
 
 Cutting taxes improves our relationship with the capitalists.
 
 @welfare
-on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; new_middle_psoe += 4*(1-dissent); landholders_psoe += 4*(1-dissent); workers_psoe -= 5; unemployed_psoe -= 5; unemployed -= 1; left_dissent += 5; labor_dissent += 5; center_dissent += 5; kpd_coalition_dissent += 1; inflation -= 1;
+on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; new_middle_psoe += 4*(1-dissent); landholders_psoe += 4*(1-dissent); workers_psoe -= 5; unemployed_psoe -= 5; unemployed -= 1; left_dissent += 5; labor_dissent += 5; center_dissent += 5; pce_coalition_dissent += 1; inflation -= 1;
 
 Cutting welfare improves our relationship with the capitalists, but it hurts our working-class base.
 

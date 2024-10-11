@@ -13,30 +13,30 @@ The PSOE cannot govern by itself yet. Because we do not have an electoral majori
 
 - @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
 - @center: Strengthen our bonds with the Catholic Center Party.
-- @kpd: Work towards repairing relationships with the Communist Party.
+- @pce: Work towards repairing relationships with the Communist Party.
 - @psoe_alone: The PSOE can stand alone for now.
 - @easy_discard
 
 
-@kpd
+@pce
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; kpd_inter_party_seen += 1
-go-to: kpd_blutmai if blutmai = 1; kpd_1 if blutmai = 0 and kpd_coalition_success = 0; kpd_2 if kpd_coalition_success = 1
+on-arrival: resources -= 1; pce_inter_party_seen += 1
+go-to: pce_blutmai if blutmai = 1; pce_1 if blutmai = 0 and pce_coalition_success = 0; pce_2 if pce_coalition_success = 1
 
-@kpd_1
-on-arrival: kpd_relation += 6*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; prp_relation -= 3
+@pce_1
+on-arrival: pce_relation += 6*(1 - dissent); communist_coalition += 1 if pce_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; prp_relation -= 3
 
 The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
 
-@kpd_2
-on-arrival: kpd_relation += 8*(1 - dissent); communist_coalition += 1 if kpd_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; prp_relation -= 3
+@pce_2
+on-arrival: pce_relation += 8*(1 - dissent); communist_coalition += 1 if pce_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; prp_relation -= 3
 
-After the success of the coalition government with the KPD, they are much more amenable to us.
+After the success of the coalition government with the PCE, they are much more amenable to us.
 
-@kpd_blutmai
-on-arrival: kpd_relation += 3*(1 - dissent)
+@pce_blutmai
+on-arrival: pce_relation += 3*(1 - dissent)
 
 After the events of Blütmai, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
 

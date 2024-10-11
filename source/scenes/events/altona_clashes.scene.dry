@@ -25,7 +25,7 @@ We have banned the planned protest. The Nazis appeal the ban in the courts in th
 go-to: allow_police_violence if prussian_police_loyalty <= 0.75; allow_police_no_violence if prussian_police_loyalty > 0.75 
 
 @allow_police_violence
-on-arrival: strife += 1; sa_strength += 50; kpd_relation -= 8; communist_coalition -= 1
+on-arrival: strife += 1; sa_strength += 50; pce_relation -= 8; communist_coalition -= 1
 
 When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. The police attempt to separate the two groups, to no avail. Gunshots are heard, reportedly from rooftop snipers (whom the police believe are communists). In response, the police fire into the surrounding buildings. Dozens are killed. All turn out to be civilians, and the reported snipers are never found.
 
@@ -38,6 +38,6 @@ When the march arrives in Altona, they are immediately confronted by an angry cr
 
 
 @allow_no_police
-on-arrival: sa_strength += 80; rfb_strength += 50; strife += 1; kpd_relation -= 8; communist_coalition -= 1
+on-arrival: sa_strength += 80; rfb_strength += 50; strife += 1; pce_relation -= 8; communist_coalition -= 1
 
 When the march arrives in Altona, they are immediately confronted by an angry crowd of communists and socialists, who throw objects at the Nazis. Gunshots are heard, reportedly from rooftop snipers. In response, the SA engage the surrounding crowd and fire at the surrounding buildings. Dozens are killed, mostly civilians. The Nazis recruit off their dead martyrs.

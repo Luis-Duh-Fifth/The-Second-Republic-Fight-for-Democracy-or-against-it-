@@ -20,7 +20,7 @@ Minor changes:
 - New advisor actions: End toleration (for some left advisors)
 - Added descriptions of the internal party factions.
 - Some more tax options.
-- Abortion rights and homosexual rights can be passed with a "progressive coalition" of the PSOE, KPD, and IR.
+- Abortion rights and homosexual rights can be passed with a "progressive coalition" of the PSOE, PCE, and IR.
 - Can only use the Shuffle Cabinet and Women's Rights cards if the chancellor is PSOE.
 - Low relations with the DVP results in less leverage in a grand coalition.
 - Papen being appointed as chancellor reduces judicial reform.
@@ -113,9 +113,9 @@ Potential future changes:
 
 Notes on the Popular Front:
 
-I don't know how the KPD would contend themselves in government. A KPD that is willing to support an PSOE government would necessarily be different from Thälmann's Stalinist organization, so I looked to the earlier Paul Levi KPD as well as the French Popular Front for ideas. Originally I had the KPD ministers implementing certain policies, but reading about Paul Levi, I think that the KPD would be abstentionist in government, in that they would not have any ministers to preserve their independent course of action, and disavow themselves from any unpopular course the government may take. 
+I don't know how the PCE would contend themselves in government. A PCE that is willing to support an PSOE government would necessarily be different from Thälmann's Stalinist organization, so I looked to the earlier Paul Levi PCE as well as the French Popular Front for ideas. Originally I had the PCE ministers implementing certain policies, but reading about Paul Levi, I think that the PCE would be abstentionist in government, in that they would not have any ministers to preserve their independent course of action, and disavow themselves from any unpopular course the government may take. 
 
-Ironically the hypothetical KPD position towards the Popular Front is basically analogous to the PSOE position towards the Brüning government (i.e. toleration).
+Ironically the hypothetical PCE position towards the Popular Front is basically analogous to the PSOE position towards the Brüning government (i.e. toleration).
 
 Sources: Gaido, Daniel. “Paul Levi and the Origins of the United-Front Policy in the Communist International.” Historical Materialism 25, no. 1 (2017): 131–74. https://doi.org/10.1163/1569206x-12341515.
 
@@ -127,8 +127,8 @@ LaPorte, Norman H. “The German Communist Party in Saxony, 1924-1933 : Factio
 v0.10.1 - An easier Popular Front
 
 Changes:
-- KPD ultimatum set at 16 months, with an option to appeal for more time.
-- More events cause changes to KPD relations, some other stat changes
+- PCE ultimatum set at 16 months, with an option to appeal for more time.
+- More events cause changes to PCE relations, some other stat changes
 - Bug fixes - thanks everyone for reporting!
 
 
@@ -328,4 +328,4 @@ As with many other major changes, there are a number of bugs introduced here...
 - Changes in party votes should be accurately reflected when there is an electoral threshold.
 - On the electoral threshold reform, it is mentioned that a plurality in an electoral district would bypass the threshold requirement, so that the BVP can remain.
 - Radio is somewhat less effective later in the game.
-- Changes to KPD coalition events if a constructive VONC reform is passed.
+- Changes to PCE coalition events if a constructive VONC reform is passed.

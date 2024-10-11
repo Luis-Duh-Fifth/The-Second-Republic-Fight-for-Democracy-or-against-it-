@@ -1,12 +1,12 @@
-title: The KPD presents its list of goals for the coalition.
-view-if: (in_popular_front = 1 or in_left_front = 1) and kpd_goals_seen = 0 and kpd_coalition_success = 0 and next_election_time - time > 12 and psoe_in_government
-on-arrival: kpd_goals_seen = 1; welfare_goal = 1; foreign_goal = 0; agriculture_goal = 1 if agriculture_minister_party != "KPD"; economy_goal = 1 if economy_minister_party != "KPD"; finance_goal = 1 if finance_minister_party != "KPD"; labor_goal = 1 if labor_minister_party != "KPD"; reichswehr_goal = 1 if reichswehr_minister_party != "KPD"; kpd_ultimatum_timer = 12; kpd_ultimatum_timer = 16 if kpd_relation >= 60; kpd_ultimatum_timer = 24 if constructive_vonc; kpd_ultimatum_timer = next_election_time - time - 1 if next_election_time - time <= 12;
+title: The PCE presents its list of goals for the coalition.
+view-if: (in_popular_front = 1 or in_left_front = 1) and pce_goals_seen = 0 and pce_coalition_success = 0 and next_election_time - time > 12 and psoe_in_government
+on-arrival: pce_goals_seen = 1; welfare_goal = 1; foreign_goal = 0; agriculture_goal = 1 if agriculture_minister_party != "PCE"; economy_goal = 1 if economy_minister_party != "PCE"; finance_goal = 1 if finance_minister_party != "PCE"; labor_goal = 1 if labor_minister_party != "PCE"; reichswehr_goal = 1 if reichswehr_minister_party != "PCE"; pce_ultimatum_timer = 12; pce_ultimatum_timer = 16 if pce_relation >= 60; pce_ultimatum_timer = 24 if constructive_vonc; pce_ultimatum_timer = next_election_time - time - 1 if next_election_time - time <= 12;
 new-page: true
 tags: event
 
-= KPD Goals
+= PCE Goals
 
-The KPD presents us with a list of goals for the coalition:
+The PCE presents us with a list of goals for the coalition:
 
 [? if welfare_goal = 1 : - Expand social welfare programs. ?]
 
@@ -24,4 +24,4 @@ The KPD presents us with a list of goals for the coalition:
 
 [? if reichswehr_goal = 1 : - Reduce funding for the Reichswehr. ?]
 
-They say that they expect to see these goals fulfilled in [+ kpd_ultimatum_timer +] months. Otherwise, they will vote to dissolve the coalition.
+They say that they expect to see these goals fulfilled in [+ pce_ultimatum_timer +] months. Otherwise, they will vote to dissolve the coalition.

@@ -11,7 +11,7 @@ max-visits: 5
 
 The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of the Republic against the extremists who threaten it. Some would call it a paramilitary, although currently it is hardly any sort of military. It is officially associated with the pro-democratic parties -the PSOE, Center, and IR, but by far the largest component is with the PSOE.
 
-[? if workers_psoe < 46 or workers_psoe < workers_fe_jons or workers_psoe < workers_kpd : The Reichsbanner is having a more difficult time recruiting, as the PSOE is no longer the dominant party among the workers. Many of its members have left. ?]
+[? if workers_psoe < 46 or workers_psoe < workers_fe_jons or workers_psoe < workers_pce : The Reichsbanner is having a more difficult time recruiting, as the PSOE is no longer the dominant party among the workers. Many of its members have left. ?]
 
 - @militant: Fund more military-style training and equipment for the Reichsbanner.
 - @militant_2: Use our existing resources to support more training for the Reichsbanner.
@@ -49,7 +49,7 @@ The Reichsbanner is already serving the purpose it needs to serve. There is no r
 
 @cut_rb
 subtitle: +1 resources
-on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; left_strength -= 2; left_dissent -= 2; psoe_militancy -= 0.05; workers_kpd += 2; unemployed_kpd += 2
+on-arrival: resources += 1; rb_strength -= 100; rb_militancy -= 0.05; left_strength -= 2; left_dissent -= 2; psoe_militancy -= 0.05; workers_pce += 2; unemployed_pce += 2
 
 Cutting resources to the Reichsbanner causes a drop in the membership, and leads some would-be members to join the Communists instead.
 

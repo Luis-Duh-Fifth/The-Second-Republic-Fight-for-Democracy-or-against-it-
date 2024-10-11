@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['psoe', 'kpd', 'izqd_rep', 'z', 'prp', 'ceda', 'fe_jons', 'other'];
+        parties = ['psoe', 'pce', 'izqd_rep', 'z', 'prp', 'ceda', 'fe_jons', 'other'];
     }
     if (!partyColors) {
-        partyColors = {'psoe': '#E3000F', 'kpd': '#8B0000', 'izqd_rep': '#DCCA4A', 'z': '#000', 'prp': '#D5AC27', 'ceda': '#3f7bc1', 'fe_jons': '#954B00', 'other': '#a0a0a0'};
+        partyColors = {'psoe': '#E3000F', 'pce': '#8B0000', 'izqd_rep': '#DCCA4A', 'z': '#000', 'prp': '#D5AC27', 'ceda': '#3f7bc1', 'fe_jons': '#954B00', 'other': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'psoe': 'PSOE', 'kpd': 'KPD', 'izqd_rep': 'izqd_rep', 'z': 'Z + PNV', 'prp': 'PRP', 'ceda': 'CEDA', 'fe_jons': 'FE_JONS', 'other': 'Others'};
+        partyNames = {'psoe': 'PSOE', 'pce': 'PCE', 'izqd_rep': 'izqd_rep', 'z': 'Z + PNV', 'prp': 'PRP', 'ceda': 'CEDA', 'fe_jons': 'FE_JONS', 'other': 'Others'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;

@@ -27,7 +27,7 @@ if (!Q.works_program) {
     Q.landholders_ceda += 10;
     Q.unemployed_ceda += 6;
     Q.workers_ceda += 5;
-    Q.workers_kpd += 5;
+    Q.workers_pce += 5;
     Q.sa_strength += 200;
 } else if (Q.unemployed > 25) {
     Q.rural_ceda += 5;

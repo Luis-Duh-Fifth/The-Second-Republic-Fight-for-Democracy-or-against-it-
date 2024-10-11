@@ -13,34 +13,34 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the KPD, FE_JONS, and CEDA.
+- @anti_dem: The anti-democratic parties of the far right and left - the PCE, FE_JONS, and CEDA.
 - @far_right: The far right - the FE_JONS and CEDA.
 - @fe_jons: The FE_JONS alone.
-- @kpd: The KPD.
+- @pce: The PCE.
 - @bourgeois: The bourgeois parties - the Center and PRP.
 - @easy_discard
 
 @anti_dem
-on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_fe_jons -= 2; workers_ceda -= 2; kpd_relation -= 10
+on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_pce -= 2; workers_fe_jons -= 2; workers_ceda -= 2; pce_relation -= 10
 
-Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
+Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the PCE in the future.
 
 @far_right
 on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_fe_jons -= 3; workers_ceda -= 3;
 
-Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
+Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the PCE. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
 
 @fe_jons
 on-arrival: enemies = "FE_JONS"; neorevisionist_strength += 5; nazi_urgency += 1; workers_fe_jons -= 4;
 
 [? if nazi_urgency == 0 or fe_jons_r < 10 : The FE_JONS is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and fe_jons_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
 
-@kpd
-on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; prp_relation += 5; z_relation += 5; workers_kpd -= 4;
+@pce
+on-arrival: enemies = "PCE"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; pce_relation -= 15; prp_relation += 5; z_relation += 5; workers_pce -= 4;
 
-Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
+Attacking the PCE is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the PCE, this may not be the best choice.
 
 @bourgeois
-on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; prp_relation -= 5; z_relation -= 5; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
+on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; prp_relation -= 5; z_relation -= 5; pce_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.

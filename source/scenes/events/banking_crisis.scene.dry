@@ -1,7 +1,7 @@
 title: Banking Crisis
 subtitle: The collapse of the German banking system...
 new-page: true
-on-arrival: banking_crisis_seen = 1; workers_kpd += 5; workers_fe_jons += 3; new_middle_fe_jons += 3; landholders_fe_jons += 4; rural_fe_jons += 3; unemployed += 3; crisis_urgency += 1; workers_psoe -= 4 if psoe_in_government; new_middle_psoe -= 5 if psoe_in_government; landholders_psoe -= 5 if psoe_in_government; rural_psoe -= 4 if psoe_in_government
+on-arrival: banking_crisis_seen = 1; workers_pce += 5; workers_fe_jons += 3; new_middle_fe_jons += 3; landholders_fe_jons += 4; rural_fe_jons += 3; unemployed += 3; crisis_urgency += 1; workers_psoe -= 4 if psoe_in_government; new_middle_psoe -= 5 if psoe_in_government; landholders_psoe -= 5 if psoe_in_government; rural_psoe -= 4 if psoe_in_government
 tags: event
 view-if: customs_union = 1 and banking_crisis_timer = 0
 max-visits: 1

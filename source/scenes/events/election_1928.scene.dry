@@ -26,7 +26,7 @@ Since we are currently ruling as part of an emergency government, we may use qua
 - @election_algorithm: No, let's hold the elections.
 
 @cancel_elections_2
-on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; prp_relation -= 8; z_relation -= 8; izqd_rep_relation -= 10; kpd_relation -= 8; coup_progress += 2; workers_psoe -= 4; new_middle_psoe -= 5; landholders_psoe -= 5; rural_psoe -= 5; catholics_psoe -= 5; unemployed_psoe -= 5; coup_progress += 2 if fe_jons_normalized >= 0.3; coup_progress += 2 if fe_jons_normalized + ceda_normalized >= 0.5
+on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; prp_relation -= 8; z_relation -= 8; izqd_rep_relation -= 10; pce_relation -= 8; coup_progress += 2; workers_psoe -= 4; new_middle_psoe -= 5; landholders_psoe -= 5; rural_psoe -= 5; catholics_psoe -= 5; unemployed_psoe -= 5; coup_progress += 2 if fe_jons_normalized >= 0.3; coup_progress += 2 if fe_jons_normalized + ceda_normalized >= 0.5
 achievement: ausnahmezustand
 
 Fine. President [+ president +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_election_month : month +] [+ next_election_year +].
@@ -72,11 +72,11 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 // The largest party can only be the CEDA or the PSOE.
 Q.largest_party = 'PSOE';
-if (Q.ceda_r >= Q.psoe_r && Q.ceda_r >= Q.kpd_r) {
+if (Q.ceda_r >= Q.psoe_r && Q.ceda_r >= Q.pce_r) {
     Q.largest_party = 'ceda';
 }
-if (Q.kpd_r >= Q.psoe_r && Q.kpd_r >= Q.ceda_r) {
-    Q.largest_party = 'KPD';
+if (Q.pce_r >= Q.psoe_r && Q.pce_r >= Q.ceda_r) {
+    Q.largest_party = 'pce';
 }
 
 // coalitions
@@ -86,23 +86,23 @@ Q.bourgeois_coalition = Q.izqd_rep_r + Q.z_r + Q.prp_r + Q.other_r;
 Q.center_right_coalition = Q.z_r + Q.izqd_rep_r + Q.prp_r + Q.other_r + Q.ceda_r;
 Q.right_coalition = Q.z_r + Q.prp_r + Q.other_r + Q.ceda_r;
 Q.far_right_coalition = Q.ceda_r + Q.fe_jons_r;
-Q.left_coalition = Q.psoe_r + Q.kpd_r;
+Q.left_coalition = Q.psoe_r + Q.pce_r;
 // this is an absurd concept lol
-Q.popular_front_coalition = Q.psoe_r + Q.kpd_r + Q.z_r + Q.izqd_rep_r - 3;
-Q.anti_democratic_coalition = Q.kpd_r + Q.fe_jons_r + Q.ceda_r;
-// aka everyone except nazi, kpd, ceda
+Q.popular_front_coalition = Q.psoe_r + Q.pce_r + Q.z_r + Q.izqd_rep_r - 3;
+Q.anti_democratic_coalition = Q.pce_r + Q.fe_jons_r + Q.ceda_r;
+// aka everyone except nazi, pce, ceda
 Q.neo_weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.z_r + Q.prp_r + Q.other_r;
 // Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
 Q.hitler_right_coalition = Q.z_r + Q.ceda_r + Q.fe_jons_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
-Q.progressive_coalition = Q.psoe_r + Q.kpd_r + Q.izqd_rep_r;
+Q.progressive_coalition = Q.psoe_r + Q.pce_r + Q.izqd_rep_r;
 
 Q.leverage = Q.psoe_r;
 
 Q.grand_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.coalition_dissent = 0;
-Q.kpd_coalition_dissent = 0;
+Q.pce_coalition_dissent = 0;
 Q.psoe_in_government = 0;
 Q.in_weimar_coalition = 0;
 Q.in_grand_coalition = 0;
@@ -122,9 +122,9 @@ Q.economic_minister_party = 'IR';
 Q.finance_minister_party = 'PRP';
 Q.agriculture_minister_party = 'Z';
 
-// reset KPD goals
-Q.kpd_goals_seen = 0;
-Q.kpd_ultimatum_seen = 0;
+// reset PCE goals
+Q.pce_goals_seen = 0;
+Q.pce_ultimatum_seen = 0;
 Q.welfare_goal = 0;
 Q.agriculture_goal = 0;
 Q.economy_goal = 0;
@@ -157,10 +157,10 @@ on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and fe_jons_r >= 15)
 on-display: {!
 data = [
     {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Math.round(Q.kpd_r*5),
+        "id": "pce",
+        "legend": "PCE",
+        "name": "PCE",
+        "seats": Math.round(Q.pce_r*5),
     },
     {
         "id": "psoe",
@@ -238,7 +238,7 @@ go-to: coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **PSOE:** {!</td><td>!} **[+ psoe_r +]%** {!</td><td>!} **[+ str_change_psoe +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}PCE: {!</td><td>!} [+ pce_r +]% {!</td><td>!} [+ str_change_pce +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td><td>!} [+ str_change_izqd_rep +] {!</td></tr>!}
 
@@ -267,7 +267,7 @@ Right-wing Coalition (Z + PNV + PRP + Others + CEDA): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and fe_jons_r >= 15 : The rapid rise in FE_JONS votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, CEDA, and FE_JONS have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 : Together, the anti-democratic PCE, CEDA, and FE_JONS have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 
@@ -290,10 +290,10 @@ There are some potential coalition arrangements.
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
-subtitle: PSOE + KPD + Z + IR ([+ popular_front_coalition +]%)
-unavailable-subtitle: PSOE + KPD + Z + IR ([+ popular_front_coalition +]%) - [? if kpd_relation < 50: We do not have good enough relations with the KPD. ?][? if z_relation < 50: We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
+subtitle: PSOE + PCE + Z + IR ([+ popular_front_coalition +]%)
+unavailable-subtitle: PSOE + PCE + Z + IR ([+ popular_front_coalition +]%) - [? if pce_relation < 50: We do not have good enough relations with the PCE. ?][? if z_relation < 50: We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
 view-if: popular_front_coalition >= 50
-choose-if: kpd_relation >= 50 and z_relation >= 50 and izqd_rep_relation >= 50 and communist_coalition >= 3
+choose-if: pce_relation >= 50 and z_relation >= 50 and izqd_rep_relation >= 50 and communist_coalition >= 3
 
 Could we really form a coalition that included both the Center and the Communists? It seems like an absurd concept, but given our good relationships with both sides, it is not an impossibility.
 
@@ -303,7 +303,7 @@ The far-right might attempt a coup, if such a coalition were formed.
 
 @popular_front_2
 
-Somehow, both the Communists and Center are at the very least willing to entertain negotiations. Of course, KPD radicals and Center conservatives derail the negotiations almost immediately. The KPD demands leadership of the coalition for themselves and their chairman Ernst Thälmann, [? if psoe_r > kpd_r : despite our higher vote share, ?]while the Center is offended by the prospect of helping Bolsheviks enter government. *Something* must be done to restore balance.
+Somehow, both the Communists and Center are at the very least willing to entertain negotiations. Of course, PCE radicals and Center conservatives derail the negotiations almost immediately. The PCE demands leadership of the coalition for themselves and their chairman Ernst Thälmann, [? if psoe_r > pce_r : despite our higher vote share, ?]while the Center is offended by the prospect of helping Bolsheviks enter government. *Something* must be done to restore balance.
 
 - @popular_front_resources
 - @popular_front_democracy
@@ -319,9 +319,9 @@ on-arrival: resources -= 4
 go-to: popular_front_success
 
 @popular_front_democracy
-title: Convince the KPD to accept democracy.
-unavailable-subtitle: Our relationship with the KPD is not high enough.
-choose-if: kpd_relation >= 60 and communist_coalition >= 3
+title: Convince the PCE to accept democracy.
+unavailable-subtitle: Our relationship with the PCE is not high enough.
+choose-if: pce_relation >= 60 and communist_coalition >= 3
 go-to: popular_front_success
 
 @popular_front_braun
@@ -330,28 +330,28 @@ view-if: president == "Braun"
 go-to: popular_front_success
 
 @popular_front_success
-on-arrival: psoe_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "PSOE"; kpd_relation += 10; coup_progress += 2; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
+on-arrival: psoe_in_government = 1; in_popular_front = 1; chancellor = "Breitscheid"; chancellor_party = "PSOE"; pce_relation += 10; coup_progress += 2; in_left_front = 0; in_weimar_coalition = 0; in_grand_coalition = 0; coalition_dissent = 0;
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_no_civil_war if coup_progress < 10
 achievement: volksfront
 
 Somehow, surprisingly, the coalition is successfully formed! We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the PSOE, acceptable to the Center [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
 
 @popular_front_no_civil_war
-on-arrival: kpd_goals_seen = 0; finance_minister_party = "Z"; interior_minister_party = "Z"; economy_minister_party = "Z"; labor_minister_party = "Z"; foreign_minister_party = "Z"; agriculture_minister_party = "Z"; reichswehr_minister = "I"; leverage += kpd_r
+on-arrival: pce_goals_seen = 0; finance_minister_party = "Z"; interior_minister_party = "Z"; economy_minister_party = "Z"; labor_minister_party = "Z"; foreign_minister_party = "Z"; agriculture_minister_party = "Z"; reichswehr_minister = "I"; leverage += pce_r
 
-In response to the KPD's entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that the Popular Front government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and center and eventually enabling the destruction of the Weimar Republic. Our task is to prove them wrong.
+In response to the PCE's entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that the Popular Front government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and center and eventually enabling the destruction of the Weimar Republic. Our task is to prove them wrong.
 
-The KPD has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" within the Popular Front government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that the Popular Front would inevitably fail, and that our failure would benefit them.
+The PCE has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" within the Popular Front government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that the Popular Front would inevitably fail, and that our failure would benefit them.
 
 - @ministries: First, we must select our ministries.
 
 
 @popular_front_civil_war
-on-arrival: kpd_relation = 80; reichswehr_loyalty += 0.25;
+on-arrival: pce_relation = 80; reichswehr_loyalty += 0.25;
 
-In response to the KPD's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
+In response to the PCE's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
 
-The Center manages to diffuse some of the hostility from the Reichswehr and the Stahlhelm, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the KPD, whether we want to or not.
+The Center manages to diffuse some of the hostility from the Reichswehr and the Stahlhelm, but fail to prevent the outbreak of fighting. We are forced to fight on the same side as the PCE, whether we want to or not.
 
 - @civil_war: A civil war, then.
 
@@ -397,12 +397,12 @@ Alternatively, Braun could use the emergency powers of the presidency. Article 4
 
 @left_coalition
 title: Is a United Left coalition possible?
-subtitle: PSOE + KPD ([+ left_coalition +]%)
-unavailable-subtitle: PSOE + KPD ([+ left_coalition +]%). [? if kpd_relation < 50 : We do not have adequate relations with the KPD. ?][? if communist_coalition < 3 : The Communists are too committed to their radical ways to partake in government. ?]
+subtitle: PSOE + PCE ([+ left_coalition +]%)
+unavailable-subtitle: PSOE + PCE ([+ left_coalition +]%). [? if pce_relation < 50 : We do not have adequate relations with the PCE. ?][? if communist_coalition < 3 : The Communists are too committed to their radical ways to partake in government. ?]
 view-if: left_coalition >= 50
-choose-if: kpd_relation >= 50 and communist_coalition >= 3
+choose-if: pce_relation >= 50 and communist_coalition >= 3
 
-There are enough votes for a PSOE + KPD coalition government, if such a thing were actually possible.
+There are enough votes for a PSOE + PCE coalition government, if such a thing were actually possible.
 
 The far-right might attempt a coup, if such a coalition were formed.
 
@@ -417,7 +417,7 @@ A far left coalition is impossible.
 
 @left_coalition_possible
 
-The KPD is still very reluctant to join a coalition, despite grassroots friendliness between our memberships. The Stalinist leadership is vehemently against such a thing. They demand the appointment of Ernst Thälmann as chancellor in exchange for a coalition. [? if president == "Hindenburg" : There is no chance whatsoever that President Hindenburg would approve of the appointment of a die-hard communist as chancellor. ?] Alternatively, if our relations with them are good enough, we could convince them to support the appointment of one of our centrist or left-leaning members as chancellor.
+The PCE is still very reluctant to join a coalition, despite grassroots friendliness between our memberships. The Stalinist leadership is vehemently against such a thing. They demand the appointment of Ernst Thälmann as chancellor in exchange for a coalition. [? if president == "Hindenburg" : There is no chance whatsoever that President Hindenburg would approve of the appointment of a die-hard communist as chancellor. ?] Alternatively, if our relations with them are good enough, we could convince them to support the appointment of one of our centrist or left-leaning members as chancellor.
 
 - @thalmann_chancellor: Appoint Thälmann as chancellor.
 - @left_coalition_resources
@@ -427,13 +427,13 @@ The KPD is still very reluctant to join a coalition, despite grassroots friendli
 @thalmann_chancellor
 choose-if: president == "Braun" and reformist_strength + neorevisionist_strength < left_strength
 unavailable-subtitle: [? if president != "Braun": President [+ president +] would never allow such a thing. ?] [? if reformist_strength >= left_strength : Most in the parliamentary party would not support Thälmann as chancellor. ?]
-on-arrival: chancellor = "Thälmann"; chancellor_party = "KPD"; kpd_relation = 80; in_left_front = 1; psoe_in_government = 1 
+on-arrival: chancellor = "Thälmann"; chancellor_party = "PCE"; pce_relation = 80; in_left_front = 1; psoe_in_government = 1 
 
 With great reluctance, President [+ president +] appoints [+ chancellor +] as chancellor.
 
-Immediately, [+ chancellor +] goes to work building a "Soviet Germany": consolidating as much power as possible in the KPD, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
+Immediately, [+ chancellor +] goes to work building a "Soviet Germany": consolidating as much power as possible in the PCE, purging state institutions of anti-communists, and sending street fighters against the "enemies of the people".
 
-In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the KPD from taking power. We are forced to be on the same side as the KPD, whether we want to or not.
+In response to [+ chancellor +] being appointed Chancellor, the right-wing forces launches almost immediately launch an attempted coup. Troops of the Stahlhelm and Nazi SA enter Berlin and immediately begin clashing with our supporters! Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop the PCE from taking power. We are forced to be on the same side as the PCE, whether we want to or not.
 
 - @civil_war
 
@@ -447,34 +447,34 @@ on-arrival: resources -= 3
 go-to: left_coalition_success
 
 @left_coalition_relations
-title: Convince the KPD to accept democracy.
-unavailable-subtitle: Our relationships with the KPD are not good enough.
-choose-if: kpd_relation >= 60
+title: Convince the PCE to accept democracy.
+unavailable-subtitle: Our relationships with the PCE are not good enough.
+choose-if: pce_relation >= 60
 go-to: left_coalition_success
 
 
 @left_coalition_success
-on-arrival: psoe_in_government = 1; in_left_front = 1; chancellor = "Breitscheid"; chancellor_party = "PSOE"; coup_progress += 3; capital_strike_progress += 2; in_popular_front = 0; in_grand_coalition = 0; in_weimar_coalition = 0; kpd_relation += 10
+on-arrival: psoe_in_government = 1; in_left_front = 1; chancellor = "Breitscheid"; chancellor_party = "PSOE"; coup_progress += 3; capital_strike_progress += 2; in_popular_front = 0; in_grand_coalition = 0; in_weimar_coalition = 0; pce_relation += 10
 go-to: left_coalition_civil_war if coup_progress >= 10; left_coalition_no_civil_war if coup_progress < 10
 achievement: einheitsfront
 
-Somehow, surprisingly, the left coalition is successfully formed, without appointing Thälmann as chancellor. The consensus choice for chancellor, accepted by the PSOE, KPD, and President [+ president +], is Rudolf Breitscheid, who belongs to the centrist faction of the PSOE, but was acceptable to the left due to his previous membership in the left-wing anti-war USPD.
+Somehow, surprisingly, the left coalition is successfully formed, without appointing Thälmann as chancellor. The consensus choice for chancellor, accepted by the PSOE, PCE, and President [+ president +], is Rudolf Breitscheid, who belongs to the centrist faction of the PSOE, but was acceptable to the left due to his previous membership in the left-wing anti-war USPD.
 
 # just raise the coup limit, don't immediately go to civil war
 
 @left_coalition_no_civil_war
-on-arrival: kpd_goals_seen = 0; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE"; reichswehr_loyalty -= 0.05
+on-arrival: pce_goals_seen = 0; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE"; reichswehr_loyalty -= 0.05
 
-In response to the KPD's entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that our government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and eventually enabling the destruction of the Weimar Republic. Our task is to prove them wrong.
+In response to the pce's entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that our government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and eventually enabling the destruction of the Weimar Republic. Our task is to prove them wrong.
 
-The KPD has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" in the worker's government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that we would inevitably fail, and that our failure would benefit them. 
+The PCE has taken an abstentionist position with regards to ministries. They claim to be participating as the "loyal opposition" in the worker's government, supporting us from the outside while also running their own propaganda campaigns to turn workers to their side. They seem to expect that we would inevitably fail, and that our failure would benefit them. 
 
 Whatever their reasoning is, the PSOE has control over the ministries of government.
 
 @left_coalition_civil_war
 on-arrival: reichswehr_loyalty += 0.1
 
-In response to the KPD's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
+In response to the PCE's entrance into the government, the right-wing immediately launches a coup attempt. Troops of the Stahlhelm and Nazi SA enter Berlin and begin clashing with our supporters. Reactionary officers within the Reichswehr have taken their troops out of the barracks and joined them with the Stahlhelm to stop us from taking power.
 
 - @civil_war: A civil war, then.
 
@@ -544,7 +544,7 @@ on-arrival: no_majority_bruning_elections += 1
 
 There is no path to a majority government. One option would be to have a continuation of the current Brüning government; if we tolerate it, then it would retain a majority vote against no-confidence.
 
-Alternatively, we could try to form a "new grand coalition" of all constitutional parties except the FE_JONS, KPD, and CEDA. The stumbling block are the minor conservative parties such as the "Economic Party of the Middle Class", who detest any hint of socialism and would ruin the country before working with Marxists.
+Alternatively, we could try to form a "new grand coalition" of all constitutional parties except the FE_JONS, PCE, and CEDA. The stumbling block are the minor conservative parties such as the "Economic Party of the Middle Class", who detest any hint of socialism and would ruin the country before working with Marxists.
 
 The third option is to have new elections.
 
@@ -753,7 +753,7 @@ Thus, we have Chancellor-President Otto Braun. He claims that he will resign as 
 
 @breitscheid_emergency_chancellor
 subtitle: The Communists are warming to him...
-on-arrival: chancellor = "Breitscheid"; chancellor_party = "PSOE"; psoe_in_government = 1; kpd_relation += 5; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE"; reichswehr_loyalty -= 0.1;
+on-arrival: chancellor = "Breitscheid"; chancellor_party = "PSOE"; psoe_in_government = 1; pce_relation += 5; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE"; reichswehr_loyalty -= 0.1;
 
 We have appointed Rudolf Breitscheid as emergency chancellor. The Communists consider him less objectionable than the alternatives, although it is unclear whether they will tolerate this government.
 
@@ -795,7 +795,7 @@ Their numbers are bolstered by the many government workers who are against the p
 @emergency_no_confidence
 title: The Nazis immediately call a no-confidence vote against us...
 view-if: far_right_coalition < 45
-on-arrival: z_no_confidence = 1 if z_relation < 45; kpd_no_confidence = 1 if kpd_relation < 45; others_no_confidence = 1 if (z_relation + prp_relation)/2 < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = FE_JONS_r + ceda_r; no_confidence_votes += z_r if z_no_confidence; no_confidence_votes += kpd_r if kpd_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
+on-arrival: z_no_confidence = 1 if z_relation < 45; pce_no_confidence = 1 if pce_relation < 45; others_no_confidence = 1 if (z_relation + prp_relation)/2 < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = FE_JONS_r + ceda_r; no_confidence_votes += z_r if z_no_confidence; no_confidence_votes += pce_r if pce_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
 
 The FE_JONS and CEDA will vote against us, of course. The other parties vote their conscience.
 
@@ -1099,7 +1099,7 @@ We have promised to let the Center have more influence in the government in resp
 @z_chancellor
 title: Let the Center party have their chancellor.
 subtitle: This is unexpected and will cause internal dissent, but may give us a better position in negotiating for other cabinet positions.
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation += 10; prp_relation += 5; kpd_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Brüning"; chancellor_party = "Z"; psoe_in_government = 1; leverage += 5
+on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation += 10; prp_relation += 5; pce_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Brüning"; chancellor_party = "Z"; psoe_in_government = 1; leverage += 5
 go-to: ministries
 
 This is highly unexpected, and many in the left and center of our party are criticizing this decision.
@@ -1161,7 +1161,7 @@ We are seen as responsible for the failure to form a government, and many of our
 
 @ministries
 
-We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the KPD. ?] [? if in_left_front and reichswehr_minister_party == "KPD" : If the KPD controls the Reichswehr Ministry, the army will most likely revolt. ?]
+We can pick from any number of ministries. Controlling a ministry allows us to directly effect policy in that area. [? if in_left_front : Any ministry that we do not take will be given to the PCE. ?] [? if in_left_front and reichswehr_minister_party == "PCE" : If the PCE controls the Reichswehr Ministry, the army will most likely revolt. ?]
 
 - #mins_1928
 - #drop_mins_1928

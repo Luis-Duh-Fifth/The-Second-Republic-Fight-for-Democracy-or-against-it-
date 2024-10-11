@@ -1,7 +1,7 @@
 title: Nazis in Crisis
 subtitle: Finally, the internal contradictions of the FE_JONS have caught up to it.
 view-if: year = 1933 and month >= 9 and fe_jons_r >= 8 and fe_jons_normalized + ceda_normalized < 0.5
-on-arrival: workers_fe_jons -= 12; new_middle_fe_jons -= 12; landholders_fe_jons -= 12; rural_fe_jons -= 12; unemployed_fe_jons -= 10; sa_strength *= 0.7; coup_progress -= 4 if coup_progress > 4; new_middle_izqd_rep += 6; new_middle_prp += 6; landholders_izqd_rep += 5; landholders_prp += 5; landholders_ceda += 3; rural_ceda += 6; rural_izqd_rep += 2; rural_prp += 2; unemployed_kpd += 4; unemployed_psoe += 4
+on-arrival: workers_fe_jons -= 12; new_middle_fe_jons -= 12; landholders_fe_jons -= 12; rural_fe_jons -= 12; unemployed_fe_jons -= 10; sa_strength *= 0.7; coup_progress -= 4 if coup_progress > 4; new_middle_izqd_rep += 6; new_middle_prp += 6; landholders_izqd_rep += 5; landholders_prp += 5; landholders_ceda += 3; rural_ceda += 6; rural_izqd_rep += 2; rural_prp += 2; unemployed_pce += 4; unemployed_psoe += 4
 max-visits: 1
 new-page: true
 tags: event

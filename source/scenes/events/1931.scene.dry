@@ -32,7 +32,7 @@ if (!Q.works_program) {
     Q.new_middle_ceda += 10; 
     Q.landholders_ceda += 10;
     Q.workers_ceda += 5;
-    Q.workers_kpd += 5;
+    Q.workers_pce += 5;
     Q.sa_strength += 100;
     Q.sh_strength += 50;
     Q.crisis_urgency += 1;

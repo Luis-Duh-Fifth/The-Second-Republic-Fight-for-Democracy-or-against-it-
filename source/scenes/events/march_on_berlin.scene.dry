@@ -25,7 +25,7 @@ title: There is nothing we can do.
 go-to: accept_election if fe_jons_normalized + ceda_normalized >= 0.45; accept_hitler if fe_jons_normalized + ceda_normalized < 0.45
 
 @accept_election
-on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; landholders_fe_jons += 10; new_middle_fe_jons += 10; workers_fe_jons += 10; rural_fe_jons += 10; unemployed_fe_jons += 8; workers_psoe -= 10; workers_kpd -= 10; sa_strength += 100;
+on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; landholders_fe_jons += 10; new_middle_fe_jons += 10; workers_fe_jons += 10; rural_fe_jons += 10; unemployed_fe_jons += 8; workers_psoe -= 10; workers_pce -= 10; sa_strength += 100;
 
 President [+ president +] has called for emergency elections, to be held next month, under a caretaker government. The SA is permitted to act with impunity, intimidating voters into supporting the fascists.
 

@@ -31,7 +31,7 @@ subtitle: He is a good organizer, but is he also a good chancellor?
 Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.
 
 @breitscheid_chancellor
-on-arrival: chancellor = "Breitscheid"; chancellor_party = "PSOE"; z_relation -= 5; prp_relation -= 5; kpd_relation += 1
+on-arrival: chancellor = "Breitscheid"; chancellor_party = "PSOE"; z_relation -= 5; prp_relation -= 5; pce_relation += 1
 subtitle: The Center Party is worried about his left-leaning tendencies.
 
 Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.

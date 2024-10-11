@@ -24,7 +24,7 @@ if (Q.republic_victory) {
 // Einigkeit und Recht - survive on medium without a civil war.
 // Einigkeit und Recht und Freiheit - survive on hard without a civil war.
 
-// Einheitsfront - form a united front with the KPD, and win the civil war.
+// Einheitsfront - form a united front with the PCE, and win the civil war.
 
 // Volksfront - form a popular front government, and win the civil war.
 
@@ -69,7 +69,7 @@ for (var c of Q.classes) {
     }
 }
 
-// Die Rote Fahne - join the KPD in the May Day march.
+// Die Rote Fahne - join the PCE in the May Day march.
 // Mehrheitspartei - form an PSOE majority government in the Reichstag.
 // Panik im Mittelstand - have over 50% of New Middle Class support.
 if (Q.new_middle_psoe_normalized && Q.new_middle_psoe_normalized >= 50) {
@@ -200,11 +200,11 @@ The PSOE is still in government, under Chancellor [+ chancellor +]. Given the ci
 
 @communist_victory
 title: Communist victory
-view-if: chancellor_party == "KPD" or president == "Thälmann" and total_defeat == 0 and long_war == 0
+view-if: chancellor_party == "PCE" or president == "Thälmann" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
-The KPD has won power in Germany, with our assistance. They will try to remake Germany in the Soviet image. How much they succeed is yet to be determined.
+The PCE has won power in Germany, with our assistance. They will try to remake Germany in the Soviet image. How much they succeed is yet to be determined.
 
 @works_program
 title: Works program enacted!
@@ -308,13 +308,13 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
-[? if game_achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and KPD. ?]
+[? if game_achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and PCE. ?]
 
-[? if game_achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
+[? if game_achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the PCE demands. ?]
 
-[? if game_achievement_volksfront: **Volksfront** - Form a government consisting of the PSOE, KPD, Z, and IR. ?]
+[? if game_achievement_volksfront: **Volksfront** - Form a government consisting of the PSOE, PCE, Z, and IR. ?]
 
-[? if game_achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
+[? if game_achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the PCE demands. ?]
 
 [? if game_achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
 
@@ -346,7 +346,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
 
-[? if game_achievement_die_rote_fahne: **Die Rote Fahne** - join the KPD in their May Day march. ?]
+[? if game_achievement_die_rote_fahne: **Die Rote Fahne** - join the PCE in their May Day march. ?]
 
 [? if game_achievement_panik_im_mittelstand: **Panik im Mittelstand** - PSOE new middle class support is at least 50%. ?]
 
@@ -395,13 +395,13 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
-[? if achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and KPD. ?]
+[? if achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and PCE. ?]
 
-[? if achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
+[? if achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the PCE demands. ?]
 
-[? if achievement_volksfront: **Volksfront** - Form a government consisting of the PSOE, KPD, Z, and IR. ?]
+[? if achievement_volksfront: **Volksfront** - Form a government consisting of the PSOE, PCE, Z, and IR. ?]
 
-[? if achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
+[? if achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the PCE demands. ?]
 
 [? if achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
 
@@ -433,7 +433,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
 
-[? if achievement_die_rote_fahne: **Die Rote Fahne** - join the KPD in their May Day march. ?]
+[? if achievement_die_rote_fahne: **Die Rote Fahne** - join the PCE in their May Day march. ?]
 
 [? if achievement_panik_im_mittelstand: **Panik im Mittelstand** - PSOE new middle class support is at least 50%. ?]
 
@@ -480,13 +480,13 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
 
-[? if not achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and KPD. ?]
+[? if not achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and PCE. ?]
 
-[? if not achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the KPD demands. ?]
+[? if not achievement_einheitsfront_2: **Sieg für die Einheitsfront** - Form a Left Front that survives the PCE demands. ?]
 
-[? if not achievement_volksfront: **Volksfront** - Form a government consisting of the PSOE, KPD, Z, and IR. ?]
+[? if not achievement_volksfront: **Volksfront** - Form a government consisting of the PSOE, PCE, Z, and IR. ?]
 
-[? if not achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the KPD demands. ?]
+[? if not achievement_volksfront_2: **Sieg für die Volksfront** - Form a Popular Front that survives the PCE demands. ?]
 
 [? if not achievement_constitutional_coalition: **Verfassungskoalition** - form a "constitutional coalition". ?]
 
@@ -518,7 +518,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
 
-[? if not achievement_die_rote_fahne: **Die Rote Fahne** - join the KPD in their May Day march. ?]
+[? if not achievement_die_rote_fahne: **Die Rote Fahne** - join the PCE in their May Day march. ?]
 
 [? if not achievement_panik_im_mittelstand: **Panik im Mittelstand** - PSOE new middle class support is at least 50%. ?]
 

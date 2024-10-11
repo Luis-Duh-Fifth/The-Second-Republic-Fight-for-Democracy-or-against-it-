@@ -19,12 +19,12 @@ The people and the press are clamoring for action to reduce inflation.
 - @nothing: Realistically, there is nothing we can do.
 
 @taxes
-on-arrival: upper_tax_rates += 1; lower_tax_rates += 1; budget += 2; unemployed += 1.5; capital_strike_progress -= 1; inflation -= 1; new_middle_psoe -= 3; landholders_psoe -= 3; workers_psoe -= 3; rural_psoe -= 3; kpd_coalition_dissent += 1; kpd_relation -= 5; left_dissent += 5
+on-arrival: upper_tax_rates += 1; lower_tax_rates += 1; budget += 2; unemployed += 1.5; capital_strike_progress -= 1; inflation -= 1; new_middle_psoe -= 3; landholders_psoe -= 3; workers_psoe -= 3; rural_psoe -= 3; pce_coalition_dissent += 1; pce_relation -= 5; left_dissent += 5
 
 Raising taxes is unpopular among everyone, but it might be what it takes to keep inflation under control.
 
 @welfare
-on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; unemployed += 1.5; new_middle_psoe += 4*(1-dissent); landholders_psoe += 4*(1-dissent); workers_psoe -= 5; unemployed_psoe -= 5; inflation -= 1; left_dissent += 5; labor_dissent += 5; center_dissent += 5; kpd_coalition_dissent += 1;
+on-arrival: welfare -= 1; budget += 1; capital_strike_progress -= 2; unemployed += 1.5; new_middle_psoe += 4*(1-dissent); landholders_psoe += 4*(1-dissent); workers_psoe -= 5; unemployed_psoe -= 5; inflation -= 1; left_dissent += 5; labor_dissent += 5; center_dissent += 5; pce_coalition_dissent += 1;
 
 Reducing the amount of government spending should reduce the inflation rate, according to classical economics. But it imposes pain upon the people who are suffering the most.
 

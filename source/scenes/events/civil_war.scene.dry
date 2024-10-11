@@ -4,7 +4,7 @@ on-arrival: {!
 Q.rb_strength = Math.round(Q.rb_strength);
 Q.sh_strength = Math.round(Q.sh_strength);
 Q.sa_strength = Math.round(Q.sa_strength);
-// re-calculate dissent, in case we transitioned from, say, the KPD support that raised reformist dissent.
+// re-calculate dissent, in case we transitioned from, say, the PCE support that raised reformist dissent.
 var total_strength = Q.left_strength + Q.center_strength + Q.labor_strength + Q.reformist_strength + Q.neorevisionist_strength;
 var total_dissent = Q.left_strength*Q.left_dissent + Q.center_strength*Q.center_dissent + Q.labor_strength*Q.labor_dissent + Q.reformist_strength*Q.reformist_dissent + Q.neorevisionist_strength*Q.neorevisionist_dissent;
 
@@ -41,21 +41,21 @@ if (Q.psoe_in_government && Q.chancellor_party == "PSOE") {
     Q.total_power += Q.loyal_reichswehr_power/4;
 }
 Q.rfb_power = Q.rfb_strength*Q.rfb_militancy;
-if (Q.kpd_relation >= 60) {
+if (Q.pce_relation >= 60) {
     Q.total_power += Q.rfb_power;
-} else if (Q.kpd_relation >= 45) {
+} else if (Q.pce_relation >= 45) {
     Q.total_power += Q.rfb_power*0.5;
 }
 // general strike strength
 // maximum (given 25 labor strength) is 400
 // use normalized workers_psoe instead of labor_strength?
-Q.normalized_workers_psoe = 100*Q.workers_psoe/(Q.workers_psoe + Q.workers_kpd + Q.workers_fe_jons + Q.workers_other + Q.workers_ceda + Q.workers_z);
-Q.normalized_workers_kpd = 100*Q.workers_kpd/(Q.workers_psoe + Q.workers_kpd + Q.workers_fe_jons + Q.workers_other + Q.workers_ceda + Q.workers_z);
+Q.normalized_workers_psoe = 100*Q.workers_psoe/(Q.workers_psoe + Q.workers_pce + Q.workers_fe_jons + Q.workers_other + Q.workers_ceda + Q.workers_z);
+Q.normalized_workers_pce = 100*Q.workers_pce/(Q.workers_psoe + Q.workers_pce + Q.workers_fe_jons + Q.workers_other + Q.workers_ceda + Q.workers_z);
 Q.normalized_workers_total = Q.normalized_workers_psoe;
-if (Q.kpd_relation >= 60) {
-    Q.normalized_workers_total += Q.normalized_workers_kpd;
-} else if (Q.kpd_relation >= 45) {
-    Q.normalized_workers_total += Q.normalized_workers_kpd*0.5;
+if (Q.pce_relation >= 60) {
+    Q.normalized_workers_total += Q.normalized_workers_pce;
+} else if (Q.pce_relation >= 45) {
+    Q.normalized_workers_total += Q.normalized_workers_pce*0.5;
 }
 Q.total_power += (2 - Q.labor_dissent/100)*Q.normalized_workers_total*(2 - Q.unemployed/100)*2.5;
 console.log("Supporter strength:", Q.total_power);
@@ -89,7 +89,7 @@ go-to: war_menu
 
 Our enemies are the nationalist Stahlhelm, with [+ sh_strength +] thousand troops, and the Nazi SA, with [+ sa_strength +] thousand troops. The loyalties of the Reichswehr, with its [+ reichswehr_strength +] thousand regular soldiers, and Prussian police, with [+ prussian_police_strength +] thousand members, are unclear.
 
-[? if chancellor_party == "KPD" or president == "Thälmann" : The KPD's paramilitary, the RFB, is leading the battle, and we are their co-combatants. ?]
+[? if chancellor_party == "PCE" or president == "Thälmann" : The PCE's paramilitary, the RFB, is leading the battle, and we are their co-combatants. ?]
 
 On our side, we have the Reichsbanner, at [+ rb_strength +] thousand members. [? if dissent > 0.15 and dissent <= 0.25: It is somewhat weakened by dissent within the party, and some members choose not to fight. ?][? if dissent > 0.25 and dissent < 0.5: It is weakened by dissent within the party, and many members choose not to fight. ?][? if dissent >= 0.5: It is heavily weakened by dissent within the party, and a substantial portion of members choose not to fight. ?]
 
@@ -102,7 +102,7 @@ What else do we have?
 @war_menu
 
 - @rw_help: Appeal to the Reichswehr to stand down.
-- @kpd_help: Call for support from the Communists.
+- @pce_help: Call for support from the Communists.
 - @general_strike: Call a general strike!
 - @loyal_police: Call up the loyal portions of the police.
 - @war_outcome: Now, the battle...
@@ -114,15 +114,15 @@ on-arrival: war_choices += 1
 
 We have urged the Reichswehr to stand down, to avoid killing their countrymen. [? if reichswehr_loyalty < 0.2 : Unfortunately, few heed our calls; the Reichswhere detest us. ?][? if reichswehr_loyalty >= 0.2 and reichswehr_loyalty < 0.4 : Some officers and troops heed our calls to not fight against us. Some even join us. ?][? if reichswehr_loyalty >= 0.4 and reichswehr_loyalty < 0.6 : The Reichswehr is split. Many avoid taking a side, or join our side. ?][? if reichswehr_loyalty >= 0.6 : Surprisingly, the majority of the Reichswehr is on our side! Our preparations have worked. ?]
 
-@kpd_help
+@pce_help
 max-visits: 1
-view-if: chancellor_party != "KPD" and president != "Thälmann" 
+view-if: chancellor_party != "PCE" and president != "Thälmann" 
 go-to: war_menu
 on-arrival: war_choices += 1
 
-There are [+ rfb_strength +] thousand fighters with the Communist RFB, in addition to the workers who support the KPD.
+There are [+ rfb_strength +] thousand fighters with the Communist RFB, in addition to the workers who support the PCE.
 
-[? if kpd_relation >= 60 : The KPD is entirely on our side, owing to our good relations.. ?][? if kpd_relation < 60 and kpd_relation >= 45 : Most of the KPD is on our side, due to their good relations with us. ?][? if kpd_relation < 45 : The KPD does not support us. ?]
+[? if pce_relation >= 60 : The PCE is entirely on our side, owing to our good relations.. ?][? if pce_relation < 60 and pce_relation >= 45 : Most of the PCE is on our side, due to their good relations with us. ?][? if pce_relation < 45 : The PCE does not support us. ?]
 
 @general_strike
 max-visits: 1
@@ -199,13 +199,13 @@ go-to: long_war_intervention
 We send a call for help to the West, but their governments are divided on whether or not to support us. We have to survive on our own until they make a decision.
 
 @soviet_aid
-choose-if: (soviet_relation >= 1 and kpd_relation >= 50) or (kpd_relation >= 75)
+choose-if: (soviet_relation >= 1 and pce_relation >= 50) or (pce_relation >= 75)
 on-arrival: soviet_aid += 1
 unavailable-subtitle: Our relations are not strong enough.
 max-visits: 1
 go-to: long_war_intervention
 
-We send a call for help to the Soviet Union. The KPD receives the bulk of the aid, while the Reichsbanner and our loyal military units are left floundering. If we win, this does not bode well for our future.
+We send a call for help to the Soviet Union. The PCE receives the bulk of the aid, while the Reichsbanner and our loyal military units are left floundering. If we win, this does not bode well for our future.
 
 @east_aid
 choose-if: east_relation >= 2

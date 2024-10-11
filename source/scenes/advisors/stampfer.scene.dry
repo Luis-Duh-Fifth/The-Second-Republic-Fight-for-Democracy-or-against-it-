@@ -7,11 +7,11 @@ new-page: true
 
 = Friedrich Stampfer
 
-Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper, and also a Reichstag member. He was historically part of the Majority PSOE that supported our participation in the Great War, but also supports cooperation with the KPD to save the Republic.
+Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper, and also a Reichstag member. He was historically part of the Majority PSOE that supported our participation in the Great War, but also supports cooperation with the PCE to save the Republic.
 
 - @media_
 - @faction_support_
-- @kpd_cooperation
+- @pce_cooperation
 - @root: Return to main
 
 
@@ -65,11 +65,11 @@ on-arrival: neorevisionist_dissent -= 6; neorevisionist_strength += 5
 
 Vorwärts prints editorials in support of neorevisionist ideas.
 
-@kpd_cooperation
-title: Cooperation with the KPD
-subtitle: Could we build closer ties with the KPD?
+@pce_cooperation
+title: Cooperation with the PCE
+subtitle: Could we build closer ties with the PCE?
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 2; kpd_relation += 4*(1-dissent); reformist_dissent += 2
+on-arrival: advisor_action_timer = 6; left_strength += 2; pce_relation += 4*(1-dissent); reformist_dissent += 2
 
-Stampfer works towards closer ties with the KPD through our media.
+Stampfer works towards closer ties with the PCE through our media.

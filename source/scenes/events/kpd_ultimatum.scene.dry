@@ -1,48 +1,48 @@
-title: The KPD checks upon our progress in accomplishing the coalition's goals...
-view-if: (in_popular_front or in_left_front) and kpd_ultimatum_timer = 0 and kpd_goals_seen = 1 and kpd_ultimatum_seen = 0 and psoe_in_government
+title: The PCE checks upon our progress in accomplishing the coalition's goals...
+view-if: (in_popular_front or in_left_front) and pce_ultimatum_timer = 0 and pce_goals_seen = 1 and pce_ultimatum_seen = 0 and psoe_in_government
 on-arrival: {!
-Q.kpd_ultimatum_seen = 1;
-Q.kpd_goals_completed = 1;
-Q.kpd_score = 6;
+Q.pce_ultimatum_seen = 1;
+Q.pce_goals_completed = 1;
+Q.pce_score = 6;
 if (Q.welfare_goal && !Q.welfare_goal_completed) {
-    Q.kpd_goals_completed = 0;
-    Q.kpd_score -= 1;
+    Q.pce_goals_completed = 0;
+    Q.pce_score -= 1;
 }
 if (Q.agriculture_goal && !Q.agriculture_goal_completed) {
-    Q.kpd_goals_completed = 0;
-    Q.kpd_score -= 1;
+    Q.pce_goals_completed = 0;
+    Q.pce_score -= 1;
 }
 if (Q.economy_goal && !Q.economy_goal_completed) {
-    Q.kpd_goals_completed = 0;
-    Q.kpd_score -= 1;
+    Q.pce_goals_completed = 0;
+    Q.pce_score -= 1;
 }
 if (Q.finance_goal && !Q.finance_goal_completed) {
-    Q.kpd_goals_completed = 0;
-    Q.kpd_score -= 1;
+    Q.pce_goals_completed = 0;
+    Q.pce_score -= 1;
 }
 if (Q.labor_goal && !Q.labor_goal_completed) {
-    Q.kpd_goals_completed = 0;
-    Q.kpd_score -= 1;
+    Q.pce_goals_completed = 0;
+    Q.pce_score -= 1;
 }
 if (Q.foreign_goal && !Q.foreign_goal_completed) {
-    Q.kpd_goals_completed = 0;
-    Q.kpd_score -= 1;
+    Q.pce_goals_completed = 0;
+    Q.pce_score -= 1;
 }
 if (Q.interior_goal && !Q.interior_goal_completed) {
-    Q.kpd_goals_completed = 0;
+    Q.pce_goals_completed = 0;
 }
 if (Q.reichswehr_goal && !Q.reichswehr_goal_completed) {
-    Q.kpd_goals_completed = 0;
-    Q.kpd_score -= 1;
+    Q.pce_goals_completed = 0;
+    Q.pce_score -= 1;
 }
 !}
 new-page: true
 tags: event
-go-to: goals_success if kpd_goals_completed; goals_failed if not kpd_goals_completed
+go-to: goals_success if pce_goals_completed; goals_failed if not pce_goals_completed
 
-= KPD Goals
+= PCE Goals
 
-At the start of this government, the KPD presented a list of goals for the coalition:
+At the start of this government, the PCE presented a list of goals for the coalition:
 
 [? if welfare_goal = 1 : - Expand social welfare programs - [? if welfare_goal_completed : success ?][? if not welfare_goal_completed: failed ?] ?]
 
@@ -59,28 +59,28 @@ At the start of this government, the KPD presented a list of goals for the coali
 [? if reichswehr_goal = 1 : - Reduce funding for the Reichswehr. - [? if reichswehr_goal_completed : success ?][? if not reichswehr_goal_completed: failed ?] ?]
 
 @goals_failed
-on-arrival: kpd_relation -= 10; workers_psoe -= 8; unemployed_psoe -= 8;
+on-arrival: pce_relation -= 10; workers_psoe -= 8; unemployed_psoe -= 8;
 
-Unfortunately, we have failed to accomplish all of the goals the KPD set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the workers.
+Unfortunately, we have failed to accomplish all of the goals the PCE set out. They plan to call a vote of no confidence against our government, and have already begun mounting a propaganda campaign to delegitimize our government in the eyes of the workers.
 
 - @appeal: Appeal to the Communists to have patience - we are trying!
-- @kpd_vote_of_no_confidence.support_center: Could we form a new government based on the Center Party and IR (and possibly PRP)?
-- @kpd_vote_of_no_confidence.let_it_happen: Let the vote happen.
+- @pce_vote_of_no_confidence.support_center: Could we form a new government based on the Center Party and IR (and possibly PRP)?
+- @pce_vote_of_no_confidence.let_it_happen: Let the vote happen.
 - @no_vonc: They cannot call a vote of no confidence due to the constitutional reforms, but they can obstruct our government at every opportunity.
 
 @appeal
-choose-if: kpd_score >= 4 and kpd_relation > 50 and kpd_appeal_seen = 0
-unavailable-subtitle: [? if kpd_score < 4: They do not see us as serious in trying to achieve the goals of the coalition. ?] [? if kpd_relation < 50: Our relations are too poor. ?] [? if kpd_appeal_seen = 1: we do not have any more time. ?]
-on-arrival: kpd_ultimatum_seen = 0; kpd_ultimatum_timer += 6; kpd_appeal_seen = 1
+choose-if: pce_score >= 4 and pce_relation > 50 and pce_appeal_seen = 0
+unavailable-subtitle: [? if pce_score < 4: They do not see us as serious in trying to achieve the goals of the coalition. ?] [? if pce_relation < 50: Our relations are too poor. ?] [? if pce_appeal_seen = 1: we do not have any more time. ?]
+on-arrival: pce_ultimatum_seen = 0; pce_ultimatum_timer += 6; pce_appeal_seen = 1
 
-We argue that we have already achieved most of the coalition's goals, and in the name of proletarian solidarity, we must make this coalition function. Surprisingly, the KPD hears our pleas, and is willing to give us six more months before the coalition goals must be achieved.
+We argue that we have already achieved most of the coalition's goals, and in the name of proletarian solidarity, we must make this coalition function. Surprisingly, the PCE hears our pleas, and is willing to give us six more months before the coalition goals must be achieved.
 
 
 @goals_success
-on-arrival: workers_psoe += 8; unemployed_psoe += 8; kpd_relation += 10; workers_kpd += 5; kpd_coalition_success += 1
+on-arrival: workers_psoe += 8; unemployed_psoe += 8; pce_relation += 10; workers_pce += 5; pce_coalition_success += 1
 go-to: popular_front_achievement if in_popular_front; united_front_achievement if in_left_front
 
-Against all expectations, the KPD's goals have all been met! Apparently the Communists did not prepare for this eventuality, a worker's government successfully built through democratic means. They will continue to "tolerate" our government for the rest of our term, while still acting as a watchdog against bourgeois backsliding.
+Against all expectations, the PCE's goals have all been met! Apparently the Communists did not prepare for this eventuality, a worker's government successfully built through democratic means. They will continue to "tolerate" our government for the rest of our term, while still acting as a watchdog against bourgeois backsliding.
 
 
 @popular_front_achievement
@@ -95,4 +95,4 @@ achievement: einheitsfront_2
 view-if: constructive_vonc
 on-arrival: in_popular_front = 0; in_left_front = 0; in_minority_government = 1;
 
-We have been effectively made a minority government, and the KPD intends to obstruct our attempts to pass policy.
+We have been effectively made a minority government, and the PCE intends to obstruct our attempts to pass policy.

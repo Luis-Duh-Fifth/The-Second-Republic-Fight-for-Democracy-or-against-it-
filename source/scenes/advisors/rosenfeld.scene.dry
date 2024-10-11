@@ -7,10 +7,10 @@ new-page: true
 
 = Kurt Rosenfeld
 
-Rosenfeld works as a lawyer in Berlin who defends left-wing individuals and causes. He favors cooperation with the KPD and a path of class struggle for the PSOE.
+Rosenfeld works as a lawyer in Berlin who defends left-wing individuals and causes. He favors cooperation with the PCE and a path of class struggle for the PSOE.
 
 - @building_the_left
-- @kpd_cooperation
+- @pce_cooperation
 - @against_toleration
 - @root: Return to main
 
@@ -23,14 +23,14 @@ on-arrival: advisor_action_timer = 6; left_strength += 6; left_dissent -= 8; ref
 
 We have increased the strength of the left faction with the PSOE.
 
-@kpd_cooperation
-title: Cooperation with the KPD
-subtitle: Push the party to be more friendly towards the KPD.
+@pce_cooperation
+title: Cooperation with the PCE
+subtitle: Push the party to be more friendly towards the PCE.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_strength += 5; kpd_relation += 4*(1-dissent); reformist_dissent += 2; communist_coalition += 1 if kpd_cooperation_seen <= 1; kpd_cooperation_seen += 1
+on-arrival: advisor_action_timer = 6; left_strength += 5; pce_relation += 4*(1-dissent); reformist_dissent += 2; communist_coalition += 1 if pce_cooperation_seen <= 1; pce_cooperation_seen += 1
 
-Through his work, Rosenfeld has defended individual KPD members; this should make some connections possible.
+Through his work, Rosenfeld has defended individual PCE members; this should make some connections possible.
 
 @against_toleration
 title: Against toleration
