@@ -153,7 +153,7 @@ The Roman Catholic Church is interested in furthering relations with the German 
 @concordat
 title: We can sign a Concordat with the Vatican!
 view-if: reichskonkordat_progress >= 4 and reichskonkordat = 0
-on-arrival: reichskonkordat = 1; erc_relation += 15; catholics_psoe += 8; catholics_erc  += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front;
+on-arrival: reichskonkordat = 1; erc_relation += 15; catholics_psoe += 8; catholics_erc += 5 if in_weimar_coalition or in_grand_coalition or in_popular_front;
 achievement: reichskonkordat
 
 We have successfully signed a Concordat between Germany and the Roman Catholic Church! This treaty defines a formal relationship between the Church and the German state, guaranteeing freedom of worship for Catholics, and the right of the church to appoint their own clergy. Catholics in Germany are pleased, as are their representatives in the Center Party.

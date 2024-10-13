@@ -242,7 +242,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td><td>!} [+ str_change_izqd_rep +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} ERC: {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc  +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} ERC: {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} PNV: {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
 
@@ -888,19 +888,19 @@ title: We can form a Grand Coalition.
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
 subtitle: PSOE + ERC + PNV + IR + PRP
 on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
-go-to: grand_coalition_psoe_lead if (n_elections <= 1 and largest_party == "PSOE") or (largest_party == "PSOE" and psoe_r >= 30) or president = "Braun"; grand_coalition_erc _lead if president != "Braun" and ((n_elections > 1 and psoe_r < 30) or (n_elections <= 1 and largest_party != "PSOE"))
+go-to: grand_coalition_psoe_lead if (n_elections <= 1 and largest_party == "PSOE") or (largest_party == "PSOE" and psoe_r >= 30) or president = "Braun"; grand_coalition_erc_lead if president != "Braun" and ((n_elections > 1 and psoe_r < 30) or (n_elections <= 1 and largest_party != "PSOE"))
 
 # TODO: if there are enough votes to form a grand coalition, who leads? Does the PSOE lead or does Brüning (Z) lead? In reality this depended on Hindenburg's will, basically, which in turn depended on what his camarilla supported.
 # In the first election, PSOE always leads. In subsequent elections, if psoe_r >= 29 then PSOE leads, otherwise ERC leads?
 
-@grand_coalition_erc _lead
-go-to: grand_coalition_erc _lead_2 if prp_relation >= 30; grand_coalition_fail if prp_relation < 30
+@grand_coalition_erc_lead
+go-to: grand_coalition_erc_lead_2 if prp_relation >= 30; grand_coalition_fail if prp_relation < 30
 
 There are enough votes to form a majority coalition consisting of the PSOE, Center (Z), Bavarian People's (PNV), Democratic (IR), and People's (PRP) parties. Given our rather weak electoral performance, [? if psoe_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_psoe = 1 : and the vote of no confidence against us, ?] President Hindenburg has asked the Center Party to take the lead role in forming a government.
 
 # TODO: if the PSOE participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
-@grand_coalition_erc _lead_2
+@grand_coalition_erc_lead_2
 
 The Center chancellor is likely to be Heinrich Brüning of the Center Party[? if chancellor = "Brüning" : again ?]. He is known for his conservatism and sympathy for monarchism, being on the right wing of the Center. [? if austerity >= 2 : Due to the government's austerity policies, many of our members are reluctant to participate in this coalition again. Some support a "toleration" arrangement in which we will provide outside support to prevent the far-right from either entering government or calling a successful no-confidence vote. Others support entering into pure opposition, and letting the right do what it wishes. ?]
 

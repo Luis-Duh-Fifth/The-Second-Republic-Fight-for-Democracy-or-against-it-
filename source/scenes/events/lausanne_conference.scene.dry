@@ -1,7 +1,7 @@
 title: Lausanne Conference
 subtitle: On the question of reparations...
 view-if: year = 1932 and month >= 6 and hoover_moratorium_seen = 1 and reparations > -2 and unemployed >= 15
-on-arrival: reparations = -2; budget += 1; workers_prp += 3 if foreign_minister_party == "PRP"; new_middle_prp += 3 if foreign_minister_party == "PRP"; landholders_prp += 3 if foreign_minister_party == "PRP"; rural_prp += 3 if foreign_minister_party == "PRP"; workers_erc  += 3 if foreign_minister_party == "ERC"; new_middle_erc  += 3 if foreign_minister_party == "ERC"; landholders_erc  += 3 if foreign_minister_party == "ERC"; rural_erc  += 3 if foreign_minister_party == "ERC"; workers_psoe += 3 if foreign_minister_party == "PSOE"; new_middle_psoe += 3 if foreign_minister_party == "PSOE"; landholders_psoe += 3 if foreign_minister_party == "PSOE"; rural_psoe += 3 if foreign_minister_party == "PSOE";
+on-arrival: reparations = -2; budget += 1; workers_prp += 3 if foreign_minister_party == "PRP"; new_middle_prp += 3 if foreign_minister_party == "PRP"; landholders_prp += 3 if foreign_minister_party == "PRP"; rural_prp += 3 if foreign_minister_party == "PRP"; workers_erc += 3 if foreign_minister_party == "ERC"; new_middle_erc += 3 if foreign_minister_party == "ERC"; landholders_erc += 3 if foreign_minister_party == "ERC"; rural_erc += 3 if foreign_minister_party == "ERC"; workers_psoe += 3 if foreign_minister_party == "PSOE"; new_middle_psoe += 3 if foreign_minister_party == "PSOE"; landholders_psoe += 3 if foreign_minister_party == "PSOE"; rural_psoe += 3 if foreign_minister_party == "PSOE";
 new-page: true
 max-visits: 1
 tags: event

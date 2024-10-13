@@ -144,14 +144,14 @@ Others: [+ other_votes +]%
 
 Workers: PSOE: [+ workers_psoe_normalized +]%, ERC: [+ workers_erc_normalized +]%, PCE: [+ workers_pce_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, FE_JONS: [+ workers_fe_jons_normalized +]%, Others: [+ workers_other_normalized +]%
 
-Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, ERC: [+ new_middle_erc _normalized +]%, PCE: [+ new_middle_pce_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, FE_JONS: [+ new_middle_fe_jons_normalized +]%, Others: [+ new_middle_other_normalized +]%
+Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, ERC: [+ new_middle_erc_normalized +]%, PCE: [+ new_middle_pce_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, FE_JONS: [+ new_middle_fe_jons_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
-Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, ERC: [+ landholders_erc _normalized +]%, PCE: [+ landholders_pce_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, FE_JONS: [+ landholders_fe_jons_normalized +]%, Others: [+ landholders_other_normalized +]%
+Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, ERC: [+ landholders_erc_normalized +]%, PCE: [+ landholders_pce_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, FE_JONS: [+ landholders_fe_jons_normalized +]%, Others: [+ landholders_other_normalized +]%
 
-Unlanded Peasents: PSOE: [+ rural_psoe_normalized +]%, ERC: [+ rural_erc _normalized +]%, PCE: [+ rural_pce_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, FE_JONS: [+ rural_fe_jons_normalized +]%, Others: [+ rural_other_normalized +]%
+Unlanded Peasents: PSOE: [+ rural_psoe_normalized +]%, ERC: [+ rural_erc_normalized +]%, PCE: [+ rural_pce_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, FE_JONS: [+ rural_fe_jons_normalized +]%, Others: [+ rural_other_normalized +]%
 
-Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, ERC: [+ unemployed_erc _normalized +]%, PCE: [+ unemployed_pce_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, FE_JONS: [+ unemployed_fe_jons_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, ERC: [+ unemployed_erc_normalized +]%, PCE: [+ unemployed_pce_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, FE_JONS: [+ unemployed_fe_jons_normalized +]%, Others: [+ unemployed_other_normalized +]%
 
-Catholics: PSOE: [+ catholics_psoe_normalized +]%, ERC: [+ catholics_erc _normalized +]%, PCE: [+ catholics_pce_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; CEDA: [+ catholics_ceda_normalized +]%, FE_JONS: [+ catholics_fe_jons_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: PSOE: [+ catholics_psoe_normalized +]%, ERC: [+ catholics_erc_normalized +]%, PCE: [+ catholics_pce_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; CEDA: [+ catholics_ceda_normalized +]%, FE_JONS: [+ catholics_fe_jons_normalized +]%, Others: [+ catholics_other_normalized +]%
 
 Support for the Republic: [+ pro_republic +]%

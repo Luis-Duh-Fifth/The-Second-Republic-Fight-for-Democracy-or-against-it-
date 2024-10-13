@@ -226,7 +226,7 @@ Q.sapd_formed = 0;
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_psoe = 60;
 Q.workers_pce = 20;
-Q.workers_erc  = 5;
+Q.workers_erc = 5;
 Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
 Q.workers_ceda = 5;
@@ -235,7 +235,7 @@ Q.workers_other = 10;
 
 Q.old_middle_psoe = 5;
 Q.old_middle_pce = 0;
-Q.old_middle_erc  = 5;
+Q.old_middle_erc = 5;
 Q.old_middle_izqd_rep= 10;
 Q.old_middle_prp = 25;
 Q.old_middle_ceda = 25;
@@ -244,7 +244,7 @@ Q.old_middle_other = 10;
 
 Q.new_middle_psoe = 5;
 Q.new_middle_pce = 1;
-Q.new_middle_erc  = 10;
+Q.new_middle_erc = 10;
 Q.new_middle_izqd_rep= 25;
 Q.new_middle_prp = 25;
 Q.new_middle_ceda = 10;
@@ -253,7 +253,7 @@ Q.new_middle_other = 15;
 
 Q.rural_psoe = 10;
 Q.rural_pce = 0;
-Q.rural_erc  = 5;
+Q.rural_erc = 5;
 Q.rural_izqd_rep= 5;
 Q.rural_prp = 15;
 Q.rural_ceda = 45;
@@ -262,7 +262,7 @@ Q.rural_other = 10;
 
 Q.unemployed_psoe = 25;
 Q.unemployed_pce = 55;
-Q.unemployed_erc  = 1;
+Q.unemployed_erc = 1;
 Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
 Q.unemployed_ceda = 5;
@@ -271,7 +271,7 @@ Q.unemployed_other = 9;
 
 Q.catholics_psoe = 15;
 Q.catholics_pce = 2;
-Q.catholics_erc  = 50;
+Q.catholics_erc = 50;
 Q.catholics_izqd_rep = 0;
 Q.catholics_prp = 5;
 Q.catholics_ceda = 5;
@@ -297,7 +297,7 @@ Q.other_r = 9;
 // diff from prev
 Q.old_psoe_r = 26;
 Q.old_pce_r = 9;
-Q.old_erc _r = 17;
+Q.old_erc_r = 17;
 Q.old_izqd_rep_r = 6;
 Q.old_prp_r = 10;
 Q.old_ceda_r = 20;

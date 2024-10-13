@@ -62,12 +62,12 @@ Fine. We have thrown our support to Chairman Thälmann of the PCE.
 
 @braun_campaign
 
-- @convince_erc : Convince the Center Party.
+- @convince_erc: Convince the Center Party.
 - @convince_pce: Convince the Communists.
 - @convince_liberals: Convince the remaining liberals, wherever they are.
 - @final_election: The final vote...
 
-@convince_erc 
+@convince_erc
 choose-if: psoe_votes >= erc_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
@@ -94,10 +94,10 @@ The Center are convinced! They will be part of the Braun coalition.
 
 The Center are not satisfied with our arguments, but they are open to being convinced. They are willing to run a joint campaign if we front the resources.
 
-- @pay_erc : Give them the resources they need.
+- @pay_erc: Give them the resources they need.
 - @braun_campaign: Forget about the Center.
 
-@pay_erc 
+@pay_erc
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3)
@@ -263,14 +263,14 @@ There is no majority in this round. In the second round, any candidate who wins 
 
 @round2_menu
 
-- @round2_convince_erc : Convince the Center to switch their support to us.
+- @round2_convince_erc: Convince the Center to switch their support to us.
 - @round2_convince_pce: Convince the PCE to switch their support to us. 
 - @round2_hindenburg: Switch our support to Hindenburg.
 - @round2_thalmann: Switch our support to Thälmann of the PCE.
 - @round2_vote: Let the second round voting begin.
 
 
-@round2_convince_erc 
+@round2_convince_erc
 view-if: braun_campaign > 0 and erc_support_braun != 1 
 choose-if: psoe_votes >= erc_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
@@ -291,22 +291,22 @@ if (Q.erc_relation >= 55) {
     Q.erc_support_braun = 2;
 }
 !}
-go-to: r2_erc _failed if erc_support_braun = 0 or (erc_support_braun = 2 and historical_mode); r2_erc _success if erc_support_braun = 1; r2_erc _partial if erc_support_braun = 2 and not historical_mode
+go-to: r2_erc_failed if erc_support_braun = 0 or (erc_support_braun = 2 and historical_mode); r2_erc_success if erc_support_braun = 1; r2_erc_partial if erc_support_braun = 2 and not historical_mode
 max-visits: 1
 
-@r2_erc _success
+@r2_erc_success
 go-to: round2_menu
 
 [? if hitler_support_hindenburg : The Center's opinion is affected by the Nazis' support of Hindenburg, and is willing to turn away from him. ?] The Center are convinced! They will be part of the Braun coalition. [? if hitler_support_hindenburg : In addition, they will also bring in some minor parties who will support us. ?]
 
-@r2_erc _partial
+@r2_erc_partial
 
 The Center are not satisfied with our arguments, but they are open to being convinced[? if hitler_support_hindenburg: , especially given the Nazis' support for Hindenburg. ?]. They are willing to run a joint campaign if we front the resources.
 
-- @r2_pay_erc : Give them the resources they need.
+- @r2_pay_erc: Give them the resources they need.
 - @round2_menu: Forget about the Center.
 
-@r2_pay_erc 
+@r2_pay_erc
 choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
@@ -315,7 +315,7 @@ go-to: round2_menu
 
 With our resources, the Center are convinced to support Braun over Hindenburg.
 
-@r2_erc _failed
+@r2_erc_failed
 go-to: round2_menu
 
 Unfortunately, we fail to turn them away from Hindenburg.
