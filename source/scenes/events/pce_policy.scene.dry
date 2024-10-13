@@ -39,7 +39,7 @@ Do we support their radical labor policy?
 - @labor_oppose: No, this is too radical.
 
 @labor_support
-on-arrival: capital_strike_progress += 2; workers_pce += 5; workers_psoe += 3*(1-dissent); pce_labor_support += 1; coalition_dissent += 1; z_relation -= 6; unemployment += 2; pce_influence += 2
+on-arrival: capital_strike_progress += 2; workers_pce += 5; workers_psoe += 3*(1-dissent); pce_labor_support += 1; coalition_dissent += 1; erc_relation -= 6; unemployment += 2; pce_influence += 2
 
 The pro-labor policy is popular among workers and is bringing the PCE more support, but in response businesses are laying off more workers and reducing hours. This is setting the government up for a confrontation with the capitalists.
 
@@ -61,7 +61,7 @@ Do we support this policy?
 - @economy_oppose: No, this must be stopped.
 
 @economy_support
-on-arrival: nationalization_progress += 1; capital_strike_progress += 4; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= 3; works_program += 1; workers_psoe += 4*(1-dissent); workers_pce += 8*(1-dissent); unemployed_pce += 4*(1-dissent); coalition_dissent += 2; prp_relation -= 6; z_relation -= 4; new_middle_psoe -= 3; landholders_psoe -= 3; economy_goal_completed += 1; pce_influence += 2
+on-arrival: nationalization_progress += 1; capital_strike_progress += 4; unemployed -= 2.5 if unemployed >= 6; unemployed -= 1.2 if works_councils >= 3; budget -= 3; works_program += 1; workers_psoe += 4*(1-dissent); workers_pce += 8*(1-dissent); unemployed_pce += 4*(1-dissent); coalition_dissent += 2; prp_relation -= 6; erc_relation -= 4; new_middle_psoe -= 3; landholders_psoe -= 3; economy_goal_completed += 1; pce_influence += 2
 
 The PCE has gained credit with the workers for enabling many to keep their jobs. Meanwhile, the bourgeois parties and middle-class voters blame the PSOE for enabling the nationalizations.
 

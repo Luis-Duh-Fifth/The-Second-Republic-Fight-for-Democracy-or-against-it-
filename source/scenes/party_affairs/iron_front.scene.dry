@@ -23,7 +23,7 @@ The Iron Front is our new antifascist coordination front, consisting of the PSOE
 @defense
 subtitle: -[+ rb_militarization_cost +] resources
 choose-if: resources >= rb_militarization_cost
-on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; z_relation -= 5 if historical_mode
+on-arrival: resources -= rb_militarization_cost; rb_strength += 50; rb_militancy += 0.05; erc_relation -= 5 if historical_mode
 
 The Iron Front rallies for the militant defense of the republic against the fascist paramilitaries, strengthening the Reichsbanner.
 

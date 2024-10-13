@@ -36,11 +36,11 @@ on-arrival: enemies = "FE_JONS"; neorevisionist_strength += 5; nazi_urgency += 1
 [? if nazi_urgency == 0 or fe_jons_r < 10 : The FE_JONS is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and fe_jons_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
 
 @pce
-on-arrival: enemies = "PCE"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; pce_relation -= 15; prp_relation += 5; z_relation += 5; workers_pce -= 4;
+on-arrival: enemies = "PCE"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; pce_relation -= 15; prp_relation += 5; erc_relation += 5; workers_pce -= 4;
 
 Attacking the PCE is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the PCE, this may not be the best choice.
 
 @bourgeois
-on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; prp_relation -= 5; z_relation -= 5; pce_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
+on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; prp_relation -= 5; erc_relation -= 5; pce_relation += 5; reformist_dissent += 8; workers_erc  -= 3; coalition_dissent += 1
 
 Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.

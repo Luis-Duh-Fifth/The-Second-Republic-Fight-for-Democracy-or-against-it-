@@ -24,7 +24,7 @@ Q.parties = ['psoe', 'pce', 'z', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.psoe = 65;
 Q.workers_pce = 20;
-Q.workers_z = 5;
+Q.workers_erc  = 5;
 Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
 Q.workers_ceda = 5;
@@ -33,7 +33,7 @@ Q.workers_other = 10;
 
 Q.landholders_psoe = 5;
 Q.landholders_pce = 0;
-Q.landholders_z = 5;
+Q.landholders_erc  = 5;
 Q.landholders_izqd_rep= 10;
 Q.landholders_prp = 25;
 Q.landholders_ceda = 25;
@@ -42,7 +42,7 @@ Q.landholders_other = 10;
 
 Q.new_middle_psoe = 5;
 Q.new_middle_pce = 0;
-Q.new_middle_z = 10;
+Q.new_middle_erc  = 10;
 Q.new_middle_izqd_rep= 25;
 Q.new_middle_prp = 25;
 Q.new_middle_ceda = 10;
@@ -51,7 +51,7 @@ Q.new_middle_other = 15;
 
 Q.rural_psoe = 10;
 Q.rural_pce = 0;
-Q.rural_z = 5;
+Q.rural_erc  = 5;
 Q.rural_izqd_rep= 5;
 Q.rural_prp = 15;
 Q.rural_ceda = 45;
@@ -60,7 +60,7 @@ Q.rural_other = 10;
 
 Q.unemployed_psoe = 25;
 Q.unemployed_pce = 55;
-Q.unemployed_z = 1;
+Q.unemployed_erc  = 1;
 Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
 Q.unemployed_ceda = 5;
@@ -69,7 +69,7 @@ Q.unemployed_other = 9;
 
 Q.catholics_psoe = 15;
 Q.catholics_pce = 5;
-Q.catholics_z = 50;
+Q.catholics_erc  = 50;
 Q.catholics_izqd_rep = 0;
 Q.catholics_prp = 5;
 Q.catholics_ceda = 5;
@@ -97,7 +97,7 @@ Q.parties = ['psoe', 'pce', 'z', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_psoe = 60;
 Q.workers_pce = 20;
-Q.workers_z = 5;
+Q.workers_erc  = 5;
 Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
 Q.workers_ceda = 0;
@@ -106,7 +106,7 @@ Q.workers_other = 15;
 
 Q.landholders_psoe = 5;
 Q.landholders_pce = 0;
-Q.landholders_z = 5;
+Q.landholders_erc  = 5;
 Q.landholders_izqd_rep= 5;
 Q.landholders_prp = 10;
 Q.landholders_ceda = 20;
@@ -115,7 +115,7 @@ Q.landholders_other = 15;
 
 Q.new_middle_psoe = 5;
 Q.new_middle_pce = 0;
-Q.new_middle_z = 5;
+Q.new_middle_erc  = 5;
 Q.new_middle_izqd_rep = 10;
 Q.new_middle_prp = 20;
 Q.new_middle_ceda = 10;
@@ -124,7 +124,7 @@ Q.new_middle_other = 15;
 
 Q.rural_psoe = 5;
 Q.rural_pce = 0;
-Q.rural_z = 5;
+Q.rural_erc  = 5;
 Q.rural_izqd_rep= 5;
 Q.rural_prp = 10;
 Q.rural_ceda = 20;
@@ -133,7 +133,7 @@ Q.rural_other = 15;
 
 Q.unemployed_psoe = 20;
 Q.unemployed_pce = 50;
-Q.unemployed_z = 0;
+Q.unemployed_erc  = 0;
 Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
 Q.unemployed_ceda = 5;
@@ -142,7 +142,7 @@ Q.unemployed_other = 5;
 
 Q.catholics_psoe = 10;
 Q.catholics_pce = 5;
-Q.catholics_z = 50;
+Q.catholics_erc  = 50;
 Q.catholics_izqd_rep = 0;
 Q.catholics_prp = 5;
 Q.catholics_ceda = 5;
@@ -151,7 +151,7 @@ Q.catholics_other = 5;
 
 Q.psoe_r = 25;
 Q.pce_r = 10;
-Q.z_r = 15;
+Q.erc_r = 15;
 Q.izqd_rep_r = 10;
 Q.prp_r = 10;
 Q.ceda_r = 14;
@@ -179,7 +179,7 @@ Q.parties = ['psoe', 'pce', 'z', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_psoe = 55;
 Q.workers_pce = 20;
-Q.workers_z = 5;
+Q.workers_erc  = 5;
 Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
 Q.workers_ceda = 0;
@@ -188,7 +188,7 @@ Q.workers_other = 5;
 
 Q.landholders_psoe = 0;
 Q.landholders_pce = 0;
-Q.landholders_z = 5;
+Q.landholders_erc  = 5;
 Q.landholders_izqd_rep = 4;
 Q.landholders_prp = 4;
 Q.landholders_ceda = 15;
@@ -197,7 +197,7 @@ Q.landholders_other = 5;
 
 Q.new_middle_psoe = 5;
 Q.new_middle_pce = 0;
-Q.new_middle_z = 5;
+Q.new_middle_erc  = 5;
 Q.new_middle_izqd_rep = 10;
 Q.new_middle_prp = 10;
 Q.new_middle_ceda = 10;
@@ -206,7 +206,7 @@ Q.new_middle_other = 5;
 
 Q.rural_psoe = 0;
 Q.rural_pce = 0;
-Q.rural_z = 5;
+Q.rural_erc  = 5;
 Q.rural_izqd_rep = 0;
 Q.rural_prp = 5;
 Q.rural_ceda = 15;
@@ -215,7 +215,7 @@ Q.rural_other = 5;
 
 Q.unemployed_psoe = 20;
 Q.unemployed_pce = 40;
-Q.unemployed_z = 0;
+Q.unemployed_erc  = 0;
 Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
 Q.unemployed_ceda = 0;
@@ -224,7 +224,7 @@ Q.unemployed_other = 5;
 
 Q.catholics_psoe = 10;
 Q.catholics_pce = 5;
-Q.catholics_z = 60;
+Q.catholics_erc  = 60;
 Q.catholics_izqd_rep = 0;
 Q.catholics_prp = 5;
 Q.catholics_ceda = 5;
@@ -233,7 +233,7 @@ Q.catholics_other = 5;
 
 Q.psoe_r = 25;
 Q.pce_r = 10;
-Q.z_r = 15;
+Q.erc_r = 15;
 Q.izqd_rep_r = 10;
 Q.prp_r = 10;
 Q.ceda_r = 14;
@@ -247,7 +247,7 @@ set-jump: post_election
 on-arrival: {!
 // set congress proportion to votes
 Q.psoe_r = Q.psoe_votes;
-Q.z_r = Q.z_votes;
+Q.erc_r = Q.erc_votes;
 Q.pce_r = Q.pce_votes;
 Q.izqd_rep_r = Q.izqd_rep_votes;
 Q.prp_r = Q.prp_votes;
@@ -265,18 +265,18 @@ if (Q.pce_r >= Q.psoe_r && Q.pce_r >= Q.ceda_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.z_r - 3;
-Q.grand_coalition = Q.psoe_r + Q.izqd_rep_r + Q.z_r + Q.prp_r;
-Q.bourgeois_coalition = Q.izqd_rep_r + Q.z_r + Q.prp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.izqd_rep_r + Q.prp_r + Q.other_r + Q.ceda_r;
-Q.right_coalition = Q.z_r + Q.prp_r + Q.other_r + Q.ceda_r;
+Q.weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r - 3;
+Q.grand_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r;
+Q.bourgeois_coalition = Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.other_r;
+Q.center_right_coalition = Q.erc_r + Q.izqd_rep_r + Q.prp_r + Q.other_r + Q.ceda_r;
+Q.right_coalition = Q.erc_r + Q.prp_r + Q.other_r + Q.ceda_r;
 Q.far_right_coalition = Q.ceda_r + Q.fe_jons_r;
 Q.left_coalition = Q.psoe_r + Q.pce_r;
 // this is an absurd concept lol
-Q.united_front_coalition = Q.psoe_r + Q.pce_r + Q.z_r + Q.izqd_rep_r - 3;
+Q.united_front_coalition = Q.psoe_r + Q.pce_r + Q.erc_r + Q.izqd_rep_r - 3;
 Q.anti_democratic_coalition = Q.pce_r + Q.fe_jons_r;
 // aka everyone except nazi, pce, ceda
-Q.neo_weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.z_r + Q.prp_r + Q.other_r;
+Q.neo_weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.other_r;
 !}
 
 The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
@@ -287,7 +287,7 @@ The electoral system is essentially proportional, with the proportion of Reichst
 PSOE: [+ psoe_r +]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + PNV: [+ z_r +]
+Z + PNV: [+ erc_r +]
 
 # 1928: 10, 1930: 13
 PCE: [+ pce_r +]
@@ -309,9 +309,9 @@ Other: [+ other_r +]
 
 **Potential coalitions:**
 
-Weimar Coalition (PSOE + Z + IR): [+ weimar_coalition +]
+Weimar Coalition (PSOE + ERC + IR): [+ weimar_coalition +]
 
-Grand Coalition (PSOE + Z + PNV + IR + PRP): [+ grand_coalition +]
+Grand Coalition (PSOE + ERC + PNV + IR + PRP): [+ grand_coalition +]
 
 Bourgeois Coalition (Z + PNV + IR + PRP + Others): [+ bourgeois_coalition +]
 

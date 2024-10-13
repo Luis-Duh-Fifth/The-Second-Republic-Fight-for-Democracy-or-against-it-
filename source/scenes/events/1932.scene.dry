@@ -14,12 +14,12 @@ Q.landholders_ceda += 6;
 Q.rural_ceda += 4;
 Q.unemployed_ceda += 4;
 if (Q.old_demographics) {
-    Q.catholics_z += 5;
+    Q.catholics_erc  += 5;
 }
 if (!Q.works_program) {
     Q.unemployed += 6; 
     Q.inflation -= 2;
-    Q.catholics_z += 4;
+    Q.catholics_erc  += 4;
     Q.workers -= 5;
     Q.rural_ceda -= 6;
     Q.rural_ceda += 8; 

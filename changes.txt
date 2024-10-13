@@ -324,7 +324,7 @@ As with many other major changes, there are a number of bugs introduced here...
 - Each constitutional reform can only be done once.
 - The Concordat can only be signed once.
 - The Constitutional Reform card can now be drawn from the Government Affairs deck.
-- Constitutional reform party support is based on Z without BVP.
+- Constitutional reform party support is based on ERC without BVP.
 - Changes in party votes should be accurately reflected when there is an electoral threshold.
 - On the electoral threshold reform, it is mentioned that a plurality in an electoral district would bypass the threshold requirement, so that the BVP can remain.
 - Radio is somewhat less effective later in the game.

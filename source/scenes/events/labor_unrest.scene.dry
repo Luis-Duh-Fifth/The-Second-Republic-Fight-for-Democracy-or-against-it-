@@ -21,7 +21,7 @@ Supporting labor is always popular in the PSOE, although many of our coalition p
 
 @support_employers
 subtitle: This will alienate the workers.
-on-arrival: labor_dissent += 8; left_dissent += 8; workers_psoe -= 6; coalition_dissent -= 1; prp_relation += 5; z_relation += 5; coalition_dissent -= 1; workers_pce += 5; pce_coalition_dissent += 1; pce_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8
+on-arrival: labor_dissent += 8; left_dissent += 8; workers_psoe -= 6; coalition_dissent -= 1; prp_relation += 5; erc_relation += 5; coalition_dissent -= 1; workers_pce += 5; pce_coalition_dissent += 1; pce_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8
 
 Even though most workers grudgingly accept the our intervention, there is deep bitterness developing against the PSOE, especially among the more radical workers. The Communists stand to gain.
 

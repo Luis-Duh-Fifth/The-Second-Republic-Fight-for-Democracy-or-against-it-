@@ -118,7 +118,7 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
       }
 
       // draw nodes
-      const z = d3.scaleOrdinal(d3.schemeCategory10);
+      const erc = d3.scaleOrdinal(d3.schemeCategory10);
       if (!noDots) {
           svg.selectAll(".series")
               .data(series)

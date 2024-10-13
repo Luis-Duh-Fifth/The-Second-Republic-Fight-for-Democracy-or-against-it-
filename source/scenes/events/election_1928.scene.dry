@@ -26,7 +26,7 @@ Since we are currently ruling as part of an emergency government, we may use qua
 - @election_algorithm: No, let's hold the elections.
 
 @cancel_elections_2
-on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; prp_relation -= 8; z_relation -= 8; izqd_rep_relation -= 10; pce_relation -= 8; coup_progress += 2; workers_psoe -= 4; new_middle_psoe -= 5; landholders_psoe -= 5; rural_psoe -= 5; catholics_psoe -= 5; unemployed_psoe -= 5; coup_progress += 2 if fe_jons_normalized >= 0.3; coup_progress += 2 if fe_jons_normalized + ceda_normalized >= 0.5
+on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; prp_relation -= 8; erc_relation -= 8; izqd_rep_relation -= 10; pce_relation -= 8; coup_progress += 2; workers_psoe -= 4; new_middle_psoe -= 5; landholders_psoe -= 5; rural_psoe -= 5; catholics_psoe -= 5; unemployed_psoe -= 5; coup_progress += 2 if fe_jons_normalized >= 0.3; coup_progress += 2 if fe_jons_normalized + ceda_normalized >= 0.5
 achievement: ausnahmezustand
 
 Fine. President [+ president +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_election_month : month +] [+ next_election_year +].
@@ -80,20 +80,20 @@ if (Q.pce_r >= Q.psoe_r && Q.pce_r >= Q.ceda_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.z_r - 3;
-Q.grand_coalition = Q.psoe_r + Q.izqd_rep_r + Q.z_r + Q.prp_r;
-Q.bourgeois_coalition = Q.izqd_rep_r + Q.z_r + Q.prp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.izqd_rep_r + Q.prp_r + Q.other_r + Q.ceda_r;
-Q.right_coalition = Q.z_r + Q.prp_r + Q.other_r + Q.ceda_r;
+Q.weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r - 3;
+Q.grand_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r;
+Q.bourgeois_coalition = Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.other_r;
+Q.center_right_coalition = Q.erc_r + Q.izqd_rep_r + Q.prp_r + Q.other_r + Q.ceda_r;
+Q.right_coalition = Q.erc_r + Q.prp_r + Q.other_r + Q.ceda_r;
 Q.far_right_coalition = Q.ceda_r + Q.fe_jons_r;
 Q.left_coalition = Q.psoe_r + Q.pce_r;
 // this is an absurd concept lol
-Q.popular_front_coalition = Q.psoe_r + Q.pce_r + Q.z_r + Q.izqd_rep_r - 3;
+Q.popular_front_coalition = Q.psoe_r + Q.pce_r + Q.erc_r + Q.izqd_rep_r - 3;
 Q.anti_democratic_coalition = Q.pce_r + Q.fe_jons_r + Q.ceda_r;
 // aka everyone except nazi, pce, ceda
-Q.neo_weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.z_r + Q.prp_r + Q.other_r;
-// Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
-Q.hitler_right_coalition = Q.z_r + Q.ceda_r + Q.fe_jons_r;
+Q.neo_weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.other_r;
+// Hitler + Right-wing parties (only comes into effect if you've alienated ERC too badly)
+Q.hitler_right_coalition = Q.erc_r + Q.ceda_r + Q.fe_jons_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
 Q.progressive_coalition = Q.psoe_r + Q.pce_r + Q.izqd_rep_r;
 
@@ -144,8 +144,8 @@ Q.interior_goal_completed = 0;
 Q.reichswehr_goal_completed = 0;
 
 //To give ERC and PNV historical minority votes
-Q.pnv_r = Math.round(Q.z_votes*0.3)
-Q.z_r = Math.round(Q.z_votes*0.7)
+Q.pnv_r = Math.round(Q.erc_votes*0.3)
+Q.erc_r = Math.round(Q.erc_votes*0.7)
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -175,16 +175,16 @@ data = [
         "seats": Math.round(Q.izqd_rep_r*5),
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": Math.round(Q.z_r * 5 * 0.7),
+        "id": "erc",
+        "legend": "ERC",
+        "name": "ERC",
+        "seats": Math.round(Q.erc_r * 5 * 0.7),
     },
     {
         "id": "pnv",
         "legend": "PNV",
         "name": "PNV",
-        "seats": Math.round(Q.z_r * 5 * 0.3),
+        "seats": Math.round(Q.erc_r * 5 * 0.3),
     },
     {
         "id": "prp",
@@ -242,7 +242,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td><td>!} [+ str_change_izqd_rep +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} ERC: {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc  +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} PNV: {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
 
@@ -257,9 +257,9 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Weimar Coalition (PSOE + Z + IR): [+ weimar_coalition +]%
+Weimar Coalition (PSOE + ERC + IR): [+ weimar_coalition +]%
 
-Grand Coalition (PSOE + Z + PNV + IR + PRP): [+ grand_coalition +]%
+Grand Coalition (PSOE + ERC + PNV + IR + PRP): [+ grand_coalition +]%
 
 Bourgeois Coalition (Z + PNV + IR + PRP + Others): [+ bourgeois_coalition +]%
 
@@ -290,10 +290,10 @@ There are some potential coalition arrangements.
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
-subtitle: PSOE + PCE + Z + IR ([+ popular_front_coalition +]%)
-unavailable-subtitle: PSOE + PCE + Z + IR ([+ popular_front_coalition +]%) - [? if pce_relation < 50: We do not have good enough relations with the PCE. ?][? if z_relation < 50: We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
+subtitle: PSOE + PCE + ERC + IR ([+ popular_front_coalition +]%)
+unavailable-subtitle: PSOE + PCE + ERC + IR ([+ popular_front_coalition +]%) - [? if pce_relation < 50: We do not have good enough relations with the PCE. ?][? if erc_relation < 50: We do not have good enough relations with the Center Party. ?][? if communist_coalition < 3 : The Communists are unwilling to compromise at all. ?]
 view-if: popular_front_coalition >= 50
-choose-if: pce_relation >= 50 and z_relation >= 50 and izqd_rep_relation >= 50 and communist_coalition >= 3
+choose-if: pce_relation >= 50 and erc_relation >= 50 and izqd_rep_relation >= 50 and communist_coalition >= 3
 
 Could we really form a coalition that included both the Center and the Communists? It seems like an absurd concept, but given our good relationships with both sides, it is not an impossibility.
 
@@ -337,7 +337,7 @@ achievement: volksfront
 Somehow, surprisingly, the coalition is successfully formed! We still need a chancellor; the only acceptable choice among the parties was Rudolf Breitscheid of the PSOE, acceptable to the Center [? if president == "Hindenburg" : as well as President Hindenburg, albeit extremely reluctantly ?].
 
 @popular_front_no_civil_war
-on-arrival: pce_goals_seen = 0; finance_minister_party = "Z"; interior_minister_party = "Z"; economy_minister_party = "Z"; labor_minister_party = "Z"; foreign_minister_party = "Z"; agriculture_minister_party = "Z"; reichswehr_minister = "I"; leverage += pce_r
+on-arrival: pce_goals_seen = 0; finance_minister_party = "ERC"; interior_minister_party = "ERC"; economy_minister_party = "ERC"; labor_minister_party = "ERC"; foreign_minister_party = "ERC"; agriculture_minister_party = "ERC"; reichswehr_minister = "I"; leverage += pce_r
 
 In response to the PCE's entrance into the government, the right-wing takes a "wait-and-see" approach for now. They expect that the Popular Front government will be unstable and incompetent, and will collapse of its own accord, discrediting the left and center and eventually enabling the destruction of the Weimar Republic. Our task is to prove them wrong.
 
@@ -483,7 +483,7 @@ In response to the PCE's entrance into the government, the right-wing immediatel
 
 @right_coalition
 title: A right-wing coalition may be formed.
-subtitle: Z + PNV + PRP + CEDA + Others ([+ right_coalition +]%)
+subtitle: ERC + PNV + PRP + CEDA + Others ([+ right_coalition +]%)
 unavailable-subtitle: The CEDA is not interested in a coalition with the Center.
 view-if: right_coalition >= 50
 choose-if: year < 1928
@@ -499,7 +499,7 @@ However, the CEDA and its leader Hugenberg is refusing to partake in a coalition
 
 
 @right_coalition_2
-on-arrival: psoe_in_government = 0; psoe_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "PRP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"
+on-arrival: psoe_in_government = 0; psoe_toleration = 0; chancellor = "Brüning"; chancellor_party = "ERC"; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "ERC"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "ERC"; finance_minister_party = "ERC"; agriculture_minister_party = "ERC"
 
 Even though the CEDA is very reluctant to participate in such a coalition, given Hugenberg's anti-constitutional views, they still accede to President Hindenburg's wishes. Thus, a majority center-right coalition is formed, with Brüning as chancellor.
 
@@ -516,7 +516,7 @@ go-to: no_majority_bruning if chancellor = "Brüning" or chancellor = "Wirth"; n
 # either new elections, or Hindenburg appoints either Brüning, Papen, Schleicher, or Hitler.
 
 @no_majority_psoe
-on-arrival: chancellor = "Brüning"; chancellor_party = "Z"
+on-arrival: chancellor = "Brüning"; chancellor_party = "ERC"
 
 There is no path to an obviously workable majority. Since President Hindenburg is unwilling to work with a minority or caretaker PSOE government, his preferred chancellor is Heinrich Brüning of the Center Party, who could lead a "presidential" government.
 
@@ -556,10 +556,10 @@ The third option is to have new elections.
 
 @new_grand_coalition
 title: A "New Grand Coalition" of all the constitutional parties?
-subtitle: PSOE + Z + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%)
+subtitle: PSOE + ERC + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%)
 view-if: neo_weimar_coalition >= 50 and grand_coalition < 50
-choose-if: z_relation >= 50 and prp_relation >= 30
-unavailable-subtitle: PSOE + Z + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%) - [? if z_relation < 50 : We do not have adequate relations with the Center Party. ?][? if prp_relation < 30 : We do not have adequate relations with the PRP. ?]
+choose-if: erc_relation >= 50 and prp_relation >= 30
+unavailable-subtitle: PSOE + ERC + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%) - [? if erc_relation < 50 : We do not have adequate relations with the Center Party. ?][? if prp_relation < 30 : We do not have adequate relations with the PRP. ?]
 
 How do we convince vehemently anti-socialist parties to allow us to form a majority coalition? Our largely benevolent relations with the Center and PRP may allow us some leverage.
 
@@ -597,8 +597,8 @@ We have assembled a new coalition under Otto Braun.
 
 @unity_government
 title: The Center Party offers a "Government of National Unity" under Chancellor Joseph Wirth.
-subtitle: PSOE + Z + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%)
-view-if: z_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50
+subtitle: PSOE + ERC + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%)
+view-if: erc_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50
 
 The Center Party leader, Joseph Joos, clearly sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Center Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
 
@@ -607,7 +607,7 @@ The Center Party leader, Joseph Joos, clearly sees the threat from the ascension
 
 @unity_government_2
 title: Accept the offer!
-on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; psoe_in_government = 1; in_grand_coalition = 1; in_unity_government = 1; leverage = 10; z_relation += 5; prp_relation += 3
+on-arrival: chancellor = "Wirth"; chancellor_party = "ERC"; psoe_in_government = 1; in_grand_coalition = 1; in_unity_government = 1; leverage = 10; erc_relation += 5; prp_relation += 3
 achievement: constitutional_coalition
 go-to: ministries
 
@@ -615,7 +615,7 @@ We have formed a new unity government of all the constitutional parties! We have
 
 
 @reject_unity_government
-on-arrival: z_relation -= 8; izqd_rep_relation -= 5; prp_relation -= 5
+on-arrival: erc_relation -= 8; izqd_rep_relation -= 5; prp_relation -= 5
 
 Our rejection of the unity government has hurt our relations with the bourgeois and center-right parties.
 
@@ -626,10 +626,10 @@ Our rejection of the unity government has hurt our relations with the bourgeois 
 
 
 @toleration_wirth
-view-if: z_party_leader = "Joos"
+view-if: erc_party_leader = "Joos"
 choose-if: president == "Braun"
 unavailable-subtitle: President Hindenburg will not support a minority government led by Joseph Wirth.
-on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; psoe_in_government = 0; psoe_toleration = 1; z_relation += 5; foreign_minister_party = "PRP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "Z"; pro_republic -= 2;
+on-arrival: chancellor = "Wirth"; chancellor_party = "ERC"; psoe_in_government = 0; psoe_toleration = 1; erc_relation += 5; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 2;
 
 We have supported a minority government led by the Center Party under Chancellor Joseph Wirth.
 
@@ -762,7 +762,7 @@ We have appointed Rudolf Breitscheid as emergency chancellor. The Communists con
 
 
 @bruning_emergency_chancellor
-on-arrival: chancellor = "Brüning"; chancellor_party = "Z"; psoe_in_government = 1; z_relation += 10; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE" 
+on-arrival: chancellor = "Brüning"; chancellor_party = "ERC"; psoe_in_government = 1; erc_relation += 10; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE" 
 
 The Center Party is pleased, and somewhat surprised, that we have appointed [+ chancellor +] as chancellor.
 
@@ -770,8 +770,8 @@ The Center Party is pleased, and somewhat surprised, that we have appointed [+ c
 - @emergency_no_confidence
 
 @wirth_emergency_chancellor
-view-if: z_party_leader == "Joos"
-on-arrival: chancellor = "Wirth"; chancellor_party = "Z"; psoe_in_government = 1; z_relation += 10; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE" 
+view-if: erc_party_leader == "Joos"
+on-arrival: chancellor = "Wirth"; chancellor_party = "ERC"; psoe_in_government = 1; erc_relation += 10; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE" 
 
 The Center Party is pleased that we have appointed [+ chancellor +] as chancellor.
 
@@ -795,7 +795,7 @@ Their numbers are bolstered by the many government workers who are against the p
 @emergency_no_confidence
 title: The Nazis immediately call a no-confidence vote against us...
 view-if: far_right_coalition < 45
-on-arrival: z_no_confidence = 1 if z_relation < 45; pce_no_confidence = 1 if pce_relation < 45; others_no_confidence = 1 if (z_relation + prp_relation)/2 < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = FE_JONS_r + ceda_r; no_confidence_votes += z_r if z_no_confidence; no_confidence_votes += pce_r if pce_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
+on-arrival: erc_no_confidence = 1 if erc_relation < 45; pce_no_confidence = 1 if pce_relation < 45; others_no_confidence = 1 if (erc_relation + prp_relation)/2 < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = FE_JONS_r + ceda_r; no_confidence_votes += erc_r if erc_no_confidence; no_confidence_votes += pce_r if pce_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
 
 The FE_JONS and CEDA will vote against us, of course. The other parties vote their conscience.
 
@@ -858,7 +858,7 @@ We have won the vote of no confidence, and are currently ruling under an PSOE mi
 
 @weimar_coalition
 title: We can form a Weimar Coalition.
-subtitle: PSOE + Z + IR ([+ weimar_coalition +]%)
+subtitle: PSOE + ERC + IR ([+ weimar_coalition +]%)
 view-if: weimar_coalition >= 50
 on-arrival: leverage += 15; in_weimar_coalition = 1; psoe_in_government = 1; in_popular_front = 0; in_left_front = 0
 achievement: weimar_coalition
@@ -871,7 +871,7 @@ Who should be the chancellor?
 - @braun
 - @breitscheid_coalition_chancellor
 - @wels
-- @z_chancellor
+- @erc_chancellor
 
 @breitscheid_coalition_chancellor
 title: Rudolf Breitscheid for Chancellor
@@ -886,21 +886,21 @@ Rudolf Breitscheid has been appointed chancellor.
 @grand_coalition
 title: We can form a Grand Coalition.
 view-if: grand_coalition >= 50 and grand_coalition_failed == 0
-subtitle: PSOE + Z + PNV + IR + PRP
+subtitle: PSOE + ERC + PNV + IR + PRP
 on-arrival: in_grand_coalition = 1; in_popular_front = 0; in_left_front = 0
-go-to: grand_coalition_psoe_lead if (n_elections <= 1 and largest_party == "PSOE") or (largest_party == "PSOE" and psoe_r >= 30) or president = "Braun"; grand_coalition_z_lead if president != "Braun" and ((n_elections > 1 and psoe_r < 30) or (n_elections <= 1 and largest_party != "PSOE"))
+go-to: grand_coalition_psoe_lead if (n_elections <= 1 and largest_party == "PSOE") or (largest_party == "PSOE" and psoe_r >= 30) or president = "Braun"; grand_coalition_erc _lead if president != "Braun" and ((n_elections > 1 and psoe_r < 30) or (n_elections <= 1 and largest_party != "PSOE"))
 
 # TODO: if there are enough votes to form a grand coalition, who leads? Does the PSOE lead or does Brüning (Z) lead? In reality this depended on Hindenburg's will, basically, which in turn depended on what his camarilla supported.
-# In the first election, PSOE always leads. In subsequent elections, if psoe_r >= 29 then PSOE leads, otherwise Z leads?
+# In the first election, PSOE always leads. In subsequent elections, if psoe_r >= 29 then PSOE leads, otherwise ERC leads?
 
-@grand_coalition_z_lead
-go-to: grand_coalition_z_lead_2 if prp_relation >= 30; grand_coalition_fail if prp_relation < 30
+@grand_coalition_erc _lead
+go-to: grand_coalition_erc _lead_2 if prp_relation >= 30; grand_coalition_fail if prp_relation < 30
 
 There are enough votes to form a majority coalition consisting of the PSOE, Center (Z), Bavarian People's (PNV), Democratic (IR), and People's (PRP) parties. Given our rather weak electoral performance, [? if psoe_no_confidence = 1 : and our previous vote of no confidence against the government, ?][? if no_confidence_against_psoe = 1 : and the vote of no confidence against us, ?] President Hindenburg has asked the Center Party to take the lead role in forming a government.
 
 # TODO: if the PSOE participated in bringing down the previous government via a vote-of-no-confidence, or if we were essentially removed from government by our coalition partners, we should be more reluctant to participate in a new government.
 
-@grand_coalition_z_lead_2
+@grand_coalition_erc _lead_2
 
 The Center chancellor is likely to be Heinrich Brüning of the Center Party[? if chancellor = "Brüning" : again ?]. He is known for his conservatism and sympathy for monarchism, being on the right wing of the Center. [? if austerity >= 2 : Due to the government's austerity policies, many of our members are reluctant to participate in this coalition again. Some support a "toleration" arrangement in which we will provide outside support to prevent the far-right from either entering government or calling a successful no-confidence vote. Others support entering into pure opposition, and letting the right do what it wishes. ?]
 
@@ -913,13 +913,13 @@ Brüning is not opposed to a coalition with us. Alternatively, we could enter a 
 
 @join_bruning
 view-if: grand_coalition >= 50 or neo_weimar_coalition >= 50
-on-arrival: psoe_in_government = 1; psoe_toleration = 0; in_grand_coalition = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "PRP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; leverage = 25 if leverage >= 25;
+on-arrival: psoe_in_government = 1; psoe_toleration = 0; in_grand_coalition = 1; chancellor = "Brüning"; chancellor_party = "ERC"; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "ERC"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "ERC"; finance_minister_party = "ERC"; agriculture_minister_party = "ERC"; leverage = 25 if leverage >= 25;
 go-to: ministries
 
 Heinrich Brüning welcomes us into his new cabinet. Now, we have our pick of ministries.
 
 @bruning_oppo
-on-arrival: psoe_in_government = 0; psoe_toleration = 0; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "PRP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; grand_coalition_failed = 1
+on-arrival: psoe_in_government = 0; psoe_toleration = 0; chancellor = "Brüning"; chancellor_party = "ERC"; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "ERC"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "ERC"; finance_minister_party = "ERC"; agriculture_minister_party = "ERC"; grand_coalition_failed = 1
 
 By refusing to join the grand coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if right_coalition >= 50 : There are enough votes to form a right-wing coalition that includes the CEDA. However, the CEDA leader, Hugenberg, is opposed to a coalition with the "November criminals" of the Center Party. And of course, the fe_jons is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if right_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the CEDA, and they are not interested in joining in a coalition with the "November criminals" of the Center Party, anyhow. And of course, the fe_jons is not interested in coalition government. This means that there is no route to a majority coalition. ?]
 
@@ -942,7 +942,7 @@ if (Q.next_election_month > 12) {
     Q.next_election_year = Q.year;
 }
 if (Q.chancellor == "Brüning") {
-    Q.z_relation -= 5;
+    Q.erc_relation -= 5;
     Q.prp_relation -= 5;
 }
 Q.pro_republic -= 8;
@@ -963,7 +963,7 @@ Q.rural_fe_jons += 6;
 Q.unemployed_fe_jons += 5;
 if (Q.pro_republic < 45) {
     // TODO: if you pursue a consistently revolutionary course, you might avoid this? But you might also cause a coalition between Hitler and the Center.
-    Q.z_relation -= 5;
+    Q.erc_relation -= 5;
     Q.prp_relation -= 5;
     Q.workers_psoe *= 0.85;
     Q.unemployed_psoe -= 2;
@@ -987,7 +987,7 @@ The people's faith in democracy is shaken by this ordeal. Of course, the Nazis a
 @toleration_bruning
 choose-if: neo_weimar_coalition >= 50
 unavailable-subtitle: The parties supporting Brüning do not have a majority.
-on-arrival: psoe_in_government = 0; psoe_toleration = 1; minority_government = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "PRP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "Z"; pro_republic -= 4; new_middle_prp -= 5; new_middle_izqd_rep -= 5; landholders_prp -= 5; landholders_izqd_rep -= 5; landholders_fe_jons += 5; new_middle_fe_jons += 5; rural_ceda -= 5;
+on-arrival: psoe_in_government = 0; psoe_toleration = 1; minority_government = 1; chancellor = "Brüning"; chancellor_party = "ERC"; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 4; new_middle_prp -= 5; new_middle_izqd_rep -= 5; landholders_prp -= 5; landholders_izqd_rep -= 5; landholders_fe_jons += 5; new_middle_fe_jons += 5; rural_ceda -= 5;
 
 We have decided to tolerate Brüning's government. This means that we will vote against no-confidence votes to make sure they fail, but also that we will not be directly participating as ministers in the government. Thus, we can prevent a new election and stop the far right from entering government.
 
@@ -1054,7 +1054,7 @@ Who should be the chancellor?
 - @muller
 - @braun
 - @wels
-- @z_chancellor
+- @erc_chancellor
 - @no_govt
 
 
@@ -1096,10 +1096,10 @@ go-to: ministries
 We have promised to let the Center have more influence in the government in response to the appointment of Braun as chancellor.
 
 
-@z_chancellor
+@erc_chancellor
 title: Let the Center party have their chancellor.
 subtitle: This is unexpected and will cause internal dissent, but may give us a better position in negotiating for other cabinet positions.
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; z_relation += 10; prp_relation += 5; pce_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Brüning"; chancellor_party = "Z"; psoe_in_government = 1; leverage += 5
+on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; erc_relation += 10; prp_relation += 5; pce_relation -= 5; in_grand_coalition = 1 if in_weimar_coalition == 0; chancellor = "Brüning"; chancellor_party = "ERC"; psoe_in_government = 1; leverage += 5
 go-to: ministries
 
 This is highly unexpected, and many in the left and center of our party are criticizing this decision.
@@ -1116,7 +1116,7 @@ Are we sure about not participating in government? This will cause significant i
 
 - @muller
 - @braun
-- @z_chancellor
+- @erc_chancellor
 - @no_govt_goals: Yes, we're sure.
 
 @no_govt_goals
@@ -1275,14 +1275,14 @@ This coalition arrangement is tolerable to all.
 @drop_labor
 title: Drop the Labor Ministry.
 view-if: labor_minister_party = "PSOE"
-on-arrival: labor_minister_party = "Z"; labor_minister = "Stegerwald"; leverage += 5;
+on-arrival: labor_minister_party = "ERC"; labor_minister = "Stegerwald"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_interior
 title: Drop the Interior Ministry.
 view-if: interior_minister_party = "PSOE"
-on-arrival: interior_minister_party = "Z"; interior_minister = "Wirth"; leverage += 5;
+on-arrival: interior_minister_party = "ERC"; interior_minister = "Wirth"; leverage += 5;
 tags: drop_mins_1928
 go-to: ministries
 
@@ -1296,7 +1296,7 @@ go-to: ministries
 @drop_economic
 title: Drop the Economic Ministry.
 view-if: economic_minister_party = "PSOE"
-on-arrival: economic_minister_party = "PRP"; economic_minister = "Curtius"; leverage += 10; economic_minister_party = "Z" if in_weimar_coalition or in_popular_front;
+on-arrival: economic_minister_party = "PRP"; economic_minister = "Curtius"; leverage += 10; economic_minister_party = "ERC" if in_weimar_coalition or in_popular_front;
 tags: drop_mins_1928
 go-to: ministries
 
@@ -1310,7 +1310,7 @@ go-to: ministries
 @drop_foreign
 title: Drop the Foreign Ministry.
 view-if: foreign_minister_party = "PSOE"
-on-arrival: foreign_minister_party = "PRP"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "Z" if in_weimar_coalition or in_popular_front;
+on-arrival: foreign_minister_party = "PRP"; foreign_minister = "Stresemann"; foreign_minister = "Curtius" if streseman_dead; leverage += 10; foreign_minister_party = "ERC" if in_weimar_coalition or in_popular_front;
 tags: drop_mins_1928
 go-to: ministries
 

@@ -94,7 +94,7 @@ The courts agree that President [+ president +] is wrong to dismiss us, and that
 @new_elections
 title: Call for new snap elections.
 subtitle: We will not resign at gunpoint, and we will attempt to maintain the integrity of the elections.
-go-to: new_elections_braun if president == "Braun"; new_elections_hindenburg if president != "Braun" and z_relation >= 40; new_elections_hindenburg_reject if president != "Braun" and z_relation < 40
+go-to: new_elections_braun if president == "Braun"; new_elections_hindenburg if president != "Braun" and erc_relation >= 40; new_elections_hindenburg_reject if president != "Braun" and erc_relation < 40
 
 
 @new_elections_braun

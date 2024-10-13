@@ -26,12 +26,12 @@ on-arrival: resources -= 1; pce_inter_party_seen += 1
 go-to: pce_blutmai if blutmai = 1; pce_1 if blutmai = 0 and pce_coalition_success = 0; pce_2 if pce_coalition_success = 1
 
 @pce_1
-on-arrival: pce_relation += 6*(1 - dissent); communist_coalition += 1 if pce_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; prp_relation -= 3
+on-arrival: pce_relation += 6*(1 - dissent); communist_coalition += 1 if pce_inter_party_seen <= 1; reformist_dissent += 2; erc_relation -= 2; prp_relation -= 3
 
 The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
 
 @pce_2
-on-arrival: pce_relation += 8*(1 - dissent); communist_coalition += 1 if pce_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; prp_relation -= 3
+on-arrival: pce_relation += 8*(1 - dissent); communist_coalition += 1 if pce_inter_party_seen <= 1; reformist_dissent += 2; erc_relation -= 3; prp_relation -= 3
 
 After the success of the coalition government with the PCE, they are much more amenable to us.
 
@@ -44,21 +44,21 @@ After the events of Blütmai, reconciling with the Communists is difficult, if n
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; z_relation += 2 if z_party_leader == "Joos"
-go-to: center_op if z_in_government = 1 and psoe_in_government = 0 and chancellor != "Brüning"; center_coalition if psoe_in_government = 1 and z_in_government = 1; center_bruning if chancellor = "Brüning"
+on-arrival: resources -= 1; erc_relation += 2 if erc_party_leader == "Joos"
+go-to: center_op if erc_in_government = 1 and psoe_in_government = 0 and chancellor != "Brüning"; center_coalition if psoe_in_government = 1 and erc_in_government = 1; center_bruning if chancellor = "Brüning"
 
 @center_op
-on-arrival: z_relation += 5*(1 - dissent)
+on-arrival: erc_relation += 5*(1 - dissent)
 
 We are currently in opposition to the Center-led government, but that does not preclude the general building of feelings of good will.
 
 @center_coalition
-on-arrival: z_relation += 8*(1 - dissent)
+on-arrival: erc_relation += 8*(1 - dissent)
 
 We are currently coalition partners with them, so improving relations comes naturally.
 
 @center_bruning
-on-arrival: z_relation += 5*(1 - dissent)
+on-arrival: erc_relation += 5*(1 - dissent)
 
 The Brüning semi-autocratic regime makes building friendly relations difficult, but not impossible.
 

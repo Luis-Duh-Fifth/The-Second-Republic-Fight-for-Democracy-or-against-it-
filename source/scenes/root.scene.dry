@@ -98,7 +98,7 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
+Q.erc_relation = 50;
 Q.pce_relation = 25;
 Q.izqd_rep_relation = 60;
 Q.prp_relation = 35;
@@ -109,9 +109,9 @@ Q.fe_jons_relation = 0;
 Q.pce_leader = "Thälmann";
 // alternative is the Conciliators as party leader
 Q.pce_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
+Q.erc_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1931 December conference. Joos will be most friendly to the PSOE.
-Q.z_party_leader = "Marx";
+Q.erc_party_leader = "Marx";
 Q.fe_jons_leader = "Hitler";
 
 // hmm... maybe we can play nice with Hindenburg???
@@ -226,7 +226,7 @@ Q.sapd_formed = 0;
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_psoe = 60;
 Q.workers_pce = 20;
-Q.workers_z = 5;
+Q.workers_erc  = 5;
 Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
 Q.workers_ceda = 5;
@@ -235,7 +235,7 @@ Q.workers_other = 10;
 
 Q.old_middle_psoe = 5;
 Q.old_middle_pce = 0;
-Q.old_middle_z = 5;
+Q.old_middle_erc  = 5;
 Q.old_middle_izqd_rep= 10;
 Q.old_middle_prp = 25;
 Q.old_middle_ceda = 25;
@@ -244,7 +244,7 @@ Q.old_middle_other = 10;
 
 Q.new_middle_psoe = 5;
 Q.new_middle_pce = 1;
-Q.new_middle_z = 10;
+Q.new_middle_erc  = 10;
 Q.new_middle_izqd_rep= 25;
 Q.new_middle_prp = 25;
 Q.new_middle_ceda = 10;
@@ -253,7 +253,7 @@ Q.new_middle_other = 15;
 
 Q.rural_psoe = 10;
 Q.rural_pce = 0;
-Q.rural_z = 5;
+Q.rural_erc  = 5;
 Q.rural_izqd_rep= 5;
 Q.rural_prp = 15;
 Q.rural_ceda = 45;
@@ -262,7 +262,7 @@ Q.rural_other = 10;
 
 Q.unemployed_psoe = 25;
 Q.unemployed_pce = 55;
-Q.unemployed_z = 1;
+Q.unemployed_erc  = 1;
 Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
 Q.unemployed_ceda = 5;
@@ -271,7 +271,7 @@ Q.unemployed_other = 9;
 
 Q.catholics_psoe = 15;
 Q.catholics_pce = 2;
-Q.catholics_z = 50;
+Q.catholics_erc  = 50;
 Q.catholics_izqd_rep = 0;
 Q.catholics_prp = 5;
 Q.catholics_ceda = 5;
@@ -282,12 +282,12 @@ Q.catholics_other = 12;
 // Current Reichstag composition
 // % of Reichstag in Jan 1931
 // source: wikipedia
-// note: the Z figures also include the PNV (Bavarian people's party)
+// note: the ERC figures also include the PNV (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.psoe_r = 26;
 Q.pce_r = 9;
-Q.z_r = 17;
+Q.erc_r = 17;
 Q.izqd_rep_r = 6;
 Q.prp_r = 10;
 Q.ceda_r = 20;
@@ -297,7 +297,7 @@ Q.other_r = 9;
 // diff from prev
 Q.old_psoe_r = 26;
 Q.old_pce_r = 9;
-Q.old_z_r = 17;
+Q.old_erc _r = 17;
 Q.old_izqd_rep_r = 6;
 Q.old_prp_r = 10;
 Q.old_ceda_r = 20;
@@ -325,7 +325,7 @@ Q.president = "Hindenburg";
 Q.chancellor = "Marx";
 Q.chancellor_party = 'Z';
 Q.psoe_in_government = 0;
-Q.z_in_government = 1;
+Q.erc_in_government = 1;
 Q.izqd_rep_in_government = 0;
 Q.prp_in_government = 1;
 Q.ceda_in_government = 1;
@@ -333,12 +333,12 @@ Q.pce_in_government = 0;
 Q.fe_jons_in_government = 0;
 
 Q.in_right_coalition = 0;
-// Weimar coalition = PSOE + Z + IR
+// Weimar coalition = PSOE + ERC + IR
 Q.in_weimar_coalition = 0;
-// Grand coalition = PSOE + Z + PNV + IR + PRP
-// also includes the "new grand coalition" of PSOE + Z + PNV + IR + PRP + Others
+// Grand coalition = PSOE + ERC + PNV + IR + PRP
+// also includes the "new grand coalition" of PSOE + ERC + PNV + IR + PRP + Others
 Q.in_grand_coalition = 0;
-// Popular front = PSOE + PCE + Z + IR
+// Popular front = PSOE + PCE + ERC + IR
 Q.in_popular_front = 0;
 // left coalition = PSOE + PCE + left-splinters
 Q.in_left_front = 0;
@@ -569,11 +569,11 @@ For more information on the politics and government of the German Republic, see 
 - @1931_historical: Begin (historical mode)
 
 @1931_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; pce_relation = 29; z_relation = 54; prp_relation = 49;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; pce_relation = 29; erc_relation = 54; prp_relation = 49;
 go-to: 1931_main
 
 @1931_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; pce_relation = 16; prp_relation = 31;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; erc_relation = 41; pce_relation = 16; prp_relation = 31;
 go-to: 1931_main
 
 @1931_historical
@@ -588,7 +588,7 @@ Q.reformist_dissent = 25;
 Q.left_dissent = 30;
 Q.labor_dissent = 25;
 Q.center_dissent = 25;
-Q.z_relation = 41;
+Q.erc_relation = 41;
 Q.pce_relation = 16;
 Q.prp_relation = 31;
 Q.budget = 2;

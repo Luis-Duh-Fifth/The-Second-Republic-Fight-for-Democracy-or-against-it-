@@ -1,6 +1,6 @@
 title: Center Party Conference
 subtitle: The Center Party chooses their new leader...
-view-if: year = 1928 and month = 12 and z_party_leader = "Marx"
+view-if: year = 1928 and month = 12 and erc_party_leader = "Marx"
 max-visits: 1
 tags: event
 new-page: true
@@ -17,14 +17,14 @@ The consensus candidate on the right is Ludwig Kaas, a Catholic priest who repre
 - @joos: Influence the Center Party to select Joseph Joos as the party chair.
 
 @kaas
-on-arrival: z_party_leader = "Kaas"; z_relation -= 5
+on-arrival: erc_party_leader = "Kaas"; erc_relation -= 5
 
 Ludwig Kaas has been selected as the chairman of the Center Party. He seems to represent a rightward turn from Marx, and will preside over a Center Party less inclined to compromise with the left.
 
 @joos
 unavailable-subtitle: Our relations are not good enough.
 subtitle: Joos is likely to be friendlier to us than Kaas.
-choose-if: z_relation >= 70
-on-arrival: z_party_leader = "Joos"; catholics_psoe += 5; workers_z += 3
+choose-if: erc_relation >= 70
+on-arrival: erc_party_leader = "Joos"; catholics_psoe += 5; workers_erc  += 3
 
 With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the PSOE, and will be more inclined to collaborate with us compared to Kaas.

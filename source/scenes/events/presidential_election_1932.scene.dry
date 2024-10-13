@@ -54,7 +54,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @support_hindenburg: Support Hindenburg instead.
 
 @support_thalmann_2
-on-arrival: psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; z_relation -= 15; prp_relation -= 15
+on-arrival: psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; erc_relation -= 15; prp_relation -= 15
 
 Fine. We have thrown our support to Chairman Thälmann of the PCE.
 
@@ -62,51 +62,51 @@ Fine. We have thrown our support to Chairman Thälmann of the PCE.
 
 @braun_campaign
 
-- @convince_z: Convince the Center Party.
+- @convince_erc : Convince the Center Party.
 - @convince_pce: Convince the Communists.
 - @convince_liberals: Convince the remaining liberals, wherever they are.
 - @final_election: The final vote...
 
-@convince_z
-choose-if: psoe_votes >= z_votes
+@convince_erc 
+choose-if: psoe_votes >= erc_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
-Q.z_support_braun = 0;
-if (Q.z_relation >= 55) {
-    Q.z_support_braun = 1;
-} else if (Q.z_relation <= 35) {
-    Q.z_support_braun = 0;
+Q.erc_support_braun = 0;
+if (Q.erc_relation >= 55) {
+    Q.erc_support_braun = 1;
+} else if (Q.erc_relation <= 35) {
+    Q.erc_support_braun = 0;
 } else {
-    Q.z_support_braun = 2;
+    Q.erc_support_braun = 2;
 }
 !}
-go-to: z_failed if z_support_braun = 0 or (z_support_braun == 2 and historical_mode); z_success if z_support_braun = 1; z_partial if z_support_braun = 2 and not historical_mode
+go-to: erc_failed if erc_support_braun = 0 or (erc_support_braun == 2 and historical_mode); erc_success if erc_support_braun = 1; erc_partial if erc_support_braun = 2 and not historical_mode
 max-visits: 1
 
 We remind the Center leaders of Hindenburg's anti-Catholicism, and try to convince them that Hindenburg's path will eventually lead to Hitler. We also remind them of the successes they've had as part of the Weimar coalition in Prussia with Otto Braun, and our support for the Center candidate Wilhelm Marx in the 1925 presidential election.
 
-@z_success
+@erc_success
 go-to: braun_campaign
 
 The Center are convinced! They will be part of the Braun coalition.
 
-@z_partial
+@erc_partial
 
 The Center are not satisfied with our arguments, but they are open to being convinced. They are willing to run a joint campaign if we front the resources.
 
-- @pay_z: Give them the resources they need.
+- @pay_erc : Give them the resources they need.
 - @braun_campaign: Forget about the Center.
 
-@pay_z
+@pay_erc 
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3)
-on-arrival: resources -= 3; z_support_braun = 1
+on-arrival: resources -= 3; erc_support_braun = 1
 go-to: braun_campaign
 
 With our resources, the Center are convinced to support Braun over Hindenburg.
 
-@z_failed
+@erc_failed
 go-to: braun_campaign
 
 Unfortunately, we fail to turn them away from Hindenburg.
@@ -183,10 +183,10 @@ Q.hindenburg_votes += Q.ceda_votes;
 if (Q.braun_campaign) {
     Q.braun_votes += Q.psoe_votes;
     Q.braun_votes += Q.izqd_rep_votes;
-    if (Q.z_support_braun && Q.z_support_braun == 1) {
-        Q.braun_votes += Q.z_votes;
+    if (Q.erc_support_braun && Q.erc_support_braun == 1) {
+        Q.braun_votes += Q.erc_votes;
     } else {
-        Q.hindenburg_votes += Q.z_votes;
+        Q.hindenburg_votes += Q.erc_votes;
     }
     if (Q.pce_support_braun) {
         Q.braun_votes += Q.pce_votes;
@@ -201,12 +201,12 @@ if (Q.braun_campaign) {
 } else if (Q.psoe_support_thalmann) {
     Q.thalmann_votes += Q.pce_votes;
     Q.thalmann_votes += Q.psoe_votes;
-    Q.hindenburg_votes += Q.z_votes;
+    Q.hindenburg_votes += Q.erc_votes;
     Q.hindenburg_votes += Q.izqd_rep_votes;
     Q.hindenburg_votes += Q.prp_votes;
 } else {
     Q.hindenburg_votes += Q.psoe_votes;
-    Q.hindenburg_votes += Q.z_votes;
+    Q.hindenburg_votes += Q.erc_votes;
     Q.hindenburg_votes += Q.izqd_rep_votes;
     Q.hindenburg_votes += Q.prp_votes;
     Q.thalmann_votes += Q.pce_votes;
@@ -263,59 +263,59 @@ There is no majority in this round. In the second round, any candidate who wins 
 
 @round2_menu
 
-- @round2_convince_z: Convince the Center to switch their support to us.
+- @round2_convince_erc : Convince the Center to switch their support to us.
 - @round2_convince_pce: Convince the PCE to switch their support to us. 
 - @round2_hindenburg: Switch our support to Hindenburg.
 - @round2_thalmann: Switch our support to Thälmann of the PCE.
 - @round2_vote: Let the second round voting begin.
 
 
-@round2_convince_z
-view-if: braun_campaign > 0 and z_support_braun != 1 
-choose-if: psoe_votes >= z_votes
+@round2_convince_erc 
+view-if: braun_campaign > 0 and erc_support_braun != 1 
+choose-if: psoe_votes >= erc_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
-Q.z_support_braun = 0;
+Q.erc_support_braun = 0;
 
-if (Q.z_relation >= 55) {
-    Q.z_support_braun = 1;
+if (Q.erc_relation >= 55) {
+    Q.erc_support_braun = 1;
     if (Q.hitler_support_hindenburg) {
         Q.hindenburg_to_braun_bonus += Math.round(Q.other_votes/2);
     }
-} else if (Q.z_relation >= 50 && Q.hitler_support_hindenburg) {
-    Q.z_support_braun = 1;
+} else if (Q.erc_relation >= 50 && Q.hitler_support_hindenburg) {
+    Q.erc_support_braun = 1;
     Q.hindenburg_to_braun_bonus += Math.round(Q.other_votes/2);
-} else if (Q.z_relation <= 35) {
-    Q.z_support_braun = 0;
+} else if (Q.erc_relation <= 35) {
+    Q.erc_support_braun = 0;
 } else {
-    Q.z_support_braun = 2;
+    Q.erc_support_braun = 2;
 }
 !}
-go-to: r2_z_failed if z_support_braun = 0 or (z_support_braun = 2 and historical_mode); r2_z_success if z_support_braun = 1; r2_z_partial if z_support_braun = 2 and not historical_mode
+go-to: r2_erc _failed if erc_support_braun = 0 or (erc_support_braun = 2 and historical_mode); r2_erc _success if erc_support_braun = 1; r2_erc _partial if erc_support_braun = 2 and not historical_mode
 max-visits: 1
 
-@r2_z_success
+@r2_erc _success
 go-to: round2_menu
 
 [? if hitler_support_hindenburg : The Center's opinion is affected by the Nazis' support of Hindenburg, and is willing to turn away from him. ?] The Center are convinced! They will be part of the Braun coalition. [? if hitler_support_hindenburg : In addition, they will also bring in some minor parties who will support us. ?]
 
-@r2_z_partial
+@r2_erc _partial
 
 The Center are not satisfied with our arguments, but they are open to being convinced[? if hitler_support_hindenburg: , especially given the Nazis' support for Hindenburg. ?]. They are willing to run a joint campaign if we front the resources.
 
-- @r2_pay_z: Give them the resources they need.
+- @r2_pay_erc : Give them the resources they need.
 - @round2_menu: Forget about the Center.
 
-@r2_pay_z
+@r2_pay_erc 
 choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
-on-arrival: resources -= 2; z_support_braun = 1
+on-arrival: resources -= 2; erc_support_braun = 1
 go-to: round2_menu
 
 With our resources, the Center are convinced to support Braun over Hindenburg.
 
-@r2_z_failed
+@r2_erc _failed
 go-to: round2_menu
 
 Unfortunately, we fail to turn them away from Hindenburg.
@@ -365,12 +365,12 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: braun_campaign = 0; psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; z_relation -= 15; prp_relation -= 15
-on-departure: z_support_braun = 0; pce_support_braun = 0;
+on-arrival: braun_campaign = 0; psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; erc_relation -= 15; prp_relation -= 15
+on-departure: erc_support_braun = 0; pce_support_braun = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the PCE.
 
-[? if z_support_braun : The Center Party is confused at our capricious behavior, and have switched their support to Hindenburg. ?]
+[? if erc_support_braun : The Center Party is confused at our capricious behavior, and have switched their support to Hindenburg. ?]
 
 - @round2_vote: Let the second round voting begin.
 

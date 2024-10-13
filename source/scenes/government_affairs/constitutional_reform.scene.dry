@@ -33,8 +33,8 @@ A constitutional reform requires either a two-thirds supermajority in the Reichs
 subtitle: Change the vote threshold to 5% for parties to be represented in the Reichstag.
 on-arrival: {!
 Q.reform_support = Q.psoe_normalized;
-if (Q.z_relation > 30) {
-    Q.reform_support += Q.z_normalized - 0.03;
+if (Q.erc_relation > 30) {
+    Q.reform_support += Q.erc_normalized - 0.03;
 }
 if (Q.pce_relation > 50 && Q.pce_normalized >= 0.1) {
     Q.reform_support += Q.pce_normalized;
@@ -49,7 +49,7 @@ view-if: electoral_threshold = 0
 
 Some political thinkers believe that the proliferation of minor parties is responsible for the instability of the republic. They believe that a higher electoral threshold will reduce the influence of small radical parties. Parties that win a plurality in a constituency will maintain their representation, a gift to regional parties such as the PNV. 
 
-The smaller parties will obviously oppose this reform. [? if z_relation > 30 : The Center Party supports this reform, while their PNV partners oppose it. ?] [? if pce_relation > 50 and pce_normalized >= 0.1 : Perhaps surprisingly, the PCE supports this reform. ?] [? if fe_jons_normalized >= 0.2 : The FE_JONS supports this reform, as they believe they have something to gain. ?]
+The smaller parties will obviously oppose this reform. [? if erc_relation > 30 : The Center Party supports this reform, while their PNV partners oppose it. ?] [? if pce_relation > 50 and pce_normalized >= 0.1 : Perhaps surprisingly, the PCE supports this reform. ?] [? if fe_jons_normalized >= 0.2 : The FE_JONS supports this reform, as they believe they have something to gain. ?]
 
 The PSOE Left opposes this change, as they believe it to be anti-democratic.
 
@@ -59,7 +59,7 @@ The PSOE Left opposes this change, as they believe it to be anti-democratic.
 
 @vote_threshold_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if z_relation <= 30 : The Center Party does not trust us enough to support this policy. ?]
+unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if erc_relation <= 30 : The Center Party does not trust us enough to support this policy. ?]
 on-arrival: constitutional_reform += 1; electoral_threshold = 5; izqd_rep_relation -= 25; prp_relation -= 25; left_dissent += 20; workers_other *= 0.1; new_middle_other *= 0.1; landholders_other *= 0.1; rural_other *= 0.2; unemployed_other *= 0.2; catholics_other *= 0.1;
 achievement: verfassungsreform
 
@@ -73,8 +73,8 @@ We have passed a constitutional amendment to increase the electoral threshold to
 subtitle: Votes of no confidence can only be called if an alternative plan for government formation can be passed, greatly reducing their incidence.
 on-arrival: {!
 Q.reform_support = Q.psoe_normalized + Q.izqd_rep_normalized;
-if (Q.z_relation >= 30) {
-    Q.reform_support += Q.z_normalized - 0.03;
+if (Q.erc_relation >= 30) {
+    Q.reform_support += Q.erc_normalized - 0.03;
 }
 if (!Q.stresemann_dead) {
     Q.reform_support += Q.prp_normalized;
@@ -82,14 +82,14 @@ if (!Q.stresemann_dead) {
 !}
 view-if: constructive_vonc = 0
 
-[? if z_relation >= 30 : The Weimar Coalition parties, the IR and Center Party, support this reform, which will greatly improve the stability of the government. ?] [? if z_relation < 30 : The IR supports this reform, but the Center Party does not trust us enough to support the constitutional referendum. ?] The more conservative and radical right-wing parties and the PCE are in opposition, as they seem to relish in the republican system's instability.
+[? if erc_relation >= 30 : The Weimar Coalition parties, the IR and Center Party, support this reform, which will greatly improve the stability of the government. ?] [? if erc_relation < 30 : The IR supports this reform, but the Center Party does not trust us enough to support the constitutional referendum. ?] The more conservative and radical right-wing parties and the PCE are in opposition, as they seem to relish in the republican system's instability.
 
 - @constructive_vonc_2: Call a constitutional referendum to pass the reform!
 - @reforms_menu: See other reform options.
 
 @constructive_vonc_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if z_relation <= 30 : The Center Party does not trust us enough to support this policy. ?]
+unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if erc_relation <= 30 : The Center Party does not trust us enough to support this policy. ?]
 on-arrival: constitutional_reform += 1; constructive_vonc = 1
 achievement: verfassungsreform
 
@@ -99,24 +99,24 @@ We have successfully passed a constitutional amendment to ban votes of no confid
 subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexekution* on state governments.
 on-arrival: {!
 Q.reform_support = Q.psoe_normalized + Q.izqd_rep_normalized + Q.pce_normalized;
-if (Q.z_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener")) {
-    Q.reform_support += Q.z_normalized;
+if (Q.erc_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener")) {
+    Q.reform_support += Q.erc_normalized;
 } else if (Q.president == "Braun") {
-    Q.reform_support += Q.z_normalized - 0.03;
+    Q.reform_support += Q.erc_normalized - 0.03;
 }
 !}
 view-if: presidential_powers = 0
 
 The wide-ranging presidential powers promised by the constitution are a potential gateway to authoritarianism. Thus, we can support reforms that limit the powers of the president, ending his power to unilaterally terminate an elected government and to remove state governments.
 
-The PCE is in favor of this reform, having been victims of the *Reichsexekution* in the past (when PCE-supported state governments in Thuringia and Saxony were removed). The democrats of the IR also support this. [? if president == "Hindenburg": However, the opposition from conservatives is vehement, as they see a reduction in presidential powers as disrespectful to Hindenburg. ?] [? if z_relation <= 49 and president == "Hindenburg" : Thus, the Center Party has been influenced to oppose these reforms. ?] [? if z_relation > 49 and president == "Hindenburg" : Despite this, the Center Party supports the proposed reform. ?] [? if president == "Braun" : The Center Party supports this reform. ?]
+The PCE is in favor of this reform, having been victims of the *Reichsexekution* in the past (when PCE-supported state governments in Thuringia and Saxony were removed). The democrats of the IR also support this. [? if president == "Hindenburg": However, the opposition from conservatives is vehement, as they see a reduction in presidential powers as disrespectful to Hindenburg. ?] [? if erc_relation <= 49 and president == "Hindenburg" : Thus, the Center Party has been influenced to oppose these reforms. ?] [? if erc_relation > 49 and president == "Hindenburg" : Despite this, the Center Party supports the proposed reform. ?] [? if president == "Braun" : The Center Party supports this reform. ?]
 
 - @presidential_powers_2: Call a constitutional referendum to pass the reform!
 - @reforms_menu: See other reform options.
 
 @presidential_powers_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if z_relation <= 49 and president != "Braun" : The Center Party does not trust us enough to support this policy. ?]
+unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if erc_relation <= 49 and president != "Braun" : The Center Party does not trust us enough to support this policy. ?]
 on-arrival: constitutional_reform += 1; presidential_powers = 1
 achievement: verfassungsreform
 

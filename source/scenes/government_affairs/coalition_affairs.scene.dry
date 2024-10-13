@@ -39,7 +39,7 @@ No. We will not do this.
 
 @bring_down
 subtitle: Bring down this government before our opponents do.
-on-arrival: psoe_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "Z"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; psoe_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_psoe -= 3; rural_psoe -= 3; landholders_psoe -= 3; catholics_psoe -= 3; reformist_dissent += 5
+on-arrival: psoe_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; chancellor = "Brüning"; chancellor_party = "ERC"; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; psoe_toleration = 0; left_strength += 8; pro_republic -= 5; new_middle_psoe -= 3; rural_psoe -= 3; landholders_psoe -= 3; catholics_psoe -= 3; reformist_dissent += 5
 
 We have called for a vote of no confidence in ourselves, and have brought down this government. Chancellor [+ chancellor +] currently rules as acting chancellor.
 

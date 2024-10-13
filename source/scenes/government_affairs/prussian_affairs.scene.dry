@@ -72,7 +72,7 @@ The Stahlhelm is no longer banned.
 
 @ban_rfb
 view-if: communist_coalition < 3 and rfb_banned = 0
-on-arrival: pce_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; z_relation += 5; prp_relation += 5; prussian_police_loyalty += 0.1
+on-arrival: pce_relation -= 15; rfb_strength -= 50; rfb_banned = 1; communist_coalition -= 1; erc_relation += 5; prp_relation += 5; prussian_police_loyalty += 0.1
 
 The ban is enthusiastically carried out by the police, perhaps too enthusiastically. The Communists take this as one more reason why the Socialists are traitors to the left. However, the moderate and center-right parties approve, as do the police.
 
@@ -90,6 +90,6 @@ We are making progress towards negotiating a concordat between Prussia and the C
 
 @sign_concordat
 view-if: prussian_concordat_progress >= 1 and prussian_concordat = 0
-on-arrival: prussian_concordat = 1; z_relation += 5; catholics_psoe += 2
+on-arrival: prussian_concordat = 1; erc_relation += 5; catholics_psoe += 2
 
 We have signed a Concordat between the Free State of Prussia and the Roman Catholic Church, guaranteeing religious freedom for Catholics in Prussia. This sets the stage for the negotiation of a national Concordat covering all of Germany.
