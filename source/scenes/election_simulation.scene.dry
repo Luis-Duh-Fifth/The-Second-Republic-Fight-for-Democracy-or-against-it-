@@ -18,7 +18,7 @@ Q.unemployed = 8.6;
 Q.catholics = 10;
 
 Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['psoe', 'pce', 'z', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
+Q.parties = ['psoe', 'pce', 'erc', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -91,7 +91,7 @@ Q.unemployed = 20;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['psoe', 'pce', 'z', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
+Q.parties = ['psoe', 'pce', 'erc', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -173,7 +173,7 @@ Q.unemployed = 33;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['psoe', 'pce', 'z', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
+Q.parties = ['psoe', 'pce', 'erc', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -287,7 +287,7 @@ The electoral system is essentially proportional, with the proportion of Reichst
 PSOE: [+ psoe_r +]
 
 # 1928: 15, 1930: 15, 1932: 
-Z + PNV: [+ erc_r +]
+ERC + PNV: [+ erc_r +]
 
 # 1928: 10, 1930: 13
 PCE: [+ pce_r +]
@@ -313,7 +313,7 @@ Weimar Coalition (PSOE + ERC + IR): [+ weimar_coalition +]
 
 Grand Coalition (PSOE + ERC + PNV + IR + PRP): [+ grand_coalition +]
 
-Bourgeois Coalition (Z + PNV + IR + PRP + Others): [+ bourgeois_coalition +]
+Bourgeois Coalition (ERC + PNV + IR + PRP + Others): [+ bourgeois_coalition +]
 
-Right-wing Coalition (Z + PNV + PRP + Others + CEDA): [+ right_coalition +]
+Right-wing Coalition (ERC + PNV + PRP + Others + CEDA): [+ right_coalition +]
 

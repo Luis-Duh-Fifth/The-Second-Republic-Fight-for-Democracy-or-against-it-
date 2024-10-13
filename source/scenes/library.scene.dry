@@ -76,7 +76,7 @@ go-to: menu
 PSOE: [+ psoe_votes +]%
 
 # 1928: 15, 1930: 15, 1932: 
-Z + PNV: [+ erc_votes +]%
+ERC + PNV: [+ erc_votes +]%
 
 # 1928: 10, 1930: 13
 PCE: [+ pce_votes +]%

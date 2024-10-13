@@ -33,7 +33,7 @@ Reichstag composition:
 # 1928: 30, 1930: 25, 1932: 22
 PSOE: [+ psoe_r +]%
 # 1928: 15, 1930: 15, 1932: 
-Z + PNV: [+ erc_r +]%
+ERC + PNV: [+ erc_r +]%
 # 1928: 10, 1930: 13
 PCE: [+ pce_r +]%
 # 1928: 5, 1930: 4 (as DstP)
@@ -126,7 +126,7 @@ Prussian police loyalty: [+ prussian_police_loyalty : loyalty +]
 
 PSOE: [+ psoe_votes +]%
 
-Z + PNV: [+ erc_votes +]%
+ERC + PNV: [+ erc_votes +]%
 
 PCE: [+ pce_votes +]%
 

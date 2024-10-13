@@ -114,13 +114,13 @@ Q.in_unity_government = 0;
 Q.psoe_toleration = 0;
 Q.psoe_caretaker = 0;
 Q.foreign_minister_party = 'PRP';
-Q.interior_minister_party = 'Z';
+Q.interior_minister_party = 'ERC';
 Q.justice_minister_party = 'I';
-Q.labor_minister_party = 'Z';
+Q.labor_minister_party = 'ERC';
 Q.reichswehr_minister_party = 'I';
 Q.economic_minister_party = 'IR';
 Q.finance_minister_party = 'PRP';
-Q.agriculture_minister_party = 'Z';
+Q.agriculture_minister_party = 'ERC';
 
 // reset PCE goals
 Q.pce_goals_seen = 0;
@@ -261,9 +261,9 @@ Weimar Coalition (PSOE + ERC + IR): [+ weimar_coalition +]%
 
 Grand Coalition (PSOE + ERC + PNV + IR + PRP): [+ grand_coalition +]%
 
-Bourgeois Coalition (Z + PNV + IR + PRP + Others): [+ bourgeois_coalition +]%
+Bourgeois Coalition (ERC + PNV + IR + PRP + Others): [+ bourgeois_coalition +]%
 
-Right-wing Coalition (Z + PNV + PRP + Others + CEDA): [+ right_coalition +]%
+Right-wing Coalition (ERC + PNV + PRP + Others + CEDA): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and fe_jons_r >= 15 : The rapid rise in FE_JONS votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
