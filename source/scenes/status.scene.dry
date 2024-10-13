@@ -142,7 +142,7 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PSOE: [+ workers_psoe_normalized +]%, ERC: [+ workers_erc _normalized +]%, PCE: [+ workers_pce_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, FE_JONS: [+ workers_fe_jons_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: PSOE: [+ workers_psoe_normalized +]%, ERC: [+ workers_erc_normalized +]%, PCE: [+ workers_pce_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, FE_JONS: [+ workers_fe_jons_normalized +]%, Others: [+ workers_other_normalized +]%
 
 Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, ERC: [+ new_middle_erc _normalized +]%, PCE: [+ new_middle_pce_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, FE_JONS: [+ new_middle_fe_jons_normalized +]%, Others: [+ new_middle_other_normalized +]%
 
