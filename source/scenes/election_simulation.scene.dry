@@ -81,7 +81,6 @@ Q.catholics_prr = 10;
 Q.catholics_ceda = 5;
 Q.catholics_re_ct = 10;
 Q.catholics_fe_jons = 0;
-
 !}
 go-to: election_algorithm
 set-jump: post_election
