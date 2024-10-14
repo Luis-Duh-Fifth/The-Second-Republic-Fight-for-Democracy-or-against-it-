@@ -224,7 +224,7 @@ Q.sapd_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.psoe = 65;
+Q.workers_psoe = 65;
 Q.workers_pce = 20;
 Q.workers_erc = 5;
 Q.workers_izqd_rep = 0;
