@@ -94,21 +94,21 @@ CEDA: [+ ceda_votes +]%
 FE_JONS: [+ fe_jons_votes +]%
 
 # 1928: 9, 1930: 10
-Others: [+ other_votes +]%
+PRR: [+ prr_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PSOE: [+ workers_psoe_normalized +]%, ERC: [+ workers_erc_normalized +]%, PCE: [+ workers_pce_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, FE_JONS: [+ workers_fe_jons_normalized +]%, Others: [+ workers_other_normalized +]%
+Workers: PSOE: [+ workers_psoe_normalized +]%, ERC: [+ workers_erc_normalized +]%, PCE: [+ workers_pce_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, FE_JONS: [+ workers_fe_jons_normalized +]%, PRR: [+ workers_prr_normalized +]%
 
-Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, ERC: [+ new_middle_erc_normalized +]%, PCE: [+ new_middle_pce_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, FE_JONS: [+ new_middle_fe_jons_normalized +]%, Others: [+ new_middle_other_normalized +]%
+Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, ERC: [+ new_middle_erc_normalized +]%, PCE: [+ new_middle_pce_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, FE_JONS: [+ new_middle_fe_jons_normalized +]%, PRR: [+ new_middle_prr_normalized +]%
 
-Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, ERC: [+ landholders_erc_normalized +]%, PCE: [+ landholders_pce_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, FE_JONS: [+ landholders_fe_jons_normalized +]%, Others: [+ landholders_other_normalized +]%
+Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, ERC: [+ landholders_erc_normalized +]%, PCE: [+ landholders_pce_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, FE_JONS: [+ landholders_fe_jons_normalized +]%, PRR: [+ landholders_prr_normalized +]%
 
-Rural: PSOE: [+ rural_psoe_normalized +]%, ERC: [+ rural_erc_normalized +]%, PCE: [+ rural_pce_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, FE_JONS: [+ rural_fe_jons_normalized +]%, Others: [+ rural_other_normalized +]%
+Rural: PSOE: [+ rural_psoe_normalized +]%, ERC: [+ rural_erc_normalized +]%, PCE: [+ rural_pce_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, FE_JONS: [+ rural_fe_jons_normalized +]%, PRR: [+ rural_prr_normalized +]%
 
-Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, ERC: [+ unemployed_erc_normalized +]%, PCE: [+ unemployed_pce_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, FE_JONS: [+ unemployed_fe_jons_normalized +]%, Others: [+ unemployed_other_normalized +]%
+Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, ERC: [+ unemployed_erc_normalized +]%, PCE: [+ unemployed_pce_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, FE_JONS: [+ unemployed_fe_jons_normalized +]%, PRR: [+ unemployed_prr_normalized +]%
 
-Catholics: PSOE: [+ catholics_psoe_normalized +]%, ERC: [+ catholics_erc_normalized +]%, PCE: [+ catholics_pce_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; CEDA: [+ catholics_ceda_normalized +]%, FE_JONS: [+ catholics_fe_jons_normalized +]%, Others: [+ catholics_other_normalized +]%
+Catholics: PSOE: [+ catholics_psoe_normalized +]%, ERC: [+ catholics_erc_normalized +]%, PCE: [+ catholics_pce_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; CEDA: [+ catholics_ceda_normalized +]%, FE_JONS: [+ catholics_fe_jons_normalized +]%, PRR: [+ catholics_prr_normalized +]%
 
 @parties
 go-to: menu
@@ -140,7 +140,7 @@ Current relations: [+ pce_relation : relationships +]
 
 Current relations: [+ fe_jons_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRP and ceda. 
+**PRR** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRP and ceda. 
 
 @paramilitaries
 on-arrival: {!
@@ -282,10 +282,10 @@ data = [
         "seats": Q.prp_r*5,
     },
     {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Q.other_r*5,
+        "id": "prr",
+        "legend": "PRR",
+        "name": "PRR",
+        "seats": Q.prr_r*5,
     },
     {
         "id": "ceda",
@@ -358,7 +358,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} PRP: {!</td><td>!} [+ prp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} PRR: {!</td><td>!} [+ prr_r +] % {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
 

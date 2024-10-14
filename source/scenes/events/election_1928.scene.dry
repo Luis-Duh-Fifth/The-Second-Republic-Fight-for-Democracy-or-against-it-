@@ -42,7 +42,7 @@ var new_party_sum = 0;
 for (var party of Q.parties) {
     Q['old_' + party + '_r'] = Q[party + '_r'];
     if (Q.constitutional_reform > 0) {
-        if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'other') || Q[party + '_banned']) {
+        if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'prr') || Q[party + '_banned']) {
             Q[party + '_r'] = 0;
         } else {
             Q[party + '_r'] = Q[party + '_votes'];
@@ -82,16 +82,16 @@ if (Q.pce_r >= Q.psoe_r && Q.pce_r >= Q.ceda_r) {
 // coalitions
 Q.weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r - 3;
 Q.grand_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r;
-Q.bourgeois_coalition = Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.other_r;
-Q.center_right_coalition = Q.erc_r + Q.izqd_rep_r + Q.prp_r + Q.other_r + Q.ceda_r;
-Q.right_coalition = Q.erc_r + Q.prp_r + Q.other_r + Q.ceda_r;
+Q.bourgeois_coalition = Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.prr_r;
+Q.center_right_coalition = Q.erc_r + Q.izqd_rep_r + Q.prp_r + Q.prr_r + Q.ceda_r;
+Q.right_coalition = Q.erc_r + Q.prp_r + Q.prr_r + Q.ceda_r;
 Q.far_right_coalition = Q.ceda_r + Q.fe_jons_r;
 Q.left_coalition = Q.psoe_r + Q.pce_r;
 // this is an absurd concept lol
 Q.popular_front_coalition = Q.psoe_r + Q.pce_r + Q.erc_r + Q.izqd_rep_r - 3;
 Q.anti_democratic_coalition = Q.pce_r + Q.fe_jons_r + Q.ceda_r;
 // aka everyone except nazi, pce, ceda
-Q.neo_weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.other_r;
+Q.neo_weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.prr_r;
 // Hitler + Right-wing parties (only comes into effect if you've alienated ERC too badly)
 Q.hitler_right_coalition = Q.erc_r + Q.ceda_r + Q.fe_jons_r;
 // Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
@@ -193,10 +193,10 @@ data = [
         "seats": Math.round(Q.prp_r*5),
     },
     {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r*5),
+        "id": "prr",
+        "legend": "PRR",
+        "name": "PRR",
+        "seats": Math.round(Q.prr_r*5),
     },
     {
         "id": "ceda",
@@ -248,7 +248,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} PRP: {!</td><td>!} [+ prp_r +]% {!</td><td>!} [+ str_change_prp +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} PRR: {!</td><td>!} [+ prr_r +] % {!</td><td>!} [+ str_change_prr +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td><td>!} [+ str_change_ceda +] {!</td></tr>!}
 
@@ -261,9 +261,9 @@ Weimar Coalition (PSOE + ERC + IR): [+ weimar_coalition +]%
 
 Grand Coalition (PSOE + ERC + PNV + IR + PRP): [+ grand_coalition +]%
 
-Bourgeois Coalition (ERC + PNV + IR + PRP + Others): [+ bourgeois_coalition +]%
+Bourgeois Coalition (ERC + PNV + IR + PRP + PRR): [+ bourgeois_coalition +]%
 
-Right-wing Coalition (ERC + PNV + PRP + Others + CEDA): [+ right_coalition +]%
+Right-wing Coalition (ERC + PNV + PRP + PRR + CEDA): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and fe_jons_r >= 15 : The rapid rise in FE_JONS votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
@@ -483,7 +483,7 @@ In response to the PCE's entrance into the government, the right-wing immediatel
 
 @right_coalition
 title: A right-wing coalition may be formed.
-subtitle: ERC + PNV + PRP + CEDA + Others ([+ right_coalition +]%)
+subtitle: ERC + PNV + PRP + CEDA + PRR ([+ right_coalition +]%)
 unavailable-subtitle: The CEDA is not interested in a coalition with the Center.
 view-if: right_coalition >= 50
 choose-if: year < 1928
@@ -556,10 +556,10 @@ The third option is to have new elections.
 
 @new_grand_coalition
 title: A "New Grand Coalition" of all the constitutional parties?
-subtitle: PSOE + ERC + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%)
+subtitle: PSOE + ERC + PNV + IR + PRP + PRR ([+ neo_weimar_coalition +]%)
 view-if: neo_weimar_coalition >= 50 and grand_coalition < 50
 choose-if: erc_relation >= 50 and prp_relation >= 30
-unavailable-subtitle: PSOE + ERC + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%) - [? if erc_relation < 50 : We do not have adequate relations with the Center Party. ?][? if prp_relation < 30 : We do not have adequate relations with the PRP. ?]
+unavailable-subtitle: PSOE + ERC + PNV + IR + PRP + PRR ([+ neo_weimar_coalition +]%) - [? if erc_relation < 50 : We do not have adequate relations with the Center Party. ?][? if prp_relation < 30 : We do not have adequate relations with the PRP. ?]
 
 How do we convince vehemently anti-socialist parties to allow us to form a majority coalition? Our largely benevolent relations with the Center and PRP may allow us some leverage.
 
@@ -597,7 +597,7 @@ We have assembled a new coalition under Otto Braun.
 
 @unity_government
 title: The Center Party offers a "Government of National Unity" under Chancellor Joseph Wirth.
-subtitle: PSOE + ERC + PNV + IR + PRP + Others ([+ neo_weimar_coalition +]%)
+subtitle: PSOE + ERC + PNV + IR + PRP + PRR ([+ neo_weimar_coalition +]%)
 view-if: erc_party_leader == "Joos" and neo_weimar_coalition >= 50 and weimar_coalition < 50
 
 The Center Party leader, Joseph Joos, clearly sees the threat from the ascension of the anti-democratic extremist parties, and thus tries to negotiate a "Government of National Unity" to save the republic. This coalition would be led by Joseph Wirth, a left-leaning member of the Center Party and former chancellor, and would encompass all of the constitutional parties. Our role in this government might be limited, however.
@@ -795,7 +795,7 @@ Their numbers are bolstered by the many government workers who are against the p
 @emergency_no_confidence
 title: The Nazis immediately call a no-confidence vote against us...
 view-if: far_right_coalition < 45
-on-arrival: erc_no_confidence = 1 if erc_relation < 45; pce_no_confidence = 1 if pce_relation < 45; others_no_confidence = 1 if (erc_relation + prp_relation)/2 < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = FE_JONS_r + ceda_r; no_confidence_votes += erc_r if erc_no_confidence; no_confidence_votes += pce_r if pce_no_confidence; no_confidence_votes += other_r if other_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
+on-arrival: erc_no_confidence = 1 if erc_relation < 45; pce_no_confidence = 1 if pce_relation < 45; PRR_no_confidence = 1 if (erc_relation + prp_relation)/2 < 45; sa_strength += 200; sh_strength += 200; no_confidence_votes = FE_JONS_r + ceda_r; no_confidence_votes += erc_r if erc_no_confidence; no_confidence_votes += pce_r if pce_no_confidence; no_confidence_votes += prr_r if prr_no_confidence; no_confidence_succeeds = 1 if no_confidence_votes > 50
 
 The FE_JONS and CEDA will vote against us, of course. The other parties vote their conscience.
 
@@ -902,7 +902,7 @@ There are enough votes to form a majority coalition consisting of the PSOE, Cent
 
 @grand_coalition_erc_lead_2
 
-The Center chancellor is likely to be Heinrich Brüning of the Center Party[? if chancellor = "Brüning" : again ?]. He is known for his conservatism and sympathy for monarchism, being on the right wing of the Center. [? if austerity >= 2 : Due to the government's austerity policies, many of our members are reluctant to participate in this coalition again. Some support a "toleration" arrangement in which we will provide outside support to prevent the far-right from either entering government or calling a successful no-confidence vote. Others support entering into pure opposition, and letting the right do what it wishes. ?]
+The Center chancellor is likely to be Heinrich Brüning of the Center Party[? if chancellor = "Brüning" : again ?]. He is known for his conservatism and sympathy for monarchism, being on the right wing of the Center. [? if austerity >= 2 : Due to the government's austerity policies, many of our members are reluctant to participate in this coalition again. Some support a "toleration" arrangement in which we will provide outside support to prevent the far-right from either entering government or calling a successful no-confidence vote. PRR support entering into pure opposition, and letting the right do what it wishes. ?]
 
 Brüning is not opposed to a coalition with us. Alternatively, we could enter a "toleration" agreement.
 

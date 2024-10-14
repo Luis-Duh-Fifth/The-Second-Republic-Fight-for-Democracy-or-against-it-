@@ -177,7 +177,7 @@ Q.thalmann_votes = 0;
 
 // initial phase:
 Q.hitler_votes += Q.fe_jons_votes;
-Q.hindenburg_votes += Q.other_votes;
+Q.hindenburg_votes += Q.prr_votes;
 Q.hindenburg_votes += Q.ceda_votes;
 
 if (Q.braun_campaign) {
@@ -280,11 +280,11 @@ Q.erc_support_braun = 0;
 if (Q.erc_relation >= 55) {
     Q.erc_support_braun = 1;
     if (Q.hitler_support_hindenburg) {
-        Q.hindenburg_to_braun_bonus += Math.round(Q.other_votes/2);
+        Q.hindenburg_to_braun_bonus += Math.round(Q.prr_votes/2);
     }
 } else if (Q.erc_relation >= 50 && Q.hitler_support_hindenburg) {
     Q.erc_support_braun = 1;
-    Q.hindenburg_to_braun_bonus += Math.round(Q.other_votes/2);
+    Q.hindenburg_to_braun_bonus += Math.round(Q.prr_votes/2);
 } else if (Q.erc_relation <= 35) {
     Q.erc_support_braun = 0;
 } else {
