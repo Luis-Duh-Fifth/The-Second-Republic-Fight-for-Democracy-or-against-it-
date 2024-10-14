@@ -526,7 +526,7 @@ table {
     fill: #DCCA4A;
 }
 .seat.erc {
-    fill: #000;
+    fill: #fd5b04;
 }
 .seat.pnv {
     fill: #69A2BE;
@@ -539,6 +539,9 @@ table {
 }
 .seat.ceda {
     fill: #3F7BC1;
+}
+.seat.re_ct {
+  fill: #000000da;
 }
 .seat.fe_jons {
     fill: #954B00;
