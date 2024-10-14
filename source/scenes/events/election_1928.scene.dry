@@ -205,10 +205,10 @@ data = [
         "seats": Math.round(Q.ceda_r*5),
     },
     {
-        "id": "re&ct",
-        "legend": "RE&CT",
-        "name": "RE&CT",
-        "seats": Math.round(Q.re&ct_r*5),
+        "id": "re_ct",
+        "legend": "re_ct",
+        "name": "re_ct",
+        "seats": Math.round(Q.re_ct_r*5),
     },
     {
         "id": "fe_jons",
