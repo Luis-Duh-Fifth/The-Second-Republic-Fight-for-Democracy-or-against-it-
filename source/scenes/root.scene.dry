@@ -455,7 +455,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'shuffle_leadership', 'streetfighting', 'peoples_party',
             'party_disunity',
             // govt
-            'agricultural_policy', 'domestic_enemies', 'fiscal_policy',
+            'agriultural_policy', 'domestic_enemies', 'fiscal_policy',
             'foreign_policy', 'judiciary', 'labor_affairs', 'military_policy',
             'police', 'prussian_affairs', 'shuffle_cabinet', 'social_welfare',
             'homosexual_rights', 'economic_policy', 'coalition_affairs',
