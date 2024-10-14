@@ -206,8 +206,8 @@ data = [
     },
     {
         "id": "re_ct",
-        "legend": "re_ct",
-        "name": "re_ct",
+        "legend": "RE_CT",
+        "name": "RE_CT",
         "seats": Math.round(Q.re_ct_r*5),
     },
     {
