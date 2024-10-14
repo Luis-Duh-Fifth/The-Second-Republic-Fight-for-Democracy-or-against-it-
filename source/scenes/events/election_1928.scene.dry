@@ -248,7 +248,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td><td>!} [+ str_change_izqd_rep +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} ERC: {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#fd5b04'> </div> !} ERC: {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} PNV: {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
 
@@ -258,7 +258,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td><td>!} [+ str_change_ceda +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} RE_CT: {!</td><td>!} [+ re_ct_r +]% {!</td><td>!} [+ str_change_re_ct +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000000da'> </div> !} RE_CT: {!</td><td>!} [+ re_ct_r +]% {!</td><td>!} [+ str_change_re_ct +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#954B00'> </div> !} FE_JONS: {!</td><td>!} [+ fe_jons_r +]% {!</td><td>!} [+ str_change_fe_jons +] {!</td></tr>!}
 {!</table>!}
