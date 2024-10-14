@@ -294,6 +294,12 @@ data = [
         "seats": Q.ceda_r*5,
     },
     {
+        "id": "re&ct",
+        "legend": "RE&CT",
+        "name": "RE&CT",
+        "seats": Q.re&ct_r*5,
+    },
+    {
         "id": "fe_jons",
         "legend": "fe_jons",
         "name": "fe_jons",
@@ -361,6 +367,8 @@ if (d3 && window) {
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} PRR: {!</td><td>!} [+ prr_r +] % {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} RE&CT: {!</td><td>!} [+ re&ct_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} FE_JONS: {!</td><td>!} [+ fe_jons_r +]% {!</td></tr>!}
 {!</table>!}
