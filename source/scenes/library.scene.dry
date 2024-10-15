@@ -365,9 +365,9 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}PCE: {!</td><td>!} [+ pce_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td></tr>!}
-
 {!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} ERC: {!</td><td>!} [+ erc_minus_pnv_r +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} PRP: {!</td><td>!} [+ prp_r +]% {!</td></tr>!}
 
