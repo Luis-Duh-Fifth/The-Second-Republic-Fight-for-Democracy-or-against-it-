@@ -279,12 +279,6 @@ data = [
         "seats": (Q.erc_r - 3)*5,
     },
     {
-        "id": "pnv",
-        "legend": "pnv",
-        "name": "pnv",
-        "seats": 3*5,
-    },
-    {
         "id": "prp",
         "legend": "PRP",
         "name": "PRP",
@@ -295,6 +289,12 @@ data = [
         "legend": "PRR",
         "name": "PRR",
         "seats": Q.prr_r*5,
+    },
+    {
+        "id": "pnv",
+        "legend": "pnv",
+        "name": "pnv",
+        "seats": 3*5,
     },
     {
         "id": "ceda",
@@ -369,11 +369,11 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} ERC: {!</td><td>!} [+ erc_minus_pnv_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} PNV: {!</td><td>!} 3% {!</td></tr>!}
-
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} PRP: {!</td><td>!} [+ prp_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} PRR: {!</td><td>!} [+ prr_r +] % {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} PNV: {!</td><td>!} 3% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
 
