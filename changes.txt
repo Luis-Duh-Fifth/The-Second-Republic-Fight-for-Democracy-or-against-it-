@@ -296,7 +296,7 @@ Future changes:
 v0.16 - Constitutional Reform, new advisors, Zentrum politics
 
 Major changes:
-- New government card - Constitutional reform (requires judicial ministry, at least a Weimar Coalition, and neorevisionism) - change vote threshold for Reichstag representation, requiring a constructive vote of no confidence, reducing presidential powers.
+- New government card - Constitutional reform (requires judicial ministry, at least a Weimar Coalition, and neorevisionism) - change vote threshold for Cortes representation, requiring a constructive vote of no confidence, reducing presidential powers.
 - new category of advisors - non-factional. New advisors: Magnus Hirschfeld, Gustav Radbruch, Fritz Baade, Friedrich Stampfer.
 - New advisor: Max Seydewitz (left)
 - New advisor actions: Fiscal Policy (Hilferding). Now, all cabinet ministry actions should have a corresponding advisor action (Economic Ministry is Woytinsky's action).

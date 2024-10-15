@@ -285,7 +285,7 @@ Q.anti_democratic_coalition = Q.pce_r + Q.fe_jons_r;
 Q.neo_weimar_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.prr_r;
 !}
 
-The electoral system is essentially proportional, with the proportion of Reichstag seats roughly equal to the proportion of votes.
+The electoral system is essentially proportional, with the proportion of Cortes seats roughly equal to the proportion of votes.
  
 **Election results:**
 

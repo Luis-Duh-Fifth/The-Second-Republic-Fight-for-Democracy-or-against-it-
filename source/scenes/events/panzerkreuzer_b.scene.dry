@@ -7,7 +7,7 @@ view-if: panzerkreuzer_b_seen = 0 and year = 1931 and month >= 2 and (psoe_in_go
 
 = Panzerkreuzer B
 
-The Navy is demanding the construction of another new battlecruiser. [? if panzerkreuzer_funded: The previous battlecruiser had been funded, and has already been launched. Another ship would futher progress Germany's rearmament. ?][? if not panzerkreuzer_funded: The previous battlecruiser requested by the Navy was not funded, thanks to us. The military remains bitter, but nevertheless they are still pursuing their rearmament plan, and must seek funding from the Reichstag. ?]
+The Navy is demanding the construction of another new battlecruiser. [? if panzerkreuzer_funded: The previous battlecruiser had been funded, and has already been launched. Another ship would futher progress Germany's rearmament. ?][? if not panzerkreuzer_funded: The previous battlecruiser requested by the Navy was not funded, thanks to us. The military remains bitter, but nevertheless they are still pursuing their rearmament plan, and must seek funding from the Cortes. ?]
 
 Much of our party is deeply opposed to rearmament, while the center and right parties are united in support. What will we do?
 
@@ -32,14 +32,14 @@ Our vote against the battlecruiser is unpopular among the right-wing parties[? i
 @abstain
 on-arrival: prp_relation -= 5; erc_relation -= 3; left_dissent += 5; labor_dissent += 5 if not panzerkreuzer_funded; panzerkreuzer_b_funded = 1; pce_relation -= 3
 
-The center-right parties are critical of our decision to abstain, and the pressure from our left flank is not entirely assuaged. Despite our abstention, the vote in the Reichstag passes, with all parties in favor except the PSOE and PCE. The ship will be built.
+The center-right parties are critical of our decision to abstain, and the pressure from our left flank is not entirely assuaged. Despite our abstention, the vote in the Cortes passes, with all parties in favor except the PSOE and PCE. The ship will be built.
 
 [? if panzerkreuzer_funded : Given the construction of the previous battlecruiser, this seemed to be a foregone conclusion, and the reaction is muted. ?]
 
 @built
 on-arrival: panzerkreuzer_b_funded = 1
 
-Chancellor [+ chancellor +] brings the matter to a full Reichstag vote, which passes with all parties in favor except the PSOE and PCE. The ship will be built.
+Chancellor [+ chancellor +] brings the matter to a full Cortes vote, which passes with all parties in favor except the PSOE and PCE. The ship will be built.
 
 @not_built
 on-arrival: panzerkreuzer_b_funded = 0; budget += 1 if panzerkreuzer_funded = 0

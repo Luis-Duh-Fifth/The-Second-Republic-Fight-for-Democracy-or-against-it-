@@ -16,7 +16,7 @@ Braun [? if psoe_prussia = 1 : is ?][? if psoe_prussia = 0 : was ?] the Minister
 
 @coalition
 title: Negotiating with the Coalition
-subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Reichstag.
+subtitle: Braun can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Cortes.
 choose-if: advisor_action_timer <= 0 and (psoe_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not psoe_prussia : The psoe does not control the Prussian government. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if psoe_in_government = 1; erc_relation += 6; izqd_rep_relation += 6; prp_relation += 2; prp_relation += 3 if in_grand_coalition

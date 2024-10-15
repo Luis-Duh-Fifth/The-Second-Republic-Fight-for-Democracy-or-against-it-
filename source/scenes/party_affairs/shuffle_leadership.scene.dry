@@ -426,7 +426,7 @@ Paul Levi is now an advisor.
 
 @add_sender
 title: Toni Sender
-subtitle: Toni Sender is an anti-war and womens' rights advocate, and Reichstag member.
+subtitle: Toni Sender is an anti-war and womens' rights advocate, and Cortes member.
 is-card: true
 card-image: img/portraits/SenderToni.jpg
 view-if: sender_advisor = 0 and n_advisors < 3
@@ -438,7 +438,7 @@ Toni Sender is now an advisor.
 
 @add_rosenfeld
 title: Kurt Rosenfeld
-subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Reichstag member.
+subtitle: Kurt Rosenfeld is a lawyer, anti-militarist activist, and Cortes member.
 is-card: true
 card-image: img/portraits/RosenfeldKurt.jpg
 view-if: rosenfeld_advisor = 0 and n_advisors < 3 and sapd_formed = 0
@@ -504,7 +504,7 @@ Wladimir Woytinsky is now an advisor.
 
 @add_mierendorff
 title: Carlo Mierendorff
-subtitle: Carlo Mierendorff is one of the youngest members of the Reichstag, and the originator of the "Neo-Revisionist" movement. He is an anti-Nazi strategist.
+subtitle: Carlo Mierendorff is one of the youngest members of the Cortes, and the originator of the "Neo-Revisionist" movement. He is an anti-Nazi strategist.
 is-card: true
 card-image: img/portraits/MierendorffCarlo.jpg
 view-if: mierendorff_advisor = 0 and n_advisors < 3

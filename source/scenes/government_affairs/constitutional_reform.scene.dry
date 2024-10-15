@@ -8,7 +8,7 @@ card-image: img/portraits/RadbruchGustav.jpg
 go-to: reforms_menu
 tags: govt_affairs
 
-# technically you could do some trickery to get a 2/3 quorum in the Reichstag by stopping some people from attending... if the FE_JONS is boycotting the Reichstag, or if the FE_JONS or CEDA are banned in the aftermath of a coup atempt...
+# technically you could do some trickery to get a 2/3 quorum in the Cortes by stopping some people from attending... if the FE_JONS is boycotting the Cortes, or if the FE_JONS or CEDA are banned in the aftermath of a coup atempt...
 
 # alternatively, a constitutional referendum can be initiated, that requires a simple majority of voters to pass (as I understand article 76). This should depend on support for the republic and for democracy, and the relationships with the other parties (more similar to the presidential election).
 
@@ -18,7 +18,7 @@ tags: govt_affairs
 
 Many neorevisionists consider the Weimar Constitution to be inadequate. They believe that the clauses of the constitution are in part responsible for the instability of the country, and must change in order to build a more stable democratic republic. Ideas from both socialists and liberals
 
-A constitutional reform requires either a two-thirds supermajority in the Reichstag, or a constitutional referendum with support from a majority of the electorate. If we do not have a supermajority in the Reichstag, we must be assured of strong support from the other parties for the constitutional referendum.
+A constitutional reform requires either a two-thirds supermajority in the Cortes, or a constitutional referendum with support from a majority of the electorate. If we do not have a supermajority in the Cortes, we must be assured of strong support from the other parties for the constitutional referendum.
 
 @reforms_menu
 
@@ -30,7 +30,7 @@ A constitutional reform requires either a two-thirds supermajority in the Reichs
 #- @constitutional_bans: Allow the banning of anti-constitutional parties.
 
 @vote_threshold
-subtitle: Change the vote threshold to 5% for parties to be represented in the Reichstag.
+subtitle: Change the vote threshold to 5% for parties to be represented in the Cortes.
 on-arrival: {!
 Q.reform_support = Q.psoe_normalized;
 if (Q.erc_relation > 30) {
@@ -96,7 +96,7 @@ achievement: verfassungsreform
 We have successfully passed a constitutional amendment to ban votes of no confidence when a new government cannot be formed. Hopefully this increases the stability of our governments.
 
 @presidential_powers
-subtitle: The president can no longer dissolve the Reichstag at will, or call a *Reichsexekution* on state governments.
+subtitle: The president can no longer dissolve the Cortes at will, or call a *Reichsexekution* on state governments.
 on-arrival: {!
 Q.reform_support = Q.psoe_normalized + Q.izqd_rep_normalized + Q.pce_normalized;
 if (Q.erc_relation > 49 && (Q.president == "Hindenburg" || Q.president == "Eckener")) {

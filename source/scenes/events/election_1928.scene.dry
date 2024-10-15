@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: Cortes Elections
 new-page: true
 tags: event
 priority: -1
@@ -10,7 +10,7 @@ set-jump: post_election_1928
 
 = Elections, [+ month : month +] [+ year +]
 
-The Reichstag elections are to be held now.
+The Cortes elections are to be held now.
 
 - @election_algorithm: May we do our best...
 - @cancel_elections
@@ -224,21 +224,21 @@ if (window && d3) {
     if (screenWidth < width - 50) {
         width = screenWidth - 50; 
         height = width;
-        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+        document.getElementById("cortes").style.height = screenWidth/2 + "px";
     } 
 
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#reichstag").datum(data).call(parliament);
+    d3.select("#cortes").datum(data).call(parliament);
 }
 !}
 go-to: coalition_menu
 
 **Election results:**
 
-{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+{!<svg id="cortes" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
@@ -275,7 +275,7 @@ Right-wing Coalition (ERC + PNV + PRP + PRR + CEDA): [+ right_coalition +]%
 
 [? if nazi_urgency <= 1 and fe_jons_r >= 15 : The rapid rise in FE_JONS votes is extremely worrying. Many had believed that the party was moribound; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
 
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic PCE, CEDA, and FE_JONS have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+[? if anti_democratic_coalition >= 50 : Together, the anti-democratic PCE, CEDA, and FE_JONS have a majority in the Cortes. A stable governing majority will be almost impossible. ?]
 
 There are some potential coalition arrangements.
 
@@ -387,7 +387,7 @@ on-arrival: chancellor = "Schleicher"; chancellor_party = "I"; pro_republic -= 1
 
 The reactionary establishment is still very skeptical of the Nazis, so instead, [+ president +] appoints Kurt von Schleicher, a former general, as chancellor, to try to "tame" the Nazis.
 
-Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the FE_JONS, the Nazis want power all to themselves, without Schleicher.
+Schleicher's government is deeply unpopular among all parties of the Cortes. Despite his support for a coalition with the FE_JONS, the Nazis want power all to themselves, without Schleicher.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
@@ -502,7 +502,7 @@ There are enough votes for a right-wing coalition of the Center (+ PNV), PRP, CE
 @no_right_coalition
 go-to: no_majority
 
-However, the CEDA and its leader Hugenberg is refusing to partake in a coalition with the "November criminals" in the Center Party. Thus, there is no clear path towards a Reichstag majority.
+However, the CEDA and its leader Hugenberg is refusing to partake in a coalition with the "November criminals" in the Center Party. Thus, there is no clear path towards a Cortes majority.
 
 
 
@@ -646,7 +646,7 @@ We have supported a minority government led by the Center Party under Chancellor
 @no_majority_papen
 on-arrival: pro_republic -= 10; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_fe_jons += 6; unemployed_fe_jons += 6; landholders_fe_jons += 5; new_middle_fe_jons += 5; rural_fe_jons += 5; no_majority_papen_elections += 1; workers_psoe -= 8 if pro_republic < 45; workers_psoe *= 0.85 if pro_republic < 40; workers_fe_jons += 5 if pro_republic < 40;
 
-After the elections, Papen is still deeply unpopular, without any hint of coalition support, and there is a vote of no confidence called against him almost immediately. No matter how we vote, the measure would pass. The Reichstag is dissolved once more.
+After the elections, Papen is still deeply unpopular, without any hint of coalition support, and there is a vote of no confidence called against him almost immediately. No matter how we vote, the measure would pass. The Cortes is dissolved once more.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
@@ -656,7 +656,7 @@ on-arrival: chancellor = "Schleicher"; pro_republic -= 10; next_election_time = 
 
 There is no path to a majority government. Hindenburg is displeased with Papen, and calls on him to resign. Now, former army general Kurt von Schleicher has been appointed chancellor, again as part of a presidential government.
 
-Schleicher's government is deeply unpopular among all parties of the Reichstag. Despite his support for a coalition with the FE_JONS, the Nazis want power all to themselves, without Schleicher.
+Schleicher's government is deeply unpopular among all parties of the Cortes. Despite his support for a coalition with the FE_JONS, the Nazis want power all to themselves, without Schleicher.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
@@ -696,7 +696,7 @@ Who should be chancellor?
 view-if: not historical_mode or not psoe_prussia
 on-arrival: chancellor = "Braun"
 
-[? if president == "Braun": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the Reichstag; there is no law saying that the Chancellor must be a member of the Reichstag). Thus, we have Chancellor-President Otto Braun. ?]
+[? if president == "Braun": Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the Cortes; there is no law saying that the Chancellor must be a member of the Cortes). Thus, we have Chancellor-President Otto Braun. ?]
 [? if president != "Braun": Otto Braun has become chancellor of the PSOE majority. ?]
 
 @breitscheid_majority_chancellor
@@ -752,7 +752,7 @@ subtitle: This is unprecedented.
 view-if: not historical_mode or not psoe_prussia
 on-arrival: chancellor = "Braun"; chancellor_party = "PSOE"; psoe_in_government = 1; pro_republic -= 5; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE"; reichswehr_loyalty -= 0.1; 
 
-Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the Reichstag; there is no law saying that the Chancellor *must* be a member of the Reichstag).
+Our experts have checked the constitution, and have discovered that there is no specific prohibition against the Chancellor also being the President (the President may not be a member of the Cortes; there is no law saying that the Chancellor *must* be a member of the Cortes).
 
 Thus, we have Chancellor-President Otto Braun. He claims that he will resign as soon as the economic-political crisis is over. The right-wing parties, who were once clamoring to replace parliamentary rule with dictatorship or monarchy, are now clamoring for the restoration of democracy.
 
@@ -807,7 +807,7 @@ on-arrival: erc_no_confidence = 1 if erc_relation < 45; pce_no_confidence = 1 if
 
 The FE_JONS and CEDA will vote against us, of course. The other parties vote their conscience.
 
-In total, [+ no_confidence_votes +]% of the Reichstag is against us. [? if no_confidence_succeeds : We have lost the vote of no confidence. ?]
+In total, [+ no_confidence_votes +]% of the Cortes is against us. [? if no_confidence_succeeds : We have lost the vote of no confidence. ?]
 
 - @no_confidence_elections_new: There will be new elections, which we will try to delay.
 - @no_confidence_win: We have won, for now.
@@ -987,7 +987,7 @@ if (Q.pro_republic < 45) {
 }
 !}
 
-There is no path to a workable Reichstag majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
+There is no path to a workable Cortes majority or minority government. The next elections are set for [+ next_election_month : month +] [+ next_election_year +].
 
 The people's faith in democracy is shaken by this ordeal. Of course, the Nazis are exploiting the instability to claim that democracy is unworkable, and that Germany needs a strong leader.
 

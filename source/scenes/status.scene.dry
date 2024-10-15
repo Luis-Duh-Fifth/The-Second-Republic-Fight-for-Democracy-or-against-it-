@@ -28,7 +28,7 @@ President: [+ president +]
 
 Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
-Reichstag composition:
+Cortes composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 PSOE: [+ psoe_r +]%

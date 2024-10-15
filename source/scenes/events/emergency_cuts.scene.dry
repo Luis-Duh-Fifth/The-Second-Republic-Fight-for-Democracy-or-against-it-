@@ -10,7 +10,7 @@ max-visits: 3
 
 Due to the crisis of the Great Depression, government budgets have fallen and welfare spending has risen substantially. Chancellor [+ chancellor +] has used Article 48 of the constitution in order to pass an emergency bill cutting welfare spending.
 
-[? if psoe_toleration : If we reject this, it would mean the end of the toleration agreement, and [+ chancellor +] would likely dissolve the Reichstag and call new elections. Of course, the workers are opposed to this policy, although it might be necessary for economic and political stability. ?]
+[? if psoe_toleration : If we reject this, it would mean the end of the toleration agreement, and [+ chancellor +] would likely dissolve the Cortes and call new elections. Of course, the workers are opposed to this policy, although it might be necessary for economic and political stability. ?]
 
 - @nothing_to_do: There is nothing we can do.
 - @vote_no
@@ -20,7 +20,7 @@ Due to the crisis of the Great Depression, government budgets have fallen and we
 view-if: psoe_toleration == 0
 on-arrival: welfare -= 1; unemployed += 2; unemployed_fe_jons += 4; unemployed_pce += 3; unemployed_psoe += 2; pro_republic -= 4; budget += 1; inflation -= 2
 
-The emergency policy passes under emergency rules, as the Reichstag is currently dissolved. The Nazis use this as a recruiting tool, and so do we.
+The emergency policy passes under emergency rules, as the Cortes is currently dissolved. The Nazis use this as a recruiting tool, and so do we.
 
 
 @vote_no

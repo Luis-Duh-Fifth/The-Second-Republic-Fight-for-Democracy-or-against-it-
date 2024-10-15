@@ -43,7 +43,7 @@ on-arrival: psoe_in_government = 0; in_grand_coalition = 0; psoe_toleration = 0;
 
 Fine. If the bourgeoisie wish to blow up the government, let them do so. Socialists will not be complicit in the destruction of the working class.
 
-[? if chancellor_party = "PSOE" : Heinrich Brüning of the Center Party has been appointed Chancellor. ?] Brüning now leads an all-bourgeois cabinet. Using the emergency powers of Article 48, Brüning and President Hindenburg have passed the welfare cuts over the objections of the Reichstag.
+[? if chancellor_party = "PSOE" : Heinrich Brüning of the Center Party has been appointed Chancellor. ?] Brüning now leads an all-bourgeois cabinet. Using the emergency powers of Article 48, Brüning and President Hindenburg have passed the welfare cuts over the objections of the Cortes.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 

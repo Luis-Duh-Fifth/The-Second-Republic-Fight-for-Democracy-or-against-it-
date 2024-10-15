@@ -323,13 +323,13 @@ if (d3 && window) {
     if (screenWidth < width - 50) {
         width = screenWidth - 50;
         height = width;
-        document.getElementById("reichstag").style.height = screenWidth/2 + "px";
+        document.getElementById("cortes").style.height = screenWidth/2 + "px";
     }
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#reichstag").datum(data).call(parliament);
+    d3.select("#cortes").datum(data).call(parliament);
 
     var lines = d3.linegraph();
     lines.width(width).height(400);
@@ -356,9 +356,9 @@ if (d3 && window) {
 }
 !}
 
-= Reichstag composition
+= Cortes composition
 
-{!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
+{!<svg id="cortes" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div></td><td>!} **PSOE:** {!</td><td>!} **[+ psoe_r +]%** {!</td></tr>!}

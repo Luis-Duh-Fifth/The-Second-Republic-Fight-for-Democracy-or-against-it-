@@ -171,7 +171,7 @@ Q.pro_republic = 59;
 
 Q.emergency_rule = 0;
 
-// minimum percentage of votes to be represented in the Reichstag
+// minimum percentage of votes to be represented in the Cortes
 Q.electoral_threshold = 0;
 // constitutional reform level
 Q.constitutional_reform = 0;
@@ -287,8 +287,8 @@ Q.catholics_re_ct = 10;
 Q.catholics_fe_jons = 0;
 
 
-// Current Reichstag composition
-// % of Reichstag in Jan 1931
+// Current Cortes composition
+// % of Cortes in Jan 1931
 // source: wikipedia
 // note: the ERC figures also include the PNV (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
