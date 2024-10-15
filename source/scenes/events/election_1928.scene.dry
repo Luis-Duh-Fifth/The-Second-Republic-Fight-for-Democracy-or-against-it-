@@ -168,23 +168,17 @@ data = [
         "name": "PSOE",
         "seats": Math.round(Q.psoe_r*5),
     },
-    {
-        "id": "izqd_rep",
-        "legend": "IR",
-        "name": "IR",
-        "seats": Math.round(Q.izqd_rep_r*5),
-    },
-    {
+     {
         "id": "erc",
         "legend": "ERC",
         "name": "ERC",
         "seats": Math.round(Q.erc_r * 5 * 0.7),
     },
     {
-        "id": "pnv",
-        "legend": "PNV",
-        "name": "PNV",
-        "seats": Math.round(Q.erc_r * 5 * 0.3),
+        "id": "izqd_rep",
+        "legend": "IR",
+        "name": "IR",
+        "seats": Math.round(Q.izqd_rep_r*5),
     },
     {
         "id": "prp",
@@ -197,6 +191,12 @@ data = [
         "legend": "PRR",
         "name": "PRR",
         "seats": Math.round(Q.prr_r*5),
+    },
+    {
+        "id": "pnv",
+        "legend": "PNV",
+        "name": "PNV",
+        "seats": Math.round(Q.erc_r * 5 * 0.3),
     },
     {
         "id": "ceda",
@@ -250,11 +250,11 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#fd5b04'> </div> !} ERC: {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} PNV: {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
-
 {!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} PRP: {!</td><td>!} [+ prp_r +]% {!</td><td>!} [+ str_change_prp +] {!</td></tr>!}
  
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} PRR: {!</td><td>!} [+ prr_r +] % {!</td><td>!} [+ str_change_prr +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} PNV: {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td><td>!} [+ str_change_ceda +] {!</td></tr>!}
 
