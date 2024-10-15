@@ -142,6 +142,12 @@ Current relations: [+ fe_jons_relation : relationships +]
 
 **PRR** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRP and ceda. 
 
+Current relations: [+ prr_relation : relationships +]
+
+**RE_CT** - *Renovacion Española y Comunion Tradicionalista* - (Spanish Renovation and Traditionalist Comunion) - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRP and ceda. 
+
+Current relations: [+ re_ct_relation : relationships +]
+
 @paramilitaries
 on-arrival: {!
 Q.rb_strength = Math.round(Q.rb_strength);

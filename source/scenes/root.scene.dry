@@ -102,8 +102,10 @@ Q.erc_relation = 50;
 Q.pce_relation = 25;
 Q.izqd_rep_relation = 60;
 Q.prp_relation = 35;
+Q.prr_relation = 20;
 // CEDA and fe_jons are invariably hostile
-Q.CEDA_relation = 10;
+Q.ceda_relation = 10;
+Q.re_ct_relation = 0;
 Q.fe_jons_relation = 0;
 
 Q.pce_leader = "Thälmann";
