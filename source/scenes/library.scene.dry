@@ -90,6 +90,9 @@ PRP: [+ prp_votes +]%
 # 1928: 14, 1930: 7
 CEDA: [+ ceda_votes +]%
 
+# 1928: 2, 1930: 5
+RE_CT: [+ re_ct_votes +]%
+
 # 1928: 3, 1930: 18
 FE_JONS: [+ fe_jons_votes +]%
 
