@@ -267,16 +267,16 @@ data = [
         "seats": Q.psoe_r*5,
     },
     {
-        "id": "izqd_rep",
-        "legend": "IR",
-        "name": "IR",
-        "seats": Q.izqd_rep_r*5,
-    },
-    {
         "id": "erc",
         "legend": "ERC",
         "name": "ERC",
         "seats": (Q.erc_r - 3)*5,
+    },
+     {
+        "id": "izqd_rep",
+        "legend": "IR",
+        "name": "IR",
+        "seats": Q.izqd_rep_r*5,
     },
     {
         "id": "prp",
