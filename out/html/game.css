@@ -528,14 +528,14 @@ table {
 .seat.erc {
     fill: #fd5b04;
 }
-.seat.pnv {
-    fill: #69A2BE;
-}
 .seat.prp {
     fill: #D5AC27;
 }
 .seat.prr {
     fill: #909090;
+}
+.seat.pnv {
+  fill: #69A2BE;
 }
 .seat.ceda {
     fill: #3F7BC1;
