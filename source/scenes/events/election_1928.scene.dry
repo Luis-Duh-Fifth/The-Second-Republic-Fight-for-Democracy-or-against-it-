@@ -156,6 +156,12 @@ Q.election_records.push(election_result);
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and fe_jons_r >= 15)
 on-display: {!
 data = [
+   {
+        "id": "cnt_fai",
+        "legend": "CNT_FAI",
+        "name": "CNT_FAI",
+        "seats": Math.round(Q.cnt_fai_r = 0),
+    },
     {
         "id": "pce",
         "legend": "PCE",

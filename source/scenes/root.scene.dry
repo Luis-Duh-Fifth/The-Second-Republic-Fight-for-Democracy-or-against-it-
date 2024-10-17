@@ -98,8 +98,9 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
+Q.cnt_fai_relation = 30
+Q.pce_relation = 30;
 Q.erc_relation = 50;
-Q.pce_relation = 25;
 Q.izqd_rep_relation = 60;
 Q.prp_relation = 35;
 Q.prr_relation = 20;
@@ -219,7 +220,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['psoe', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'ceda', 're_ct', 'fe_jons'];
+Q.parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'ceda', 're_ct', 'fe_jons'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
@@ -227,7 +228,8 @@ Q.sapd_formed = 0;
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_psoe = 65;
-Q.workers_pce = 20;
+Q.workers_cnt_fai = 20;
+Q.workers_pce = 5;
 Q.workers_erc = 5;
 Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
@@ -236,15 +238,15 @@ Q.workers_ceda = 5;
 Q.workers_re_ct = 5;
 Q.workers_fe_jons = 0;
 
-Q.landholders_psoe = 5;
+Q.landholders_psoe = 0;
 Q.landholders_pce = 0;
-Q.landholders_erc = 5;
-Q.landholders_izqd_rep= 10;
-Q.landholders_prp = 25;
+Q.landholders_erc = 0;
+Q.landholders_izqd_rep= 5;
+Q.landholders_prp = 10;
 Q.landholders_prr = 10;
-Q.landholders_ceda = 25;
-Q.landholders_re_ct = 10;
-Q.landholders_fe_jons = 10;
+Q.landholders_ceda = 35;
+Q.landholders_re_ct = 25;
+Q.landholders_fe_jons = 5;
 
 Q.new_middle_psoe = 5;
 Q.new_middle_pce = 0;
@@ -252,11 +254,12 @@ Q.new_middle_erc = 10;
 Q.new_middle_izqd_rep= 25;
 Q.new_middle_prp = 25;
 Q.new_middle_prr = 15;
-Q.new_middle_ceda = 10;
+Q.new_middle_ceda = 15;
 Q.new_middle_re_ct = 15;
 Q.new_middle_fe_jons = 5;
 
 Q.rural_psoe = 10;
+Q.rural_cnt_fai = 20;
 Q.rural_pce = 0;
 Q.rural_erc = 5;
 Q.rural_izqd_rep= 5;
@@ -267,7 +270,8 @@ Q.rural_re_ct = 10;
 Q.rural_fe_jons = 5;
 
 Q.unemployed_psoe = 25;
-Q.unemployed_pce = 55;
+Q.unemployed_cnt_fai = 35;
+Q.unemployed_pce = 10;
 Q.unemployed_erc = 1;
 Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
@@ -277,6 +281,7 @@ Q.unemployed_re_ct = 9;
 Q.unemployed_fe_jons = 15;
 
 Q.catholics_psoe = 15;
+Q.catholics_cnt_fai = 15;
 Q.catholics_pce = 5;
 Q.catholics_erc = 50;
 Q.catholics_izqd_rep = 0;

@@ -514,6 +514,9 @@ table {
 }
 
 /* Styles for parties */
+.seat.cnt_fai {
+  fill: #000000;
+}
 .seat.pce {
     fill: #8B0000;
 }
@@ -522,28 +525,32 @@ table {
     stroke: #000;
     stroke-width: 1.5px;
 }
-.seat.izqd_rep {
-    fill: #DCCA4A;
-}
 .seat.erc {
-    fill: #fd5b04;
+  fill: #fd5304;
+  stroke: #f4f002;
+  stroke-width: 1.5px;
+}
+    .seat.izqd_rep {
+      fill: #ff9100;
 }
 .seat.prp {
-    fill: #D5AC27;
+    fill: #4ad527;
 }
 .seat.prr {
-    fill: #909090;
+    fill: #8300a7;
 }
 .seat.pnv {
-  fill: #69A2BE;
+  fill: #147800;
 }
 .seat.ceda {
-    fill: #3F7BC1;
+    fill: #003878;
 }
 .seat.re_ct {
-  fill: #000000da;
+  fill: #120051;
 }
 .seat.fe_jons {
-    fill: #954B00;
+  fill: #000;
+  stroke: #E3000F;
+  stroke-width: 1.5px;
 }
 
