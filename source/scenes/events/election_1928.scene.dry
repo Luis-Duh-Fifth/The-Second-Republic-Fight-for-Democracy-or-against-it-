@@ -250,23 +250,25 @@ go-to: coalition_menu
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **PSOE:** {!</td><td>!} **[+ psoe_r +]%** {!</td><td>!} **[+ str_change_psoe +]** {!</td></tr>!}
 
+{!<tr><td><div class="box" style='background-color:#000000'> </div> !}CNT_FAI: {!</td><td>!} [+ cnt_fai_r +]% {!</td><td>!} [+ str_change_cnt_fai +] {!</td></tr>!}
+
 {!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}PCE: {!</td><td>!} [+ pce_r +]% {!</td><td>!} [+ str_change_pce +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#fd5b04'> </div> !} ERC: {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#fd5304'> </div> !} ERC: {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td><td>!} [+ str_change_izqd_rep +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff9100'> </div> !} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td><td>!} [+ str_change_izqd_rep +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} PRP: {!</td><td>!} [+ prp_r +]% {!</td><td>!} [+ str_change_prp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#4ad527'> </div> !} PRP: {!</td><td>!} [+ prp_r +]% {!</td><td>!} [+ str_change_prp +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} PRR: {!</td><td>!} [+ prr_r +] % {!</td><td>!} [+ str_change_prr +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8300a7'> </div> !} PRR: {!</td><td>!} [+ prr_r +] % {!</td><td>!} [+ str_change_prr +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} PNV: {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#147800'> </div> !} PNV: {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td><td>!} [+ str_change_ceda +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#003878'> </div> !} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td><td>!} [+ str_change_ceda +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000000da'> </div> !} RE_CT: {!</td><td>!} [+ re_ct_r +]% {!</td><td>!} [+ str_change_re_ct +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#120051'> </div> !} RE_CT: {!</td><td>!} [+ re_ct_r +]% {!</td><td>!} [+ str_change_re_ct +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} FE_JONS: {!</td><td>!} [+ fe_jons_r +]% {!</td><td>!} [+ str_change_fe_jons +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#000'> </div> !} FE_JONS: {!</td><td>!} [+ fe_jons_r +]% {!</td><td>!} [+ str_change_fe_jons +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
