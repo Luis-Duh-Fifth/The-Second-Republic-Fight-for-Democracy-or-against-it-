@@ -94,7 +94,7 @@ The courts agree that President [+ president +] is wrong to dismiss us, and that
 @new_elections
 title: Call for new snap elections.
 subtitle: We will not resign at gunpoint, and we will attempt to maintain the integrity of the elections.
-go-to: new_elections_braun if president == "Braun"; new_elections_alcala zamora if president != "Braun" and erc_relation >= 40; new_elections_alcala zamora_reject if president != "Braun" and erc_relation < 40
+go-to: new_elections_braun if president == "Braun"; new_elections_alcala_zamora if president != "Braun" and erc_relation >= 40; new_elections_alcala_zamora_reject if president != "Braun" and erc_relation < 40
 
 
 @new_elections_braun
@@ -114,7 +114,7 @@ go-to: new_elections_2
 The fascists seem to believe that they would win an election if one were to be held now, so they agree to our holding an election for next month.
 
 
-@new_elections_alcala zamora
+@new_elections_alcala_zamora
 go-to: new_elections_2
 
 With the mediation of various establishment figures, new elections are called for next month, without the use of fascist "electoral monitors".
@@ -124,7 +124,7 @@ With the mediation of various establishment figures, new elections are called fo
 on-arrival: next_election_time = time + 1 if next_election_time > time+1; next_election_month = month + 1 if next_election_time >= time+1; next_election_year = year if next_election_time >= time+1; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
 
-@new_elections_alcala zamora_reject
+@new_elections_alcala_zamora_reject
 
 Influenced by his inner circle and by the fascists in the streets, President Alcala Zamora rejects our offer of new free and fair elections, and again demands that we resign. There is no arguing.
 

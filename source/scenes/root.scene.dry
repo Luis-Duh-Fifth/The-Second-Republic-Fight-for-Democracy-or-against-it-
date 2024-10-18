@@ -118,7 +118,7 @@ Q.erc_party_leader = "Marx";
 Q.fe_jons_leader = "Hitler";
 
 // hmm... maybe we can play nice with Alcala Zamora???
-Q.alcala zamora_relation = 25;
+Q.alcala_zamora_relation = 25;
 
 
 // Does the PSOE lead in Prussia?
