@@ -34,7 +34,7 @@ Q.workers_re_ct = 5;
 Q.workers_fe_jons = 0;
 
 Q.landholders_psoe = 5;
-Q.landholders_psoe = 0;
+Q.landholders_cnt_fai = 0;
 Q.landholders_pce = 0;
 Q.landholders_erc = 5;
 Q.landholders_izqd_rep= 10;
