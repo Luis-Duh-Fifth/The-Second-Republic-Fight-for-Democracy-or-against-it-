@@ -338,15 +338,17 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Alcala Zamora";
-// starting chancellor: Wilhelm Marx
-Q.chancellor = "Marx";
-Q.chancellor_party = 'ERC';
+// starting chancellor: Azaña
+Q.chancellor = "Azaña";
+Q.chancellor_party = 'IR';
 Q.psoe_in_government = 0;
 Q.erc_in_government = 1;
-Q.izqd_rep_in_government = 0;
-Q.prp_in_government = 1;
-Q.ceda_in_government = 1;
+Q.izqd_rep_in_government = 1;
+Q.prp_in_government = 0;
+Q.prr_in_goverment = 0;
+Q.ceda_in_government = 0;
 Q.pce_in_government = 0;
+Q.re_ct_in_goverment = 0;
 Q.fe_jons_in_government = 0;
 
 Q.in_right_coalition = 0;
