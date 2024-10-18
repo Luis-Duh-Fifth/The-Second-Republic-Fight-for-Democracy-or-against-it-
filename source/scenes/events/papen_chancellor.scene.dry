@@ -1,13 +1,13 @@
 title: Chancellor [+ chancellor +] replaced by Franz von Papen
-subtitle: President Hindenburg dismisses the government.
-view-if: (chancellor = "Brüning" or chancellor = "Wirth") and ((year = 1932 and month >= 4) or year >= 1933) and president = "Hindenburg" and psoe_in_government = 0 and (psoe_r < 27 or unemployed > 15 or grand_coalition < 50 or largest_party == "FE_JONS") and not presidential_powers
+subtitle: President Alcala Zamora dismisses the government.
+view-if: (chancellor = "Brüning" or chancellor = "Wirth") and ((year = 1932 and month >= 4) or year >= 1933) and president = "Alcala Zamora" and psoe_in_government = 0 and (psoe_r < 27 or unemployed > 15 or grand_coalition < 50 or largest_party == "FE_JONS") and not presidential_powers
 on-arrival: old_chancellor = chancellor; psoe_toleration = 0; chancellor = "Papen"; chancellor_party = "I"; next_election_time = time+3 if next_election_time >= time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; judicial_reform -= 2 if judicial_reform >= 2; finance_minister_party = "I"; interior_minister_party = "I"; economy_minister_party = "I"; labor_minister_party = "I"; foreign_minister_party = "I"; agriculture_minister_party = "I"; reichswehr_minister = "I";
 new-page: true
 tags: event
 max-visits: 1
 
-President Hindenburg's secretive group of advisors (often called the "camarilla") has turned against [+ old_chancellor +], and Hindenburg his dismissed the Chancellor, replacing him with the more reactionary Franz von Papen, an independent formerly of the Center Party. [? if year == 1932 : Brüning's final straw was his "agricultural settlement" policy, sending unemployed workers to homestead in underutilized lands (that happen to be owned by aristocrats). ?]
+President Alcala Zamora's secretive group of advisors (often called the "camarilla") has turned against [+ old_chancellor +], and Alcala Zamora his dismissed the Chancellor, replacing him with the more reactionary Franz von Papen, an independent formerly of the Center Party. [? if year == 1932 : Brüning's final straw was his "agricultural settlement" policy, sending unemployed workers to homestead in underutilized lands (that happen to be owned by aristocrats). ?]
 
-Papen is immediately faced with a vote of no confidence, given his unpopularity. However the PSOE votes, he is guaranteed to fall, due to the unanimous hatred against him from all other parties. Meanwhile, he is governing via emergency powers with Hindenburg. His first policy is to legalize the Nazi SA, but this does not win their loyalty.
+Papen is immediately faced with a vote of no confidence, given his unpopularity. However the PSOE votes, he is guaranteed to fall, due to the unanimous hatred against him from all other parties. Meanwhile, he is governing via emergency powers with Alcala Zamora. His first policy is to legalize the Nazi SA, but this does not win their loyalty.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].

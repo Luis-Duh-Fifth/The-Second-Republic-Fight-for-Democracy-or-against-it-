@@ -9,7 +9,7 @@ max-visits: 1
 
 = Cortes War Guilt Inquiry
 
-The War Guilt Inquiry has been an intermittent Cortes committee for investigating the causes of the Great War and the German defeat. So far, it has faced massive resistance from the military establishment up to President Hindenburg.
+The War Guilt Inquiry has been an intermittent Cortes committee for investigating the causes of the Great War and the German defeat. So far, it has faced massive resistance from the military establishment up to President Alcala Zamora.
 
 - @restart: Restart the inquiry.
 - @root: Do nothing.

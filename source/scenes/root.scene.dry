@@ -117,8 +117,8 @@ Q.erc_leader = "Brüning";
 Q.erc_party_leader = "Marx";
 Q.fe_jons_leader = "Hitler";
 
-// hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
+// hmm... maybe we can play nice with Alcala Zamora???
+Q.alcala zamora_relation = 25;
 
 
 // Does the PSOE lead in Prussia?
@@ -337,7 +337,7 @@ Q.economic_records = [];
 
 
 // State of the government
-Q.president = "Hindenburg";
+Q.president = "Alcala Zamora";
 // starting chancellor: Wilhelm Marx
 Q.chancellor = "Marx";
 Q.chancellor_party = 'ERC';

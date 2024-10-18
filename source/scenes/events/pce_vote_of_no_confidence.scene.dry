@@ -27,7 +27,7 @@ How do we assuage the PCE?
 @thalmann
 choose-if: president == "Braun"
 subtitle: This would be pretext for a right-wing coup.
-unavailable-subtitle: [? if president == "Hindenburg" : President Hindenburg would never allow this. ?]
+unavailable-subtitle: [? if president == "Alcala Zamora" : President Alcala Zamora would never allow this. ?]
 on-arrival: chancellor = "Thälmann"; chancellor_party = "PCE"
 
 With great reluctance, President [+ president +] appoints [+ chancellor +] as chancellor.
@@ -62,9 +62,9 @@ We could try to boot the PCE from our governing coalition, and form a new govern
 @let_it_happen
 view-if: not constructive_vonc
 on-arrival: pce_relation -= 8; workers_pce -= 5; workers_psoe -= 8; unemployed_psoe -= 6
-go-to: let_it_happen_braun if president = "Braun"; let_it_happen_hindenburg if president = "Hindenburg"
+go-to: let_it_happen_braun if president = "Braun"; let_it_happen_alcala zamora if president = "Alcala Zamora"
 
-# if Braun is president, we are now a caretaker government. If Hindenburg is president, Brüning is a caretaker government
+# if Braun is president, we are now a caretaker government. If Alcala Zamora is president, Brüning is a caretaker government
 
 @let_it_happen_braun
 on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; psoe_in_government = 0; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "I"; interior_minister_party = "I"; justice_minister_party = "I"; labor_minister_party = "I"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "I";
@@ -73,7 +73,7 @@ The vote succeeds, and our coalition has collapsed. Chancellor [+ chancellor +] 
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
-@let_it_happen_hindenburg
+@let_it_happen_alcala zamora
 on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; psoe_in_government = 0; in_popular_front = 0; in_left_front = 0; chancellor = "Brüning"; chancellor_party = "Z "; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; coalition_dissent = 0; pce_coalitipn_dissent = 0; pro_republic -= 5; landholders_psoe -= 3; new_middle_psoe -= 2; workers_psoe -= 3 if pro_republic < 50; workers_psoe -= 4 if pro_republic < 40; landholders_fe_jons += 4 if pro_republic < 50; new_middle_fe_jons += 3 if pro_republic < 50
 
 The vote succeeds, and our government has resigned. Chancellor Brüning has been appointed as the head of an acting government, consisting solely of the bourgeois parties.
