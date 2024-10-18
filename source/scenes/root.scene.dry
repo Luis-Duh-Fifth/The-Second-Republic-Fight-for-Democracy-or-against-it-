@@ -300,15 +300,15 @@ Q.catholics_fe_jons = 0;
 // note: the ERC figures also include the PNV (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.psoe_r = 26;
-Q.pce_r = 9;
-Q.erc_r = 17;
-Q.izqd_rep_r = 6;
+Q.psoe_r = 27;
+Q.pce_r = 0;
+Q.erc_r = 9+4;
+Q.izqd_rep_r = 24;
 Q.prp_r = 10;
-Q.prr_r = 9;
-Q.ceda_r = 20;
+Q.prr_r = 19;
+Q.ceda_r = 4;
 Q.re_ct_r = 2;
-Q.fe_jons_r = 1;
+Q.fe_jons_r = 0;
 
 // diff from prev
 Q.old_psoe_r = 26;
@@ -342,7 +342,7 @@ Q.president = "Alcala Zamora";
 Q.chancellor = "Azaña";
 Q.chancellor_party = 'IR';
 Q.psoe_in_government = 0;
-Q.erc_in_government = 1;
+Q.erc_in_government = 0;
 Q.izqd_rep_in_government = 1;
 Q.prp_in_government = 0;
 Q.prr_in_goverment = 0;
