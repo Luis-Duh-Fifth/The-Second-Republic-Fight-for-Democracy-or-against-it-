@@ -26,17 +26,17 @@ on-arrival: prp_relation -= 8; erc_relation -= 5; pacifism += 1; nationalism -= 
 go-to: vote_no_chancellor if chancellor_party = "PSOE"; vote_no_pass if chancellor_party != "PSOE"
 
 @vote_no_chancellor
-go-to: braun if chancellor = "Braun"; muller if chancellor = "Müller"
+go-to: braun if chancellor = "Braun"; prieto if chancellor = "Prieto"
 
 @braun
 on-arrival: panzerkreuzer_funded = 0; nationalism -= 3*(1-dissent); panzerkreuzer_failed = 1; workers_psoe += 5*(1-dissent);
 
 Our coalition partners are shocked by our intransigence! However, Chancellor Braun manages to persuade our cabinet ministers to drop the plan to vote on the battlecruiser. The ship will not be built!
 
-@muller
+@prieto
 on-arrival: panzerkreuzer_funded = 1
 
-Our coalition partners are shocked by our intransigence! Despite Chancellor Müller's rejection of the proposal, the other parties bring the matter to a Cortes vote, which easily passes, with only the PSOE and PCE voting against. The ship will be built.
+Our coalition partners are shocked by our intransigence! Despite Chancellor Prieto's rejection of the proposal, the other parties bring the matter to a Cortes vote, which easily passes, with only the PSOE and PCE voting against. The ship will be built.
 
 @vote_no_pass
 on-arrival: panzerkreuzer_funded = 1

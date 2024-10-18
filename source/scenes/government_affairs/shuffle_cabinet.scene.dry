@@ -4,7 +4,7 @@ is-card: true
 tags: govt_affairs
 on-arrival: shuffle_cabinet_timer = 6; month_actions += 1
 view-if: psoe_in_government == 1 and shuffle_cabinet_timer == 0 and chancellor_party == "PSOE" and not in_psoe_majority and not in_emergency_government and not in_left_front
-card-image: img/muller_cabinet.jpg
+card-image: img/prieto_cabinet.jpg
 
 Do we wish to shuffle our cabinet? This might upset our current coalition.
 

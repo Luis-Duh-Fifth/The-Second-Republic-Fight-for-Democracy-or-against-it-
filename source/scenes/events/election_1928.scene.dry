@@ -697,7 +697,7 @@ Who should be chancellor?
 
 - @braun_majority_chancellor: Otto Braun for Chancellor.
 - @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
-- @muller_majority_chancellor: Hermann Müller for Chancellor.
+- @prieto_majority_chancellor: Hermann Prieto for Chancellor.
 - @wels_majority_chancellor: Otto Wels for Chancellor.
 
 @braun_majority_chancellor
@@ -712,19 +712,19 @@ on-arrival: chancellor = "Breitscheid"
 
 Rudolf Breitscheid has become chancellor of the PSOE majority.
 
-@muller_majority_chancellor
-view-if: muller_dead = 0
-on-arrival: chancellor = "Müller"
+@prieto_majority_chancellor
+view-if: prieto_dead = 0
+on-arrival: chancellor = "Prieto"
 
-Hermann Müller has become chancellor of the PSOE majority.
+Hermann Prieto has become chancellor of the PSOE majority.
 
 @wels_majority_chancellor
-view-if: muller_dead = 1
+view-if: prieto_dead = 1
 on-arrival: chancellor = "Wels"
 
 Otto Wels has become chancellor of the PSOE majority.
 
-# TODO: Otto Wels should be able to be chancellor of a Grand Coalition, Weimar Coalition, or PSOE majority after Müller dies.
+# TODO: Otto Wels should be able to be chancellor of a Grand Coalition, Weimar Coalition, or PSOE majority after Prieto dies.
 
 
 @brauns_dilemma
@@ -883,7 +883,7 @@ We have enough votes to form a "Weimar Coalition" government consisting of the P
 
 Who should be the chancellor?
 
-- @muller
+- @prieto
 - @braun
 - @breitscheid_coalition_chancellor
 - @wels
@@ -1067,25 +1067,25 @@ As expected, the PSOE is the largest party, and this time, we are expected to ta
 
 Who should be the chancellor?
 
-- @muller
+- @prieto
 - @braun
 - @wels
 - @erc_chancellor
 - @no_govt
 
 
-@muller
-title: Hermann Müller for Chancellor
-view-if: muller_dead = 0
-subtitle: Muller is popular within the party, and is the preferred candidate of the Center and other parties.
-on-arrival: psoe_in_government = 1; chancellor = "Müller"; chancellor_party = "PSOE"; in_grand_coalition = 1 if in_weimar_coalition == 0
+@prieto
+title: Hermann Prieto for Chancellor
+view-if: prieto_dead = 0
+subtitle: prieto is popular within the party, and is the preferred candidate of the Center and other parties.
+on-arrival: psoe_in_government = 1; chancellor = "Prieto"; chancellor_party = "PSOE"; in_grand_coalition = 1 if in_weimar_coalition == 0
 go-to: ministries
 
-Müller's appointment as chancellor is approved by all our potential allies.
+Prieto's appointment as chancellor is approved by all our potential allies.
 
 @wels
 title: Otto Wels for Chancellor
-view-if: muller_dead = 1
+view-if: prieto_dead = 1
 subtitle: Otto Wels is a party leader, but can he also be chancellor?
 on-arrival: psoe_in_government = 1; chancellor = "Wels"; chancellor_party = "PSOE"; in_grand_coalition = 1 if in_weimar_coalition == 0
 go-to: ministries
@@ -1099,7 +1099,7 @@ subtitle: Braun is currently the Minister-President of Prussia, and is one of ou
 
 The Center party has significant qualms about appointing Braun as chancellor, given that he is already Minister-President of Prussia. They ask for either more cabinet positions, or for Braun to resign his state government role. The latter is completely unacceptable.
 
-- @muller
+- @prieto
 - @wels
 - @braun_2: Let the Center have their cabinet positions.
 
@@ -1130,7 +1130,7 @@ on-arrival: reformist_dissent += 5; center_dissent += 5; labor_dissent += 5; neo
 
 Are we sure about not participating in government? This will cause significant internal dissent, and will lead to increased distrust from the bourgeois parties. Even debating this option causes internal backlash. In addition, it is possible that the bourgeois and right-wing parties will also be unable to form a coalition government, leading to a regime appointed by President [+ president +].
 
-- @muller
+- @prieto
 - @braun
 - @erc_chancellor
 - @no_govt_goals: Yes, we're sure.
