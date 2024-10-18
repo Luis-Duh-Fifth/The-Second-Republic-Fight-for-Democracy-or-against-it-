@@ -1,7 +1,7 @@
 title: Indalecio Prieto
 is-pinned-card: true 
 tags: advisor, centrist
-card-image: img/portraits/PrietoHermann.jpg
+card-image: 
 new-page: true
 view-if: prieto_advisor = 1
 
