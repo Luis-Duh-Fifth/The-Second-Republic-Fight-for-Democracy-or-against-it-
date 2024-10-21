@@ -1,13 +1,13 @@
-title: Paul Levi
+title: Francisco Largo Caballero
 is-pinned-card: true
 tags: advisor, left
-card-image: img/portraits/LargoCaballeroFrancisco.jpg
-view-if: levi_advisor = 1
+card-image: img/portraits/LeviPaul.jpg
+view-if: largo_caballero_advisor = 1
 new-page: true 
 
-= Paul Levi
+= Francisco Largo Caballero
 
-Levi is a former leader of the PCE who left over their devotion to violence and revolutionary adventurism.
+largo_caballero is a former leader of the PCE who left over their devotion to violence and revolutionary adventurism.
 
 - @building_the_left
 - @pce_cooperation
@@ -29,4 +29,4 @@ unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 5; pce_relation += 6*(1-dissent); reformist_dissent += 3; communist_coalition += 1 if pce_cooperation_seen <= 1; pce_cooperation_seen += 1
 
-Levi attempts to reach out to his former colleagues to dissuade the PCE from their current extreme Stalinist path. Some concessions are extracted.
+largo_caballero attempts to reach out to his former colleagues to dissuade the PCE from their current extreme Stalinist path. Some concessions are extracted.
