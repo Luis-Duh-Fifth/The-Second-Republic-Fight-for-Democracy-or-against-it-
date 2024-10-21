@@ -141,14 +141,14 @@ Woytinsky has been removed as an advisor. The Labor faction disapproves.
 
 # left
 
-@remove_levi
-title: Remove Levi
-view-if: levi_advisor = 1
+@remove_largo_caballero
+title: Remove largo_caballero
+view-if: largo_caballero_advisor = 1
 tags: remove_advisor
-on-arrival: levi_advisor = 0; left_dissent += 5; n_advisors -= 1
+on-arrival: largo_caballero_advisor = 0; left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Levi has been removed as an advisor. The Leftist faction disapproves.
+largo_caballero has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_sender
 title: Remove Sender
@@ -412,17 +412,17 @@ Antonie Pfülf is now an advisor.
 
 # left
 
-@add_levi
-title: Paul Levi
-subtitle: Paul Levi is a former pce leader who was purged for criticizing Communist policies.
+@add_largo_caballero
+title: Francisco Largo Caballero
+subtitle: Francisco Largo Caballero is a former pce leader who was purged for criticizing Communist policies.
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
-view-if: levi_advisor = 0 and levi_dead = 0 and n_advisors < 3 and sapd_formed = 0
-on-arrival: levi_advisor = 1; n_advisors += 1; left_strength += 5
+view-if: largo_caballero_advisor = 0 and largo_caballero_dead = 0 and n_advisors < 3 and sapd_formed = 0
+on-arrival: largo_caballero_advisor = 1; n_advisors += 1; left_strength += 5
 go-to: advisor_menu
 tags: left_advisor
 
-Paul Levi is now an advisor.
+Francisco Largo Caballero is now an advisor.
 
 @add_sender
 title: Toni Sender

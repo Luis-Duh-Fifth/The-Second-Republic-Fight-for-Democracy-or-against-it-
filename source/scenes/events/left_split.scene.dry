@@ -3,7 +3,7 @@ new-page: true
 subtitle: The Left's disagreements with our policies have grown too severe.
 tags: event
 view-if: left_dissent >= 60
-on-arrival: sapd_formed = 1; left_strength = left_strength/2; workers_psoe -= 5; unemployed_psoe -= 5; workers_prr += 5; workers_pce += 3; n_advisors -= 1 if levi_advisor == 1; levi_advisor = 0; rb_strength -= 300; pce_relation -= 5; rb_militancy -= 0.05 if rb_militancy >= 0.1; n_advisors -= 1 if seydewiterc_advisor == 1; seydewiterc_advisor = 0; n_advisors -= 1 if rosenfeld_advisor == 1; rosenfeld_advisor = 0;
+on-arrival: sapd_formed = 1; left_strength = left_strength/2; workers_psoe -= 5; unemployed_psoe -= 5; workers_prr += 5; workers_pce += 3; n_advisors -= 1 if largo_caballero_advisor == 1; largo_caballero_advisor = 0; rb_strength -= 300; pce_relation -= 5; rb_militancy -= 0.05 if rb_militancy >= 0.1; n_advisors -= 1 if seydewiterc_advisor == 1; seydewiterc_advisor = 0; n_advisors -= 1 if rosenfeld_advisor == 1; rosenfeld_advisor = 0;
 max-visits: 1
 
 = Left-wing members split

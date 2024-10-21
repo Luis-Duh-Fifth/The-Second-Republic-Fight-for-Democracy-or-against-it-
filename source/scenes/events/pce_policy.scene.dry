@@ -6,11 +6,11 @@ on-arrival: pce_policy_timer = 5
 #tags: event
 #max-choices: 1
 
-# disable this event for now - the PCE is abstentionist in government. This position is loosely based on Paul Levi's ideas during the Kapp Putsch. A PCE that is willing to support an PSOE government would necessarily have some different policy ideas from the Thälmann Stalinist line, so I looked to the earlier Paul Levi PCE as well as the French popular front for ideas.
+# disable this event for now - the PCE is abstentionist in government. This position is loosely based on Francisco Largo Caballero's ideas during the Kapp Putsch. A PCE that is willing to support an PSOE government would necessarily have some different policy ideas from the Thälmann Stalinist line, so I looked to the earlier Francisco Largo Caballero PCE as well as the French popular front for ideas.
 
 # ironically the hypothetical PCE position towards the Popular Front is basically analogous to the PSOE position towards the Brüning government (i.e. toleration).
 
-# Sources: Gaido, Daniel. “Paul Levi and the Origins of the United-Front Policy in the Communist International.” Historical Materialism 25, no. 1 (2017): 131–74. https://doi.org/10.1163/1569206x-12341515.
+# Sources: Gaido, Daniel. “Paul largo_caballero and the Origins of the United-Front Policy in the Communist International.” Historical Materialism 25, no. 1 (2017): 131–74. https://doi.org/10.1163/1569206x-12341515.
 # LaPorte, Norman H. “The German Communist Party in Saxony, 1924-1933 : Factionalism, Fratricide and Political Failure,” 1998. http://dspace.stir.ac.uk/handle/1893/3259.
 
 
