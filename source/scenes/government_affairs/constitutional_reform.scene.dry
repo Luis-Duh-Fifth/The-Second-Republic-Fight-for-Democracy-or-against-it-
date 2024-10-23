@@ -101,7 +101,7 @@ on-arrival: {!
 Q.reform_support = Q.psoe_normalized + Q.izqd_rep_normalized + Q.pce_normalized;
 if (Q.erc_relation > 49 && (Q.president == "Alcala Zamora" || Q.president == "Eckener")) {
     Q.reform_support += Q.erc_normalized;
-} else if (Q.president == "Braun") {
+} else if (Q.president == "Azaña") {
     Q.reform_support += Q.erc_normalized - 0.03;
 }
 !}
@@ -109,14 +109,14 @@ view-if: presidential_powers = 0
 
 The wide-ranging presidential powers promised by the constitution are a potential gateway to authoritarianism. Thus, we can support reforms that limit the powers of the president, ending his power to unilaterally terminate an elected government and to remove state governments.
 
-The PCE is in favor of this reform, having been victims of the *Reichsexekution* in the past (when PCE-supported state governments in Thuringia and Saxony were removed). The democrats of the IR also support this. [? if president == "Alcala Zamora": However, the opposition from conservatives is vehement, as they see a reduction in presidential powers as disrespectful to Alcala Zamora. ?] [? if erc_relation <= 49 and president == "Alcala Zamora" : Thus, the Center Party has been influenced to oppose these reforms. ?] [? if erc_relation > 49 and president == "Alcala Zamora" : Despite this, the Center Party supports the proposed reform. ?] [? if president == "Braun" : The Center Party supports this reform. ?]
+The PCE is in favor of this reform, having been victims of the *Reichsexekution* in the past (when PCE-supported state governments in Thuringia and Saxony were removed). The democrats of the IR also support this. [? if president == "Alcala Zamora": However, the opposition from conservatives is vehement, as they see a reduction in presidential powers as disrespectful to Alcala Zamora. ?] [? if erc_relation <= 49 and president == "Alcala Zamora" : Thus, the Center Party has been influenced to oppose these reforms. ?] [? if erc_relation > 49 and president == "Alcala Zamora" : Despite this, the Center Party supports the proposed reform. ?] [? if president == "Azaña" : The Center Party supports this reform. ?]
 
 - @presidential_powers_2: Call a constitutional referendum to pass the reform!
 - @reforms_menu: See other reform options.
 
 @presidential_powers_2
 choose-if: reform_support >= pass_threshold
-unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if erc_relation <= 49 and president != "Braun" : The Center Party does not trust us enough to support this policy. ?]
+unavailable-subtitle: We do not have enough support for this policy. [? if pro_republic < 65 : We should have an additional margin for the referendum since we need a majority of voters, and many voters who do not support the republic will not participate. ?] [? if erc_relation <= 49 and president != "Azaña" : The Center Party does not trust us enough to support this policy. ?]
 on-arrival: constitutional_reform += 1; presidential_powers = 1
 achievement: verfassungsreform
 

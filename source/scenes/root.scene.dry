@@ -361,7 +361,7 @@ Q.in_grand_coalition = 0;
 Q.in_popular_front = 0;
 // left coalition = PSOE + PCE + left-splinters
 Q.in_left_front = 0;
-// emergency government containing the PSOE: only president Braun can do this.
+// emergency government containing the PSOE: only president Azaña can do this.
 Q.in_emergency_government = 0;
 Q.in_psoe_majority = 0;
 Q.grand_coalition_failed = 0;
@@ -389,7 +389,7 @@ Q.interior_minister = 'von Keudell';
 Q.interior_minister_party = 'CEDA';
 Q.justice_minister = 'Hergt';
 Q.justice_minister_party = 'CEDA';
-Q.labor_minister = 'Brauns';
+Q.labor_minister = 'Azañas';
 Q.labor_minister_party = 'ERC';
 Q.reichswehr_minister = 'Groener';
 Q.reichswehr_minister_party = 'I';
@@ -551,7 +551,7 @@ Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
 // Reformist advisors
 Q.severing_advisor = 0; // Carl Severing
-Q.braun_advisor = 0; // Otto Braun
+Q.azaña_advisor = 0; // Manuel Azaña
 Q.juchacz_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
 

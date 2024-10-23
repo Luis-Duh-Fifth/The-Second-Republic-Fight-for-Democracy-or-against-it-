@@ -82,14 +82,14 @@ go-to: rm_main
 
 Severing has been removed as an advisor. The Reformist faction disapproves.
 
-@remove_braun
-title: Remove Braun
-view-if: braun_advisor = 1
+@remove_Azaña
+title: Remove Azaña
+view-if: azaña_advisor = 1
 tags: remove_advisor
-on-arrival: braun_advisor = 0; reformist_dissent += 5; n_advisors -= 1
+on-arrival: azaña_advisor = 0; reformist_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-Braun has been removed as an advisor. The Reformist faction disapproves.
+Azaña has been removed as an advisor. The Reformist faction disapproves.
 
 @remove_juchacz
 title: Remove Juchacz
@@ -372,17 +372,17 @@ go-to: advisor_menu
 
 Carl Severing is now an advisor.
 
-@add_braun
-title: Otto Braun
-subtitle: Otto Braun is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders.
+@add_azaña
+title: Manuel Azaña
+subtitle: Manuel Azaña is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders.
 is-card: true
-card-image: img/portraits/BraunOtto.jpg
+card-image: img/portraits/azañaOtto.jpg
 tags: reformist_advisor
-view-if: braun_advisor = 0 and n_advisors < 3
-on-arrival: braun_advisor = 1; n_advisors += 1; reformist_strength += 5
+view-if: azaña_advisor = 0 and n_advisors < 3
+on-arrival: azaña_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
-Otto Braun is now an advisor.
+Manuel Azaña is now an advisor.
 
 @add_juchacz
 title: Marie Juchacz

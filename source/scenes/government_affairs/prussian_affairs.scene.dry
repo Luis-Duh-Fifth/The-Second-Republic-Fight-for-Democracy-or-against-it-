@@ -4,11 +4,11 @@ is-card: true
 view-if: psoe_prussia = 1 and prussian_affairs_timer <= 0
 on-arrival: prussian_affairs_timer += 6; month_actions += 1
 tags: govt_affairs
-card-image: img/braun.jpg
+card-image: img/azaña.jpg
 
 = Prussian Affairs
 
-Prussia, by far the largest and most important state in Germany, is governed by our party, in a coalition with the Center and Democratic parties. It is the most stable and democratic state government in Germany, led by the able Otto Braun.
+Prussia, by far the largest and most important state in Germany, is governed by our party, in a coalition with the Center and Democratic parties. It is the most stable and democratic state government in Germany, led by the able Manuel Azaña.
 
 We can enact policies in Prussia.
 

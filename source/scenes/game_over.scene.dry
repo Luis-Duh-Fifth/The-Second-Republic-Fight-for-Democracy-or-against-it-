@@ -8,8 +8,8 @@ Q.game_over = 1;
 // Eiserne Front - Form the Iron Front.
 this.achieve('game_completed');
 
-// Roter Zar von Preußen - At the end of the game, Otto Braun is president, chancellor, and minister-president of prussia at the same time.
-if (Q.president == 'Braun' && Q.chancellor == 'Braun' && Q.psoe_prussia) {
+// Roter Zar von Preußen - At the end of the game, Manuel Azaña is president, chancellor, and minister-president of prussia at the same time.
+if (Q.president == 'Azaña' && Q.chancellor == 'Azaña' && Q.psoe_prussia) {
     this.achieve('red_tzar_of_prussia');
 }
 // Bürgerkrieg - enter a long civil war.
@@ -182,13 +182,13 @@ Germany is currently in the grip of a civil war, a brutal affair that has no obv
 [? if is_favorable == 0 : The current conditions are not favorable for us. ?][? if west_relation >= 2: Our cause is popular in the West, but their sclerotic governments are reluctant to send us aid. ?][? if soviet_aid >= 1 : The Soviet Union has aided the Communists, but not the socialists and democrats, in an attempt to shape Germany's future government. ?][? if east_aid >= 1 : Poland and Czechoslovakia have sent some assistance against the fascists. ?]
 
 
-@braun_victorious
-title: Otto Braun victorious
-view-if: president == "Braun"
+@azaña_victorious
+title: Manuel Azaña victorious
+view-if: president == "Azaña"
 tags: endings
 go-to: eg_menu
 
-Otto Braun has been elected as President of Germany. He had never desired to be the most powerful man in Germany, but now he is. 
+Manuel Azaña has been elected as President of Germany. He had never desired to be the most powerful man in Germany, but now he is. 
 
 @psoe_victorious
 title: psoe still in government
@@ -306,7 +306,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
 
-[? if game_achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
+[? if game_achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Manuel Azaña is President, Chancellor, and Minister-President. ?]
 
 [? if game_achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and PCE. ?]
 
@@ -344,7 +344,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
 
-[? if game_achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if game_achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Manuel Azaña president, and deport Hitler in one playthrough on at least normal difficulty. ?]
 
 [? if game_achievement_die_rote_fahne: **Die Rote Fahne** - join the PCE in their May Day march. ?]
 
@@ -393,7 +393,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
 
-[? if achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
+[? if achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Manuel Azaña is President, Chancellor, and Minister-President. ?]
 
 [? if achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and PCE. ?]
 
@@ -431,7 +431,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
 
-[? if achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Manuel Azaña president, and deport Hitler in one playthrough on at least normal difficulty. ?]
 
 [? if achievement_die_rote_fahne: **Die Rote Fahne** - join the PCE in their May Day march. ?]
 
@@ -478,7 +478,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Resist the Prussian Coup and win. ?]
 
-[? if not achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Otto Braun is President, Chancellor, and Minister-President. ?]
+[? if not achievement_red_tzar_of_prussia : **Roter Zar von Preußen** - Manuel Azaña is President, Chancellor, and Minister-President. ?]
 
 [? if not achievement_einheitsfront: **Einheitsfront** - Form a government consisting of the PSOE and PCE. ?]
 
@@ -516,7 +516,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if not achievement_women_reichsbanner: **Mädchen in Uniform** - a woman's place is in the Reichsbanner. ?]
 
-[? if not achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty. ?]
+[? if not achievement_bruder_zur_sonne: **Brüder, zur Sonne, zur Freiheit** - reduce unemployment, pause reparations, increase women's rights, elect Manuel Azaña president, and deport Hitler in one playthrough on at least normal difficulty. ?]
 
 [? if not achievement_die_rote_fahne: **Die Rote Fahne** - join the PCE in their May Day march. ?]
 

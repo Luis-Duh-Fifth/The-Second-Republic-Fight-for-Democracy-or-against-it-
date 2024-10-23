@@ -12,13 +12,13 @@ on-arrival: prieto_died_in_office = 1
 
 Chancellor Hermann Prieto has died while in office. He will be greatly missed. But now, we must select a new Chancellor.
 
-- @braun_chancellor: Otto Braun (PSOE) for Chancellor.
+- @azaña_chancellor: Manuel Azaña for Chancellor.
 - @wels_chancellor: Otto Wels (PSOE) for Chancellor.
 - @breitscheid_chancellor: Rudolf Breitscheid (PSOE) for Chancellor.
 - @bruning_chancellor: Let Heinrich Bruning of the Center Party become Chancellor.
 
-@braun_chancellor
-on-arrival: chancellor = "Braun"; chancellor_party = "PSOE"; erc_relation -= 5; prp_relation -= 5
+@azaña_chancellor
+on-arrival: chancellor = "Azaña"; chancellor_party = "PSOE"; erc_relation -= 5; prp_relation -= 5
 subtitle: The Center Party is worried about having so much power in one man.
 
 Our coalition partners are reluctant to accept the new Chancellor, but they do not make loud objections.

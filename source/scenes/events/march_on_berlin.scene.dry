@@ -4,7 +4,7 @@ view-if: (psoe_in_government = 1 and coup_progress >= 10 and year >= 1930 and (s
 new-page: true
 max-visits: 1
 on-arrival: march_on_berlin_seen = 1; sa_strength += 80; sh_strength += 80
-go-to: ask_resign if psoe_in_government and president != "Braun"; govt_menu if president = "Braun"; non_govt_menu if psoe_in_government = 0 and president != "Braun"
+go-to: ask_resign if psoe_in_government and president != "Azaña"; govt_menu if president = "Azaña"; non_govt_menu if psoe_in_government = 0 and president != "Azaña"
 tags: event
 
 = March on Berlin
@@ -56,12 +56,12 @@ President [+ president +] has asked our government to resign.
 
 @fight
 title: Deploy the Reichsbanner and call a general strike to resist the fascists!
-on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if psoe_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += workers_psoe_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Braun" and psoe_in_government
+on-arrival: defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if psoe_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; defense_strength += workers_psoe_normalized*(2 - dissent)*(2 - unemployed/100); defense_strength += reichswehr_strength*reichswehr_loyalty*reichswehr_militancy if president=="Azaña" and psoe_in_government
 go-to: fight_2_win if defense_strength >= enemy_strength; fight_2_pre_civil_war if defense_strength < enemy_strength
 
 The Reichsbanner number at [+ rb_strength +] thousand; many are in Berlin to counter the fascist demonstration.
 
-[? if psoe_prussia: The Prussian police has been deployed against the fascists. ?] [? if psoe_in_government and president == "Braun" : The portions of the Reichswehr that are loyal are also deployed. ?]
+[? if psoe_prussia: The Prussian police has been deployed against the fascists. ?] [? if psoe_in_government and president == "Azaña" : The portions of the Reichswehr that are loyal are also deployed. ?]
 
 
 @fight_2_win
@@ -94,21 +94,21 @@ The courts agree that President [+ president +] is wrong to dismiss us, and that
 @new_elections
 title: Call for new snap elections.
 subtitle: We will not resign at gunpoint, and we will attempt to maintain the integrity of the elections.
-go-to: new_elections_braun if president == "Braun"; new_elections_alcala_zamora if president != "Braun" and erc_relation >= 40; new_elections_alcala_zamora_reject if president != "Braun" and erc_relation < 40
+go-to: new_elections_azaña if president == "Azaña"; new_elections_alcala_zamora if president != "Azaña" and erc_relation >= 40; new_elections_alcala_zamora_reject if president != "Azaña" and erc_relation < 40
 
 
-@new_elections_braun
-go-to: new_elections_braun_2 if fe_jons_normalized + ceda_normalized >= 0.5; new_elections_braun_reject if fe_jons_normalized + ceda_normalized < 0.5
+@new_elections_azaña
+go-to: new_elections_azaña_2 if fe_jons_normalized + ceda_normalized >= 0.5; new_elections_azaña_reject if fe_jons_normalized + ceda_normalized < 0.5
 
 
-@new_elections_braun_reject
+@new_elections_azaña_reject
 
 The fascists reject our offer of free and fair elections. They are demanding that President [+ president +] dismisses the current government and appoints Hitler chancellor.
 
-- @braun_appoints_hitler
+- @azaña_appoints_hitler
 - @fight
 
-@new_elections_braun_2
+@new_elections_azaña_2
 go-to: new_elections_2
 
 The fascists seem to believe that they would win an election if one were to be held now, so they agree to our holding an election for next month.
@@ -135,8 +135,8 @@ Influenced by his inner circle and by the fascists in the streets, President Alc
 
 @resign
 title: Resign our positions in the government.
-choose-if: president != "Braun"
-unavailable-subtitle: President Braun cannot resign.
+choose-if: president != "Azaña"
+unavailable-subtitle: President Azaña cannot resign.
 on-arrival: chancellor = "Papen"; chancellor_party = "I"; psoe_in_government = 0;
 go-to: accept
 
@@ -144,9 +144,9 @@ We have resigned our positions in the government.
 
 
 
-@braun_appoints_hitler
+@azaña_appoints_hitler
 title: We cannot do anything but appoint Hitler chancellor.
-view-if: president == "Braun"
+view-if: president == "Azaña"
 choose-if: fe_jons_normalized >= 0.5 or largest_party == "FE_JONS"
 unavailable-subtitle: There is no way President [+ president +] could do such a blatantly undemocratic act.
 on-arrival: chancellor = "Hitler"; chancellor_party = "FE_JONS"; psoe_in_government = 0

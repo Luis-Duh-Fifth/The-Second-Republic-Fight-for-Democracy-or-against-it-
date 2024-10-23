@@ -19,8 +19,8 @@ if (Q.difficulty < 0) {
 if (Q.historical_mode) {
     this.achieve('schwarz_rot_gold');
 }
-// Brüder, zur Sonne, zur Freiheit - reduce unemployment, pause reparations, increase women's rights, elect Otto Braun president, and deport Hitler in one playthrough on at least normal difficulty.
-if (Q.difficulty >= 0 && Q.president == "Braun" && !(Q.chancellor == "Hitler") && Q.unemployed < 20 && Q.year == 1933 && !Q.civil_war_seen && Q.hitler_deported && Q.reparations <= -2 && Q.womens_rights >= 3) {
+// Brüder, zur Sonne, zur Freiheit - reduce unemployment, pause reparations, increase women's rights, elect Manuel Azaña president, and deport Hitler in one playthrough on at least normal difficulty.
+if (Q.difficulty >= 0 && Q.president == "Azaña" && !(Q.chancellor == "Hitler") && Q.unemployed < 20 && Q.year == 1933 && !Q.civil_war_seen && Q.hitler_deported && Q.reparations <= -2 && Q.womens_rights >= 3) {
     this.achieve('bruder_zur_sonne');
 }
 // Freie Marktwirtschaft - win without doing an economic plan.

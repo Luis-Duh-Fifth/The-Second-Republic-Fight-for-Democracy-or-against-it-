@@ -30,7 +30,7 @@ go-to: what_do
 This is a gift to the Communists, a boost to their theory that parliamentary democracy will never benefit the working class.
 
 @what_do
-on-arrival: prp_relation += 5 if chancellor = "Braun"
+on-arrival: prp_relation += 5 if chancellor = "Azaña"
 
 But the crux of the matter is, what can we do?
 

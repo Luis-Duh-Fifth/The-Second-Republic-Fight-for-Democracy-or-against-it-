@@ -4,7 +4,7 @@ view-if: year = 1932 and (month = 4 or month = 5) and presidential_election_seen
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: braun_campaign = 0; hitler_support_alcala_zamora = 0; presidential_election_seen = 1; fe_jons_candidate = "Hitler" if hitler_deported == 0 else fe_jons_candidate = "Göring";
+on-arrival: azaña_campaign = 0; hitler_support_alcala_zamora = 0; presidential_election_seen = 1; fe_jons_candidate = "Hitler" if hitler_deported == 0 else fe_jons_candidate = "Göring";
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
@@ -16,12 +16,12 @@ The presidential election is coming up soon. [? if psoe_in_government = 0 : Whil
 # if hitler is deported, who would fe_jons run? Duesterberg? or Goering?
 # Goering runs, essentially as a proxy for Hitler, who is now stateless.
 
-Many are calling for us to support the incumbent Alcala Zamora, despite his well-known reactionary tendencies. Is he truly the best bulwark against Hitler's ascension? On the other hand, many in our party are calling for Otto Braun to run again, but he is reluctant.
+Many are calling for us to support the incumbent Alcala Zamora, despite his well-known reactionary tendencies. Is he truly the best bulwark against Hitler's ascension? On the other hand, many in our party are calling for Manuel Azaña to run again, but he is reluctant.
 
 [? if pce_relation >= 50 : Another strange possibilty is an united front with the Communists, either to support Thälmann or our own candidate. ?]
 
 - @support_alcala_zamora: Support alcala_zamora.
-- @support_braun: Run Otto Braun of the PSOE.
+- @support_azaña: Run Manuel Azaña of the PSOE.
 - @support_thalmann: Support Ernst Thälmann of the PCE.
 
 @support_alcala_zamora
@@ -31,16 +31,16 @@ Despite his known reactionary nature, Alcala Zamora has at least been keeping th
 
 - @final_election: The final vote...
 
-@support_braun
+@support_azaña
 subtitle: This will cost us 2 resources.
 choose-if: resources >= 2
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 2; braun_campaign = 1
-go-to: braun_campaign
+on-arrival: resources -= 2; azaña_campaign = 1
+go-to: azaña_campaign
 
-It takes effort to run a somewhat unexpected campaign. First, Braun has to be convinced to run. He himself had supported voting for Alcala Zamora, and it takes a good deal of prodding to convince him of his destiny.
+It takes effort to run a somewhat unexpected campaign. First, Azaña has to be convinced to run. He himself had supported voting for Alcala Zamora, and it takes a good deal of prodding to convince him of his destiny.
 
-The miniscule remnants of the Democratic Party (now called the German State Party) will likely support us. Who else will? Can we convince the Center to support Braun? What about the Communists?
+The miniscule remnants of the Democratic Party (now called the German State Party) will likely support us. Who else will? Can we convince the Center to support Azaña? What about the Communists?
 
 
 @support_thalmann
@@ -50,7 +50,7 @@ unavailable-subtitle: [? if pce_relation < 50 : We do not have good enough relat
 Supporting Thälmann is rather unpopular in our party, even if the Communists accept our support. Are we sure?
 
 - @support_thalmann_2: Yes, we will support Thälmann, despite the reformists' pleas against it.
-- @support_braun: Support Braun instead.
+- @support_azaña: Support Azaña instead.
 - @support_alcala_zamora: Support Alcala Zamora instead.
 
 @support_thalmann_2
@@ -60,7 +60,7 @@ Fine. We have thrown our support to Chairman Thälmann of the PCE.
 
 - @final_election: The final vote...
 
-@braun_campaign
+@azaña_campaign
 
 - @convince_erc: Convince the Center Party.
 - @convince_pce: Convince the Communists.
@@ -71,43 +71,43 @@ Fine. We have thrown our support to Chairman Thälmann of the PCE.
 choose-if: psoe_votes >= erc_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
-Q.erc_support_braun = 0;
+Q.erc_support_azaña = 0;
 if (Q.erc_relation >= 55) {
-    Q.erc_support_braun = 1;
+    Q.erc_support_azaña = 1;
 } else if (Q.erc_relation <= 35) {
-    Q.erc_support_braun = 0;
+    Q.erc_support_azaña = 0;
 } else {
-    Q.erc_support_braun = 2;
+    Q.erc_support_azaña = 2;
 }
 !}
-go-to: erc_failed if erc_support_braun = 0 or (erc_support_braun == 2 and historical_mode); erc_success if erc_support_braun = 1; erc_partial if erc_support_braun = 2 and not historical_mode
+go-to: erc_failed if erc_support_azaña = 0 or (erc_support_azaña == 2 and historical_mode); erc_success if erc_support_azaña = 1; erc_partial if erc_support_azaña = 2 and not historical_mode
 max-visits: 1
 
-We remind the Center leaders of Alcala Zamora's anti-Catholicism, and try to convince them that Alcala Zamora's path will eventually lead to Hitler. We also remind them of the successes they've had as part of the Weimar coalition in Prussia with Otto Braun, and our support for the Center candidate Wilhelm Marx in the 1925 presidential election.
+We remind the Center leaders of Alcala Zamora's anti-Catholicism, and try to convince them that Alcala Zamora's path will eventually lead to Hitler. We also remind them of the successes they've had as part of the Weimar coalition in Prussia with Manuel Azaña, and our support for the Center candidate Wilhelm Marx in the 1925 presidential election.
 
 @erc_success
-go-to: braun_campaign
+go-to: azaña_campaign
 
-The Center are convinced! They will be part of the Braun coalition.
+The Center are convinced! They will be part of the Azaña coalition.
 
 @erc_partial
 
 The Center are not satisfied with our arguments, but they are open to being convinced. They are willing to run a joint campaign if we front the resources.
 
 - @pay_erc: Give them the resources they need.
-- @braun_campaign: Forget about the Center.
+- @azaña_campaign: Forget about the Center.
 
 @pay_erc
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3)
-on-arrival: resources -= 3; erc_support_braun = 1
-go-to: braun_campaign
+on-arrival: resources -= 3; erc_support_azaña = 1
+go-to: azaña_campaign
 
-With our resources, the Center are convinced to support Braun over Alcala Zamora.
+With our resources, the Center are convinced to support Azaña over Alcala Zamora.
 
 @erc_failed
-go-to: braun_campaign
+go-to: azaña_campaign
 
 Unfortunately, we fail to turn them away from Alcala Zamora.
 
@@ -116,29 +116,29 @@ choose-if: psoe_votes >= pce_votes
 unavailable-subtitle: The PCE knows that they are more popular than us; they do not see a reason to support our candidate.
 max-visits: 1
 
-The PCE is supporting their own candidate, Ernst Thälmann. [? if pce_relation >= 50 : However, they are willing to be convinced to drop their campaign and support Braun; how do we convince them? ?][? if pce_relation < 50 : They do not seem willing to be convinced. ?]
+The PCE is supporting their own candidate, Ernst Thälmann. [? if pce_relation >= 50 : However, they are willing to be convinced to drop their campaign and support Azaña; how do we convince them? ?][? if pce_relation < 50 : They do not seem willing to be convinced. ?]
 
 - @pce_resources: Use our resources.
 - @pce_relations: Use our good relations.
-- @braun_campaign: Forget about the PCE.
+- @azaña_campaign: Forget about the PCE.
 
 @pce_resources
 view-if: pce_relation >= 50 and not historical_mode
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; pce_support_braun = 1
-go-to: braun_campaign
+on-arrival: resources -= 3; pce_support_azaña = 1
+go-to: azaña_campaign
 
-The PCE now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+The PCE now endorses Azaña in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 @pce_relations
 view-if: pce_relation >= 60
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: pce_support_braun = 1
-go-to: braun_campaign
+on-arrival: pce_support_azaña = 1
+go-to: azaña_campaign
 
-The PCE now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+The PCE now endorses Azaña in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 
 
@@ -146,19 +146,19 @@ The PCE now endorses Braun in the presidential election! We ask them to keep the
 max-visits: 1
 go-to: convince_liberals_success if prp_relation >= 50; convince_liberals_fail if prp_relation < 50
 
-The liberal vote (IR and PRP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the IR is already willing to support Braun.
+The liberal vote (IR and PRP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the IR is already willing to support Azaña.
 
 @convince_liberals_success
-on-arrival: prp_support_braun = 1
-go-to: braun_campaign
+on-arrival: prp_support_azaña = 1
+go-to: azaña_campaign
 
-Thanks to our good relations, the PRP has promised to support Braun in the election.
+Thanks to our good relations, the PRP has promised to support Azaña in the election.
 
 @convince_liberals_fail
-on-arrival: prp_support_braun = 0
-go-to: braun_campaign
+on-arrival: prp_support_azaña = 0
+go-to: azaña_campaign
 
-We failed to convince the PRP to support Braun.
+We failed to convince the PRP to support Azaña.
 
 
 
@@ -170,7 +170,7 @@ set-jump: post_election
 
 @post_election
 on-arrival: {!
-Q.braun_votes = 0;
+Q.azaña_votes = 0;
 Q.alcala_zamora_votes = 0;
 Q.hitler_votes = 0;
 Q.thalmann_votes = 0;
@@ -180,21 +180,21 @@ Q.hitler_votes += Q.fe_jons_votes;
 Q.alcala_zamora_votes += Q.prr_votes;
 Q.alcala_zamora_votes += Q.ceda_votes;
 
-if (Q.braun_campaign) {
-    Q.braun_votes += Q.psoe_votes;
-    Q.braun_votes += Q.izqd_rep_votes;
-    if (Q.erc_support_braun && Q.erc_support_braun == 1) {
-        Q.braun_votes += Q.erc_votes;
+if (Q.azaña_campaign) {
+    Q.azaña_votes += Q.psoe_votes;
+    Q.azaña_votes += Q.izqd_rep_votes;
+    if (Q.erc_support_azaña && Q.erc_support_azaña == 1) {
+        Q.azaña_votes += Q.erc_votes;
     } else {
         Q.alcala_zamora_votes += Q.erc_votes;
     }
-    if (Q.pce_support_braun) {
-        Q.braun_votes += Q.pce_votes;
+    if (Q.pce_support_azaña) {
+        Q.azaña_votes += Q.pce_votes;
     } else {
         Q.thalmann_votes += Q.pce_votes;
     }
-    if (Q.prp_support_braun) {
-        Q.braun_votes += Q.prp_votes;
+    if (Q.prp_support_azaña) {
+        Q.azaña_votes += Q.prp_votes;
     } else {
         Q.alcala_zamora_votes += Q.prp_votes;
     }
@@ -216,31 +216,31 @@ if (Q.hitler_support_alcala_zamora) {
     Q.alcala_zamora_votes += Q.fe_jons_votes;
 }
 
-if (Q.alcala_zamora_to_braun_bonus) {
-    Q.alcala_zamora_votes -= Q.alcala_zamora_to_braun_bonus;
-    Q.braun_votes += Q.alcala_zamora_to_braun_bonus;
+if (Q.alcala_zamora_to_azaña_bonus) {
+    Q.alcala_zamora_votes -= Q.alcala_zamora_to_azaña_bonus;
+    Q.azaña_votes += Q.alcala_zamora_to_azaña_bonus;
 }
-if (Q.thalmann_to_braun_bonus) {
-    Q.thalmann_votes -= Q.thalmann_to_braun_bonus;
-    Q.braun_votes += Q.thalmann_to_braun_bonus;
+if (Q.thalmann_to_azaña_bonus) {
+    Q.thalmann_votes -= Q.thalmann_to_azaña_bonus;
+    Q.azaña_votes += Q.thalmann_to_azaña_bonus;
 }
 
 // check for majority
 Q.alcala_zamora_majority = (Q.alcala_zamora_votes >= 50);
 Q.thalmann_majority = (Q.thalmann_votes >= 50);
 Q.hitler_majority = (Q.hitler_votes >= 50);
-Q.braun_majority = (Q.braun_votes >= 50);
-Q.any_majority = Q.alcala_zamora_majority | Q.thalmann_majority | Q.hitler_majority | Q.braun_majority;
+Q.azaña_majority = (Q.azaña_votes >= 50);
+Q.any_majority = Q.alcala_zamora_majority | Q.thalmann_majority | Q.hitler_majority | Q.azaña_majority;
 
 // check for plurality
-Q.alcala_zamora_plurality = (Q.alcala_zamora_votes >= Q.hitler_votes && Q.alcala_zamora_votes >= Q.braun_votes && Q.alcala_zamora_votes >= Q.thalmann_votes);
-Q.thalmann_plurality = (Q.thalmann_votes >= Q.alcala_zamora_votes && Q.thalmann_votes >= Q.braun_votes && Q.thalmann_votes >= Q.hitler_votes);
-Q.hitler_plurality = (Q.hitler_votes >= Q.alcala_zamora_votes && Q.hitler_votes >= Q.braun_votes && Q.hitler_votes >= Q.thalmann_votes);
-Q.braun_plurality = (Q.braun_votes >= Q.alcala_zamora_votes && Q.braun_votes >= Q.hitler_votes && Q.braun_votes >= Q.thalmann_votes);
+Q.alcala_zamora_plurality = (Q.alcala_zamora_votes >= Q.hitler_votes && Q.alcala_zamora_votes >= Q.azaña_votes && Q.alcala_zamora_votes >= Q.thalmann_votes);
+Q.thalmann_plurality = (Q.thalmann_votes >= Q.alcala_zamora_votes && Q.thalmann_votes >= Q.azaña_votes && Q.thalmann_votes >= Q.hitler_votes);
+Q.hitler_plurality = (Q.hitler_votes >= Q.alcala_zamora_votes && Q.hitler_votes >= Q.azaña_votes && Q.hitler_votes >= Q.thalmann_votes);
+Q.azaña_plurality = (Q.azaña_votes >= Q.alcala_zamora_votes && Q.azaña_votes >= Q.hitler_votes && Q.azaña_votes >= Q.thalmann_votes);
 // If no candidate gets above 50%, then there's a second round. In the second round, a plurality wins. 
 Q.election_round += 1;
 !}
-go-to: alcala_zamora_wins if alcala_zamora_majority == 1; thalmann_wins if thalmann_majority == 1; hitler_wins if hitler_majority == 1; braun_wins if braun_majority == 1; no_majority_round1 if any_majority == 0 and election_round == 1; round2_results if election_round >= 2
+go-to: alcala_zamora_wins if alcala_zamora_majority == 1; thalmann_wins if thalmann_majority == 1; hitler_wins if hitler_majority == 1; azaña_wins if azaña_majority == 1; no_majority_round1 if any_majority == 0 and election_round == 1; round2_results if election_round >= 2
 
 Results:
 
@@ -248,17 +248,17 @@ Alcala Zamora - [+ alcala_zamora_votes +]%
 
 [+ fe_jons_candidate +] - [+ hitler_votes +]%
 
-[? if pce_support_braun == 0 : Thälmann - [+ thalmann_votes +]% ?]
+[? if pce_support_azaña == 0 : Thälmann - [+ thalmann_votes +]% ?]
 
-[? if braun_campaign > 0 : Braun - [+ braun_votes +]% ?]
+[? if azaña_campaign > 0 : Azaña - [+ azaña_votes +]% ?]
 
 @no_majority_round1
-on-arrival: hitler_support_alcala_zamora = 1 if (braun_plurality or thalmann_plurality)
+on-arrival: hitler_support_alcala_zamora = 1 if (azaña_plurality or thalmann_plurality)
 go-to: round2_menu
 
 There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
 
-[? if braun_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ fe_jons_candidate +] is no longer running in the second round, and has switched his endorsement to Alcala Zamora. ?]
+[? if azaña_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ fe_jons_candidate +] is no longer running in the second round, and has switched his endorsement to Alcala Zamora. ?]
 
 
 @round2_menu
@@ -271,33 +271,33 @@ There is no majority in this round. In the second round, any candidate who wins 
 
 
 @round2_convince_erc
-view-if: braun_campaign > 0 and erc_support_braun != 1 
+view-if: azaña_campaign > 0 and erc_support_azaña != 1 
 choose-if: psoe_votes >= erc_votes
 unavailable-subtitle: The Center knows that they are more popular than us; they do not see a reason to support our candidate.
 on-arrival: {!
-Q.erc_support_braun = 0;
+Q.erc_support_azaña = 0;
 
 if (Q.erc_relation >= 55) {
-    Q.erc_support_braun = 1;
+    Q.erc_support_azaña = 1;
     if (Q.hitler_support_alcala_zamora) {
-        Q.alcala_zamora_to_braun_bonus += Math.round(Q.prr_votes/2);
+        Q.alcala_zamora_to_azaña_bonus += Math.round(Q.prr_votes/2);
     }
 } else if (Q.erc_relation >= 50 && Q.hitler_support_alcala_zamora) {
-    Q.erc_support_braun = 1;
-    Q.alcala_zamora_to_braun_bonus += Math.round(Q.prr_votes/2);
+    Q.erc_support_azaña = 1;
+    Q.alcala_zamora_to_azaña_bonus += Math.round(Q.prr_votes/2);
 } else if (Q.erc_relation <= 35) {
-    Q.erc_support_braun = 0;
+    Q.erc_support_azaña = 0;
 } else {
-    Q.erc_support_braun = 2;
+    Q.erc_support_azaña = 2;
 }
 !}
-go-to: r2_erc_failed if erc_support_braun = 0 or (erc_support_braun = 2 and historical_mode); r2_erc_success if erc_support_braun = 1; r2_erc_partial if erc_support_braun = 2 and not historical_mode
+go-to: r2_erc_failed if erc_support_azaña = 0 or (erc_support_azaña = 2 and historical_mode); r2_erc_success if erc_support_azaña = 1; r2_erc_partial if erc_support_azaña = 2 and not historical_mode
 max-visits: 1
 
 @r2_erc_success
 go-to: round2_menu
 
-[? if hitler_support_alcala_zamora : The Center's opinion is affected by the Nazis' support of Alcala Zamora, and is willing to turn away from him. ?] The Center are convinced! They will be part of the Braun coalition. [? if hitler_support_alcala_zamora : In addition, they will also bring in some minor parties who will support us. ?]
+[? if hitler_support_alcala_zamora : The Center's opinion is affected by the Nazis' support of Alcala Zamora, and is willing to turn away from him. ?] The Center are convinced! They will be part of the Azaña coalition. [? if hitler_support_alcala_zamora : In addition, they will also bring in some minor parties who will support us. ?]
 
 @r2_erc_partial
 
@@ -310,10 +310,10 @@ The Center are not satisfied with our arguments, but they are open to being conv
 choose-if: resources >= 2
 subtitle: -2 resources
 unavailable-subtitle: Not enough resources (need 2)
-on-arrival: resources -= 2; erc_support_braun = 1
+on-arrival: resources -= 2; erc_support_azaña = 1
 go-to: round2_menu
 
-With our resources, the Center are convinced to support Braun over Alcala Zamora.
+With our resources, the Center are convinced to support Azaña over Alcala Zamora.
 
 @r2_erc_failed
 go-to: round2_menu
@@ -326,10 +326,10 @@ Unfortunately, we fail to turn them away from Alcala Zamora.
 @round2_convince_pce
 choose-if: psoe_votes >= pce_votes
 unavailable-subtitle: The PCE knows that they are more popular than us; they do not see a reason to support our candidate.
-view-if: braun_campaign > 0 and pce_support_braun == 0 
+view-if: azaña_campaign > 0 and pce_support_azaña == 0 
 max-visits: 1
 
-The PCE is committed to supporting Ernst Thälmann. [? if pce_relation >= 45 : However, the Nazi-Alcala Zamora coalition worries them enough that they are willing to be convinced to drop their campaign and support Braun. ?][? if pce_relation < 45 : They do not seem willing to be convinced. ?]
+The PCE is committed to supporting Ernst Thälmann. [? if pce_relation >= 45 : However, the Nazi-Alcala Zamora coalition worries them enough that they are willing to be convinced to drop their campaign and support Azaña. ?][? if pce_relation < 45 : They do not seem willing to be convinced. ?]
 
 - @r2_pce_resources: Use our resources.
 - @r2_pce_relations: Use our good relations.
@@ -340,21 +340,21 @@ view-if: pce_relation >= 45 and not historical_mode
 choose-if: resources >= 3
 subtitle: -3 resources
 unavailable-subtitle: Not enough resources (need 3).
-on-arrival: resources -= 3; pce_support_braun = 1
+on-arrival: resources -= 3; pce_support_azaña = 1
 go-to: round2_menu
 
-The PCE now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
+The PCE now endorses Azaña in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters.
 
 @r2_pce_relations
 view-if: pce_relation >= 60
 unavailable-subtitle: Our relations are not good enough.
-on-arrival: pce_support_braun = 1
+on-arrival: pce_support_azaña = 1
 go-to: round2_menu
 
-The PCE now endorses Braun in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
+The PCE now endorses Azaña in the presidential election! We ask them to keep their support low-key, so as to not alienate the bourgeois voters. 
 
 @round2_thalmann
-view-if: psoe_support_thalmann == 0 and pce_support_braun == 0
+view-if: psoe_support_thalmann == 0 and pce_support_azaña == 0
 choose-if: pce_relation >= 50 and left_strength > reformist_strength 
 unavailable-subtitle: [? if pce_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this bizarre arrangement. ?]
 max-visits: 1
@@ -365,18 +365,18 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: braun_campaign = 0; psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; erc_relation -= 15; prp_relation -= 15
-on-departure: erc_support_braun = 0; pce_support_braun = 0;
+on-arrival: azaña_campaign = 0; psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; erc_relation -= 15; prp_relation -= 15
+on-departure: erc_support_azaña = 0; pce_support_azaña = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the PCE.
 
-[? if erc_support_braun : The Center Party is confused at our capricious behavior, and have switched their support to Alcala Zamora. ?]
+[? if erc_support_azaña : The Center Party is confused at our capricious behavior, and have switched their support to Alcala Zamora. ?]
 
 - @round2_vote: Let the second round voting begin.
 
 @round2_alcala_zamora
-view-if: braun_campaign > 0 or psoe_support_thalmann > 0
-on-arrival: braun_campaign = 0; psoe_support_thalmann = 0
+view-if: azaña_campaign > 0 or psoe_support_thalmann > 0
+on-arrival: azaña_campaign = 0; psoe_support_thalmann = 0
 
 We have switched our support to Alcala Zamora.
 
@@ -387,7 +387,7 @@ go-to: election_algorithm
 set-jump: post_election
 
 @round2_results
-go-to: alcala_zamora_wins if alcala_zamora_plurality == 1; thalmann_wins if thalmann_plurality == 1; braun_wins if braun_plurality == 1; hitler_wins if hitler_plurality == 1
+go-to: alcala_zamora_wins if alcala_zamora_plurality == 1; thalmann_wins if thalmann_plurality == 1; azaña_wins if azaña_plurality == 1; hitler_wins if hitler_plurality == 1
 
 
 @alcala_zamora_wins
@@ -411,7 +411,7 @@ on-arrival: president = fe_jons_candidate; chancellor = "Hitler"; chancellor_par
 - @hitler_takes_power: What do we do now?
 
 
-@braun_wins
-on-arrival: president = "Braun"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_psoe += 8*(1-dissent); landholders_psoe += 5*(1-dissent); new_middle_psoe += 5*(1-dissent); rural_psoe += 5*(1-dissent); unemployed_psoe += 5*(1-dissent);
+@azaña_wins
+on-arrival: president = "Azaña"; reformist_dissent -= 15; center_dissent -= 15; labor_dissent -= 15; left_dissent -= 5; workers_psoe += 8*(1-dissent); landholders_psoe += 5*(1-dissent); new_middle_psoe += 5*(1-dissent); rural_psoe += 5*(1-dissent); unemployed_psoe += 5*(1-dissent);
 
-Otto Braun of the PSOE has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
+Manuel Azaña of the PSOE has won the presidency! This is a moment of celebration for our party, and his victory is able to bolster our support.
