@@ -142,13 +142,13 @@ Woytinsky has been removed as an advisor. The Labor faction disapproves.
 # left
 
 @remove_largo_caballero
-title: Remove largo_caballero
+title: Remove Largo Caballero
 view-if: largo_caballero_advisor = 1
 tags: remove_advisor
 on-arrival: largo_caballero_advisor = 0; left_dissent += 5; n_advisors -= 1
 go-to: rm_main
 
-largo_caballero has been removed as an advisor. The Leftist faction disapproves.
+Largo Caballero has been removed as an advisor. The Leftist faction disapproves.
 
 @remove_sender
 title: Remove Sender
