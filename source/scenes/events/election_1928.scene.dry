@@ -323,7 +323,7 @@ Somehow, both the Communists and Center are at the very least willing to enterta
 
 - @popular_front_resources
 - @popular_front_democracy
-- @popular_front_azaña
+- @popular_front_azana
 - @coalition_menu: This is impossible. Try another governing arrangement.
 
 @popular_front_resources
@@ -340,7 +340,7 @@ unavailable-subtitle: Our relationship with the PCE is not high enough.
 choose-if: pce_relation >= 60 and communist_coalition >= 3
 go-to: popular_front_success
 
-@popular_front_azaña
+@popular_front_azana
 title: Use pressure from President Azaña to force the parties to cooperate.
 view-if: president == "Azaña"
 go-to: popular_front_success
@@ -377,7 +377,7 @@ The Center manages to diffuse some of the hostility from the Reichswehr and the 
 title: Far-right coalition
 subtitle: FE_JONS + CEDA ([+ far_right_coalition +]%)
 view-if: far_right_coalition >= 50
-go-to: far_right_win if (year >= 1932 or fe_jons_r >= 44) and president != "Azaña"; far_right_fail if (year < 1932 and fe_jons_r < 44) and president != "Azaña"; far_right_azaña if president == "Azaña"
+go-to: far_right_win if (year >= 1932 or fe_jons_r >= 44) and president != "Azaña"; far_right_fail if (year < 1932 and fe_jons_r < 44) and president != "Azaña"; far_right_azana if president == "Azaña"
 priority: 2
 
 There are enough votes for the Nazis and the CEDA to form a coalition. [+ fe_jons_leader +] has made his participation in government contingent on being appointed chancellor. It is up to President [+ president +] to decide.
@@ -399,14 +399,14 @@ Schleicher's government is deeply unpopular among all parties of the Cortes. Des
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
-@far_right_azaña
+@far_right_azana
 on-arrival: coup_progress += 2
 
 President Azaña faces a dilemma. Is it "democratic" to let democracy be destroyed, if the majority of voters have willed it so? Some, even on the left, suggest that the Nazis would not *truly* be as horrific as their platform suggests, and that giving them power would let them discredit themselves in the eyes of the public.
 
 Alternatively, Azaña could use the emergency powers of the presidency. Article 48 has been used by Alcala Zamora to promulgate anti-democratic and anti-worker policies; can Article 48 be used for good as well as evil?
 
-- @emergency_azaña: We will form an emergency government with Azaña's support.
+- @emergency_azana: We will form an emergency government with Azaña's support.
 - @new_elections: We will have new elections.
 - @far_right_win: Let the Nazis form their government.
 
@@ -600,9 +600,9 @@ Now, we have a new grand coalition, a "Constitutional Coalition" of all the non-
 Who should be chancellor?
 
 - @join_bruning: For better or for worse, it must be Heinrich Brüning of the Center.
-- @azaña_chancellor_new: Manuel Azaña for Chancellor?
+- @azana_chancellor_new: Manuel Azaña for Chancellor?
 
-@azaña_chancellor_new
+@azana_chancellor_new
 subtitle: This will reduce our leverage in the ministries.
 view-if: not historical_mode or not psoe_prussia
 on-arrival: leverage -= 10; chancellor = "Azaña"; chancellor_party = "PSOE"
@@ -695,12 +695,12 @@ Finally, the PSOE can govern alone! Our long campaign of electioneering has paid
 
 Who should be chancellor?
 
-- @azaña_majority_chancellor: Manuel Azaña for Chancellor.
+- @azana_majority_chancellor: Manuel Azaña for Chancellor.
 - @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
 - @prieto_majority_chancellor: Hermann Prieto for Chancellor.
 - @wels_majority_chancellor: Otto Wels for Chancellor.
 
-@azaña_majority_chancellor
+@azana_majority_chancellor
 view-if: not historical_mode or not psoe_prussia
 on-arrival: chancellor = "Azaña"
 
@@ -734,7 +734,7 @@ view-if: president == "Azaña" and (grand_coalition < 50 or grand_coalition_fail
 
 President Azaña faces a dilemma. He desperately desires a socialist or at least democratic government, but the electoral results are not there for such. Article 48 has been used by Alcala Zamora to promulgate anti-democratic and anti-worker policies; can Article 48 be used for good as well as evil?
 
-- @emergency_azaña: We will form an emergency government with Azaña's support.
+- @emergency_azana: We will form an emergency government with Azaña's support.
 - @new_elections: We will have new elections.
 - @new_grand_coalition
 - @left_coalition
@@ -743,19 +743,19 @@ President Azaña faces a dilemma. He desperately desires a socialist or at least
 
 
 
-@emergency_azaña
+@emergency_azana
 title: We will form an emergency government with Azaña's support.
 subtitle: This may have the effect of inflamming public sentiment against us, and the reactionaries will be against us each step of the way.
 on-arrival: sa_strength += 100; sh_strength += 100; in_emergency_government = 1;
 
 Yes, an emergency minority government, with the support of the PSOE. Who should lead this emergency minority government?
 
-- @azaña_emergency_chancellor: Manuel Azaña for Chancellor-President!
+- @azana_emergency_chancellor: Manuel Azaña for Chancellor-President!
 - @breitscheid_emergency_chancellor: Rudolf Breitscheid for emergency Chancellor.
 - @bruning_emergency_chancellor: Brüning of the Center Party, as a goodwill gesture toward the bourgeoisie.
 - @wirth_emergency_chancellor: Joseph Wirth of the Center Party, as a gesture of republican unity.
 
-@azaña_emergency_chancellor
+@azana_emergency_chancellor
 subtitle: This is unprecedented.
 view-if: not historical_mode or not psoe_prussia
 on-arrival: chancellor = "Azaña"; chancellor_party = "PSOE"; psoe_in_government = 1; pro_republic -= 5; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE"; reichswehr_loyalty -= 0.1; 
@@ -1101,9 +1101,9 @@ The Center party has significant qualms about appointing Azaña as chancellor, g
 
 - @prieto
 - @wels
-- @azaña_2: Let the Center have their cabinet positions.
+- @azana_2: Let the Center have their cabinet positions.
 
-@azaña_2
+@azana_2
 subtitle: Manuel Azaña will be Chancellor.
 view-if: not historical_mode
 on-arrival: psoe_in_government = 1; chancellor = "Azaña"; chancellor_party = "PSOE"; leverage -= 10; in_grand_coalition = 1 if in_weimar_coalition == 0

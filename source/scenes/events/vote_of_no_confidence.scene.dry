@@ -74,7 +74,7 @@ The PCE is not interested in a "toleration" arrangement; they will only support 
 
 @let_it_happen
 on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; psoe_in_government = 0; in_grand_coalition = 0; in_weimar_coalition = 0; in_popular_front = 0; psoe_toleration = 0; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; labor_minister = "Stegerwald"; interior_minister = "Wirth"; finance_minister = "Moldenhauer"; economic_minister = "Curtius"; justice_minister = "Koch-Weser"; foreign_minister = "Stresemann"; agriculture_minister = "Dietrich"; reichswehr_minister = "Groener";  coalition_dissent = 0; pro_republic -= 5; landholders_psoe -= 3; new_middle_psoe -= 2; workers_psoe -= 3 if pro_republic < 50; workers_psoe -= 4 if pro_republic < 40; landholders_fe_jons += 4 if pro_republic < 50; new_middle_fe_jons += 3 if pro_republic < 50
-go-to: let_it_happen_alcala_zamora if president != "Azaña"; let_it_happen_azaña if president == "Azaña"
+go-to: let_it_happen_alcala_zamora if president != "Azaña"; let_it_happen_azana if president == "Azaña"
 
 @let_it_happen_alcala_zamora
 on-arrival: chancellor = "Brüning"; chancellor_party = "ERC"; welfare -= 2;
@@ -83,7 +83,7 @@ The vote succeeds, and our government has resigned. Chancellor Brüning has been
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
-@let_it_happen_azaña
+@let_it_happen_azana
 on-arrival: psoe_caretaker = 1
 
 The vote succeeds, and our government has resigned. Chancellor [+ chancellor +] remains as the head of a caretaker government, but no longer has the power to enact new policies.

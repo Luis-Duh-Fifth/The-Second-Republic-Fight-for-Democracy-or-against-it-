@@ -62,11 +62,11 @@ We could try to boot the PCE from our governing coalition, and form a new govern
 @let_it_happen
 view-if: not constructive_vonc
 on-arrival: pce_relation -= 8; workers_pce -= 5; workers_psoe -= 8; unemployed_psoe -= 6
-go-to: let_it_happen_azaña if president = "Azaña"; let_it_happen_alcala_zamora if president = "Alcala Zamora"
+go-to: let_it_happen_azana if president = "Azaña"; let_it_happen_alcala_zamora if president = "Alcala Zamora"
 
 # if Azaña is president, we are now a caretaker government. If Alcala Zamora is president, Brüning is a caretaker government
 
-@let_it_happen_azaña
+@let_it_happen_azana
 on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; psoe_in_government = 0; in_popular_front = 0; in_left_front = 0; foreign_minister_party = "I"; interior_minister_party = "I"; justice_minister_party = "I"; labor_minister_party = "I"; reichswehr_minister_party = "I"; economic_minister_party = "I"; finance_minister_party = "I"; agriculture_minister_party = "I";
 
 The vote succeeds, and our coalition has collapsed. Chancellor [+ chancellor +] will lead a caretaker government until the next election.

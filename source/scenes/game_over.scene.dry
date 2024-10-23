@@ -182,7 +182,7 @@ Germany is currently in the grip of a civil war, a brutal affair that has no obv
 [? if is_favorable == 0 : The current conditions are not favorable for us. ?][? if west_relation >= 2: Our cause is popular in the West, but their sclerotic governments are reluctant to send us aid. ?][? if soviet_aid >= 1 : The Soviet Union has aided the Communists, but not the socialists and democrats, in an attempt to shape Germany's future government. ?][? if east_aid >= 1 : Poland and Czechoslovakia have sent some assistance against the fascists. ?]
 
 
-@azaña_victorious
+@azana_victorious
 title: Manuel Azaña victorious
 view-if: president == "Azaña"
 tags: endings

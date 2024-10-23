@@ -2,7 +2,7 @@ title: Manuel Azaña
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/AzañaManuel.jpg
-view-if: Azaña_advisor = 1
+view-if: azana_advisor = 1
 new-page: true 
 
 = Manuel Azaña
