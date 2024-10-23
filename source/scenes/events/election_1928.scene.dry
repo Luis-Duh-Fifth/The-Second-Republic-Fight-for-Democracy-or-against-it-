@@ -1068,7 +1068,7 @@ As expected, the PSOE is the largest party, and this time, we are expected to ta
 Who should be the chancellor?
 
 - @prieto
-- @azaña
+- @azana
 - @wels
 - @erc_chancellor
 - @no_govt
@@ -1092,7 +1092,7 @@ go-to: ministries
 
 Otto Wels's appointment as chancellor is approved by our potential allies.
 
-@azaña
+@azana
 title: Manuel Azaña for Chancellor
 view-if: not historical_mode or not psoe_prussia
 subtitle: Azaña is currently the Minister-President of Prussia, and is one of our most popular leaders. However, other parties may have qualms about concentrating too much power in one man.
@@ -1131,7 +1131,7 @@ on-arrival: reformist_dissent += 5; center_dissent += 5; labor_dissent += 5; neo
 Are we sure about not participating in government? This will cause significant internal dissent, and will lead to increased distrust from the bourgeois parties. Even debating this option causes internal backlash. In addition, it is possible that the bourgeois and right-wing parties will also be unable to form a coalition government, leading to a regime appointed by President [+ president +].
 
 - @prieto
-- @azaña
+- @azana
 - @erc_chancellor
 - @no_govt_goals: Yes, we're sure.
 
