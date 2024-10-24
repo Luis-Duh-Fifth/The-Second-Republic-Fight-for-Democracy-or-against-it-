@@ -372,6 +372,8 @@ if (d3 && window) {
 {!<table>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div></td><td>!} **PSOE:** {!</td><td>!} **[+ psoe_r +]%** {!</td></tr>!}
 
+{!<tr><td><div class="box" style='background-color:#00000'> </div></td> <td>!}CNT_FAI: {!</td><td>!} [+ cnt_fai_r +]% {!</td></tr>!}
+
 {!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}PCE: {!</td><td>!} [+ pce_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} ERC: {!</td><td>!} [+ erc_minus_pnv_r +]% {!</td></tr>!}
