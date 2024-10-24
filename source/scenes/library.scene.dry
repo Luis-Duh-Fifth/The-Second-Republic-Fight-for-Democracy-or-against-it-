@@ -119,6 +119,9 @@ Catholics: PSOE: [+ catholics_psoe_normalized +]%, CNT_FAI: [+ catholics_cnt_fai
 go-to: menu
 
 **CNT_FAI** - *Confederation Nacional de Trabajo_Federacion Anarquista Iberica* (National Confederation of Labour_Anarchist Federation of Iberia) -
+
+Current relations: [+ cnt_fai_relation : relationships +]
+
 **PCE** - *Partido Comunista Español* (Spanish Comunist Party) - an offshoot of the psoe that emerged in the aftermath of the Revolution, they follow the path of Moscow.
 
 Current relations: [+ pce_relation : relationships +]
