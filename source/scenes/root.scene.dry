@@ -551,7 +551,7 @@ Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
 // Reformist advisors
 Q.severing_advisor = 0; // Carl Severing
-q.azana_advisor = 1; // Manuel Azaña
+Q.azana_advisor = 1; // Manuel Azaña
 Q.juchacz_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade
 

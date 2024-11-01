@@ -170,7 +170,7 @@ set-jump: post_election
 
 @post_election
 on-arrival: {!
-q.azana_votes = 0;
+Q.azana_votes = 0;
 Q.alcala_zamora_votes = 0;
 Q.hitler_votes = 0;
 Q.thalmann_votes = 0;
@@ -180,21 +180,21 @@ Q.hitler_votes += Q.fe_jons_votes;
 Q.alcala_zamora_votes += Q.prr_votes;
 Q.alcala_zamora_votes += Q.ceda_votes;
 
-if (q.azana_campaign) {
-    q.azana_votes += Q.psoe_votes;
-    q.azana_votes += Q.izqd_rep_votes;
+if (Q.azana_campaign) {
+    Q.azana_votes += Q.psoe_votes;
+    Q.azana_votes += Q.izqd_rep_votes;
     if (Q.erc_support_azana && Q.erc_support_azana == 1) {
-        q.azana_votes += Q.erc_votes;
+        Q.azana_votes += Q.erc_votes;
     } else {
         Q.alcala_zamora_votes += Q.erc_votes;
     }
     if (Q.pce_support_azana) {
-        q.azana_votes += Q.pce_votes;
+        Q.azana_votes += Q.pce_votes;
     } else {
         Q.thalmann_votes += Q.pce_votes;
     }
     if (Q.prp_support_azana) {
-        q.azana_votes += Q.prp_votes;
+        Q.azana_votes += Q.prp_votes;
     } else {
         Q.alcala_zamora_votes += Q.prp_votes;
     }
@@ -218,25 +218,25 @@ if (Q.hitler_support_alcala_zamora) {
 
 if (Q.alcala_zamora_to_azana_bonus) {
     Q.alcala_zamora_votes -= Q.alcala_zamora_to_azana_bonus;
-    q.azana_votes += Q.alcala_zamora_to_azana_bonus;
+    Q.azana_votes += Q.alcala_zamora_to_azana_bonus;
 }
 if (Q.thalmann_to_azana_bonus) {
     Q.thalmann_votes -= Q.thalmann_to_azana_bonus;
-    q.azana_votes += Q.thalmann_to_azana_bonus;
+    Q.azana_votes += Q.thalmann_to_azana_bonus;
 }
 
 // check for majority
 Q.alcala_zamora_majority = (Q.alcala_zamora_votes >= 50);
 Q.thalmann_majority = (Q.thalmann_votes >= 50);
 Q.hitler_majority = (Q.hitler_votes >= 50);
-q.azana_majority = (q.azana_votes >= 50);
-Q.any_majority = Q.alcala_zamora_majority | Q.thalmann_majority | Q.hitler_majority | q.azana_majority;
+Q.azana_majority = (Q.azana_votes >= 50);
+Q.any_majority = Q.alcala_zamora_majority | Q.thalmann_majority | Q.hitler_majority | Q.azana_majority;
 
 // check for plurality
-Q.alcala_zamora_plurality = (Q.alcala_zamora_votes >= Q.hitler_votes && Q.alcala_zamora_votes >= q.azana_votes && Q.alcala_zamora_votes >= Q.thalmann_votes);
-Q.thalmann_plurality = (Q.thalmann_votes >= Q.alcala_zamora_votes && Q.thalmann_votes >= q.azana_votes && Q.thalmann_votes >= Q.hitler_votes);
-Q.hitler_plurality = (Q.hitler_votes >= Q.alcala_zamora_votes && Q.hitler_votes >= q.azana_votes && Q.hitler_votes >= Q.thalmann_votes);
-q.azana_plurality = (q.azana_votes >= Q.alcala_zamora_votes && q.azana_votes >= Q.hitler_votes && q.azana_votes >= Q.thalmann_votes);
+Q.alcala_zamora_plurality = (Q.alcala_zamora_votes >= Q.hitler_votes && Q.alcala_zamora_votes >= Q.azana_votes && Q.alcala_zamora_votes >= Q.thalmann_votes);
+Q.thalmann_plurality = (Q.thalmann_votes >= Q.alcala_zamora_votes && Q.thalmann_votes >= Q.azana_votes && Q.thalmann_votes >= Q.hitler_votes);
+Q.hitler_plurality = (Q.hitler_votes >= Q.alcala_zamora_votes && Q.hitler_votes >= Q.azana_votes && Q.hitler_votes >= Q.thalmann_votes);
+Q.azana_plurality = (Q.azana_votes >= Q.alcala_zamora_votes && Q.azana_votes >= Q.hitler_votes && Q.azana_votes >= Q.thalmann_votes);
 // If no candidate gets above 50%, then there's a second round. In the second round, a plurality wins. 
 Q.election_round += 1;
 !}
