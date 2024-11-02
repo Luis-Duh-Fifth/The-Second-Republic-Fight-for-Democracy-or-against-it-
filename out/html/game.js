@@ -16,7 +16,7 @@
     // Add your custom code here.
   };
 
-  var TITLE = "Social Democracy: An Alternate History" + '_' + "Autumn Chen";
+  var TITLE = "The Second Republic, the Fight for Democracy" + '_' + "LuisDuhFifth";
 
   // the url is a link to game.json
   // TODO; 
