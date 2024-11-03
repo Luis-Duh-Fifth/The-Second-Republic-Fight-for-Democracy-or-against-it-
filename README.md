@@ -1,4 +1,4 @@
-# Social Democracy: An Alternate History
+# THE SECOND REPUBLIC, FIGHT FOR DEMOCRACY
 
 ## Included Libraries
 
