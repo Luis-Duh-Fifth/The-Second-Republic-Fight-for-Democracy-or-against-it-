@@ -44,8 +44,8 @@ if (!Q.works_program) {
 }
 !}
 tags: event
-view-if: year = 1931 and month = 1 
 priority: 2
+view-if: year == 1932 and month >= 1
 max-visits: 1
 
 A new year begins. [? if works_program = 0 : Unemployment continues to spiral upwards. The strength of the CEDA continues to rise. ?][? if works_program > 0 : A works program has been enacted in order to reduce unemployment. ?] [? if works_program > 0 and unemployment > 15 : However, unemployment remains too high for comfort. ?]

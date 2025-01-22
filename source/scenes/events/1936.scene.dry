@@ -1,7 +1,8 @@
 title: 1936
 subtitle: A new year
-
 tags: event
-view-if: year = 1936 and month = 1 
 priority: 2
+view-if: year == 1936 and month >= 1
 max-visits: 1
+
+New year new me!!!!

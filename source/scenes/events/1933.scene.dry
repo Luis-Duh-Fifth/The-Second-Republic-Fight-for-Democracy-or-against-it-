@@ -1,10 +1,10 @@
 title: 1933
-
+subtitle: A new year
 tags: event
 priority: 2
-view-if: year = 1933 and month = 1
+view-if: year == 1933 and month >= 1
 max-visits: 1
 
-
+New year new me!!!!
 
 
