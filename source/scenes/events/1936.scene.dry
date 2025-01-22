@@ -1,0 +1,7 @@
+title: 1936
+subtitle: A new year
+
+tags: event
+view-if: year = 1935 and month = 1 
+priority: 2
+max-visits: 1
