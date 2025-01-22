@@ -2,7 +2,7 @@ title: 1937
 subtitle: The end of the crisis?
 
 tags: event
-view-if: year = 1935 and month = 1 
+view-if: year = 1936 and month = 1 
 priority: 2
 max-visits: 1
 
