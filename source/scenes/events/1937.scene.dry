@@ -3,7 +3,7 @@ subtitle: The end of the crisis?
 
 tags: event
 priority: 2
-view-if: year == 1932 and month >= 1
+view-if: year == 1937 and month >= 1
 max-visits: 1
 
 on-arrival: {!
