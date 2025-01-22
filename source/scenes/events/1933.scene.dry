@@ -1,12 +1,10 @@
 title: 1933
-subtitle: The end of the crisis?
+
 tags: event
 priority: 2
 view-if: (year = 1933 and month >= 12) or year >= 1934
 max-visits: 1
 
-It is the end of 1933, and the CEDA still has not taken power. It appears that we have already passed the worst of the years of crisis. We are turning the corner on the Great Depression, and Nazism's days are numbered.
 
-Perhaps Germany will finally enter into a new era of genuine peace...
 
-- @game_over: Game over.
+
