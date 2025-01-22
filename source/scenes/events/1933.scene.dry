@@ -2,7 +2,7 @@ title: 1933
 
 tags: event
 priority: 2
-view-if: (year = 1933 and month >= 12) or year >= 1934
+view-if: year = 1933 and month = 1
 max-visits: 1
 
 
