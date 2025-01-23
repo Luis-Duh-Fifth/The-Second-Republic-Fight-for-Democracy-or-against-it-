@@ -697,7 +697,7 @@ Who should be chancellor?
 
 - @azana_majority_chancellor: Manuel Azaña for Chancellor.
 - @breitscheid_majority_chancellor: Rudolf Breitscheid for Chancellor.
-- @prieto_majority_chancellor: Hermann Prieto for Chancellor.
+- @prieto_majority_chancellor: Indalecio Prieto for Chancellor.
 - @wels_majority_chancellor: Otto Wels for Chancellor.
 
 @azana_majority_chancellor
@@ -716,7 +716,7 @@ Rudolf Breitscheid has become chancellor of the PSOE majority.
 view-if: prieto_dead = 0
 on-arrival: chancellor = "Prieto"
 
-Hermann Prieto has become chancellor of the PSOE majority.
+Indalecio Prieto has become chancellor of the PSOE majority.
 
 @wels_majority_chancellor
 view-if: prieto_dead = 1
@@ -1075,7 +1075,7 @@ Who should be the chancellor?
 
 
 @prieto
-title: Hermann Prieto for Chancellor
+title: Indalecion Prieto for Chancellor
 view-if: prieto_dead = 0
 subtitle: prieto is popular within the party, and is the preferred candidate of the Center and other parties.
 on-arrival: psoe_in_government = 1; chancellor = "Prieto"; chancellor_party = "PSOE"; in_grand_coalition = 1 if in_weimar_coalition == 0
