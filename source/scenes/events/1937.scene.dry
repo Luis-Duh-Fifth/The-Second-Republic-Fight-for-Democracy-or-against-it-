@@ -1,10 +1,5 @@
 title: 1937
 subtitle: Game Over
-tags: event
-priority: -3
-view-if: year == 1937 and month >= 1
-max-visits: 1
-
 on-arrival: {!
 // Einigkeit - survive on easy without a civil war.
 // Einigkeit und Recht - survive on medium without a civil war.
@@ -30,6 +25,11 @@ if (!Q.economic_plan) {
 }
 
 !}
+tags: event
+priority: -3
+view-if: year == 1937 and month >= 1
+max-visits: 1
+
 
 It is the end of 1933, and the CEDA still has not taken power. It appears that we have already passed the worst of the years of crisis. We are turning the corner on the Great Depression, and Nazism's days are numbered.
 
