@@ -128,7 +128,7 @@ Current relations: [+ pce_relation : relationships +]
 
 **PSOE** - *Partido Socialista Obrero Español* (Spanish Socialist Workers Party) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern PSOE was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" PSOE or USPD, which opposed the war.
 
-**ERC** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **PNV** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
+**ERC** - *Esquerra Republicana Catalana* (Catalan Republican Left) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **PNV** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
 
 Current relations: [+ erc_relation : relationships +]
 
