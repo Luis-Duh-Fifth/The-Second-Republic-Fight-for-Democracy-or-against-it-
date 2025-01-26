@@ -72,7 +72,7 @@ if (Q.unemployed <= 1) {
 }
 
 // re-calculate dissent.
-var total_strength = Q.left_strength + Q.center_strength + Q.labor_strength + Q.reformist_strength + Q.neorevisionist_strength;
+var total_strength = Q.left_strength + Q.center_strength;
 
 // normalize strength for the different factions
 Q.left_strength = 100*Q.left_strength/total_strength;
