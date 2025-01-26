@@ -74,6 +74,8 @@ PCE: [+ pce_relation : relationships +]
 
 CEDA: [+ ceda_relation : relationships +]
 
+RE_CT: [+ re_ct_relation : relationships +]
+
 FE_JONS: [+ fe_jons_relation : relationships +]
 
 = Internal Factions of the PSOE
@@ -81,13 +83,6 @@ FE_JONS: [+ fe_jons_relation : relationships +]
 Left strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
 Center strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
-
-Labor strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
-
-Reformist strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
-
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
-
 
 @paramilitaries
 

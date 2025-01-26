@@ -30,7 +30,7 @@ title: Defending Toleration
 subtitle: Prieto supports the toleration arrangement with the bourgeois parties.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_toleration: The PSOE is not in toleration. ?]
 choose-if: psoe_in_government = 0 and psoe_toleration = 1 and advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
+on-arrival: advisor_action_timer = 6; left_dissent -= 8; center_dissent -= 5;
 
 We have reduced dissent among the anti-toleration factions. 
 

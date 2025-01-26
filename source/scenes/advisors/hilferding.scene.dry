@@ -21,7 +21,7 @@ title: Against Right and Left
 subtitle: As a Centrist, Hilferding seeks to steer a course between the party's factions.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if: advisor_action_timer = 0
-on-arrival: advisor_action_timer = 5; advisor_action_time = time; center_strength += 10; left_strength -= 5; labor_strength -= 5; neorevisionist_strength -= 5; center_dissent -= 10
+on-arrival: advisor_action_timer = 5; advisor_action_time = time; center_strength += 10; left_strength -= 5; center_dissent -= 10
 
 We have reduced the strength of the dissident factions in the party.
 

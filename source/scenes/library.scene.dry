@@ -226,34 +226,6 @@ Strength: [+ center_strength : strength +]
 
 Dissent: [+ center_dissent : dissent +]
 
-**Labor**
-
-Many PSOE members are also part of the ADGB, the federation of free trade unions. Their goal is economic reform and benefits for organized workers.
-
-Strength: [+ labor_strength : strength +]
-
-Dissent: [+ labor_dissent : dissent +]
-
-**Reformists**
-
-Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy against the far right and left. [? if psoe_prussia : They are dominant in the state government of Prussia. ?]
-
-Strength: [+ reformist_strength : strength +]
-
-Dissent: [+ reformist_dissent : dissent +]
-
-@neorevisionists
-go-to: menu
-
-**Neorevisionists**
-
-Neorevisionists focus on defending the republic and expanding democracy, while also expanding the party's base beyond the working class to create a people's party. They support new propaganda methods and extraparliamentary action in defense of the republic.
-
-Strength: [+ neorevisionist_strength : strength +]
-
-Dissent: [+ neorevisionist_dissent : dissent +]
-
-
 @figures
 title: Figures and Charts
 go-to: menu
