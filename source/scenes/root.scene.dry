@@ -54,7 +54,7 @@ Q.center_dissent = 0;
 Q.unions_independent = 0;
 Q.centrists_resign = 0;
 Q.left_split = 0;
-Q.reformists_resigned = 0;
+Q.izqd_rep_repudiates = 0;
 
 
 // crisis_urgency indicates how seriously the PSOE is taking the economic crisis - scale from 0 to 10.

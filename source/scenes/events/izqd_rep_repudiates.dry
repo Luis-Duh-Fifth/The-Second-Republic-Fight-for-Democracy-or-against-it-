@@ -1,0 +1,11 @@
+title: IR breaks with us!
+new-page: true 
+subtitle: IRs disagreements with our actions have grown too severe.
+tags: event
+view-if: izqd_rep_relation <= 40
+on-arrival:   n_advisors -= 1 if azana_advisor == 1; n_advisors -= 1 if severing_advisor == 1; azana_advisor = 0; severing_advisor = 0; izqd_rep_repudiates = 1
+max-visits: 1
+
+= IR stops working with us.
+
+Our policy choices and extraparlamentary actions have greatly offended the Left Republicans. Our closest allies since the fall of the Monarchy no longer collaborate with us.
