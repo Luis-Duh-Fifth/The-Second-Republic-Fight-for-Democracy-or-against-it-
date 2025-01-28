@@ -1,0 +1,11 @@
+title: IR reaproaches us!
+new-page: true 
+subtitle: Our eforts to regain IRs trust have suceeded.
+tags: event
+view-if: izqd_rep_relation >= 54
+on-arrival:   azana_advisor = 1; severing_advisor = 1; izqd_rep_repudiates = 0
+max-visits: 1
+
+= IR reassumes cooperation with us.
+
+Wether if because external events, our attempts at convincing or otherwishe, the Left Republicans have decided to collaborate with us again. Let us celebrate reuniting with old allies.
