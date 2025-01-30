@@ -1,0 +1,11 @@
+title: PCE proposes collaboration!
+new-page: true 
+subtitle: The PCE seems interested in cooperation with us, and more.
+tags: event
+view-if: pce_relation >= 40 and pce_rejects = 1
+on-arrival:    schumacher_advisor = 1; mierendorff_advisor = 1; pce_rejects = 0
+
+= PCE begins collaboration with us.
+
+The PCE has always, in line with Moscow, mantained a distance and distrust wit us. We would have hoped that the recent steps that we both took towards Marxist unity would work out, unfortunatly, they have grown dissilusioned with what they see as our timidness to carry out the proletarian revolution and instaurate a dictatorship of the proletariat.
+

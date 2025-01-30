@@ -51,10 +51,11 @@ Q.center_strength = 30;
 Q.center_dissent = 0;
 
 // secret events...
-Q.unions_independent = 0;
+Q.cnt_fai_rejects = 1;
+Q.pce_rejects = 1
 Q.centrists_resign = 0;
 Q.left_split = 0;
-Q.izqd_rep_repudiates = 0;
+Q.izqd_rep_rejects = 0;
 
 
 // crisis_urgency indicates how seriously the PSOE is taking the economic crisis - scale from 0 to 10.

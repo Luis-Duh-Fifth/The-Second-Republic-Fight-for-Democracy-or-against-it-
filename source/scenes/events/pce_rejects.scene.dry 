@@ -1,0 +1,11 @@
+title: PCE declares us social fascists!
+new-page: true 
+subtitle: The PCEs misgivings with us have lead them to decide they were wrong on cooperation with us.
+tags: event
+view-if: pce_relation <= 40 and pce_rejects = 0
+on-arrival:   n_advisors -= 1 if schumacher_advisor == 1; n_advisors -= 1 if mierendorff_advisor == 1; schumacher_advisor = 0; mierendorff_advisor = 0; pce_rejects = 1
+
+= PCE stops working with us.
+
+The PCE has always, in line with Moscow, a certain distrust for us. As well as remaining a Marxist-Leninist party. We would have hoped that the recent steps that we both took towards Marxist unity would work out, unfortunatly, they have grown dissilusioned with what they see as our timidness to carry out the proletarian revolution and instaurate a dictatorship of the proletariat.
+

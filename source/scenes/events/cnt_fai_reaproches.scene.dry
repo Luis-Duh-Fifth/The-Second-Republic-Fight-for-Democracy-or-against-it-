@@ -1,0 +1,10 @@
+title: CNT_FAI reaproaches us.
+new-page: true 
+subtitle: The CNT FAI has approached us in a conciliatory manner.
+tags: event
+view-if: cnt_fai_relation >= 60 and cnt_fai_rejects = 1
+on-arrival: cnt_fai_rejects = 0; woytinsky_advisor = 1; leipart_advisor = 1;
+
+= CNT FAI has declared us allies in the fight for socialism.
+
+The relationship between the CNT FAI and the PSOE have never been quite good, they consider us too conciliatory towards the burgoise republic and the liberal parties. Nontheless, one way or another, they have been convinced of our good intentions. Let the forces of reaction tremble for the biggest socialist forces of Spain are united.

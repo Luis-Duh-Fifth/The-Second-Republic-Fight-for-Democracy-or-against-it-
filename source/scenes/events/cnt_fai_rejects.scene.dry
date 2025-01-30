@@ -1,0 +1,10 @@
+title: CNT_FAI rejects us.
+new-page: true 
+subtitle: The CNT FAIs annoyance with our methods have reached boiling point.
+tags: event
+view-if: cnt_fai_relation <= 60 and cnt_fai_rejects = 0
+on-arrival: cnt_fai_rejects = 1; n_advisors -= 1 if woytinsky_advisor == 1; n_advisors -= 1 if leipart_advisor == 1; woytinsky_advisor = 0; leipart_advisor = 0;
+
+= CNT FAI has declared us counter revolutionary.
+
+Unfortunatly, it would seem the two biggest worker movements in Spain have not been able to hold together. The CNT FAI have grown tired of us and have declared us traitors and counterrevolutionaries to the proletariat, let us hope they do not go further than declarations.
