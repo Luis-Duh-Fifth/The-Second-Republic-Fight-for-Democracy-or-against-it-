@@ -2,7 +2,7 @@ title: PCE proposes collaboration!
 new-page: true 
 subtitle: The PCE seems interested in cooperation with us, and more.
 tags: event
-view-if: pce_relation >= 40 and pce_rejects = 1
+view-if: pce_relation >= 40 and pce_rejects = 1 and comiterin_1935 = 1
 on-arrival:    schumacher_advisor = 1; mierendorff_advisor = 1; pce_rejects = 0
 
 = PCE begins collaboration with us.

@@ -1,0 +1,30 @@
+title: 7th Congress of the Comiterin
+subtitle: The Comiterin gathers to discuss a possible change of policy.
+view-if: year = 1935
+max-visits: 1
+tags: event
+new-page: true
+On-arrival: comiterin_1935 = 1
+
+= The Popular Front: A New Idea
+
+The 7th Congress of the Communist international begins with recent events in everyones mind. The fall of Germany to a National Socialist dictatorship and the failure of the "After them us" strategy of the KPD and the social fascist thesis. The comiterin, under the strong recomendations of Bulgarian Giorgi Dimitrov, begins approving of Popular Front tactics. Now, Communist parties all around the globe are beggining to abandon their all out war against the other socialist movements and begin favoring allying them to stop the reactionary forces. It would seem that the PCE is rapidly warming up to us after this.  
+
+#- @shuffle_leadership: It's time to change our advisors to take into account new ideas.
+- @support_neo: Support the neorevisionist movement.
+- @no_new_ideas: We don't need new ideas.
+- @easy_discard
+
+@support_neo
+on-arrival: neorevisionist_strength += 10; nazi_urgency += 1; neorevisionism = 1; peoples_party_support += 1
+
+We support the new leaders, and start using new-style propaganda techniques in our campaigns. The results are uncertain so far...
+
+- @shuffle_leadership: We should use this opportunity to change the party's leadership.
+- @root: Continue...
+
+
+@no_new_ideas
+on-arrival: neorevisionist_strength -= 5; center_strength += 5; neorevisionism = -1
+
+We do not need these new ideas; they seem to imitate too closely those of the Nazis and Communists.

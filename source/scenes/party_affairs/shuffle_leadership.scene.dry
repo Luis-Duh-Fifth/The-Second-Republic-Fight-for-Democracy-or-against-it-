@@ -272,9 +272,9 @@ frequency: 1
 
 - @centrist: Add Centrists
 - @left: Add Leftists
-- @reformist: Add Reformists
-- @labor: Add Labor
-- @neorev: Add Neorevisionists
+- @left_republicans: Add Left Republicans
+- @anarcho_syndicalists: Add Anarcho Syndicalists
+- @communists: Add Communists
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
@@ -284,8 +284,8 @@ view-if: n_advisors < 3
 
 - #center_advisor
 
-@reformist
-view-if: n_advisors < 3
+@left_republicans
+view-if: izqd_rep_rejects = 0 and n_advisors < 3
 
 - #reformist_advisor
 
@@ -294,13 +294,13 @@ view-if: n_advisors < 3
 
 - #left_advisor
 
-@labor
-view-if: n_advisors < 3
+@anarcho_syndicalists
+view-if: cnt_fai_rejects = 0 and n_advisors < 3
 
 - #labor_advisor
 
-@neorev
-view-if: neorevisionism > 0 and n_advisors < 3
+@communists
+view-if: pce_rejects = 0 and n_advisors < 3
 
 - #neorev_advisor
 
