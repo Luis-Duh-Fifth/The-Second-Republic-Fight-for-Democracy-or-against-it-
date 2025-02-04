@@ -1,6 +1,6 @@
 Title: Largo Caballero becomes leader of the revolutionary wing.
 subtitle: Previously a reformist, Caballero has radicalized after revent events.
 tags: event
-view-if: casas_viejas = 1  // Gotta decide more
+view-if: casas_viejas = 1  
 max-visits: 1
 On arrival: spanish_lenin = 1
