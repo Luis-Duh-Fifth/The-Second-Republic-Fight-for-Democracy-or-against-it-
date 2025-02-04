@@ -1,0 +1,31 @@
+Title: Shoking events in Casas Viejas
+subtitle: The brutal repression of an attempted anarchist uprising in Casas Viejas send shockwaves.
+tags: event
+view-if: 1933
+max-visits: 1
+On arrival: casas_viejas = 1
+
+A generalized small anarchist insurrection attempt has occurred nationally, in most of the country they fail with little blood, but in Casas Viejas, tragedy strikes. The anarchists, manage to resist for a while, the Civil Guard and Assault guards repression is brutal. At the end of the day in Casas Viejas there are 26 dead and no prisioners.
+
+This has sent the goverment scrambling, and unfortunatly, Azañas first reaction has been in favor of the supression due to him being misinformed of the events that happened, even if he afterwards takes it back and discharges the responsible officer, the damage is done. All this has negative effects on us, as we are members of a goverment that has commited such a purge. Already there is noise to abandon the goverment within the party, meanwhile the goverment is growing increasingly.
+
+The question remains, what to do?
+
+- @Condemnmin: Condemn the events, but absolve Azaña and the goverment.
+- @Condemnmid: Condemn the events and do not defend the goverment.
+- @Condemnmax: Condemn the events and the goverment, our participation regardless.
+
+@Condemnmin
+on-arrival: izqd_rep_relation +=5; coalition_dissent -= 1; left_dissent += 5; center_dissent += 5; workers_psoe -= 2; unemployed_psoe -= 1; rural_psoe -= 3; rural_cnt_fai += 3; workers_cnt_fai += 1; workers_pce += 1; unemployed_pce += 1
+
+We condmen the events that have happened in Casas Viejas, but we nontheless attempt to protect Azaña and the goverment from the attacks of being reactionary or incompetent. This leaves us open to attacks from our left but Azaña and the left Republicans thank us profusely.
+
+@Condemnmid
+on-arrival: left_dissent += 3; center_dissent += 2; workers_psoe -= 1; rural_psoe -= 1; unemployed_psoe -= 1; rural_cnt_fai += 1; workers_cnt_fai += 1; unemployed_pce += 1
+
+We condemn the events that have happened in Casas Viejas. However, our presence in the goverment still gives us trouble. 
+
+@Condemnmax
+on-arrival: coalition_dissent += 1; izqd_rep_relation -= 5; rural_psoe -= 1; unemployed_psoe -= 1; rural_cnt_fai += 1; unemployed_pce += 1
+
+We condemn the events that have happened in Casas Viejas. We go a step further and accuse the goverment of inaction and of responsibility of the events. This hurts our standing with the goverment, but it stems the bleeding of votes to more radical parties even if we are in the goverment.
