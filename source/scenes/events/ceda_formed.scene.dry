@@ -1,7 +1,7 @@
 Title: The Catholic Right consolidates.
 subtitle: After a short period of disorganization after the end of the Monarchy the right is back on its feet.
 tags: event
-view-if: 1933
+view-if: year = 1933 and month = 3
 max-visits: 1
 On arrival: ceda_formed = 1
 

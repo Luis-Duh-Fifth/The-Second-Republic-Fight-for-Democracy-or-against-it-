@@ -1,7 +1,7 @@
 Title: Shoking events in Casas Viejas
 subtitle: The brutal repression of an attempted anarchist uprising in Casas Viejas send shockwaves.
 tags: event
-view-if: 1933
+view-if: year = 1933 and month = 1
 max-visits: 1
 On arrival: casas_viejas = 1
 
