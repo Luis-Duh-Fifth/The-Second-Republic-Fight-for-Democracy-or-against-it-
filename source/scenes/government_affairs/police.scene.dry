@@ -63,7 +63,7 @@ on-arrival: censorship += 1
 We censor publications calling for the overthrow of the Republic, regardless of idiological position. We censor Monarchist, Anarchist, Communist, and Reactionary publications. [? if spanish_lenin = 1: Even some of our more radicalized pieces of media suffer censorship?]. Even if there are protests everywhere (and some of our allies to our left grumble), however forces supportive of the Republic applaud enthusiastically, and even the center right is supportive.  
 
 @censorship_right
-on-arrival: censorship += 2 censorship_partisian += 3
+on-arrival: censorship += 2; censorship_partisian += 3
 
 We censor Rightist publications, even moderate ones. From moderate chrisitian democrats to far right monarchists we curtail their publications, dissalowing excessivly critical articles, crypto monarchist or clericalists ones, etc. This is supported by our centerleft and those to our left but the center and center right republicans are agitated while this has had a radicalizing effect on the right in general.
 
