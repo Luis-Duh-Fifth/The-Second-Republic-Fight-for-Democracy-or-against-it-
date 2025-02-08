@@ -52,7 +52,7 @@ The Republic has ample laws permitting the censorship and supression of publicat
 -@censorship_right: We will censor the right as a whole, wether Monarchists, Catholics, or whatever. This is a Republic of the left only.
 -@relax_censorship: Perhaps the censorship we have is excessive, we are supposed to be a break from the censorship of the Alfonsine kingdom, yet our curtailing of freedom of speech is widely considered to be excessive and partisian.
 
-@censorship_far_right:
+@censorship_far_right
 on-arrival: censorship += 1; censorship_partisian += 1
 
 We censor and supress various articles and figures of the far right, on grounds of clericalism, calling for the overthrow of the Republic or other reasons. The right critizices our lack of censorship towards far left calls to overthrow the Republic but our center left allies approve.
