@@ -17,7 +17,7 @@ As the army, the police has a strong reactionary presences, nontheless there are
 - @censorship: We will carry out censorship of hostile publications.
 - @investigate_far_right: Investigate illegal activity among the far right.
 - @domestic_enemies: Investigate or ban our domestic enemies.
-- @censorship: We will carry out censorship of hostile publications.
+- @do_censorship: We will carry out censorship of hostile publications.
 - @deport_hitler
 - @root: Take no action for now.
 - @easy_discard
@@ -43,7 +43,7 @@ Corruption in big business is rampant, of course. We have uncovered a number of 
 
 Unfortunately, our investigations have failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
 
-@censorship
+@do_censorship
 
 The Republic has ample laws permitting the censorship and supression of publications hostile of it. However, there are many concerns on if they violating freedom of speech and many consider our laws to be concerningly authoritarian. The question remains, how do we use these powers?
 
