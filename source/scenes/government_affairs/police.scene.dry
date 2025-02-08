@@ -49,7 +49,7 @@ The Republic has ample laws permitting the censorship and supression of publicat
 -@censorship_far_right: Censor the publications on the far right, Monarchists, Fascists and Reactionaries calling for the end of the Republic.
 -@censorship_extremes: We will use the laws to censor only publications calling for the violent overthrow of the Republic.
 -@censorship_right: We will censor the right as a whole, wether Monarchists, Catholics, or whatever. This is a Republic of the Republicans only.
--@relax_censorship: Perhaps the censorship we have is excessive, our curtailing of freedom of speech is widely considered to be excessive and partisian.
+-@relax_censorship: Perhaps the censorship we have is excessive, our curtailing of freedom of speech is concerning [? if censorship_partisian > 0 : while also considered to be excessively partisian ?] .
 
 @censorship_far_right
 on-arrival: censorship += 1; censorship_partisian += 1
@@ -67,7 +67,7 @@ on-arrival: censorship += 2; censorship_partisian += 3
 We censor Rightist publications, even moderate ones. From moderate chrisitian democrats to far right monarchists we curtail their publications, dissalowing excessivly critical articles, crypto monarchist or clericalists ones, etc. This is supported by our centerleft and those to our left but the center and center right republicans are agitated while this has had a radicalizing effect on the right in general.
 
 @relax_censorship
-view_if: censorship >= 0
+view_if: censorship > 0
 on-arrival: censorship -= 1
 
 We relax the censorship around the country, be it because it isnt necessary anymore, pragmatic concessions, idealism or otherwise. This move is generally supported everywhere, though some raise issue at their enemies being able to now publish more easily, we have calmed down concerns on freedom of speech.
