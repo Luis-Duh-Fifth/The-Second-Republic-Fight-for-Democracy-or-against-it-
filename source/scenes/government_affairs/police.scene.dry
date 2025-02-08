@@ -60,7 +60,7 @@ We censor and supress various articles and figures of the far right, on grounds 
 @censorship_extremes
 on-arrival: censorship += 1
 
-We censor publications calling for the overthrow of the Republic, regardless of idiological position. We censor Monarchist, Anarchist, Communist, and Reactionary publications. [? if president == spanish_lenin = 1: Even some of our more radicalized pieces of media suffer censorship?]. Even if there are protests everywhere (and some of our allies to our left grumble), however forces supportive of the Republic applaud enthusiastically, and even the center right is supportive.  
+We censor publications calling for the overthrow of the Republic, regardless of idiological position. We censor Monarchist, Anarchist, Communist, and Reactionary publications. [? if spanish_lenin = 1: Even some of our more radicalized pieces of media suffer censorship?]. Even if there are protests everywhere (and some of our allies to our left grumble), however forces supportive of the Republic applaud enthusiastically, and even the center right is supportive.  
 
 @censorship_right
 on-arrival: censorship += 2 censorship_partisian += 3
