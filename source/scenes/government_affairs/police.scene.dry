@@ -48,8 +48,8 @@ The Republic has ample laws permitting the censorship and supression of publicat
 
 -@censorship_far_right: Censor the publications on the far right, Monarchists, Fascists and Reactionaries calling for the end of the Republic.
 -@censorship_extremes: We will use the laws to censor only publications calling for the violent overthrow of the Republic.
--@censorship_right: We will censor the right as a whole, wether Monarchists, Catholics, or whatever. This is a Republic of the left only.
--@relax_censorship: Perhaps the censorship we have is excessive, we are supposed to be a break from the censorship of the Alfonsine kingdom, yet our curtailing of freedom of speech is widely considered to be excessive and partisian.
+-@censorship_right: We will censor the right as a whole, wether Monarchists, Catholics, or whatever. This is a Republic of the Republicans only.
+-@relax_censorship: Perhaps the censorship we have is excessive, our curtailing of freedom of speech is widely considered to be excessive and partisian.
 
 @censorship_far_right
 on-arrival: censorship += 1; censorship_partisian += 1
