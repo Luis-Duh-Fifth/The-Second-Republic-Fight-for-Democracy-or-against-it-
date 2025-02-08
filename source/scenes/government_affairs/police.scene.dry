@@ -14,10 +14,9 @@ As the army, the police has a strong reactionary presences, nontheless there are
 
 - @loyalty: Improve the loyalty of the Interior Ministry forces.
 - @investigate_corruption: Investigate corruption by big businesses.
-- @censorship: We will carry out censorship of hostile publications.
+- @do_censorship: We will carry out censorship of hostile publications.
 - @investigate_far_right: Investigate illegal activity among the far right.
 - @domestic_enemies: Investigate or ban our domestic enemies.
-- @do_censorship: We will carry out censorship of hostile publications.
 - @deport_hitler
 - @root: Take no action for now.
 - @easy_discard
