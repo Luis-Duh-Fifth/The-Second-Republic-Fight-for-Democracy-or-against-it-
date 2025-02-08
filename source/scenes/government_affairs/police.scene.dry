@@ -8,14 +8,16 @@ card-image: img/portraits/SeveringCarl.jpg
 
 = Internal Security
 
-The Interior Ministry controls internal security throughout the German Republic. While most police work is delegated to the states, the national security agency can perform special investigations.
+The Ministerio de Gobernacion (Interior Ministry) controls internal security throughout the Spanish Republic.
 
-As with the state police units and the Reichswehr, the internal police tends to be reactionary, and has serious issues with loyalty to the elected government of the Republic.
+As the army, the police has a strong reactionary presences, nontheless there are also stronger loyalist portions, especially concentrated in the new Assault Guard. The other security institutions, like the National Police and the Civil Guard, nontheless have strong reactionary presence, and many components and oficcers have serious issues with loyalty to the elected government of the Republic.
 
 - @loyalty: Improve the loyalty of the Interior Ministry forces.
 - @investigate_corruption: Investigate corruption by big businesses.
+- @censorship: We will carry out censorship of hostile publications.
 - @investigate_far_right: Investigate illegal activity among the far right.
 - @domestic_enemies: Investigate or ban our domestic enemies.
+- @censorship: We will carry out censorship of hostile publications.
 - @deport_hitler
 - @root: Take no action for now.
 - @easy_discard
@@ -23,7 +25,7 @@ As with the state police units and the Reichswehr, the internal police tends to 
 @loyalty
 on-arrival: interior_police_loyalty += 0.1
 
-As with the Prussian state police, there are measures we can take to root out reactionary and anti-democratic sentiment in the police. We can improve training and recruiting procedures, and identify and remove known fascists and the like.
+There are measures we can take to root out reactionary and anti-democratic sentiment in the police. We can improve training and recruiting procedures, and identify and remove known reactionaries and the like.
 
 Current interior police loyalty: [+ interior_police_loyalty : loyalty +]
 
@@ -40,6 +42,37 @@ Corruption in big business is rampant, of course. We have uncovered a number of 
 @investigate_corruption_failure
 
 Unfortunately, our investigations have failed to turn up anything. Rumors are that the targets of our investigation were tipped off by infiltrators within the police.
+
+@censorship
+
+The Republic has ample laws permitting the censorship and supression of publications hostile of it. However, there are many concerns on if they violating freedom of speech and many consider our laws to be concerningly authoritarian. The question remains, how do we use these powers?
+
+-@censorship_extreme_right: Censor the publications on the far right, Monarchists, Fascists and Reactionaries calling for the end of the Republic.
+-@censorship_extremes: We will use the laws to censor only publications calling for the violent overthrow of the Republic.
+-@censorship_right: We will censor the right as a whole, wether Monarchists, Catholics, or whatever. This is a Republic of the left only.
+-@relax_censorship: Perhaps the censorship we have is excessive, we are supposed to be a break from the censorship of the Alfonsine kingdom, yet our curtailing of freedom of speech is widely considered to be excessive and partisian.
+
+@censorship_extreme_right:
+on-arrival: censorship += 1; censorship_partisian += 1
+
+We censor and supress various articles and figures of the far right, on grounds of clericalism, calling for the overthrow of the Republic or other reasons. The right critizices our lack of censorship towards far left calls to overthrow the Republic but our center left allies approve.
+
+@censorship_extremes
+on-arrival: censorship += 1
+
+We censor publications calling for the overthrow of the Republic, regardless of idiological position. We censor Monarchist, Anarchist, Communist, and Reactionary publications. [? if president == spanish_lenin = 1: Even some of our more radicalized pieces of media suffer censorship?]. Even if there are protests everywhere (and some of our allies to our left grumble), however forces supportive of the Republic applaud enthusiastically, and even the center right is supportive.  
+
+@censorship_right
+on-arrival: censorship += 2 censorship_partisian += 3
+
+We censor Rightist publications, even moderate ones. From moderate chrisitian democrats to far right monarchists we curtail their publications, dissalowing excessivly critical articles, crypto monarchist or clericalists ones, etc. This is supported by our centerleft and those to our left but the center and center right republicans are agitated while this has had a radicalizing effect on the right in general.
+
+@relax_censorship
+view_if: censorship >= 0
+on-arrival: censorship -= 1
+
+We relax the censorship around the country, be it because it isnt necessary anymore, pragmatic concessions, idealism or otherwise. This move is generally supported everywhere, though some raise issue at their enemies being able to now publish more easily, we have calmed down concerns on freedom of speech.
+
 
 @investigate_far_right
 go-to: investigate_far_right_success if interior_police_loyalty >= 0.55; investigate_far_right_failure if interior_police_loyalty < 0.55

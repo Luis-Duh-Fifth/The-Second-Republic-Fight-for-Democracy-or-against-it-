@@ -16,7 +16,7 @@
     // Add your custom code here.
   };
 
-  var TITLE = "The Second Republic, the Fight for Democracy" + '_' + "LuisDuhFifth";
+  var TITLE = "The Second Republic, the Fight for Democracy (Or Against it)" + '_' + "LuisDuhFifth";
 
   // the url is a link to game.json
   // TODO; 

@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= The Second-Republic Fight for Democracy or against it.
+= The Second-Republic Fight for Democracy (or Against it).
 
 @start_menu_2
 
@@ -50,7 +50,7 @@ Q.left_dissent = 20;
 Q.center_strength = 30;
 Q.center_dissent = 0;
 
-// secret events...
+// If other parties collaborate with us and if we have split
 Q.cnt_fai_rejects = 1;
 Q.pce_rejects = 1
 Q.centrists_resign = 0;
@@ -405,6 +405,9 @@ Q.judicial_reform = 0;
 Q.bureaucratic_reform = 0;
 Q.military_reform = 0;
 Q.womens_rights = 0;
+// how harsh is our censorship?
+Q.censorship = 0;
+Q.censorship_partisian = 0;
 // level of welfare relative to 1931 (can go negative)
 Q.welfare = 0;
 // level of support for farmers
@@ -567,13 +570,15 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/Background.webp
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *"We all fit in the Republic, no one is banned for their ideas; but the Republic will be republican, that is, designed and governed by republicans, new or old, who all accept the doctrine that bases the State on freedom of conscience, on equality before the law, on free discussion, on the predominance of the will of the majority, freely expressed. The Republic will be democratic, or it will not be."*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Manuel Azaña, Speech in Madrid, 28, September, 1930
 
 This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
 
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+For more information on the politics and government of the Spanish Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
+
+This is an overhaul mod to SD:AAH, by Autumn Chen, thank her for making it all possible.
 
 - @1931_easy: Begin (easy difficulty)
 - @1931_main: Begin (normal difficulty)
