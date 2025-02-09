@@ -68,7 +68,7 @@ We censor Rightist publications, even moderate ones. From moderate chrisitian de
 
 @relax_censorship
 view_if: censorship > 0
-on-arrival: censorship -= 1 pro_republic += 1; rural_ceda += 1 ceda_relation += 1
+on-arrival: censorship -= 1 pro_republic += 1; rural_ceda += 1; ceda_relation += 1
 
 We relax the censorship around the country, be it because it isnt necessary anymore, pragmatic concessions, idealism or otherwise. This move is generally supported everywhere, though some raise issue at their enemies being able to now publish more easily, we have calmed down concerns on freedom of speech.
 
