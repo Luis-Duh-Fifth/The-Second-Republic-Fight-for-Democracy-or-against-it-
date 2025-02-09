@@ -52,23 +52,23 @@ The Republic has ample laws permitting the censorship and supression of publicat
 -@relax_censorship: Perhaps the censorship we have is excessive, our curtailing of freedom of speech is concerning [? if censorship_partisian > 0 : while also considered to be excessively partisian ?] .
 
 @censorship_far_right
-on-arrival: censorship += 1; censorship_partisian += 1
+on-arrival: censorship += 1; censorship_partisian += 1; landholders_re_ct -= 1; new_middle_fe_jons -= 1; pro_republic += 1; izqd_rep_relation += 1;
 
 We censor and supress various articles and figures of the far right, on grounds of clericalism, calling for the overthrow of the Republic or other reasons. The right critizices our lack of censorship towards far left calls to overthrow the Republic but our center left allies approve.
 
 @censorship_extremes
-on-arrival: censorship += 1
+on-arrival: censorship += 1; unemployed_pce -= 1; rural_cnt_fai -= 1; landholders_re_ct -= 1; new_middle_fe_jons -= 1; pro_republic += 2; izqd_rep_relation += 2; prp_relation += 2; prr_relation += 2
 
 We censor publications calling for the overthrow of the Republic, regardless of idiological position. We censor Monarchist, Anarchist, Communist, and Reactionary publications. [? if spanish_lenin = 1: Even some of our more radicalized pieces of media suffer censorship?]. Even if there are protests everywhere (and some of our allies to our left grumble), however forces supportive of the Republic applaud enthusiastically, and even the center right is supportive.  
 
 @censorship_right
-on-arrival: censorship += 2; censorship_partisian += 3
+on-arrival: censorship += 2; censorship_partisian += 3; landholders_re_ct -= 1; new_middle_fe_jons -= 1; rural_ceda  -= 1; pro_republic -= 1; prr_relation -= 2; prp_relation -= 2; izqd_rep_relation += 2; pce_relation += 2; cnt_fai_relation +=2
 
 We censor Rightist publications, even moderate ones. From moderate chrisitian democrats to far right monarchists we curtail their publications, dissalowing excessivly critical articles, crypto monarchist or clericalists ones, etc. This is supported by our centerleft and those to our left but the center and center right republicans are agitated while this has had a radicalizing effect on the right in general.
 
 @relax_censorship
 view_if: censorship > 0
-on-arrival: censorship -= 1
+on-arrival: censorship -= 1 pro_republic += 1; rural_ceda += 1 ceda_relation += 1
 
 We relax the censorship around the country, be it because it isnt necessary anymore, pragmatic concessions, idealism or otherwise. This move is generally supported everywhere, though some raise issue at their enemies being able to now publish more easily, we have calmed down concerns on freedom of speech.
 

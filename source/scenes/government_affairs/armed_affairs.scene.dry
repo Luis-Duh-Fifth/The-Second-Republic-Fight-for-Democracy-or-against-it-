@@ -1,16 +1,16 @@
-title: The Prussian Bulwark
+title: Of the forces of the state.
 new-page: true
 is-card: true
-view-if: psoe_prussia = 1 and prussian_affairs_timer <= 0
-on-arrival: prussian_affairs_timer += 6; month_actions += 1
+view-if: armed_affairs_timer <= 0 and interior_minister_party = psoe; 
+on-arrival: armed_affairs_timer += 6; month_actions += 1
 tags: govt_affairs
 card-image: img/braun.jpg
 
 = Prussian Affairs
 
-Prussia, by far the largest and most important state in Germany, is governed by our party, in a coalition with the Center and Democratic parties. It is the most stable and democratic state government in Germany, led by the able Manuel Azaña.
+The institutions of order of the Spanish Republic can be divided in National Police, Civil Guard, Assault Guard, the Army, and the Navy. Theres also the matter of the paramilitaries and such. They all have conflicting and complicated relations both to us and to the 
 
-We can enact policies in Prussia.
+We can enact policies onto the institutions of order.
 
 - @police_loyalty: Bolster the loyalty of the police.
 - @police_strength: Recruit additional police.
