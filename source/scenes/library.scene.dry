@@ -197,9 +197,9 @@ Militarization: [+ sa_militancy : militancy +]
 
 Loyalty: [+ reichswehr_loyalty : loyalty +]
 
-**Prussian police**: [+ prussian_police_strength +] thousand members.
+**Prussian police**: [+ assault_guard_strength +] thousand members.
 
-Loyalty: [+ prussian_police_loyalty : loyalty +]
+Loyalty: [+ assault_guard_loyalty : loyalty +]
 
 
 

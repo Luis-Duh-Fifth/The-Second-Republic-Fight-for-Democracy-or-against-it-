@@ -24,21 +24,30 @@ With the ministry of Gobernation can enact policies onto the institutions of ord
 - @easy_discard
 
 @police_loyalty
-view-if: prussian_police_loyalty < 1
-on-arrival: prussian_police_loyalty += 0.1
+view-if: assault_guard_loyalty < 1
+on-arrival: assault_guard_loyalty += 0.1
 
 # increase police loyalty
 The police have historically been overrun with reactionaries, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
 
-Current police loyalty: [+ prussian_police_loyalty : loyalty +].
+Current police loyalty: [+ assault_guard_loyalty : loyalty +].
 
 @police_strength
-on-arrival: prussian_police_strength += 20
+on-arrival: assault_guard_strength += 20
 
 We have increased the size of the Prussian police.
 
+@GA_loyalty
+
+@GA_strength
+
+@GC_loyalty
+
+@GA_strength
+
 @bureaucracy
-on-arrival: prussian_police_loyalty += 0.05; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); new_middle_psoe += 2*(1-dissent) if democratization >= 3; new_middle_psoe += 2*(1-dissent) if democratization >= 4; coup_progress += 0.5
+on-arrival: assault_guard_loyalty += 0.05; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); new_middle_psoe += 2*(1-dissent) if democratization >= 3; new_middle_psoe += 2*(1-dissent) if democratization >= 4; coup_progress += 0.5
 
 The bureaucracy is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on individual freedoms, but perhaps the security of the republic requires it.
 
+@interior_restructuring

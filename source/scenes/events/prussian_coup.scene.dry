@@ -28,7 +28,7 @@ The Reichswehr and Stahlhelm are already surrounding Berlin, and the SA is suppo
 - @surrender
 
 @defend_2
-on-arrival: resist_coup = 1; defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += prussian_police_strength*prussian_police_militancy*prussian_police_loyalty if psoe_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; enemy_strength += reichswehr_strength*reichswehr_militancy*(1-reichswehr_loyalty)/2; defense_strength += workers_psoe_normalized*(2 - dissent)*(2 - unemployed/100);
+on-arrival: resist_coup = 1; defense_strength = rb_strength*rb_militancy*(1-dissent/2); defense_strength += assault_guard_strength*assault_guard_militancy*assault_guard_loyalty if psoe_prussia; enemy_strength = sa_strength*sa_militancy + sh_strength*sh_militancy; enemy_strength += reichswehr_strength*reichswehr_militancy*(1-reichswehr_loyalty)/2; defense_strength += workers_psoe_normalized*(2 - dissent)*(2 - unemployed/100);
 go-to: defend_2_civil_war if defense_strength < enemy_strength; defend_2_victory if defense_strength >= enemy_strength
 
 @defend_2_victory

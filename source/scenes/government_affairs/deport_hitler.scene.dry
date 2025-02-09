@@ -21,7 +21,7 @@ When the police approach, he is surrounded by his SA guards, preventing him from
 
 @force_approach
 on-arrival: {!
-var total_allied_strength = Q.rb_strength*Q.rb_militancy + Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty;
+var total_allied_strength = Q.rb_strength*Q.rb_militancy + Q.assault_guard_strength*Q.assault_guard_militancy*Q.assault_guard_loyalty;
 var enemy_strength = Q.sa_strength*Q.sa_militancy;
 console.log('Deporting Hitler - force approach');
 console.log(total_allied_strength, enemy_strength);

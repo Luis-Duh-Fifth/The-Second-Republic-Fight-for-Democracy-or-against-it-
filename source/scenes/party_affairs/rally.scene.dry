@@ -17,7 +17,7 @@ The Nazi SA has disrupted our rally! Their street troops are preventing us from 
 
 @police_protect
 view-if: psoe_prussia == 1
-on-arrival: police_protect_success = prussian_police_loyalty * prussian_police_militancy * prussian_police_strength - sa_militancy*sa_strength;
+on-arrival: police_protect_success = assault_guard_loyalty * assault_guard_militancy * assault_guard_strength - sa_militancy*sa_strength;
 go-to: police_protect_win if police_protect_success >= 0; police_protect_lose if police_protect_success < 0
 
 @police_protect_win

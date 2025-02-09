@@ -27,9 +27,9 @@ if (Q.dissent > 0.15) {
     Q.rb_power *= (1 - Q.dissent/1.5);
 }
 Q.total_power += Q.rb_power;
-Q.prussian_police_power = Q.prussian_police_strength*Q.prussian_police_militancy*Q.prussian_police_loyalty;
+Q.assault_guard_power = Q.assault_guard_strength*Q.assault_guard_militancy*Q.assault_guard_loyalty;
 if (Q.psoe_prussia) {
-    Q.total_power += Q.prussian_police_power;
+    Q.total_power += Q.assault_guard_power;
 }
 if (Q.reichswehr_loyalty < 0) {
     Q.reichswehr_loyalty = 0;
@@ -87,7 +87,7 @@ go-to: war_menu
 
 = The Array of Forces
 
-Our enemies are the nationalist Stahlhelm, with [+ sh_strength +] thousand troops, and the Nazi SA, with [+ sa_strength +] thousand troops. The loyalties of the Reichswehr, with its [+ reichswehr_strength +] thousand regular soldiers, and Prussian police, with [+ prussian_police_strength +] thousand members, are unclear.
+Our enemies are the nationalist Stahlhelm, with [+ sh_strength +] thousand troops, and the Nazi SA, with [+ sa_strength +] thousand troops. The loyalties of the Reichswehr, with its [+ reichswehr_strength +] thousand regular soldiers, and Prussian police, with [+ assault_guard_strength +] thousand members, are unclear.
 
 [? if chancellor_party == "PCE" or president == "Thälmann" : The PCE's paramilitary, the RFB, is leading the battle, and we are their co-combatants. ?]
 
@@ -138,7 +138,7 @@ go-to: war_menu
 on-arrival: war_choices += 1
 view-if: psoe_prussia = 1
 
-Since we still control the Prussian government, we can call upon the Prussian police. [? if prussian_police_loyalty < 0.4 : Unfortunately, the police are politically unreliable at best. ?][? if prussian_police_loyalty >= 0.4 and prussian_police_loyalty < 0.65 : In this crucial hour, the Prussian police are split, with about half actively supporting our efforts. ?][? if prussian_police_loyalty >= 0.65 : Most join in supporting our efforts. Our efforts in cultivating republican loyalties in the police have proven their worth. ?]
+Since we still control the Prussian government, we can call upon the Prussian police. [? if assault_guard_loyalty < 0.4 : Unfortunately, the police are politically unreliable at best. ?][? if assault_guard_loyalty >= 0.4 and assault_guard_loyalty < 0.65 : In this crucial hour, the Prussian police are split, with about half actively supporting our efforts. ?][? if assault_guard_loyalty >= 0.65 : Most join in supporting our efforts. Our efforts in cultivating republican loyalties in the police have proven their worth. ?]
 
 
 
