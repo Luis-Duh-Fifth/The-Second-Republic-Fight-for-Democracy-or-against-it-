@@ -18,8 +18,8 @@ title: Prussian Bulwark
 subtitle: Severing has influence over Prussian politics.
 choose-if: advisor_action_timer <= 0 and psoe_prussia = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_prussia : The PSOE is not in control of Prussia. ?]
-on-arrival: advisor_action_timer = 6; armed_affairs_timer -= 6
-go-to: armed_affairs
+on-arrival: advisor_action_timer = 6; security_affairs_timer -= 6
+go-to: security_affairs
 
 
 @police_affairs

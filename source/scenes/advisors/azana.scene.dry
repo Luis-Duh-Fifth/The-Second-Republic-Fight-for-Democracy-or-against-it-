@@ -28,8 +28,8 @@ title: The Prussian Bulwark
 subtitle: As the Minister-President of Prussia, Azaña has power over the Prussian bureaucracy and security services.
 choose-if: advisor_action_timer <= 0 and psoe_prussia = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if psoe_prussia == 0 : The PSOE does not control Prussia. ?]
-on-arrival: advisor_action_timer = 6; armed_affairs_timer -= 6
-go-to: armed_affairs
+on-arrival: advisor_action_timer = 6; security_affairs_timer -= 6
+go-to: security_affairs
 
 @snap_election
 title: Snap Election

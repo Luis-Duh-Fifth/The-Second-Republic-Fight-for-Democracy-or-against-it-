@@ -1,0 +1,44 @@
+title: Security Forces of the State.
+new-page: true
+is-card: true
+view-if: security_affairs_timer <= 0
+on-arrival: security_affairs_timer += 6; month_actions += 1
+tags: govt_affairs
+card-image: img/braun.jpg
+
+= Interior Forces Affairs
+
+The security forces of the Spanish Republic can be divided in National Police, Civil Guard and the Assault Guard. With the army Army and Navy hanging in the background. They all have conflicting and complicated relations both to us, to each other and to the Republic. 
+
+With the ministry of Gobernation can enact policies onto the institutions of order, to balance them, reorganize them, or perhaps even do fundamental restructurings.
+
+- @police_loyalty: Bolster the loyalty of the National Police.
+- @police_strength: Recruit additional National Police.
+- @GA_loyalty: Bolster the loyalty of the Assault Guard.
+- @GA_strength: Recruit additional Assault Guards.
+- @GC_loyalty: Bolster the loyalty of the Civil Guard.
+- @GC_strength: Recruit additional Civil Guards.
+- @bureaucracy: Purge the interior bureaucracy of reactionary elements.
+- @interior_restructuring: Restructure the compositions and jurisdictions of the security forces.
+- @root: No new policies are needed.
+- @easy_discard
+
+@police_loyalty
+view-if: prussian_police_loyalty < 1
+on-arrival: prussian_police_loyalty += 0.1
+
+# increase police loyalty
+The police have historically been overrun with reactionaries, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
+
+Current police loyalty: [+ prussian_police_loyalty : loyalty +].
+
+@police_strength
+on-arrival: prussian_police_strength += 20
+
+We have increased the size of the Prussian police.
+
+@bureaucracy
+on-arrival: prussian_police_loyalty += 0.05; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); new_middle_psoe += 2*(1-dissent) if democratization >= 3; new_middle_psoe += 2*(1-dissent) if democratization >= 4; coup_progress += 0.5
+
+The bureaucracy is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on individual freedoms, but perhaps the security of the republic requires it.
+
