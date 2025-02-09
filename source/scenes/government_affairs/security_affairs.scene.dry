@@ -43,7 +43,7 @@ We have increased the size of the Prussian police.
 
 @GC_loyalty
 
-@GA_strength
+@GC_strength
 
 @bureaucracy
 on-arrival: assault_guard_loyalty += 0.05; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); new_middle_psoe += 2*(1-dissent) if democratization >= 3; new_middle_psoe += 2*(1-dissent) if democratization >= 4; coup_progress += 0.5
