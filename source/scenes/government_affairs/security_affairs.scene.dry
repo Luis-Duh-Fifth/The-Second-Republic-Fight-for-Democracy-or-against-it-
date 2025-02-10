@@ -15,11 +15,11 @@ The competences of the respective security forces are as followed: The Civil Gua
 With the ministry of Gobernation can enact policies onto the institutions of order, to balance them, reorganize them, or perhaps even do fundamental restructurings.
 
 - @police_loyalty: Bolster the loyalty of the National Police.
-- @police_strength: Recruit additional National Police.
+- @police_strength: Strengthen the Police.
 - @GA_loyalty: Bolster the loyalty of the Assault Guard.
-- @GA_strength: Recruit additional Assault Guards.
+- @GA_strength: Strengthen the Assault Guards.
 - @GC_loyalty: Bolster the loyalty of the Civil Guard.
-- @GC_strength: Recruit additional Civil Guards.
+- @GC_strength: Strengthen the Civil Guards.
 - @bureaucracy: Purge the interior bureaucracy of reactionary elements.
 - @interior_restructuring: Restructure the compositions and jurisdictions of the security forces.
 - @root: No new policies are needed.
@@ -35,9 +35,9 @@ The police have historically had strong reactionary tendencies, and we are tryin
 Current police loyalty: [+ police_loyalty: loyalty +].
 
 @police_strength
-on-arrival: police_strength += 10
+on-arrival: police_strength += 5; police_loyalty += 0.05; civil_guard_loyalty -= 0.05; assault_guard_loyalty -= 0.05
 
-We have increased the size of the police.
+We increase the power and competences of the Police. They are pleased at this development and take on their new competences with renowed vigour, the Assault Guard and Civil Guard at not thrilled at their loss of competences.
 
 @GA_loyalty
 view-if: assault_guard_loyalty < 1
@@ -64,6 +64,8 @@ Current Civil Guard loyalty: [+ civil_guard_loyalty : loyalty +].
 
 @GC_strength
 on-arrival: civil_guard_strength += 5; civil_guard_loyalty += 0.05; police_loyalty -= 0.05; assault_guard_loyalty = -0.05
+
+We increase the power and competences of the Civil Guard. They are pleased at this development and take on their new competences with renowed vigour, the Police and Assault Guard at not thrilled at their loss of competences.
 
 @bureaucracy
 on-arrival: assault_guard_loyalty += 0.02; civil_guard_loyalty += 0.02; police_loyalty += 0.02; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); coup_progress += 0.5
