@@ -79,7 +79,7 @@ if (Q.new_middle_psoe_normalized && Q.new_middle_psoe_normalized >= 50) {
 if (Q.rural_psoe_normalized && Q.rural_psoe_normalized >= 50) {
     this.achieve('bauernrevolution');
 }
-if (Q.catholics_psoe_normalized && Q.catholics_psoe_normalized >= 50) {
+if (Q.minorities_psoe_normalized && Q.minorities_psoe_normalized >= 50) {
     this.achieve('katholischer_sozialismus');
 }
 // Räterepublik - begin the transformation to a socialist economy.

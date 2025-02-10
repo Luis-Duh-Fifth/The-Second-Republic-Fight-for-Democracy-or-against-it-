@@ -113,7 +113,7 @@ Rural: PSOE: [+ rural_psoe_normalized +]%, CNT_FAI: [+ rural_cnt_fai_normalized 
 
 Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, CNT_FAI: [+ unemployed_cnt_fai_normalized +]%, PCE: [+ unemployed_pce_normalized +]%, ERC: [+ unemployed_erc_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, RE_CT: [+ unemployed_re_ct_normalized +]%, FE_JONS: [+ unemployed_fe_jons_normalized +]%, PRR: [+ unemployed_prr_normalized +]%
 
-Catholics: PSOE: [+ catholics_psoe_normalized +]%, CNT_FAI: [+ catholics_cnt_fai_normalized +]%, PCE: [+ catholics_pce_normalized +]%, ERC: [+ catholics_erc_normalized +]%, IR: [+ catholics_izqd_rep_normalized +]%, PRP: [+ catholics_prp_normalized +]%; CEDA: [+ catholics_ceda_normalized +]%, RE_CT: [+ catholics_re_ct_normalized +]%, FE_JONS: [+ catholics_fe_jons_normalized +]%, PRR: [+ catholics_prr_normalized +]%
+Minorities: PSOE: [+ minorities_psoe_normalized +]%, CNT_FAI: [+ minorities_cnt_fai_normalized +]%, PCE: [+ minorities_pce_normalized +]%, ERC: [+ minorities_erc_normalized +]%, IR: [+ minorities_izqd_rep_normalized +]%, PRP: [+ minorities_prp_normalized +]%; CEDA: [+ minorities_ceda_normalized +]%, RE_CT: [+ minorities_re_ct_normalized +]%, FE_JONS: [+ minorities_fe_jons_normalized +]%, PRR: [+ minorities_prr_normalized +]%
 
 @parties
 go-to: menu

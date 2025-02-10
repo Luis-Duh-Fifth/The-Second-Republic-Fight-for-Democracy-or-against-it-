@@ -54,7 +54,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @support_alcala_zamora: Support Alcala Zamora instead.
 
 @support_thalmann_2
-on-arrival: psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; erc_relation -= 15; prp_relation -= 15
+on-arrival: psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; minorities_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; erc_relation -= 15; prp_relation -= 15
 
 Fine. We have thrown our support to Chairman Thälmann of the PCE.
 
@@ -365,7 +365,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: azana_campaign = 0; psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; erc_relation -= 15; prp_relation -= 15
+on-arrival: azana_campaign = 0; psoe_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; minorities_psoe -= 5; workers_psoe -= 3; pce_relation += 10; communist_coalition += 2; erc_relation -= 15; prp_relation -= 15
 on-departure: erc_support_azana = 0; pce_support_azana = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the PCE.

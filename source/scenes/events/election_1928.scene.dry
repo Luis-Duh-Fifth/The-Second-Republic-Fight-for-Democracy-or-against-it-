@@ -26,7 +26,7 @@ Since we are currently ruling as part of an emergency government, we may use qua
 - @election_algorithm: No, let's hold the elections.
 
 @cancel_elections_2
-on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; prp_relation -= 8; erc_relation -= 8; izqd_rep_relation -= 10; pce_relation -= 8; coup_progress += 2; workers_psoe -= 4; new_middle_psoe -= 5; landholders_psoe -= 5; rural_psoe -= 5; catholics_psoe -= 5; unemployed_psoe -= 5; coup_progress += 2 if fe_jons_normalized >= 0.3; coup_progress += 2 if fe_jons_normalized + ceda_normalized >= 0.5
+on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; prp_relation -= 8; erc_relation -= 8; izqd_rep_relation -= 10; pce_relation -= 8; coup_progress += 2; workers_psoe -= 4; new_middle_psoe -= 5; landholders_psoe -= 5; rural_psoe -= 5; minorities_psoe -= 5; unemployed_psoe -= 5; coup_progress += 2 if fe_jons_normalized >= 0.3; coup_progress += 2 if fe_jons_normalized + ceda_normalized >= 0.5
 achievement: ausnahmezustand
 
 Fine. President [+ president +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_election_month : month +] [+ next_election_year +].
@@ -837,7 +837,7 @@ Q.workers_psoe -= 3;
 Q.new_middle_psoe -= 3;
 Q.landholders_psoe -= 3;
 Q.rural_psoe -= 3;
-Q.catholics_psoe -= 3;
+Q.minorities_psoe -= 3;
 Q.workers_fe_jons += 5;
 Q.landholders_fe_jons += 3;
 Q.new_middle_fe_jons += 3;
@@ -851,7 +851,7 @@ if (Q.pro_republic < 40) {
     Q.new_middle_psoe -= 5;
     Q.landholders_psoe -= 5;
     Q.rural_psoe -= 5;
-    Q.catholics_psoe -= 3;
+    Q.minorities_psoe -= 3;
     Q.workers_fe_jons += 5;
     Q.landholders_fe_jons += 5;
     Q.new_middle_fe_jons += 5;
@@ -966,7 +966,7 @@ Q.workers_psoe -= 5;
 Q.new_middle_psoe -= 5;
 Q.landholders_psoe -= 5;
 Q.rural_psoe -= 5;
-Q.catholics_psoe -= 3;
+Q.minorities_psoe -= 3;
 Q.new_middle_prp -= 8;
 Q.landholders_prp -= 8;
 Q.new_middle_izqd_rep -= 5;
@@ -986,7 +986,7 @@ if (Q.pro_republic < 45) {
     Q.new_middle_psoe -= 5;
     Q.landholders_psoe -= 5;
     Q.rural_psoe -= 5;
-    Q.catholics_psoe -= 3;
+    Q.minorities_psoe -= 3;
     Q.workers_fe_jons += 10;
     Q.landholders_fe_jons += 10;
     Q.new_middle_fe_jons += 10;
@@ -1160,7 +1160,7 @@ go-to: right_coalition_post_psoe if right_coalition >= 50 and president != "Aza�
 
 
 @right_coalition_post_psoe
-on-arrival: chancellor = "Brüning"; new_middle_psoe -= 3; landholders_psoe -= 2; workers_psoe -= 2; catholics_psoe -= 4; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; 
+on-arrival: chancellor = "Brüning"; new_middle_psoe -= 3; landholders_psoe -= 2; workers_psoe -= 2; minorities_psoe -= 4; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; 
 
 There are enough votes to form a right-wing coalition of the Z, PRP, CEDA, and various minor parties, essentially replicating the previous Marx government. However, the CEDA is very reluctant to join the government[? if year <= 1928 : , as it had just exited from a coalition with the Center. ?][? if year > 1928 : , as its leader, Alfred Hugenberg, is against the very existence of parliamentary democracy, and is unwilling to join such a coalition anymore. ?]
 
@@ -1168,7 +1168,7 @@ Chancellor Heinrich Brüning of the Center Party currently rules on an emergency
 
 
 @new_elections_psoe
-on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; new_middle_psoe -= 5; landholders_psoe -= 5; workers_psoe -= 3; catholics_psoe -= 3; in_election = 1
+on-arrival: next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year = year + 1 if next_election_month > 12; next_election_month = next_election_month - 12 if next_election_month > 12; new_middle_psoe -= 5; landholders_psoe -= 5; workers_psoe -= 3; minorities_psoe -= 3; in_election = 1
 
 Since the remaining bourgeois and right-wing parties cannot form a tolerable governing agreement, new elections have been called for [+ next_election_month : month +] [+ next_election_year +]. The previous chancellor has resigned, and has been replaced by Heinrich Brüning, also of the Center Party, ruling as part of a presidential cabinet. 
 

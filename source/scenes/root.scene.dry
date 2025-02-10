@@ -139,9 +139,9 @@ Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
 Q.rfb_banned_prussia = 0;
 
-Q.national_police_strength = 50;
-Q.national_police_militancy = 1;
-Q.national_police_loyalty = 0.45;
+Q.police_strength = 50;
+Q.police_militancy = 1;
+Q.police_loyalty = 0.45;
 
 Q.assault_guard_strength = 90;
 Q.assault_guard_militancy = 1;
@@ -198,7 +198,7 @@ Q.new_middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 8.6;
-Q.catholics = 30;
+Q.minorities = 30;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
@@ -216,7 +216,7 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'minorities'];
 Q.parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'ceda', 're_ct', 'fe_jons'];
 
 // TODO: add 'sapd' later on
@@ -279,16 +279,16 @@ Q.unemployed_ceda = 5;
 Q.unemployed_re_ct = 9;
 Q.unemployed_fe_jons = 15;
 
-Q.catholics_psoe = 15;
-Q.catholics_cnt_fai = 15;
-Q.catholics_pce = 5;
-Q.catholics_erc = 50;
-Q.catholics_izqd_rep = 0;
-Q.catholics_prp = 5;
-Q.catholics_prr = 10;
-Q.catholics_ceda = 5;
-Q.catholics_re_ct = 10;
-Q.catholics_fe_jons = 0;
+Q.minorities_psoe = 15;
+Q.minorities_cnt_fai = 15;
+Q.minorities_pce = 5;
+Q.minorities_erc = 50;
+Q.minorities_izqd_rep = 0;
+Q.minorities_prp = 5;
+Q.minorities_prr = 10;
+Q.minorities_ceda = 5;
+Q.minorities_re_ct = 10;
+Q.minorities_fe_jons = 0;
 
 
 // Current Cortes composition

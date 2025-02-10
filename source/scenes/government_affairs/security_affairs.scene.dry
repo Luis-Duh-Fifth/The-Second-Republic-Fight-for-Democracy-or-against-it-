@@ -10,6 +10,8 @@ card-image: img/braun.jpg
 
 The security forces of the Spanish Republic can be divided in National Police, Civil Guard and the Assault Guard. With the army Army and Navy hanging in the background. They all have conflicting and complicated relations both to us, to each other and to the Republic. 
 
+The competences of the respective security forces are as followed: The Civil Guard is tasked with the protection of the countryside and the smaller rural towns, it also has a mixed situation, being under both the Interior Ministry while the Ministry of War can influence or even order it in certain cases. The Assault Guard is our urban metropolitan force, tasked with dealing with unrest in metropolitan cities. Finally theres the Armed Police, tasked with keeping public buildings and functionaries, as well as official events, safe.
+
 With the ministry of Gobernation can enact policies onto the institutions of order, to balance them, reorganize them, or perhaps even do fundamental restructurings.
 
 - @police_loyalty: Bolster the loyalty of the National Police.
@@ -24,30 +26,50 @@ With the ministry of Gobernation can enact policies onto the institutions of ord
 - @easy_discard
 
 @police_loyalty
+view-if: police_loyalty < 1
+on-arrival: police_loyalty += 0.1
+
+# increase police loyalty
+The police have historically had strong reactionary tendencies, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
+
+Current police loyalty: [+ police_loyalty: loyalty +].
+
+@police_strength
+on-arrival: police_strength += 10
+
+We have increased the size of the police.
+
+@GA_loyalty
 view-if: assault_guard_loyalty < 1
 on-arrival: assault_guard_loyalty += 0.1
 
-# increase police loyalty
-The police have historically been overrun with reactionaries, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
+We have increased the loyalty of the Assault Guard, we have great hopes for the Assault Guards to become a model of Republican loyalty to the other state forces.
 
-Current police loyalty: [+ assault_guard_loyalty : loyalty +].
-
-@police_strength
-on-arrival: assault_guard_strength += 20
-
-We have increased the size of the Prussian police.
-
-@GA_loyalty
+Current Assault Guard loyalty: [+ assault_guard_loyalty : loyalty +].
 
 @GA_strength
+on-arrival: assault_guard_strength += 5; civil_guard_loyalty -= 0.05; police_loyalty -= 0.05; assault_guard_loyalty += 0.05
+
+We increase the power and competences of the Assault Guard. They are pleased at this development and take on their new competences with renowed vigour, the Police and Civil Guard at not thrilled at their loss of competences.
 
 @GC_loyalty
+view-if: civil_guard_loyalty < 1
+on-arrival: civil_guard_loyalty += 0.05
+
+We attempt to strengthen the loyalty of the Civil Guard, while we are suprised to find a strong amount of loyalists both within officer corps and the base, we also find problematic officers and agents, of questionable loyalty. We increase the loyalty of the Civil Guard but there is still much to be done. 
+
+Current Civil Guard loyalty: [+ civil_guard_loyalty : loyalty +].
+
+
 
 @GC_strength
+on-arrival: civil_guard_strength += 5; civil_guard_loyalty += 0.05; police_loyalty -= 0.05; assault_guard_loyalty = -0.05
 
 @bureaucracy
-on-arrival: assault_guard_loyalty += 0.05; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); new_middle_psoe += 2*(1-dissent) if democratization >= 3; new_middle_psoe += 2*(1-dissent) if democratization >= 4; coup_progress += 0.5
+on-arrival: assault_guard_loyalty += 0.02; civil_guard_loyalty += 0.02; police_loyalty += 0.02; nationalism -= 5; pacifism += 1; democratization += 1; pro_republic += 3*(1-dissent); coup_progress += 0.5
 
-The bureaucracy is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on individual freedoms, but perhaps the security of the republic requires it.
+The bureaucracy of the security forces is deeply reactionary, and many abuse their power to favor the political right. By removing the pro-monarchy and pro-dictatorship elements, we can democratize it. Some of our opponents claim that we are infringing on individual freedoms, but perhaps the security of the republic requires it.
 
 @interior_restructuring
+
+There are a series of characteristics of our Security Structures that might require some form of reforms and changes to be made more effective. The lack of collaboration between agencies, the mixed military-interior characteristics of the Civil Guard, the mixed competences. Perhaps a couple of changes and modernizations might be of great aid.

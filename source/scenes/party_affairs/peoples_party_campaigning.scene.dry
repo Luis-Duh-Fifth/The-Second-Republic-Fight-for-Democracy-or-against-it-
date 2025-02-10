@@ -43,7 +43,7 @@ As a people's party, we represent women of all classes.
 
 @campaign_catholics
 title: Campaign among political Catholics.
-on-arrival: catholics_psoe += 5*(1-dissent);
+on-arrival: minorities_psoe += 5*(1-dissent);
 
 Catholics have historically been tied to the Center Party, but there is no reason why our party cannot appeal to them. The Prussian Concordat in particular is a sign of our friendship with Catholicism.
 

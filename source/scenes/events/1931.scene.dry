@@ -13,7 +13,7 @@ if (Q.works_program && Q.works_program > 1) {
     Q.unemployed -= 2;
     Q.inflation += 2;
 }
-Q.catholics_erc += 5;
+Q.minorities_erc += 5;
 Q.rural_prp -= 5;
 Q.landholders_prp -= 5;
 Q.new_middle_prp -= 5;

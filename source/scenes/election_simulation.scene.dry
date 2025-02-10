@@ -9,15 +9,15 @@ set-jump: post_election
 @1928
 on-arrival: {!
 Q.workers = 25; // industry and trade
-Q.landholders = 25; // "old mittelstand"
+Q.landholders = 23; // "old mittelstand"
 // 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 15; // "new mittelstand"
+Q.new_middle = 17; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 8.6;
-Q.catholics = 10;
+Q.minorities = 10;
 
-Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'minorities'];
 Q.parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'ceda', 're_ct', 'fe_jons'];
 
 // Support for party by social group
@@ -77,16 +77,16 @@ Q.unemployed_ceda = 5;
 Q.unemployed_re_ct = 9;
 Q.unemployed_fe_jons = 15;
 
-Q.catholics_psoe = 15;
-Q.catholics_cnt_fai
-Q.catholics_pce = 5;
-Q.catholics_erc = 50;
-Q.catholics_izqd_rep = 0;
-Q.catholics_prp = 5;
-Q.catholics_prr = 10;
-Q.catholics_ceda = 5;
-Q.catholics_re_ct = 10;
-Q.catholics_fe_jons = 0;
+Q.minorities_psoe = 15;
+Q.minorities_cnt_fai
+Q.minorities_pce = 5;
+Q.minorities_erc = 50;
+Q.minorities_izqd_rep = 0;
+Q.minorities_prp = 5;
+Q.minorities_prr = 10;
+Q.minorities_ceda = 5;
+Q.minorities_re_ct = 10;
+Q.minorities_fe_jons = 0;
 !}
 go-to: election_algorithm
 set-jump: post_election
@@ -100,9 +100,9 @@ Q.new_middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 20;
-Q.catholics = 30;
+Q.minorities = 30;
 
-Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'minorities'];
 Q.parties = ['psoe', 'pce', 'erc', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'prr'];
 
 // Support for party by social group
@@ -152,14 +152,14 @@ Q.unemployed_ceda = 5;
 Q.unemployed_fe_jons = 25;
 Q.unemployed_prr = 5;
 
-Q.catholics_psoe = 10;
-Q.catholics_pce = 5;
-Q.catholics_erc = 50;
-Q.catholics_izqd_rep = 0;
-Q.catholics_prp = 5;
-Q.catholics_ceda = 5;
-Q.catholics_fe_jons = 10;
-Q.catholics_prr = 5;
+Q.minorities_psoe = 10;
+Q.minorities_pce = 5;
+Q.minorities_erc = 50;
+Q.minorities_izqd_rep = 0;
+Q.minorities_prp = 5;
+Q.minorities_ceda = 5;
+Q.minorities_fe_jons = 10;
+Q.minorities_prr = 5;
 
 Q.psoe_r = 25;
 Q.pce_r = 10;
@@ -182,9 +182,9 @@ Q.new_middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 33;
-Q.catholics = 30;
+Q.minorities = 30;
 
-Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'minorities'];
 Q.parties = ['psoe', 'pce', 'erc', 'izqd_rep', 'prp', 'ceda', 'fe_jons', 'prr'];
 
 // Support for party by social group
@@ -234,14 +234,14 @@ Q.unemployed_ceda = 0;
 Q.unemployed_fe_jons = 50;
 Q.unemployed_prr = 5;
 
-Q.catholics_psoe = 10;
-Q.catholics_pce = 5;
-Q.catholics_erc = 60;
-Q.catholics_izqd_rep = 0;
-Q.catholics_prp = 5;
-Q.catholics_ceda = 5;
-Q.catholics_fe_jons = 10;
-Q.catholics_prr = 5;
+Q.minorities_psoe = 10;
+Q.minorities_pce = 5;
+Q.minorities_erc = 60;
+Q.minorities_izqd_rep = 0;
+Q.minorities_prp = 5;
+Q.minorities_ceda = 5;
+Q.minorities_fe_jons = 10;
+Q.minorities_prr = 5;
 
 Q.psoe_r = 25;
 Q.pce_r = 10;
