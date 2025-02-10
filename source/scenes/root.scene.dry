@@ -98,6 +98,7 @@ Q.izqd_rep_relation = 60;
 Q.prp_relation = 35;
 Q.prr_relation = 20;
 // CEDA and fe_jons are invariably hostile
+Q.pnv_relation = 20;
 Q.ceda_relation = 10;
 Q.re_ct_relation = 0;
 Q.fe_jons_relation = 0;

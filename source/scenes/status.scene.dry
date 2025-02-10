@@ -63,6 +63,9 @@ Next election: [+ next_election_month : month +] [+ next_election_year +]
 
 = Inter-party Relations
 
+CNT_FAI: [+ cnt_fai_relation : relationships +]
+
+PCE: [+ pce_relation : relationships +]
 
 ERC: [+ erc_relation : relationships +]
 
@@ -70,7 +73,9 @@ IR: [+ izqd_rep_relation : relationships +]
 
 PRP: [+ prp_relation : relationships +]
 
-PCE: [+ pce_relation : relationships +]
+PRR: [+ prr_relation : relationships +]
+
+PNV: [+ pnv_relation : relationships +]
 
 CEDA: [+ ceda_relation : relationships +]
 

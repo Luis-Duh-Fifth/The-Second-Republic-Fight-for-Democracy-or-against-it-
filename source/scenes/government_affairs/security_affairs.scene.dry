@@ -27,7 +27,7 @@ With the ministry of Gobernation can enact policies onto the institutions of ord
 
 @police_loyalty
 view-if: police_loyalty < 1
-on-arrival: police_loyalty += 0.1
+on-arrival: police_loyalty += 0.1; assault_guard_loyalty -= 0.01; civil_guard_loyalty -= 0.01
 
 # increase police loyalty
 The police have historically had strong reactionary tendencies, and we are trying to change this, little by little. We have improved the training and recruitment process to select for a broader demographic than the traditional conservatives, and to put a tighter leash on their political activity. In addition, we set up committees to investigate the ranks of the police and remove those with far-right sympathies. It is a slow and arduous work.
@@ -41,7 +41,7 @@ We increase the power and competences of the Police. They are pleased at this de
 
 @GA_loyalty
 view-if: assault_guard_loyalty < 1
-on-arrival: assault_guard_loyalty += 0.1
+on-arrival: assault_guard_loyalty += 0.1; police_loyalty -= 0.01; civil_guard_loyalty -= 0.01
 
 We have increased the loyalty of the Assault Guard, we have great hopes for the Assault Guards to become a model of Republican loyalty to the other state forces.
 
@@ -54,13 +54,11 @@ We increase the power and competences of the Assault Guard. They are pleased at 
 
 @GC_loyalty
 view-if: civil_guard_loyalty < 1
-on-arrival: civil_guard_loyalty += 0.05
+on-arrival: civil_guard_loyalty += 0.05; assault_guard_loyalty += 0.1; police_loyalty -= 0.01;
 
 We attempt to strengthen the loyalty of the Civil Guard, while we are suprised to find a strong amount of loyalists both within officer corps and the base, we also find problematic officers and agents, of questionable loyalty. We increase the loyalty of the Civil Guard but there is still much to be done. 
 
 Current Civil Guard loyalty: [+ civil_guard_loyalty : loyalty +].
-
-
 
 @GC_strength
 on-arrival: civil_guard_strength += 5; civil_guard_loyalty += 0.05; police_loyalty -= 0.05; assault_guard_loyalty = -0.05
@@ -75,3 +73,6 @@ The bureaucracy of the security forces is deeply reactionary, and many abuse the
 @interior_restructuring
 
 There are a series of characteristics of our Security Structures that might require some form of reforms and changes to be made more effective. The lack of collaboration between agencies, the mixed military-interior characteristics of the Civil Guard, the mixed competences. Perhaps a couple of changes and modernizations might be of great aid.
+
+- @increase_cooperation: We must increase thev cooperation between the different 
+- @GC_reduce_army:

@@ -8,11 +8,12 @@ card-image: img/portraits/LeberJulius.jpg
 
 = Military Policy
 
-The Reichswehr is a deeply reactionary institution that has been generally hostile to any notion of socialism or democracy. However, we now control the military as part of the government. What should we do to reform it?
+The Army is a deeply reactionary institution that has been generally hostile to any notion of socialism or democracy. However, we now control the military as part of the government. What should we do to reform it?
 
 - @increase_funding: Increase funding for the military to purchase its loyalty.
 - @decrease_funding: Reduce funding for the military so we have more for social spending.
 - @reform: Conduct a thorough reform of the ranks, reducing the influence of reactionaries and making it more hospitable to us.
+- @reduce_officers: Spain has an excessive amount of oficcers, we should attempt to reduce the size of the officer corps. 
 - @root: No change to military policy.
 - @easy_discard
 
@@ -42,3 +43,5 @@ on-arrival: coalition_dissent += 1 if in_grand_coalition == 1; reichswehr_loyalt
 Our efforts are at least somewhat successful; we have changed the recruiting and training patterns so that more soldiers from non-reactionary backgrounds can join, hopefully changing the culture of the forces. We have also removed some of the officers who supported the previous Kapp putsch.
 
 The center-right parties are committed to the military and deeply suspicious of our efforts to reform it.
+
+@reduce_officers: 
