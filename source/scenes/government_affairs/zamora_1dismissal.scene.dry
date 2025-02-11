@@ -1,0 +1,25 @@
+title: President Zamora retires confidence from Manuel Azaña.
+subtitle: The President has turned against us.
+new-page: true
+view-if: Chancellor = Azaña; dismissal_timer = 0
+tags: event
+on arrival: Chancellor = Lerroux (PRR); psoe_in_government = 0; prr_in_goverment = 1
+
+President Zamora has turned against Azañas govermen, which has been growing more and more fractured since the events of Casas Viejas. He dismisses him and replaces him with Lerroux of the Radical Republicans. 
+
+The left Republicans are up in arms but they eventually agree to a Republican unity cabinet, even if it does not include the PSOE, despite strong resistance from the radical socialists and others. 
+
+This agreement to exclude us has caused massive radicalization internally. Many are calling to break all ties with the Left Republicans amd declare our agreements null and void.
+
+- @break: We break our ties to the Left Republicans, their agreement to leave us out of goverment is nothing short of a betrayal of the Socialist-Left Republican alliance.
+- @no_break: While the actions of the Left Republicans do not sit well with us, we cannot void all our agreements with them. 
+
+@break:
+on-arrival: izqd_rep_rejects = 1; izqd_rep_relation -= 5; left_strength += 5; 1st_break_centerleft = 1
+
+We break with the Left Republicans, the fundational alliance that birthed the Republic is dead. 
+
+@no_break:
+on_arrival: left_strength += 5; left dissent += 5
+
+We do not break with the left Republicans, it would be to burn bridges with our closest allies since the beggining of the Republic.
