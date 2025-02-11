@@ -15,7 +15,7 @@ This agreement to exclude us has caused massive radicalization internally. Many 
 - @no_break: While the actions of the Left Republicans do not sit well with us, we cannot void all our agreements with them. 
 
 @break
-on-arrival: izqd_rep_rejects = 1; izqd_rep_relation -= 5; left_strength += 5; 1st_break_centerleft = 1
+on-arrival: izqd_rep_rejects = 1; izqd_rep_relation -= 5; left_strength += 5; first_break_centerleft = 1
 
 We break with the Left Republicans, the fundational alliance that birthed the Republic is dead. 
 
