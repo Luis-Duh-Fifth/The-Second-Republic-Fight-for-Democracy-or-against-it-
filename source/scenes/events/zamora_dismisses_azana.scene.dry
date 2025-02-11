@@ -1,9 +1,9 @@
 title: President Zamora retires confidence from Manuel Azaña.
 subtitle: The President has turned against us.
 new-page: true
-view-if: Chancellor = Azaña and dismissal_timer = 0
+view-if: Chancellor = "Azaña (IR)" and dismissal_timer = 0
 tags: event
-on arrival: Chancellor = Lerroux (PRR); psoe_in_government = 0; prr_in_goverment = 1
+on arrival: Chancellor = "Lerroux (PRR)"; psoe_in_government = 0; prr_in_goverment = 1
 
 President Zamora has turned against Azañas govermen, which has been growing more and more fractured since the events of Casas Viejas. He dismisses him and replaces him with Lerroux of the Radical Republicans. 
 
