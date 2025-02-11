@@ -3,7 +3,7 @@ subtitle: The brutal repression of an attempted anarchist uprising in Casas Viej
 tags: event
 view-if: year = 1933 and month = 1
 max-visits: 1
-On arrival: casas_viejas = 1
+On arrival: casas_viejas = 1; dismissal_timer = 9  
 
 A generalized small anarchist insurrection attempt has occurred nationally, in most of the country they fail with little blood, but in Casas Viejas, tragedy strikes. The anarchists, manage to resist for a while, the Civil Guard and Assault guards repression is brutal. At the end of the day in Casas Viejas there are 26 dead and no prisioners.
 
