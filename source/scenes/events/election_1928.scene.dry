@@ -605,7 +605,7 @@ Who should be chancellor?
 @azana_chancellor_new
 subtitle: This will reduce our leverage in the ministries.
 view-if: not historical_mode or not psoe_prussia
-on-arrival: leverage -= 10; chancellor = "Azaña"; chancellor_party = "PSOE"
+on-arrival: leverage -= 10; chancellor = "Azaña"; chancellor_party = "IR"
 go-to: ministries
 
 We have assembled a new coalition under Manuel Azaña.
