@@ -45,6 +45,9 @@ Our efforts are at least somewhat successful; we have changed the recruiting and
 The center-right parties are committed to the military and deeply suspicious of our efforts to reform it.
 
 @reduce_officers
+subtitle: -1 budget
+choose-if: budget >= 1
+unavailable-subtitle: We do not have the budget.
+on-arrival: budget -= 1; coup_progress += 1 
 
-
-placeholder
+We reduce our bloated officer corps. 
