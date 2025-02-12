@@ -3,7 +3,7 @@ subtitle: The President has turned against us.
 new-page: true
 view-if: chancellor = "Azaña" and zamora_prepares_timer = 0
 tags: event
-on arrival: Chancellor = "Lerroux"; chancellor_party = "PRR"; psoe_in_government = 0; prr_in_goverment = 1
+on arrival: chancellor = "Lerroux"; chancellor_party = "PRR"; psoe_in_government = 0; prr_in_goverment = 1
 
 President Zamora has turned against Azañas goverment, which has been growing more and more fractured since the events of Casas Viejas. He dismisses him and replaces him with Lerroux of the Radical Republicans. 
 
