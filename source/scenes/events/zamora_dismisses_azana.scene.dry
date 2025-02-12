@@ -1,7 +1,7 @@
 title: President Zamora retires confidence from Manuel Azaña.
 subtitle: The President has turned against us.
 new-page: true
-view-if: chancellor = "Azaña" and zamora_prepares_timer = 0
+view-if: chancellor = "Azaña" and zamora_prepares_timer = 1
 tags: event
 on arrival: chancellor = "Lerroux"; chancellor_party = "PRR"; psoe_in_government = 0; prr_in_goverment = 1
 
