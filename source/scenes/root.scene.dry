@@ -476,7 +476,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'constitutional_reform',
             // events
             'emergency_cuts', 'unemployment_insurance',
-            'sa_ban', 'sh_ban' 'zamora_prepares'
+            'sa_ban', 'sh_ban', 'zamora_prepares',
             'pce_policy', 'pce_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis'];
 Q.advisor_action_timer = 0;
