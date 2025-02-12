@@ -529,6 +529,7 @@ Q.unemployment_insurance_timer = 0;
 Q.sa_ban_timer = 0;
 Q.sh_ban_timer = 0;
 Q.pce_ultimatum_timer = 0;
+Q.zamora_prepares_timer = 0;
 
 
 // all the initial advisors are centrists.
