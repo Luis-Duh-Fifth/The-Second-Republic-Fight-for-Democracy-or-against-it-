@@ -54,9 +54,7 @@ unavailable-subtitle: [? if grand_coalition < 50 : This would not give us a majo
 
 We could try to boot the PCE from our governing coalition, and form a new government with the bourgeois parties.
 
-- @election_1928.weimar_coalition: Form a Weimar Coalition?
-- @election_1928.grand_coalition: Form a Grand Coalition?
-- @let_it_happen: There is nothing we can do.
+- @election_1928.socialist_republican_coalition_coalition: Form a Republican-Socialist Coalition?
 
 
 @let_it_happen
