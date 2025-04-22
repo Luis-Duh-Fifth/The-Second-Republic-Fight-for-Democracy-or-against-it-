@@ -314,10 +314,8 @@ Could we really form a coalition that included both the Left Republicans and the
 The far-right might attempt a coup, if such a coalition were formed.
 
 - @popular_front_2: Form the Popular Front!
-    on-arrival:
-        While the formation of a government is underway, questions of participation arise.
-        Largo Caballero maintains that we should refuse to join the government, letting the Left Republicans form their own government alongside the Communists—in order not to compromise the socialist movement with bourgeois concessions.
-        Prieto, on the other hand, argues that by participating directly in government, we can better resolve Spain's current problems.
+
+While the formation of a government is underway, questions of participation arise. Largo Caballero maintains that we should refuse to join the government, letting the Left Republicans form their own government alongside the Communists—in order not to compromise the socialist movement with bourgeois concessions. Prieto, on the other hand, argues that by participating directly in government, we can better resolve Spain's current problems.
 
 - @popular_front_sucess: We will enter goverment and participate in it. We must defend the Republic from the Goverment.
 - @popular_front_sucess_toleration: Let the left burgois form their goverment, we will await from below. We are in the perfect position to observe, defend, and perhaps even attack.
