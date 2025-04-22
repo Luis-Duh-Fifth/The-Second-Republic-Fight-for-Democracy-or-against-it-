@@ -118,42 +118,45 @@ Minorities: PSOE: [+ minorities_psoe_normalized +]%, CNT_FAI: [+ minorities_cnt_
 @parties
 go-to: menu
 
-**CNT_FAI** - *Confederation Nacional de Trabajo_Federacion Anarquista Iberica* (National Confederation of Labour_Anarchist Federation of Iberia) -
+**CNT_FAI** - *Confederation Nacional de Trabajo_Federacion Anarquista Iberica* (National Confederation of Labour_Anarchist Federation of Iberia) - The CNT is the second biggest trade union in this country after our UGT. It is a militantly anarcho syndicalist organization, being probably the biggest anarchist movement in europe. They are frontally against any concessions to what they consider the "burgois republic", this of course strains their relationship with us and many others. Given their anarchist idiology they absolutly refuse to participate in parlamentarian politics, nontheless, if they are happy with us they might be open to encouraging their members to vote our lists. 
 
 Current relations: [+ cnt_fai_relation : relationships +]
 
-**PCE** - *Partido Comunista Español* (Spanish Comunist Party) - an offshoot of the psoe that emerged in the aftermath of the Revolution, they follow the path of Moscow.
+**PCE** - *Partido Comunista Español* (Spanish Comunist Party) - A split from us from the days of October, the PCE is mostly irrelevant in national politics, being very small. Nontheless, it is a incredibly well organized and disciplined party. A Marxist Leninist party, they follow the path of Moscow most loyally.
 
 Current relations: [+ pce_relation : relationships +]
 
-**PSOE** - *Partido Socialista Obrero Español* (Spanish Socialist Workers Party) - this is us. We are a socialist and democratic party of the working class. We are the heirs of the legacy of Marx and Engels, Lassalle and Bebel. We are the foremost defenders of the Republic. The modern PSOE was formed from a merger of the "Majority" SPD, which supported the Great War, and the "Independent" PSOE or USPD, which opposed the war.
+**PSOE** - *Partido Socialista Obrero Español* (Spanish Socialist Workers Party) - this is us. We are a socialist party of the working class. We are the heirs of the legacy of Marx and Pablo Iglesias.
 
-**ERC** - *Esquerra Republicana Catalana* (Catalan Republican Left) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **PNV** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
+**ERC** - *Esquerra Republicana Catalana* (Catalan Republican Left) - center left to left Catalan party that supports the Republic. They wish for independence, but for now advocate for autnomy.
 
 Current relations: [+ erc_relation : relationships +]
 
-# TODO: replace this with the german state party after 1930
-**IR** - *Izquierda Republicana* (Republican Left) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently renamed themselves the German State Party. ?]
+**IR** - *Izquierda Republicana* (Republican Left) - a center-left liberal party, popular among the intelligensia and educated middle class. We have worked together closely for the creation and constitution of the Republic.
 
 Current relations: [+ izqd_rep_relation : relationships +]
 
-**PRP** - *Partido Republicano Progresista* (Republican Progressive Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
+**PRP** - *Partido Republicano Progresista* (Republican Progressive Party) - a conservative republican party, with support of the middle classes, bourgeoisie and small landholders. We woked together to establish the Republic but later broke with us over religious issues and economic reform.
 
 Current relations: [+ prp_relation : relationships +]
 
-**PRR** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRP and ceda. 
+**PRR** - *Partido Republicano Radical* (Republican Radical Party) - The PRR is a center right Republican party, strangely enough it began as a leftist revolutionary anticlerical burgoise party. They collabrated with us on the overthrow of the Monarchy but our relations have rapidly cooled. 
 
 Current relations: [+ prr_relation : relationships +]
 
-**CEDA** - *Confederacion Española de Derechas Autonomas* (Spanish Confederation of Autonomous Rights) - a right-wing nationalist-conservative party, with authoritarian, monarchist, and racist elements. It is supported by the former aristocracy, rural landowners, and conservative Lutherans.
+**PNV** - *Partido Nacionalista Vasco* (Basque Nationalist Party) - A nationalist Basque party, they are catholic conservatives, while more open to working with us due to their autonomist ambitions, they are nontheless hostile to us.
+
+Current relations: [+ pnv_relation : relationships +]
+
+**CEDA** - *Confederacion Española de Derechas Autonomas* (Spanish Confederation of Autonomous Rights) - a right-wing catholic-conservative party, with authoritarian, monarchist, and racist elements. It is supported by parts pf the middle class, big and small landowners, peasents and Catholics in general. They mantain an ambigious position on form of state, refusing to declare themselves Republicans while not calling themselves monarchists. They have strong backing of the old order, having very close ties to the church and landowners.
 
 Current relations: [+ ceda_relation : relationships +]
 
-**RE_CT** - *Renovacion Española y Comunion Tradicionalista* - (Spanish Renovation and Traditionalist Comunion) - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the PRP and ceda. 
+**RE_CT** - *Renovacion Española y Comunion Tradicionalista* - (Spanish Renovation and Traditionalist Comunion) - The explicitly monarchist and reactionary parties. Heavly authonritarian, they are strongly preatorianist, being in favour of coups and a violent overthrow of the Republic. 
 
 Current relations: [+ re_ct_relation : relationships +]
 
-**FE_JONS** - *Falange Española de Las Juntas Ofensivas Nacional Syndicalistas* - (Spanish Falange of the Councils of the National Syndicalist Offensive) - a far-right nationalist and antisemitic party.
+**FE_JONS** - *Falange Española de Las Juntas Ofensivas Nacional Syndicalistas* - (Spanish Falange of the Councils of the National Syndicalist Offensive) - a National Syndicalist fascist party. 
 
 Current relations: [+ fe_jons_relation : relationships +]
 

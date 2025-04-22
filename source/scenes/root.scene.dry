@@ -199,7 +199,7 @@ Q.new_middle = 14; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
 Q.unemployed = 8.6;
-Q.minorities = 30;
+Q.minorities = 10;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
 
@@ -339,7 +339,7 @@ Q.president = "Alcala Zamora";
 // starting chancellor: Azaña
 Q.chancellor = "Azaña";
 Q.chancellor_party = 'IR';
-Q.psoe_in_government = 0;
+Q.psoe_in_government = 1;
 Q.erc_in_government = 0;
 Q.izqd_rep_in_government = 1;
 Q.prp_in_government = 0;
@@ -351,7 +351,7 @@ Q.fe_jons_in_government = 0;
 
 Q.in_right_coalition = 0;
 // Weimar coalition = PSOE + ERC + IR
-Q.in_weimar_coalition = 0;
+Q.in_socialist_republican_coalition = 0;
 // Grand coalition = PSOE + ERC + PNV + IR + PRP
 // also includes the "new grand coalition" of PSOE + ERC + PNV + IR + PRP + PRR
 Q.in_grand_coalition = 0;
@@ -379,24 +379,22 @@ Q.psoe_toleration = 0;
 Q.minority_government = 0;
 
 // ministries - which parties control the ministries?
-// starting with the 4th Marx cabinet https://en.wikipedia.org/wiki/Fourth_Marx_cabinet
-// is the agricultural ministry useful at all?
-Q.foreign_minister = 'Streseman';
-Q.foreign_minister_party = 'PRP';
-Q.interior_minister = 'von Keudell';
-Q.interior_minister_party = 'CEDA';
-Q.justice_minister = 'Hergt';
-Q.justice_minister_party = 'CEDA';
-Q.labor_minister = 'Azañas';
-Q.labor_minister_party = 'ERC';
-Q.reichswehr_minister = 'Groener';
-Q.reichswehr_minister_party = 'I';
-Q.economic_minister = 'Curtius';
-Q.economic_minister_party = 'PRP';
-Q.finance_minister = 'Köhler';
-Q.finance_minister_party = 'ERC';
-Q.agriculture_minister = 'Schiele';
-Q.agriculture_minister_party = 'CEDA';
+Q.foreign_minister = 'Zulueta';
+Q.foreign_minister_party = 'I';
+Q.interior_minister = 'Quiroga';
+Q.interior_minister_party = 'ORGA';
+Q.justice_minister = 'Albornoz';
+Q.justice_minister_party = 'PRRS';
+Q.labor_minister = 'Caballero';
+Q.labor_minister_party = 'PSOE';
+Q.reichswehr_minister = 'Azaña';
+Q.reichswehr_minister_party = 'AR';
+Q.economic_minister = 'Prieto';
+Q.economic_minister_party = 'PSOE';
+Q.finance_minister = 'Carner';
+Q.finance_minister_party = 'I';
+Q.agriculture_minister = 'Domingo';
+Q.agriculture_minister_party = 'PRRS';
 
 // Events: what has occurred?
 Q.panzerkreuzer_seen = 0;
