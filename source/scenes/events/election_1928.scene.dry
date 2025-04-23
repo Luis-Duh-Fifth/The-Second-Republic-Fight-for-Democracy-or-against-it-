@@ -394,6 +394,7 @@ Portela's government is deeply unpopular among all parties of the Cortes. Despit
 
 @vonc_portela
 on-arrival: next_election_time = time+5; next_election_month = month + 5; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12
+
 A no confidence vote is called on Portela, which he fails to survive, the President dissolves the courts and calls new elections.
 
 @far_right_azana
