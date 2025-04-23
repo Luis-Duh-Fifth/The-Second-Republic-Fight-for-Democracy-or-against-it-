@@ -1045,6 +1045,7 @@ Prieto's appointment as chancellor is approved by all our potential allies.
 title: Manuel Azana for Chancellor
 on-arrival: psoe_in_government = 1; chancellor = "Azana"; chancellor_party = "IR"; in_grand_coalition = 1 if in_socialist_republican_coalition == 0
 go-to: ministries
+
 Azana is approved by the members of the coalition.
 
 @prr_chancellor
