@@ -584,13 +584,13 @@ Who should be chancellor?
 - @barrio_chancellor_new: Martinez Barrios is a center right but nontheless dedicated Republican, he might be the ideal man to consolidate this Republican front.
 - @azana_chancellor_new: Manuel Azana for Chancellor? This will be a bitter pill for our rightmost coalition partners but perhaps its worth it.
 
-@portela_again:
+@portela_again
 on-arrival: leverage += 5; chancellor = "Portela" chancellor_party = "I"
 go-to: ministries
 
 Portela has assembled a parlamentary majority with us, let us hope he puts it to good use.
 
-@barrio:
+@barrio
 on arrival: chancellor = "Barrio"; chancellor_party = "[? if ur_formed = 1: UR?] [? if ur_formed = 0: PRR?] "
 
 Barrio is an impartial and honest figure which will guide the goverment as stabely as possible.
