@@ -580,11 +580,11 @@ Now, we have a new grand coalition, a "Constitutional Coalition" of all the non-
 
 Who should be chancellor?
 
-- @portela: We should mantain the presidents man, Portela, even if we dislike him he is useful to assuare ourselves of the Presidents collaboration.
+- @portela_again: We should mantain the presidents man, Portela, even if we dislike him he is useful to assuare ourselves of the Presidents collaboration.
 - @barrio_chancellor_new: Martinez Barrios is a center right but nontheless dedicated Republican, he might be the ideal man to consolidate this Republican front.
 - @azana_chancellor_new: Manuel Azana for Chancellor? This will be a bitter pill for our rightmost coalition partners but perhaps its worth it.
 
-@portela:
+@portela_again:
 on-arrival: leverage += 5; chancellor = "Portela" chancellor_party = "I"
 go-to: ministries
 
