@@ -962,7 +962,7 @@ The people's faith in democracy is shaken by this ordeal. Of course, the CEDA am
 @toleration_right
 choose-if: grand_republican_coalition >= 50
 unavailable-subtitle: The parties supporting the goverment do not have a majority.
-on-arrival: psoe_in_government = 0; psoe_toleration = 1; minority_government = 1; chancellor = "Lerroux"; chancellor_party = "PRR"; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 4; new_middle_prp -= 5; new_middle_izqd_rep -= 5; landholders_prp -= 5; landholders_izqd_rep -= 5; landholders_ceda += 5; new_middle_ceda += 5;º
+on-arrival: psoe_in_government = 0; psoe_toleration = 1; minority_government = 1; chancellor = "Lerroux"; chancellor_party = "PRR"; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 4; new_middle_prp -= 5; new_middle_izqd_rep -= 5; landholders_prp -= 5; landholders_izqd_rep -= 5; landholders_ceda += 5; new_middle_ceda += 5
 
 We have decided to tolerate the rightist Republican government. This means that we will vote against no-confidence votes to make sure they fail, but also that we will not be directly participating as ministers in the government. Thus, we can prevent a new election and stop the far right from entering government.
 
