@@ -585,7 +585,7 @@ Who should be chancellor?
 - @azana_chancellor_new: Manuel Azana for Chancellor? This will be a bitter pill for our rightmost coalition partners but perhaps its worth it.
 
 @portela_again
-on-arrival: leverage += 5; chancellor = "Portela" chancellor_party = "I"
+on-arrival: leverage += 5; chancellor = "Portela"; chancellor_party = "I"
 go-to: ministries
 
 Portela has assembled a parlamentary majority with us, let us hope he puts it to good use.
