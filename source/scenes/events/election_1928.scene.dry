@@ -340,7 +340,7 @@ on-arrival: chancellor = "Prieto"; chancellor_party = "PSOE"
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_peace if coup_progress < 10
 
 @popular_front_sucess_toleration
-on-arrival: toleration_azana = 1, chancellor = "Azaña"; chancellor_party = "IR"; coup_progress -= 1;
+on-arrival: toleration_azana = 1; chancellor = "Azaña"; chancellor_party = "IR"; coup_progress -= 1;
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_peace if coup_progress < 10
 
 We externally support another Azana Left Republican goverment. While we have given up giding the nation through the goverment this allows us to not compromise the socialist revolution.
