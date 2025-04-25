@@ -672,7 +672,7 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "FE_JONS"
 
 There is no path to a majority government for now. The scheming around President Alcala Zamora is leading to only one path - that of Chancellor Adolf Hitler. [? if largest_party == "FE_JONS" : Since they are the largest party, it is not exactly contrary to parliamentary procedure, so it is difficult to raise objections solely on procedural grounds. ?] [? if hitler_deported: Despite his earlier deportation, the Nazi leaders and their reactionary allies have connived for the president to give him German citizenship after all. ?]
 
-- @hitler_takes_power: What now?
+- @ceda_takes_power: What now?
 
 # if FE_JONS is largest party and Alcala Zamora is president, then Alcala Zamora appoints Hitler chancellor.
 
