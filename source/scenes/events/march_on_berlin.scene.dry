@@ -35,7 +35,7 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "FE_JONS"; psoe_in_governm
 
 After the resignation of the chancellor, Hitler has been appointed chancellor[? if hitler_deported: , after being made a citizen again ?].
 
-- @hitler_takes_power
+- @ceda_takes_power
 
 @ask_resign
 
