@@ -373,7 +373,7 @@ view-if: authoritarian_right_coalition >= 50
 go-to: far_right_win if (year >= 1933 or authoritarian_right_coalition  >= 66) and president != "Azaña"; far_right_fail if (year < 1932 and fe_jons_r < 65) and president != "Azaña"; far_right_azana if president == "Azaña"
 priority: 2
 
-There are enough votes for the Far Right and the CEDA to form a coalition. They are agitating for Gil Robles to be granted the Presidency of Goverment. It is up to President [+ president +] to decide who to appoint Chancellor, however, the right can dismiss him if it isnt their preferred candidate.
+There are enough votes for the Far Right and the CEDA to form a coalition. They are agitating for Gil Robles to be granted the Presidency of Goverment. It is up to President [+ president +] to decide who to appoint Chancellor, however, the right can dismiss him if it isnt their preferred candidate, and it does make sense after all, arent they the biggest party?
 
 @far_right_win
 on-arrival: chancellor = "Gil Robles"; chancellor_party = "CEDA"
