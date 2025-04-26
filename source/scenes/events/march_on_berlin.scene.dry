@@ -153,4 +153,4 @@ on-arrival: chancellor = "Hitler"; chancellor_party = "FE_JONS"; psoe_in_governm
 
 Threatened with a civil war, and unwilling to fight anymore, President [+ president +] dismisses the current government and appoints Hitler of the FE_JONS as chancellor.
 
-- @hitler_takes_power
+- @ceda_takes_power
