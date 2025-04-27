@@ -517,13 +517,13 @@ on-arrival: chancellor = "Portela"; chancellor_party = "I"
 
 There is no path to an obviously workable majority. Since President Alcala Zamora is unwilling to work with a minority or caretaker PSOE or CEDA government, his preferred chancellor is Manuel Portela, and independent centrist Republican, who could lead a "presidential" government.
 
-- @no_vonc: We will not be calling a vote of no confidence on Portela... for now.
+- @no_majority_portela: We will not be calling a vote of no confidence on Portela... for now.
 - @new_grand_coalition: We will try to form a new grand coalition.
 - @new_elections: We will have new elections.
 
 # - if FE_JONS is the largest party and the 
 
-@no_majority_bruning
+@no_majority_portela
 go-to: no_majority_bruning_toleration if (no_majority_elections <= 3 and anti_democratic_coalition <= 50); alcala_zamora_appoints_papen if no_majority_elections > 3 or anti_democratic_coalition > 50
 
 
