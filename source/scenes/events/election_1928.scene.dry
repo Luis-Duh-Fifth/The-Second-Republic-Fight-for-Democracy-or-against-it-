@@ -545,7 +545,7 @@ Alternatively, we could try to form a "new grand coalition" of all constitutiona
 
 The third option is to have new elections.
 
-- @toleration_bruning: We will tolerate Brüning.
+- @tolerating_portela: We will tolerate Brüning.
 - @new_grand_coalition: We will try to form a new grand coalition.
 - @new_elections: We will have new elections.
 - @unity_government
@@ -561,7 +561,7 @@ unavailable-subtitle: PSOE + ERC + PNV + IR + PRP + PRR ([+ grand_republican_coa
 How do we convince vehemently anti-socialist or moderate catholic parties to allow us to form a majority coalition? Our largely benevolent relations with the centrists may allow us some leverage.
 
 - @use_resources
-- @toleration_bruning: No. We will tolerate a minority government.
+- @tolerating_portela: No. We will tolerate a minority government.
 - @new_elections: No. We will have new elections.
 - @unity_government
 
@@ -628,7 +628,7 @@ on-arrival: erc_relation -= 8; izqd_rep_relation -= 5; prp_relation -= 5
 Our rejection of the unity government has hurt our relations with the bourgeois and center-right parties.
 
 - @azanas_dilemma
-- @toleration_bruning: We will tolerate a minority government led by Brüning.
+- @tolerating_portela: We will tolerate a minority government led by Brüning.
 - @toleration_wirth: We will tolerate a minority government led by Joseph Wirth.
 - @new_elections: There will be new elections.
 
@@ -883,7 +883,7 @@ Albeit Lerroux would prefer to exclude us, he is pressured by his party to not e
 
 - @join_right: Join the Grand coalition.
 - @right_oppo: Join the opposition.
-- @toleration_bruning: We will "tolerate" a minority Republican government.
+- @tolerating_portela: We will "tolerate" a minority Republican government.
 - @unity_government
 
 @join_right
@@ -901,7 +901,7 @@ By refusing to join the grand coalition or tolerating it, we essentially throw t
 If we do not at least "tolerate" the government, there will be new elections in a few months. In the meantime, the President and President of Goverment may use the emergency powers to essentially govern by decree. And it is not at all clear that we will do any better in the next election.
 
 - @join_bruning: Join the Brüning coalition.
-- @toleration_bruning: We will tolerate Brüning after all.
+- @tolerating_portela: We will tolerate Brüning after all.
 - @azanas_dilemma
 - @new_elections: New elections, it is!
 
