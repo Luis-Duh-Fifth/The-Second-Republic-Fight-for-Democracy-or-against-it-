@@ -522,7 +522,6 @@ There is no path to an obviously workable majority. Since President Alcala Zamor
 - @new_grand_coalition: We will try to form a new grand coalition.
 - @new_elections: We will have new elections.
 
-# - if FE_JONS is the largest party and the 
 
 @portela_wait
 go-to: no_majority_portela_toleration if (no_majority_elections <= 3 and anti_democratic_coalition <= 50);
