@@ -525,7 +525,7 @@ There is no path to an obviously workable majority. Since President Alcala Zamor
 # - if FE_JONS is the largest party and the 
 
 @portela_wait
-go-to: no_majority_portela_toleration if (no_majority_elections <= 3 and anti_democratic_coalition <= 50); alcala_zamora_appoints_papen if no_majority_elections > 3 or anti_democratic_coalition > 50
+go-to: no_majority_portela_toleration if (no_majority_elections <= 3 and anti_democratic_coalition <= 50);
 
 
 @reject_portela
