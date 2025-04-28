@@ -506,7 +506,7 @@ The CEDA tolerates a PRR goverment, however, it is clear that they expècting to
 title: There is no clear governing majority.
 view-if: socialist_republican_coalition < 50 and (grand_coalition < 50 or grand_coalition_failed == 1) and authoritarian_right_coalition < 50
 on-arrival: no_majority_elections += 1
-go-to: no_majority_bruning if chancellor = "Brüning" or chancellor = "Wirth"; no_majority_portela if chancellor = "Portela" and no_majority_portela_elections == 0; no_majority_portela_2 if chancellor == "Portela" and no_majority_portela_elections > 0; no_majority_schleicher if chancellor = "Schleicher"; no_majority_psoe if chancellor_party = "PSOE" or chancellor == "Marx"
+go-to: no_majority_portela if chancellor = "Portela" or chancellor = "Wirth"; no_majority_portela if chancellor = "Portela" and no_majority_portela_elections == 0; no_majority_portela_2 if chancellor == "Portela" and no_majority_portela_elections > 0; no_majority_schleicher if chancellor = "Schleicher"; no_majority_psoe if chancellor_party = "PSOE" or chancellor == "Marx"
 
 # TODO: if there is an anti-democratic coalition majority, you should appoint Papen.
 
@@ -525,7 +525,7 @@ There is no path to an obviously workable majority. Since President Alcala Zamor
 # - if FE_JONS is the largest party and the 
 
 @portela_wait
-go-to: no_majority_bruning_toleration if (no_majority_elections <= 3 and anti_democratic_coalition <= 50); alcala_zamora_appoints_papen if no_majority_elections > 3 or anti_democratic_coalition > 50
+go-to: no_majority_portela_toleration if (no_majority_elections <= 3 and anti_democratic_coalition <= 50); alcala_zamora_appoints_papen if no_majority_elections > 3 or anti_democratic_coalition > 50
 
 
 @reject_portela
@@ -537,8 +537,8 @@ Papen is immediately faced with a vote of no confidence, given his unpopularity.
 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
-@no_majority_bruning_toleration
-on-arrival: no_majority_bruning_elections += 1
+@no_majority_portela_toleration
+on-arrival: no_majority_portela_elections += 1
 
 There is no path to a majority government. One option would be to have a continuation of the current Brüning government; if we tolerate it, then it would retain a majority vote against no-confidence.
 
