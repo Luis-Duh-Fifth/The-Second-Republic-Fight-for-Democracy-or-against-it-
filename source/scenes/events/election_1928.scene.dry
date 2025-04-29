@@ -637,16 +637,6 @@ view-if: erc_party_leader = "Joos"
 choose-if: president == "Azaña"
 on-arrival: chancellor = "Portela"; chancellor_party = "I"; psoe_in_government = 0; psoe_toleration = 1; erc_relation += 5; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 2;
 
-@toleration_wirth
-view-if: erc_party_leader = "Joos"
-choose-if: president == "Azaña"
-unavailable-subtitle: President Alcala Zamora will not support a minority government led by Joseph Wirth.
-on-arrival: chancellor = "Wirth"; chancellor_party = "ERC"; psoe_in_government = 0; psoe_toleration = 1; erc_relation += 5; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "IR"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 2;
-
-We have supported a minority government led by the Center Party under Chancellor Joseph Wirth.
-
-
-
 @no_majority_portela
 on-arrival: pro_republic -= 10; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_fe_jons += 6; unemployed_fe_jons += 6; landholders_fe_jons += 5; new_middle_fe_jons += 5; rural_fe_jons += 5; no_majority_papen_elections += 1; workers_psoe -= 8 if pro_republic < 45; workers_psoe *= 0.85 if pro_republic < 40; workers_fe_jons += 5 if pro_republic < 40;
 
