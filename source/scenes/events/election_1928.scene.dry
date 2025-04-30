@@ -887,7 +887,7 @@ go-to: ministries
 
 Lerroux reluctantly welcomes us into his new cabinet. Now, we have our pick of ministries.
 
-@bruning_oppo
+@right_oppo
 on-arrival: psoe_in_government = 0; psoe_toleration = 0; chancellor = "Lerroux"; chancellor_party = "PRR"; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "ERC"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "ERC"; finance_minister_party = "ERC"; agriculture_minister_party = "ERC"; grand_coalition_failed = 1
 
 By refusing to join the grand coalition or tolerating it, we essentially throw the balance of government to the right wing. [? if right_coalition >= 50 : There are enough votes to form a right-wing coalition that includes the CEDA. However, the CEDA leader, Gil Robles, is opposed to a coalition with the Republicans of the PRR. And of course, the fe_jons is not interested in coalition government. This means that there will not be enough votes to form a majority coalition. ?][? if right_coalition < 50 : There are not enough votes to form a right-wing coalition that includes the CEDA, and they are not interested in joining in a coalition with the Republicans if they refuse him the Presidency of Goverment. This means that there is no route to a majority coalition. ?]
