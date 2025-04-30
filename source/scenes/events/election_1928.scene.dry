@@ -560,7 +560,7 @@ unavailable-subtitle: PSOE + ERC + PNV + IR + PRP + PRR ([+ grand_republican_coa
 
 How do we convince vehemently anti-socialist or moderate catholic parties to allow us to form a majority coalition? Our largely benevolent relations with the centrists may allow us some leverage.
 
-- @use_resources
+- @use_resources: Convince the Conservative Liberals to join.
 - @tolerating_portela: No. We will tolerate a minority government.
 - @new_elections: No. We will have new elections.
 - @unity_government
