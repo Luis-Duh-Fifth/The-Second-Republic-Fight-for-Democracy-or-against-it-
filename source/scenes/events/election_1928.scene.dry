@@ -1018,7 +1018,7 @@ As expected, the PRP is too set in their anti-socialist ways.
 
 
 
-@grand_coalition_psoe_lead
+@grand_coalition_left_lead
 on-arrival: leverage -= 15 if prp_relation < 20
 
 As expected, the PSOE is the largest party, and this time, we are expected to take the lead role in the formation of the next government, including selecting the chancellor. President [+ president +] has asked us to form a majority coalition with the Center (Z), Bavarian People's (PNV), Democratic (IR), and People's (PRP) parties.
