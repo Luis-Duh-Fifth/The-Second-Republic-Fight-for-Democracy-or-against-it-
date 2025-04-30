@@ -403,12 +403,12 @@ Ernst Thälmann of the PCE has won the presidency. Immediately, the far-right la
 - @civil_war: This is civil war.
 
 @hitler_wins
-on-arrival: president = fe_jons_candidate; chancellor = "Hitler"; chancellor_party = "FE_JONS"
+on-arrival: president = fe_jons_candidate; chancellor = "Gil Robles"; chancellor_party = "CEDA"
 
 [? if fe_jons_candidate == "Hitler" : Adolf Hitler of the FE_JONS has won the presidency. He wastes no time in consolidating power. ?]
 [? if fe_jons_candidate != "Hitler" : The FE_JONS candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
 
-- @hitler_takes_power: What do we do now?
+- @ceda_takes_power: What do we do now?
 
 
 @azana_wins
