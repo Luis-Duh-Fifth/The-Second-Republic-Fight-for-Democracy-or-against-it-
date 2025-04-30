@@ -590,7 +590,7 @@ go-to: ministries
 
 Portela has assembled a parlamentary majority with us, let us hope he puts it to good use.
 
-@barrio
+@barrio_chancellor_new
 on arrival: chancellor = "Barrio"; chancellor_party = "[? if ur_formed = 1: UR?] [? if ur_formed = 0: PRR?] "
 
 Barrio is an impartial and honest figure which will guide the goverment as stabely as possible.
