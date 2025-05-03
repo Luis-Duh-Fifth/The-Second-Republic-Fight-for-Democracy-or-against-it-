@@ -894,7 +894,7 @@ By refusing to join the grand coalition or tolerating it, we essentially throw t
 
 If we do not at least "tolerate" the government, there will be new elections in a few months. In the meantime, the President and President of Goverment may use the emergency powers to essentially govern by decree. And it is not at all clear that we will do any better in the next election.
 
-- @join_portela: Join the Brüning coalition.
+- @join_right: Join the Right coalition.
 - @tolerating_portela: We will tolerate Brüning after all.
 - @azanas_dilemma
 - @new_elections: New elections, it is!
@@ -952,6 +952,10 @@ There is no path to a workable Cortes majority or minority government. The next 
 
 The people's faith in democracy is shaken by this ordeal. Of course, the CEDA amd far rogjt are exploiting the instability to claim that democracy is unworkable, and that Spain needs a strong leader.
 
+@join_portela
+view-if: grand_coalition >= 50 or neo_weimar_coalition >= 50
+on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; leverage = 25 if leverage >= 25;
+go-to: ministries
 
 @tolerating_portela
 choose-if: neo_weimar_coalition >= 50
