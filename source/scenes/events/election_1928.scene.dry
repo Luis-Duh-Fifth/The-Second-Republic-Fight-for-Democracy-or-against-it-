@@ -894,7 +894,7 @@ By refusing to join the grand coalition or tolerating it, we essentially throw t
 
 If we do not at least "tolerate" the government, there will be new elections in a few months. In the meantime, the President and President of Goverment may use the emergency powers to essentially govern by decree. And it is not at all clear that we will do any better in the next election.
 
-- @join_bruning: Join the Brüning coalition.
+- @join_portela: Join the Brüning coalition.
 - @tolerating_portela: We will tolerate Brüning after all.
 - @azanas_dilemma
 - @new_elections: New elections, it is!
@@ -985,7 +985,7 @@ view-if: prp_relation >= 15
 go-to: prp_conservative if stresemann_dead == 1; prp_majority if stresemann_dead == 0
 
 @prp_majority
-go-to: join_bruning
+go-to: join_portela
 
 Under the influence of Gustav Stresemann, the PRP agrees to allow us into the coalition, and so does the PNV.
 
@@ -1006,7 +1006,7 @@ go-to: beg_prp_succeed; beg_prp_fail
 We make the case that without the PSOE, there is no parliamentary majority, given the CEDA and Far Right's hostility to constitutional government.
 
 @beg_prp_succeed
-go-to: join_bruning
+go-to: join_portela
 
 Somehow, we succeed in convincing them! We are now in a coalition.
 
