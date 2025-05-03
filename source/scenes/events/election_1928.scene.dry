@@ -952,11 +952,6 @@ There is no path to a workable Cortes majority or minority government. The next 
 
 The people's faith in democracy is shaken by this ordeal. Of course, the CEDA amd far rogjt are exploiting the instability to claim that democracy is unworkable, and that Spain needs a strong leader.
 
-@join_portela
-view-if: grand_coalition >= 50 or neo_weimar_coalition >= 50
-on-arrival: spd_in_government = 1; spd_toleration = 0; in_grand_coalition = 1; chancellor = "Brüning"; chancellor_party = "Z"; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "Z"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = "Z"; finance_minister_party = "Z"; agriculture_minister_party = "Z"; leverage = 25 if leverage >= 25;
-go-to: ministries
-
 @tolerating_portela
 choose-if: neo_weimar_coalition >= 50
 unavailable-subtitle: The parties supporting Brüning do not have a majority.
@@ -989,7 +984,7 @@ view-if: prp_relation >= 15
 go-to: prp_conservative if stresemann_dead == 1; prp_majority if stresemann_dead == 0
 
 @prp_majority
-go-to: join_portela
+go-to: join_right
 
 Under the influence of Gustav Stresemann, the PRP agrees to allow us into the coalition, and so does the PNV.
 
@@ -1010,7 +1005,7 @@ go-to: beg_prp_succeed; beg_prp_fail
 We make the case that without the PSOE, there is no parliamentary majority, given the CEDA and Far Right's hostility to constitutional government.
 
 @beg_prp_succeed
-go-to: join_portela
+go-to: join_right
 
 Somehow, we succeed in convincing them! We are now in a coalition.
 
