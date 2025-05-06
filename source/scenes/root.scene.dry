@@ -324,7 +324,9 @@ Q.sapd_r = 0;
 Q.old_sapd_r = 0;
 
 // for changing the DDP's name to the DStP
-Q.izqd_rep_name = "IR";
+Q.izqd_rep_name = "AR and PRRS";
+Q.ceda_name = "AP and other Conservatives"
+Q.re_ct_name = "CT and disorganized Alfonsines"
 
 // array of objects of the form {date: Date(), psoe: 10, pce: 12, ...} for each election
 Q.election_records = [];
