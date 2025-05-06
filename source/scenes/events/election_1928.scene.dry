@@ -332,7 +332,7 @@ Somehow, surprisingly, the coalition is successfully formed! We still need a pre
 - @Prieto: President of the Cabinet Prieto.
 
 @Azana
-on-arrival: chancellor = "Azaña"; chancellor_party = "izqd_rep_name"
+on-arrival: chancellor = "Azaña"; chancellor_party = izqd_rep_name
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_peace if coup_progress < 10
 
 @Prieto
@@ -340,7 +340,7 @@ on-arrival: chancellor = "Prieto"; chancellor_party = "PSOE"
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_peace if coup_progress < 10
 
 @popular_front_sucess_toleration
-on-arrival: toleration_azana = 1; chancellor = "Azaña"; chancellor_party = "izqd_rep_name"; coup_progress -= 1;
+on-arrival: toleration_azana = 1; chancellor = "Azaña"; chancellor_party = izqd_rep_name; coup_progress -= 1;
 go-to: popular_front_civil_war if coup_progress >= 10; popular_front_peace if coup_progress < 10
 
 We externally support another Azana Left Republican goverment. While we have given up giding the nation through the goverment this allows us to not compromise the socialist revolution.
@@ -376,7 +376,7 @@ priority: 2
 There are enough votes for the Far Right and the CEDA to form a coalition. They are agitating for Gil Robles to be granted the Presidency of Goverment. It is up to President [+ president +] to decide who to appoint Chancellor, however, the right can dismiss him if it isnt their preferred candidate, and it does make sense after all, arent they the biggest party?
 
 @far_right_win
-on-arrival: chancellor = "Gil Robles"; chancellor_party = "CEDA"
+on-arrival: chancellor = "Gil Robles"; chancellor_party = ceda_name
 
 [? if president == "Alcala Zamora" : President Alcala Zamora ?][? if president == "Azaña" : President Azana ?] is forced to give goverment to Gil Robles
 
@@ -597,7 +597,7 @@ Barrio is an impartial and honest figure which will guide the goverment as stabe
 
 @azana_chancellor_new
 subtitle: This will reduce our leverage in the ministries.
-on-arrival: leverage -= 5; chancellor = "Azaña"; chancellor_party = "izqd_rep_name"
+on-arrival: leverage -= 5; chancellor = "Azaña"; chancellor_party = izqd_rep_name
 go-to: ministries
 
 We have assembled a new coalition under Manuel Azana, Azana is received coldly by the right of the coalution.
@@ -635,7 +635,7 @@ Our rejection of the unity government has hurt our relations with the bourgeois 
 @toleration_wirth
 view-if: erc_party_leader = "Joos"
 choose-if: president == "Azaña"
-on-arrival: chancellor = "Portela"; chancellor_party = "I"; psoe_in_government = 0; psoe_toleration = 1; erc_relation += 5; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "izqd_rep_name"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 2;
+on-arrival: chancellor = "Portela"; chancellor_party = "I"; psoe_in_government = 0; psoe_toleration = 1; erc_relation += 5; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = izqd_rep_name; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 2;
 
 @no_majority_portela
 on-arrival: pro_republic -= 10; next_election_time = time+3; next_election_month = month + 3; next_election_year = year; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; workers_fe_jons += 6; unemployed_fe_jons += 6; landholders_fe_jons += 5; new_middle_fe_jons += 5; rural_fe_jons += 5; no_majority_papen_elections += 1; workers_psoe -= 8 if pro_republic < 45; workers_psoe *= 0.85 if pro_republic < 40; workers_fe_jons += 5 if pro_republic < 40;
@@ -732,7 +732,7 @@ Yes, an  minority government, with the support of the PSOE. Who should lead this
 @azana_emergency_chancellor
 subtitle: This is unprecedented.
 view-if: not historical_mode or not psoe_prussia
-on-arrival: chancellor = "Azaña"; chancellor_party = "izqd_rep_name"; psoe_in_government = 1; pro_republic -= 5; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE"; reichswehr_loyalty -= 0.1; 
+on-arrival: chancellor = "Azaña"; chancellor_party = izqd_rep_name; psoe_in_government = 1; pro_republic -= 5; foreign_minister_party = "PSOE"; interior_minister_party = "PSOE"; justice_minister_party = "PSOE"; labor_minister_party = "PSOE"; reichswehr_minister_party = "PSOE"; economic_minister_party = "PSOE"; finance_minister_party = "PSOE"; agriculture_minister_party = "PSOE"; reichswehr_loyalty -= 0.1; 
 
 Our experts have checked the constitution, and have discovered that there is no specific prohibition against the President of Goverment also being the President of the Republic.
 
@@ -962,7 +962,7 @@ We have decided to tolerate Brüning's government. This means that we will vote 
 @toleration_right
 choose-if: grand_republican_coalition >= 50
 unavailable-subtitle: The parties supporting the goverment do not have a majority.
-on-arrival: psoe_in_government = 0; psoe_toleration = 1; minority_government = 1; chancellor = "Lerroux"; chancellor_party = "PRR"; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = "izqd_rep_name"; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 4; new_middle_prp -= 5; new_middle_izqd_rep -= 5; landholders_prp -= 5; landholders_izqd_rep -= 5; landholders_ceda += 5; new_middle_ceda += 5
+on-arrival: psoe_in_government = 0; psoe_toleration = 1; minority_government = 1; chancellor = "Lerroux"; chancellor_party = "PRR"; foreign_minister_party = "PRP"; interior_minister_party = "ERC"; justice_minister_party = "I"; labor_minister_party = "ERC"; reichswehr_minister_party = "I"; economic_minister_party = izqd_rep_name; finance_minister_party = "PRP"; agriculture_minister_party = "ERC"; pro_republic -= 4; new_middle_prp -= 5; new_middle_izqd_rep -= 5; landholders_prp -= 5; landholders_izqd_rep -= 5; landholders_ceda += 5; new_middle_ceda += 5
 
 We have decided to tolerate the rightist Republican government. This means that we will vote against no-confidence votes to make sure they fail, but also that we will not be directly participating as ministers in the government. Thus, we can prevent a new election and stop the far right from entering government.
 
@@ -1043,7 +1043,7 @@ Prieto's appointment as chancellor is approved by all our potential allies.
 
 @azana
 title: Manuel Azana for Chancellor
-on-arrival: psoe_in_government = 1; chancellor = "Azaña"; chancellor_party = "izqd_rep_name"; in_grand_coalition = 1 if in_socialist_republican_coalition == 0
+on-arrival: psoe_in_government = 1; chancellor = "Azaña"; chancellor_party = izqd_rep_name; in_grand_coalition = 1 if in_socialist_republican_coalition == 0
 go-to: ministries
 
 Azana is approved by the members of the coalition.
@@ -1242,7 +1242,7 @@ go-to: ministries
 @drop_finance
 title: Drop the Finance Ministry.
 view-if: finance_minister_party = "PSOE"
-on-arrival: finance_minister_party = "PRP"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = "izqd_rep_name" if in_socialist_republican_coalition or in_popular_front;
+on-arrival: finance_minister_party = "PRP"; finance_minister = "Moldenhauer"; leverage += 10; finance_minister_party = izqd_rep_name if in_socialist_republican_coalition or in_popular_front;
 tags: drop_mins_1928
 go-to: ministries
 
@@ -1256,7 +1256,7 @@ go-to: ministries
 @drop_justice
 title: Drop the Justice Ministry.
 view-if: justice_minister_party = "PSOE"
-on-arrival: justice_minister_party = "izqd_rep_name"; justice_minister = "Koch-Weser"; leverage += 10;
+on-arrival: justice_minister_party = izqd_rep_name; justice_minister = "Koch-Weser"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 
@@ -1270,7 +1270,7 @@ go-to: ministries
 @drop_agriculture
 title: Drop the Agriculture Ministry.
 view-if: agriculture_minister_party = "PSOE"
-on-arrival: agriculture_minister_party = "izqd_rep_name"; agriculture_minister = "Dietrich"; leverage += 10;
+on-arrival: agriculture_minister_party = izqd_rep_name; agriculture_minister = "Dietrich"; leverage += 10;
 tags: drop_mins_1928
 go-to: ministries
 

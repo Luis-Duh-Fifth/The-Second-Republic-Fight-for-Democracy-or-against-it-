@@ -132,7 +132,7 @@ Current relations: [+ pce_relation : relationships +]
 
 Current relations: [+ erc_relation : relationships +]
 
-**izqd_rep_name** - *Izquierda Republicana* (Republican Left) - a center-left liberal party, popular among the intelligensia and educated middle class. We have worked together closely for the creation and constitution of the Republic.
+**[+ izqd_rep_name +]**  - *Izquierda Republicana* (Republican Left) - a center-left liberal party, popular among the intelligensia and educated middle class. We have worked together closely for the creation and constitution of the Republic.
 
 Current relations: [+ izqd_rep_relation : relationships +]
 
@@ -148,11 +148,11 @@ Current relations: [+ prr_relation : relationships +]
 
 Current relations: [+ pnv_relation : relationships +]
 
-**ceda_name** - *Confederacion Española de Derechas Autonomas* (Spanish Confederation of Autonomous Rights) - a right-wing catholic-conservative party, with authoritarian, monarchist, and racist elements. It is supported by parts pf the middle class, big and small landowners, peasents and Catholics in general. They mantain an ambigious position on form of state, refusing to declare themselves Republicans while not calling themselves monarchists. They have strong backing of the old order, having very close ties to the church and landowners.
+**[+ ceda_name +]**  - *Confederacion Española de Derechas Autonomas* (Spanish Confederation of Autonomous Rights) - a right-wing catholic-conservative party, with authoritarian, monarchist, and racist elements. It is supported by parts pf the middle class, big and small landowners, peasents and Catholics in general. They mantain an ambigious position on form of state, refusing to declare themselves Republicans while not calling themselves monarchists. They have strong backing of the old order, having very close ties to the church and landowners.
 
 Current relations: [+ ceda_relation : relationships +]
 
-**re_ct_name** - *Renovacion Española y Comunion Tradicionalista* - (Spanish Renovation and Traditionalist Comunion) - The explicitly monarchist and reactionary parties. Heavly authonritarian, they are strongly preatorianist, being in favour of coups and a violent overthrow of the Republic. 
+**[+ re_ct_name +]**  - *Renovacion Española y Comunion Tradicionalista* - (Spanish Renovation and Traditionalist Comunion) - The explicitly monarchist and reactionary parties. Heavly authonritarian, they are strongly preatorianist, being in favour of coups and a violent overthrow of the Republic. 
 
 Current relations: [+ re_ct_relation : relationships +]
 
@@ -260,8 +260,8 @@ data = [
     },
      {
         "id": "izqd_rep",
-        "legend": "izqd_rep_name",
-        "name": "izqd_rep_name",
+        "legend": "IR",
+        "name": "IR",
         "seats": Q.izqd_rep_r*5,
     },
     {
@@ -284,14 +284,14 @@ data = [
     },
     {
         "id": "ceda",
-        "legend": "ceda_name",
-        "name": "ceda_name",
+        "legend": "CEDA",
+        "name": "CEDA",
         "seats": Q.ceda_r*5,
     },
     {
         "id": "re_ct",
-        "legend": "re_ct_name",
-        "name": "re_ct_name",
+        "legend": "RE_CT",
+        "name": "RE_CT",
         "seats": Q.re_ct_r*5,
     },
     {
