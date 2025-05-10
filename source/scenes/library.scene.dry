@@ -260,8 +260,8 @@ data = [
     },
      {
         "id": "izqd_rep",
-        "legend": "IR",
-        "name": "IR",
+        "legend": izqd_rep_name,
+        "name": izqd_rep_name,
         "seats": Q.izqd_rep_r*5,
     },
     {
@@ -284,14 +284,14 @@ data = [
     },
     {
         "id": "ceda",
-        "legend": "CEDA",
-        "name": "CEDA",
+        "legend": ceda_name,
+        "name": ceda_name,
         "seats": Q.ceda_r*5,
     },
     {
         "id": "re_ct",
-        "legend": "RE_CT",
-        "name": "RE_CT",
+        "legend": re_ct_name,
+        "name": re_ct_name,
         "seats": Q.re_ct_r*5,
     },
     {
