@@ -3,8 +3,8 @@ subtitle: After a short period of disorganization after the end of the Monarchy 
 tags: event
 view-if: year = 1933 and month = 3
 max-visits: 1
-On arrival: ceda_formed = 1
+On arrival: ceda_name = CEDA; ceda_formed = 1; re_ct_name = RE_CT
 
 The right has been splintered since the beggining of the republic, divided on matters of the monarchy, economy, methods, and past grudges. Nontheless, after a period of struggle, the agrarians, the catholics, political groups we have disgruntled and many others have joined together. The nucleus of the party is the AP, Action Party. The Confederacion Española de Derechas Autonomas (Spanish Confederation of the Autonomous Right), is led by Gil Robles, a staunch clericalist, with strong support from the Church and the countryside.
 
-There are perhaps some positive news about this new giant, the CEDA mantains an accidentalist position in the face of the Republic-Monarchy question, supposedly mantaining neutrality on this matter. This has caused the monarchist hardliners to leave and form Renovacion Española. In any case, this is a matter of worry, the right has begun consolidating, they look for massive gains next election...
+There are perhaps some positive news about this new giant, the CEDA mantains an accidentalist position in the face of the Republic-Monarchy question, supposedly mantaining neutrality on this matter. This has caused the monarchist hardliners to leave and form Renovacion Española, a far right corporatist monarchist party. In any case, this is a matter of worry, the right has begun consolidating, they look for massive gains next election...
