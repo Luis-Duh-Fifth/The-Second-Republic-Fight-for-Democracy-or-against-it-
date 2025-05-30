@@ -100,7 +100,8 @@ Q.prr_relation = 20;
 // CEDA and fe_jons are invariably hostile
 Q.pnv_relation = 20;
 Q.ceda_relation = 10;
-Q.re_ct_relation = 0;
+Q.ren_esp_relation = 0;
+Q.com_trad_relation = 0;
 Q.fe_jons_relation = 0;
 
 Q.pce_leader = "Thälmann";
@@ -218,10 +219,11 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'minorities'];
-Q.parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'ceda', 're_ct', 'fe_jons'];
+Q.parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'ceda', 'com_trad', 'fe_jons'];
 
-// TODO: add 'sapd' later on
+// TODO: Party formations
 Q.sapd_formed = 0;
+Q.ren_esp_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -233,7 +235,7 @@ Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
 Q.workers_prr = 10;
 Q.workers_ceda = 5;
-Q.workers_re_ct = 5;
+Q.workers_com_trad = 1;
 Q.workers_fe_jons = 0;
 
 Q.landholders_psoe = 0;
@@ -244,7 +246,7 @@ Q.landholders_izqd_rep= 5;
 Q.landholders_prp = 10;
 Q.landholders_prr = 10;
 Q.landholders_ceda = 35;
-Q.landholders_re_ct = 25;
+Q.landholders_com_trad = 25;
 Q.landholders_fe_jons = 5;
 
 Q.new_middle_psoe = 5;
@@ -255,7 +257,7 @@ Q.new_middle_izqd_rep= 25;
 Q.new_middle_prp = 25;
 Q.new_middle_prr = 15;
 Q.new_middle_ceda = 15;
-Q.new_middle_re_ct = 15;
+Q.new_middle_com_trad = 15;
 Q.new_middle_fe_jons = 5;
 
 Q.rural_psoe = 10;
@@ -266,7 +268,7 @@ Q.rural_izqd_rep= 5;
 Q.rural_prp = 15;
 Q.rural_prr = 10;
 Q.rural_ceda = 45;
-Q.rural_re_ct = 10;
+Q.rural_com_trad = 10;
 Q.rural_fe_jons = 5;
 
 Q.unemployed_psoe = 25;
@@ -277,7 +279,7 @@ Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
 Q.unemployed_prr = 9;
 Q.unemployed_ceda = 5;
-Q.unemployed_re_ct = 9;
+Q.unemployed_com_trad = 9;
 Q.unemployed_fe_jons = 15;
 
 Q.minorities_psoe = 15;
@@ -288,7 +290,7 @@ Q.minorities_izqd_rep = 0;
 Q.minorities_prp = 5;
 Q.minorities_prr = 10;
 Q.minorities_ceda = 5;
-Q.minorities_re_ct = 10;
+Q.minorities_com_trad = 10;
 Q.minorities_fe_jons = 0;
 
 
@@ -298,14 +300,15 @@ Q.minorities_fe_jons = 0;
 // note: the ERC figures also include the PNV (Bavarian people's party)
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
-Q.psoe_r = 27;
+Q.psoe_r = 26;
 Q.pce_r = 0;
-Q.erc_r = 9+4;
-Q.izqd_rep_r = 24;
-Q.prp_r = 10;
+Q.erc_r = 9;
+Q.izqd_rep_r = 26;
 Q.prr_r = 19;
-Q.ceda_r = 4;
-Q.re_ct_r = 2;
+Q.prp_r = 11;
+Q.pnv_r = 4;
+Q.ceda_r = 2;
+Q.com_trad_r = 2;
 Q.fe_jons_r = 0;
 
 // diff from prev
@@ -316,17 +319,18 @@ Q.old_izqd_rep_r = 6;
 Q.old_prp_r = 10;
 Q.old_prr_r = 9;
 Q.old_ceda_r = 20;
-Q.old_re_ct_r = 2;
+Q.old_com_trad_r = 2;
 Q.old_fe_jons_r = 1;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
+Q.ren_esp_r = 0;
+Q.ren_esp_r = 0;
 
 // for changing the DDP's name to the DStP
 Q.izqd_rep_name = "AR and PRRS";
 Q.ceda_name = "AP and other Conservatives"
-Q.re_ct_name = "CT and disorganized Alfonsines"
 
 // array of objects of the form {date: Date(), psoe: 10, pce: 12, ...} for each election
 Q.election_records = [];
@@ -348,7 +352,7 @@ Q.prp_in_government = 0;
 Q.prr_in_goverment = 0;
 Q.ceda_in_government = 0;
 Q.pce_in_government = 0;
-Q.re_ct_in_goverment = 0;
+Q.com_trad_in_goverment = 0;
 Q.fe_jons_in_government = 0;
 
 Q.in_right_coalition = 0;

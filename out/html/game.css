@@ -545,8 +545,12 @@ table {
 .seat.ceda {
     fill: #003878;
 }
-.seat.re_ct {
-  fill: #120051;
+}
+.seat.ren_esp {
+    fill: #053f08;
+}
+.seat.com_trad {
+  fill: #000000;
 }
 .seat.fe_jons {
   fill: #000;

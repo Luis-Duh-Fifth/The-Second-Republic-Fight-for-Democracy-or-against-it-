@@ -85,7 +85,7 @@ Q.grand_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r;
 Q.bourgeois_coalition = Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.prr_r;
 Q.center_republican_coalition = Q.erc_r + Q.izqd_rep_r + Q.prp_r + Q.prr_r + Q.ceda_r;
 Q.right_coalition =  Q.prp_r + Q.prr_r + Q.ceda_r;
-Q.authoritarian_right_coalition = Q.ceda_r + Q.re_ct_r + Q.fe_jons_r;
+Q.authoritarian_right_coalition = Q.ceda_r + Q.ren_esp_r + Q.com_trad_r + Q.fe_jons_r;
 Q.left_coalition = Q.psoe_r + Q.pce_r;
 // this is an absurd concept lol
 Q.popular_front_coalition = Q.psoe_r + Q.pce_r + Q.erc_r + Q.izqd_rep_r;
@@ -210,11 +210,20 @@ data = [
         "name": ceda_name,
         "seats": Math.round(Q.ceda_r*5),
     },
+];
+if (Q.ren_esp_formed = 1 && Q.sapd_r) {
+    data.push({
+            "id": "ren_esp",
+            "legend": "RE",
+            "name": "RE",
+            "seats": Math.round(Q.ren_esp_r*5),
+            });
+}
     {
-        "id": "re_ct",
-        "legend": re_ct_name,
-        "name": re_ct_name,
-        "seats": Math.round(Q.re_ct_r*5),
+        "id": "com_trad",
+        "legend": "CT",
+        "name": "CT",
+        "seats": Math.round(Q.com_trad_r*5),
     },
     {
         "id": "fe_jons",

@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['psoe', 'cnt_fai', 'pce', 'izqd_rep', 'erc', 'prp', 'ceda', 're_ct' 'fe_jons', 'prr'];
+        parties = ['psoe', 'cnt_fai', 'pce', 'izqd_rep', 'erc', 'prp', 'ceda', 'ren_esp', 'com_trad', 'fe_jons', 'prr'];
     }
     if (!partyColors) {
-        partyColors = {'psoe': '#E3000F', 'pce': '#8B0000', 'izqd_rep': '#DCCA4A', 'erc': '#000', 'prp': '#D5AC27', 'ceda': '#3f7bc1' 're_ct': '#000000da',, 'fe_jons': '#954B00', 'prr': '#a0a0a0'};
+        partyColors = {'psoe': '#E3000F', 'pce': '#8B0000', 'izqd_rep': '#DCCA4A', 'erc': '#000', 'prp': '#D5AC27', 'ceda': '#3f7bc1', 'ren_esp': '#053f08', 'com_trad': '#000000da', 'fe_jons': '#954B00', 'prr': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'psoe': 'PSOE', 'cnt_fai': 'CNT_FAI', 'pce': 'PCE', 'izqd_rep': 'IR', 'erc': 'ERC + PNV', 'prp': 'PRP', 'ceda': 'CEDA', 're_ct': 'RE_CT' 'fe_jons': 'FE_JONS', 'prr': 'PRR'};
+        partyNames = {'psoe': 'PSOE', 'cnt_fai': 'CNT_FAI', 'pce': 'PCE', 'izqd_rep': 'IR', 'erc': 'ERC + PNV', 'prp': 'PRP', 'ceda': 'CEDA', 'ren_esp': 'RE', 'com_trad': 'CT', 'fe_jons': 'FE_JONS', 'prr': 'PRR'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;

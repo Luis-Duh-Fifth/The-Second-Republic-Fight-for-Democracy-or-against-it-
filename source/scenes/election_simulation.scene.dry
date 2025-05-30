@@ -18,7 +18,7 @@ Q.unemployed = 8.6;
 Q.minorities = 10;
 
 Q.classes = ['workers', 'landholders', 'new_middle', 'rural', 'unemployed', 'minorities'];
-Q.parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'ceda', 're_ct', 'fe_jons'];
+Q.parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'ceda', 'ren_esp', 'com_trad', 'fe_jons'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -30,7 +30,7 @@ Q.workers_izqd_rep = 0;
 Q.workers_prp = 0;
 Q.workers_prr = 10;
 Q.workers_ceda = 5;
-Q.workers_re_ct = 5;
+Q.workers_com_trad = 1;
 Q.workers_fe_jons = 0;
 
 Q.landholders_psoe = 5;
@@ -41,7 +41,7 @@ Q.landholders_izqd_rep= 10;
 Q.landholders_prp = 25;
 Q.landholders_prr = 10;
 Q.landholders_ceda = 25;
-Q.landholders_re_ct = 10;
+Q.landholders_com_trad = 10;
 Q.landholders_fe_jons = 10;
 
 Q.new_middle_psoe = 5;
@@ -52,7 +52,7 @@ Q.new_middle_izqd_rep= 25;
 Q.new_middle_prp = 25;
 Q.new_middle_prr = 15;
 Q.new_middle_ceda = 10;
-Q.new_middle_re_ct = 15;
+Q.new_middle_com_trad = 15;
 Q.new_middle_fe_jons = 5;
 
 Q.rural_psoe = 10;
@@ -63,7 +63,7 @@ Q.rural_izqd_rep= 5;
 Q.rural_prp = 15;
 Q.rural_prr = 10;
 Q.rural_ceda = 45;
-Q.rural_re_ct = 10;
+Q.rural_com_trad = 10;
 Q.rural_fe_jons = 5;
 
 Q.unemployed_psoe = 25;
@@ -74,7 +74,7 @@ Q.unemployed_izqd_rep = 0;
 Q.unemployed_prp = 0;
 Q.unemployed_prr = 9;
 Q.unemployed_ceda = 5;
-Q.unemployed_re_ct = 9;
+Q.unemployed_com_trad = 9;
 Q.unemployed_fe_jons = 15;
 
 Q.minorities_psoe = 15;
@@ -85,7 +85,7 @@ Q.minorities_izqd_rep = 0;
 Q.minorities_prp = 5;
 Q.minorities_prr = 10;
 Q.minorities_ceda = 5;
-Q.minorities_re_ct = 10;
+Q.minorities_com_trad = 10;
 Q.minorities_fe_jons = 0;
 !}
 go-to: election_algorithm
