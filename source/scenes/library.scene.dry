@@ -313,7 +313,6 @@ data = [
         "name": "fe_jons",
         "seats": Q.fe_jons_r*5,
     },
-];
 if (d3 && window) {
     // get screen width
     var width = 500;
