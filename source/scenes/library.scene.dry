@@ -300,7 +300,7 @@ data = [
         "legend": "RE",
         "name": "RE",
         "seats": Q.ren_esp_r*5,
-    },]
+    },
     {
         "id": "com_trad",
         "legend": "CT",
@@ -313,6 +313,7 @@ data = [
         "name": "fe_jons",
         "seats": Q.fe_jons_r*5,
     },
+];
 if (d3 && window) {
     // get screen width
     var width = 500;
