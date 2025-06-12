@@ -295,12 +295,12 @@ data = [
         "name": ceda_name,
         "seats": Q.ceda_r*5,
     },
-    [? if ren_esp_formed = 1: {
+    (Q.ren_esp_formed = 1) {
         "id": "ren_esp",
         "legend": "RE",
         "name": "RE",
         "seats": Q.ren_esp_r*5,
-    },?]
+    },]
     {
         "id": "com_trad",
         "legend": "CT",
