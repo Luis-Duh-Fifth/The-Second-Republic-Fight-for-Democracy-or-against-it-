@@ -92,10 +92,8 @@ PRP: [+ prp_votes +]%
 # 1928: 14, 1930: 7
 CEDA: [+ ceda_votes +]%
 
-[? if ren_esp_formed = 1: 
-# 1928: 2, 1930: 5
-RE: [+ ren_esp_votes +]%
-?]
+[? if ren_esp_formed = 1: RE: [+ ren_esp_votes +]% ?]
+
 # 1928: 2, 1930: 5
 CT: [+ com_trad_votes +]%
 
@@ -157,9 +155,9 @@ Current relations: [+ pnv_relation : relationships +]
 
 Current relations: [+ ceda_relation : relationships +]
 
-[? if ren_esp_formed = 1: *RE* (Renovacion Espanola) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. 
+[? if ren_esp_formed = 1: *RE* (Renovacion Espanola) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. ?]
 
-Current relations: [+ ren_esp_relation : relationships +] ?]
+[? if ren_esp_formed = 1: Current relations: [+ ren_esp_relation : relationships +] ?]
 
 CT  - *Comunion Tradicionalista* - (Traditionalist Comunion) - The explicitly monarchist and reactionary parties. Heavly authonritarian, they are strongly preatorianist, being in favour of coups and a violent overthrow of the Republic. 
 
