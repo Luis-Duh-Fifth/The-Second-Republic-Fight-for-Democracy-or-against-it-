@@ -275,7 +275,9 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#003878'> </div> !} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td><td>!} [+ str_change_ceda +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#120051'> </div> !} RE_CT: {!</td><td>!} [+ re_ct_r +]% {!</td><td>!} [+ str_change_re_ct +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#120051'> </div> !} CT: {!</td><td>!} [+ com_trad_r +]% {!</td><td>!} [+ str_change_com_trad +] {!</td></tr>!}
+
+[? if ren_esp_formed = 1: {!<tr><td><div class="box" style='background-color:#120051'> </div> !} RE: {!</td><td>!} [+ ren_esp_r +]% {!</td><td>!} [+ str_change_ren_esp +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#000'> </div> !} FE_JONS: {!</td><td>!} [+ fe_jons_r +]% {!</td><td>!} [+ str_change_fe_jons +] {!</td></tr>!}
 {!</table>!}
@@ -377,7 +379,7 @@ The Left Reupublicans manages to some of the hostility from the Army and Right, 
 
 @authoritarian_right_coalition
 title: Authoritarian-right coalition
-subtitle: FE_JONS + CEDA + RE_CT ([+ authoritarian_right_coalition +]%)
+subtitle: FE_JONS + CEDA + [? if ren_esp_formed = 1: RE + ?]CT ([+ authoritarian_right_coalition +]%)
 view-if: authoritarian_right_coalition >= 50
 go-to: far_right_win if (year >= 1933 or authoritarian_right_coalition  >= 66) and president != "Azaña"; far_right_fail if (year < 1932 and fe_jons_r < 65) and president != "Azaña"; far_right_azana if president == "Azaña"
 priority: 2
