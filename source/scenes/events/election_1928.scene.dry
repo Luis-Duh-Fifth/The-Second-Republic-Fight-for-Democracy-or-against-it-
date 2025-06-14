@@ -211,26 +211,28 @@ data = [
         "seats": Math.round(Q.ceda_r*5),
     },
 ];
-if (Q.ren_esp_formed == 1 && Q.ren:esp_r) {
+if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
     data.push({
-            "id": "ren_esp",
-            "legend": "RE",
-            "name": "RE",
-            "seats": Math.round(Q.ren_esp_r*5),
-            });
+        "id": "ren_esp",
+        "legend": "RE",
+        "name": "RE",
+        "seats": Math.round(Q.ren_esp_r * 5),
+    });
 }
-    {
-        "id": "com_trad",
-        "legend": "CT",
-        "name": "CT",
-        "seats": Math.round(Q.com_trad_r*5),
-    },
-    {
-        "id": "fe_jons",
-        "legend": "FE_JONS",
-        "name": "FE_JONS",
-        "seats": Math.round(Q.fe_jons_r*5),
-    },
+    data = data.concat([
+        {
+            "id": "com_trad",
+            "legend": "CT",
+            "name": "CT",
+            "seats": Math.round(Q.com_trad_r * 5),
+        },
+        {
+            "id": "fe_jons",
+            "legend": "FE_JONS",
+            "name": "FE_JONS",
+            "seats": Math.round(Q.fe_jons_r * 5),
+        },
+    ]);
 if (window && d3) {
     var width = 500; 
     var height = 500;
