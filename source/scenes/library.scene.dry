@@ -241,7 +241,7 @@ go-to: menu
 on-arrival: erc_minus_pnv_r = erc_r - 3;
 on-display: {!
 data = [
-    {
+   {
         "id": "cnt_fai",
         "legend": "CNT_FAI",
         "name": "CNT_FAI",
@@ -295,36 +295,29 @@ data = [
         "name": ceda_name,
         "seats": Math.round(Q.ceda_r*5),
     },
-    (Q.ren_esp_formed == 1 && Q.ren_esp_r) {
+];
+if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
     data.push({
-            "id": "ren_esp",
-            "legend": "RE",
-            "name": "RE",
-            "seats": Math.round(Q.ren_esp_r*5),
-            });
+        "id": "ren_esp",
+        "legend": "RE",
+        "name": "RE",
+        "seats": Math.round(Q.ren_esp_r * 5),
+    });
 }
-    {
-        "id": "com_trad",
-        "legend": "CT",
-        "name": "CT",
-        "seats": Math.round(Q.com_trad_r*5),
-    },
-    {
-        "id": "fe_jons",
-        "legend": "FE_JONS",
-        "name": "FE_JONS",
-        "seats": Math.round(Q.fe_jons_r*5),
-    },
-if (d3 && window) {
-    // get screen width
-    var width = 500;
-    var height = 500;
-    var screenWidth = document.getElementById('content').offsetWidth;
-    if (screenWidth < width - 50) {
-        width = screenWidth - 50;
-        height = width;
-        document.getElementById("cortes").style.height = screenWidth/2 + "px";
-    }
+    data = data.concat([
+        {
+            "id": "com_trad",
+            "legend": "CT",
+            "name": "CT",
+            "seats": Math.round(Q.com_trad_r * 5),
+        },
+        {
+            "id": "fe_jons",
+            "legend": "FE_JONS",
+            "name": "FE_JONS",
+            "seats": Math.round(Q.fe_jons_r * 5),
+        },
+    ]);
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
