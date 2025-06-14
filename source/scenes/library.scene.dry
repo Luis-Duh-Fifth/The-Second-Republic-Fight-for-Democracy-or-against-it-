@@ -318,7 +318,7 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
             "seats": Math.round(Q.fe_jons_r * 5),
         },
     ]);
-    if (d3 && window) 
+    if (d3 && window) {
     // get screen width
     var width = 500;
     var height = 500;
