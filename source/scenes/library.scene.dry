@@ -245,77 +245,76 @@ data = [
         "id": "cnt_fai",
         "legend": "CNT_FAI",
         "name": "CNT_FAI",
-        "seats": Q.cnt_fai_r*5,
+        "seats": Math.round(Q.cnt_fai_r = 0),
     },
     {
         "id": "pce",
         "legend": "PCE",
         "name": "PCE",
-        "seats": Q.pce_r*5,
+        "seats": Math.round(Q.pce_r*5),
     },
     {
         "id": "psoe",
         "legend": "PSOE",
         "name": "PSOE",
-        "seats": Q.psoe_r*5,
+        "seats": Math.round(Q.psoe_r*5),
     },
-    {
+     {
         "id": "erc",
         "legend": "ERC",
         "name": "ERC",
-        "seats": (Q.erc_r - 3)*5,
+        "seats": Math.round(Q.erc_r * 5 * 0.7),
     },
-     {
+    {
         "id": "izqd_rep",
         "legend": izqd_rep_name,
         "name": izqd_rep_name,
-        "seats": Q.izqd_rep_r*5,
+        "seats": Math.round(Q.izqd_rep_r*5),
     },
     {
         "id": "prp",
         "legend": "PRP",
         "name": "PRP",
-        "seats": Q.prp_r*5,
+        "seats": Math.round(Q.prp_r*5),
     },
     {
         "id": "prr",
         "legend": "PRR",
         "name": "PRR",
-        "seats": Q.prr_r*5,
+        "seats": Math.round(Q.prr_r*5),
     },
     {
         "id": "pnv",
-        "legend": "pnv",
-        "name": "pnv",
-        "seats": Q.pnv_r*5,
+        "legend": "PNV",
+        "name": "PNV",
+        "seats": Math.round(Q.erc_r * 5 * 0.3),
     },
     {
         "id": "ceda",
         "legend": ceda_name,
         "name": ceda_name,
-        "seats": Q.ceda_r*5,
+        "seats": Math.round(Q.ceda_r*5),
     },
     (Q.ren_esp_formed == 1 && Q.ren_esp_r) {
     data.push({
-        "id": "ren_esp",
-        "legend": "RE",
-        "name": "RE",
-        "seats": Math.round(Q.ren_esp_r * 5),
-    });
-    }
+            "id": "ren_esp",
+            "legend": "RE",
+            "name": "RE",
+            "seats": Math.round(Q.ren_esp_r*5),
+            });
+}
     {
         "id": "com_trad",
         "legend": "CT",
         "name": "CT",
-        "seats": Q.com_trad_r*5,
+        "seats": Math.round(Q.com_trad_r*5),
     },
     {
         "id": "fe_jons",
-        "legend": "fe_jons",
-        "name": "fe_jons",
-        "seats": Q.fe_jons_r*5,
+        "legend": "FE_JONS",
+        "name": "FE_JONS",
+        "seats": Math.round(Q.fe_jons_r*5),
     },
-];
 if (d3 && window) {
     // get screen width
     var width = 500;
