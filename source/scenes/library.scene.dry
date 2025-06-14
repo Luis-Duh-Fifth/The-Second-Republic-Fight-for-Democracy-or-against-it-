@@ -295,7 +295,7 @@ data = [
         "name": ceda_name,
         "seats": Q.ceda_r*5,
     },
-    ...((Q.ren_esp_formed == 1 && Q.ren_esp_r)
+    ((Q.ren_esp_formed == 1 && Q.ren_esp_r)
         ? [{
             "id": "re_esp",
             "legend": "RE",
