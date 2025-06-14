@@ -3,7 +3,7 @@ subtitle: After a short period of disorganization after the end of the Monarchy 
 tags: event
 view-if: year = 1933 and month = 3
 max-visits: 1
-On arrival: ceda_name = CEDA; ceda_formed = 1; ren_esp_formed = 1
+On arrival: ceda_name = CEDA; ceda_formed = 1; ren_esp_formed == 1
 
 The right has been splintered since the beggining of the republic, divided on matters of the monarchy, economy, methods, and past grudges. Nontheless, after a period of struggle, the agrarians, the catholics, political groups we have disgruntled and many others have joined together. The nucleus of the party is the AP, Action Party. The Confederacion Española de Derechas Autonomas (Spanish Confederation of the Autonomous Right), is led by Gil Robles, a staunch clericalist, with strong support from the Church and the countryside.
 

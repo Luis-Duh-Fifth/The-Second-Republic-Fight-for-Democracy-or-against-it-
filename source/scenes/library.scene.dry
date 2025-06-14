@@ -92,7 +92,7 @@ PRP: [+ prp_votes +]%
 # 1928: 14, 1930: 7
 CEDA: [+ ceda_votes +]%
 
-[? if ren_esp_formed = 1: RE: [+ ren_esp_votes +]% ?]
+[? if ren_esp_formed == 1: RE: [+ ren_esp_votes +]% ?]
 
 # 1928: 2, 1930: 5
 CT: [+ com_trad_votes +]%
@@ -105,17 +105,17 @@ PRR: [+ prr_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PSOE: [+ workers_psoe_normalized +]%, CNT_FAI: [+ workers_cnt_fai_normalized +]%, PCE: [+ workers_pce_normalized +]%, ERC: [+ workers_erc_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRR: [+ workers_prr_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, [? if ren_esp_formed = 1: RE: [+ workers_ren_esp_normalized +]% ?], CT: [+ workers_com_trad_normalized +]%, FE_JONS: [+ workers_fe_jons_normalized +]%
+Workers: PSOE: [+ workers_psoe_normalized +]%, CNT_FAI: [+ workers_cnt_fai_normalized +]%, PCE: [+ workers_pce_normalized +]%, ERC: [+ workers_erc_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRR: [+ workers_prr_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ workers_ren_esp_normalized +]% ?], CT: [+ workers_com_trad_normalized +]%, FE_JONS: [+ workers_fe_jons_normalized +]%
 
-Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, CNT_FAI: [+ new_middle_cnt_fai_normalized +]%, PCE: [+ new_middle_pce_normalized +]%, ERC: [+ new_middle_erc_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRR: [+ new_middle_prr_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, [? if ren_esp_formed = 1: RE: [+ new_middle_ren_esp_normalized +]% ?], CT: [+ new_middle_com_trad_normalized +]%, FE_JONS: [+ new_middle_fe_jons_normalized +]%
+Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, CNT_FAI: [+ new_middle_cnt_fai_normalized +]%, PCE: [+ new_middle_pce_normalized +]%, ERC: [+ new_middle_erc_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRR: [+ new_middle_prr_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ new_middle_ren_esp_normalized +]% ?], CT: [+ new_middle_com_trad_normalized +]%, FE_JONS: [+ new_middle_fe_jons_normalized +]%
 
-Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, CNT_FAI: [+ landholders_cnt_fai_normalized +]%, PCE: [+ landholders_pce_normalized +]%, ERC: [+ landholders_erc_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRR: [+ landholders_prr_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, [? if ren_esp_formed = 1: RE: [+ landholders_ren_esp_normalized +]% ?], CT: [+ new_middle_com_trad_normalized +]%, FE_JONS: [+ landholders_fe_jons_normalized +]%
+Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, CNT_FAI: [+ landholders_cnt_fai_normalized +]%, PCE: [+ landholders_pce_normalized +]%, ERC: [+ landholders_erc_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRR: [+ landholders_prr_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ landholders_ren_esp_normalized +]% ?], CT: [+ new_middle_com_trad_normalized +]%, FE_JONS: [+ landholders_fe_jons_normalized +]%
 
-Unlanded Peasents: PSOE: [+ rural_psoe_normalized +]%, CNT_FAI: [+ rural_cnt_fai_normalized +]%, PCE: [+ rural_pce_normalized +]%, ERC: [+ rural_erc_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRR: [+ rural_prr_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, [? if ren_esp_formed = 1: RE: [+ rural_ren_esp_normalized +]% ?], CT: [+ rural_com_trad_normalized +]%, FE_JONS: [+ rural_fe_jons_normalized +]%
+Unlanded Peasents: PSOE: [+ rural_psoe_normalized +]%, CNT_FAI: [+ rural_cnt_fai_normalized +]%, PCE: [+ rural_pce_normalized +]%, ERC: [+ rural_erc_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRR: [+ rural_prr_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ rural_ren_esp_normalized +]% ?], CT: [+ rural_com_trad_normalized +]%, FE_JONS: [+ rural_fe_jons_normalized +]%
 
-Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, CNT_FAI: [+ unemployed_cnt_fai_normalized +]%, PCE: [+ unemployed_pce_normalized +]%, ERC: [+ unemployed_erc_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRR: [+ unemployed_prr_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, [? if ren_esp_formed = 1: RE: [+ unemployed_ren_esp_normalized +]% ?], CT: [+ unemployed_com_trad_normalized +]%, FE_JONS: [+ unemployed_fe_jons_normalized +]%
+Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, CNT_FAI: [+ unemployed_cnt_fai_normalized +]%, PCE: [+ unemployed_pce_normalized +]%, ERC: [+ unemployed_erc_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRR: [+ unemployed_prr_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ unemployed_ren_esp_normalized +]% ?], CT: [+ unemployed_com_trad_normalized +]%, FE_JONS: [+ unemployed_fe_jons_normalized +]%
 
-Minorities: PSOE: [+ minorities_psoe_normalized +]%, CNT_FAI: [+ minorities_cnt_fai_normalized +]%, PCE: [+ minorities_pce_normalized +]%, ERC: [+ minorities_erc_normalized +]%, IR: [+ minorities_izqd_rep_normalized +]%, PRR: [+ minorities_prr_normalized +]%, PRP: [+ minorities_prp_normalized +]%; CEDA: [+ minorities_ceda_normalized +]%, [? if ren_esp_formed = 1: RE: [+ minorities_ren_esp_normalized +]% ?], CT: [+ minorities_com_trad_normalized +]%, FE_JONS: [+ minorities_fe_jons_normalized +]%
+Minorities: PSOE: [+ minorities_psoe_normalized +]%, CNT_FAI: [+ minorities_cnt_fai_normalized +]%, PCE: [+ minorities_pce_normalized +]%, ERC: [+ minorities_erc_normalized +]%, IR: [+ minorities_izqd_rep_normalized +]%, PRR: [+ minorities_prr_normalized +]%, PRP: [+ minorities_prp_normalized +]%; CEDA: [+ minorities_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ minorities_ren_esp_normalized +]% ?], CT: [+ minorities_com_trad_normalized +]%, FE_JONS: [+ minorities_fe_jons_normalized +]%
 
 
 @parties
@@ -155,9 +155,9 @@ Current relations: [+ pnv_relation : relationships +]
 
 Current relations: [+ ceda_relation : relationships +]
 
-[? if ren_esp_formed = 1: *RE* (Renovacion Espanola) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. ?]
+[? if ren_esp_formed == 1: *RE* (Renovacion Espanola) - a party recently formed in a split from the SPD, the SAPD is essentially an agglomeration of various left-wing splinter groups between the SPD and KPD. ?]
 
-[? if ren_esp_formed = 1: Current relations: [+ ren_esp_relation : relationships +] ?]
+[? if ren_esp_formed == 1: Current relations: [+ ren_esp_relation : relationships +] ?]
 
 CT  - *Comunion Tradicionalista* - (Traditionalist Comunion) - The explicitly monarchist and reactionary parties. Heavly authonritarian, they are strongly preatorianist, being in favour of coups and a violent overthrow of the Republic. 
 
@@ -295,7 +295,7 @@ data = [
         "name": ceda_name,
         "seats": Q.ceda_r*5,
     },
-    (Q.ren_esp_formed = 1) {
+    (Q.ren_esp_formed == 1) {
         "id": "ren_esp",
         "legend": "RE",
         "name": "RE",
@@ -378,7 +378,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
 
-[? If ren_esp_formed = 1: {!<tr><td><div class="box" style='background-color:##053f08'> </div></td><td>!} RE: {!</td><td>!} [+ ren_esp_r +]% {!</td></tr>!} ?]
+[? If ren_esp_formed == 1: {!<tr><td><div class="box" style='background-color:##053f08'> </div></td><td>!} RE: {!</td><td>!} [+ ren_esp_r +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:##000'> </div></td><td>!} CT: {!</td><td>!} [+ com_trad_r +]% {!</td></tr>!}
 
