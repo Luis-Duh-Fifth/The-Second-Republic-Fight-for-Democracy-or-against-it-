@@ -295,12 +295,12 @@ data = [
         "name": ceda_name,
         "seats": Q.ceda_r*5,
     },
-    (Q.sapd_formed && Q.sapd_r) {
+    (Q.ren_esp_formed == 1 && Q.ren_esp_r) {
     data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r5),
+            "id": "re_esp",
+            "legend": "RE",
+            "name": "RE",
+            "seats": Math.round(Q.ren_esp_r5),
             });
     }
     {
