@@ -383,7 +383,7 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
 
 {!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
 
-[? If ren_esp_formed == 1: {!<tr><td><div class="box" style='background-color:##053f08'> </div></td><td>!} RE: {!</td><td>!} [+ ren_esp_r +]% {!</td></tr>!} ?]
+[? if ren_esp_formed == 1: {!<tr><td><div class="box" style='background-color:##053f08'> </div></td><td>!} RE: {!</td><td>!} [+ ren_esp_r +]% {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:##000'> </div></td><td>!} CT: {!</td><td>!} [+ com_trad_r +]% {!</td></tr>!}
 
