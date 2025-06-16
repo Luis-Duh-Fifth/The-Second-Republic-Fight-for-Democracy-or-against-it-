@@ -43,7 +43,7 @@ PRP: [+ prp_r +]%
 # 1928: 14, 1930: 7
 CEDA: [+ ceda_r +]%
 # 1928: 3, 1930: 18
-[? if ren_esp_formed == 1 : RE: [+ ren:esp_r +]% ?]
+[? if ren_esp_formed == 1 : RE: [+ ren_esp_r +]% ?]
 CT:[+ com_trad_r +]%
 FE_JONS: [+ fe_jons_r +]%
 # 1928: 9, 1930: 10
