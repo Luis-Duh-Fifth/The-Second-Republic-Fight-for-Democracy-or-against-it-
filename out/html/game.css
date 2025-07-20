@@ -517,44 +517,49 @@ table {
 .seat.cnt_fai {
   fill: #000000;
 }
+
 .seat.pce {
-    fill: #8B0000;
+  fill: #8f1a1a;
 }
+
 .seat.psoe {
-    fill: #E3000F;
-    stroke: #000;
-    stroke-width: 1.5px;
-}
-.seat.erc {
-  fill: #fd5304;
-  stroke: #f4f002;
-  stroke-width: 1.5px;
-}
-    .seat.izqd_rep {
-      fill: #ff9100;
-}
-.seat.prp {
-    fill: #4ad527;
-}
-.seat.prr {
-    fill: #8300a7;
-}
-.seat.pnv {
-  fill: #147800;
-}
-.seat.ceda {
-    fill: #003878;
-}
-}
-.seat.ren_esp {
-    fill: #053f08;
-}
-.seat.com_trad {
-  fill: #000000;
-}
-.seat.fe_jons {
-  fill: #000;
-  stroke: #E3000F;
+  fill: #c31818;
+  stroke: #000;
   stroke-width: 1.5px;
 }
 
+.seat.erc {
+  fill: #d66a1a;
+}
+
+.seat.izqd_rep {
+  fill: #e98c1f;
+}
+
+.seat.prp {
+  fill: #4caf2c;
+}
+
+.seat.prr {
+  fill: #6e3aa3;
+}
+
+.seat.pnv {
+  fill: #1a7a1a;
+}
+
+.seat.ceda {
+  fill: #204d91;
+}
+
+.seat.ren_esp {
+  fill: #1d7e1d;
+}
+
+.seat.com_trad {
+  fill: #B32D34;
+}
+
+.seat.fe_jons {
+  fill: #5C1321;
+}

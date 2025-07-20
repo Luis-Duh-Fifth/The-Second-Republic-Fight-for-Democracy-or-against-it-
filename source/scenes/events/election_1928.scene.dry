@@ -38,33 +38,148 @@ on-arrival: {!
 // set old results
 // election threshold constitutional reform
 // banning parties
-var new_party_sum = 0;
-for (var party of Q.parties) {
-    Q['old_' + party + '_r'] = Q[party + '_r'];
-    if (Q.constitutional_reform > 0) {
-        if (Q[party + '_votes'] < Q.electoral_threshold || (Q.electoral_threshold > 1 && party == 'prr') || Q[party + '_banned']) {
-            Q[party + '_r'] = 0;
-        } else {
-            Q[party + '_r'] = Q[party + '_votes'];
-        }
-        new_party_sum += Q[party + '_r'];
-    } else {
-        Q[party + '_r'] = Q[party + '_votes'];
+
+var total_sum = 0;
+
+Q.left_list = ['psoe', 'pce', 'izqd_rep', 'erc'];
+Q.center_list = ['prr', 'prp'];
+Q.right_list = ['ceda', 'com_trad', 'fe_jons'];
+
+Q.lists = ['left_list', 'center_list', 'right_list'];
+
+for (var list of Q.lists) {
+    Q['old_' + list + '_votes'] = Q[list + '_votes'] || 0;
+    Q['old_' + list + '_seats'] = Q[list + '_seats'] || 0;
+
+    Q[list + '_votes'] = 0;
+    Q[list + '_seats'] = 0;
+    for (var party of Q[list]) {
+        Q[list + '_votes'] += Q[party + '_votes'];
     }
-    Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
-    var sign = Q['change_' + party + '_r'] > 0 ? '+'  : '';
-    Q['str_change_' + party] = sign + Q['change_' + party + '_r'];//.toFixed(1);
 }
-// calculate new party sum if electoral reform
-if (Q.electoral_threshold && Q.electoral_threshold > 0) {
-    for (var party of Q.parties) {
-        if (Q[party + '_r'] > 0) {
-            Q[party + '_r'] = Math.round(Q[party + '_r']*100/new_party_sum);
-        }
-        Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
-        var sign = Q['change_' + party + '_r'] > 0 ? '+'  : '';
-        Q['str_change_' + party] = sign + Q['change_' + party + '_r'];//.toFixed(1);
+
+total_sum = Q.left_list_votes + Q.center_list_votes + Q.right_list_votes;
+
+for (var list of Q.lists) {
+    Q[list + '_votes'] = Q[list + '_votes'] / total_sum * 100;
+}
+
+for (var state of Q.states) {
+    var total_sum_state = 0;
+    for (var list of Q.lists) {
+        Q[state + '_' + list + '_votes'] = 0;
     }
+    for (var list of Q.lists) {
+        Q[state + '_' + list + '_votes'] = Q[list + '_votes'] * Q[state + '_' + list + '_weight'];
+        total_sum_state += Q[state + '_' + list + '_votes'];
+    }
+
+    let left = Q[state + '_left_list_votes'];
+    let center = Q[state + '_center_list_votes'];
+    let right = Q[state + '_right_list_votes'];
+
+    let max = Math.max(left, center, right);
+    let top_list = (max === left) ? 'left_list' :
+                   (max === center) ? 'center_list' : 'right_list';
+
+    for (var list of Q.lists) {
+        if (top_list == list) {
+            total_sum_state += Q[state + '_' + list + '_votes'] * 0.5;
+            Q[state + '_' + list + '_votes'] *= 1.5;
+        }
+    }
+
+    for (var list of Q.lists) {
+        Q[state + '_' + list + '_votes'] = Q[state + '_' + list + '_votes'] / total_sum_state * 100;
+    }
+                   
+    let totalVotes = 0;
+
+    for (var list of Q.lists) {
+        totalVotes += Q[state + '_' + list + '_votes'];
+    }
+
+    let totalSeats = Q[state + '_seats'];
+
+    let allocatedSeats = 0;
+    let remainders = [];
+    for (var list of Q.lists) {
+        let rawSeats = Q[state + '_' + list + '_votes'] * totalSeats / totalVotes;
+        let seats = Math.floor(rawSeats);
+        Q[state + '_' + list + '_seats'] = seats;
+        allocatedSeats += seats;
+        remainders.push({
+            list: list,
+            remainder: rawSeats - seats
+        });
+    }
+
+    let remainingSeats = totalSeats - allocatedSeats;
+    remainders.sort((a, b) => b.remainder - a.remainder);
+    for (let i = 0; i < remainingSeats; i++) {
+        let list = remainders[i].list;
+        Q[state + '_' + list + '_seats'] += 1;
+    }
+    console.log(Q[state + '_' + list + '_seats'])
+    for (var list of Q.lists) {
+        Q[list + '_seats'] += Q[state + '_' + list + '_seats'] || 0;
+    }
+}
+
+for (var list of Q.lists) {
+    var list_weight_total = 0;
+    for (var party of Q[list]) {
+        list_weight_total += Q[party + '_list_weight'];
+    }
+    if (list_weight_total != 0) {
+        for (var party of Q[list]) {
+            Q[party + '_list_weight'] = Q[party + '_list_weight'] / list_weight_total;
+        }
+    }
+    for (var party of Q[list]) {
+        Q[party + '_seats'] = Q[list + '_seats']*Q[party + '_list_weight'];
+    }
+}
+
+var total_seats = 0;
+
+for (var list of Q.lists) {
+    for (var party of Q[list]) {
+        total_seats += Q[party + '_seats'];
+    }
+    for (var party of Q[list]) {
+        Q[party + '_r'] = parseFloat(((Q[party + '_seats'] * 100) / total_seats).toFixed(1));
+    }
+    for (var party of Q[list]) {
+        Q[party + '_seats'] = Math.round(Q[party + '_seats']);
+    }
+}
+
+for (var list of Q.lists) {
+    for (var party of Q[list]) {
+        Q['change_' + party + '_r'] = Q[party + '_r'] - Q['old_' + party + '_r'];
+        var sign = Q['change_' + party + '_r'] > 0 
+                   ? '<img src="img/arrowup.png"> ' 
+                   : Q['change_' + party + '_r'] < 0 
+                     ? '<img src="img/arrowdown.png"> ' 
+                     : '<img src="img/steady.png"> ';
+        Q['change_' + party + '_r'] = Math.abs(Q['change_' + party + '_r']);
+        Q['str_change_' + party] = sign + parseFloat(Q['change_' + party + '_r']).toFixed(1);
+
+        Q['change_' + party + '_seats'] = Q[party + '_seats'] - Q['old_' + party + '_seats'];
+        var sign = Q['change_' + party + '_seats'] > 0 
+                   ? '<img src="img/arrowup.png"> ' 
+                   : Q['change_' + party + '_seats'] < 0 
+                     ? '<img src="img/arrowdown.png"> ' 
+                     : '<img src="img/steady.png"> ';
+        Q['change_' + party + '_seats'] = Math.abs(Q['change_' + party + '_seats']);
+        Q['str_change_' + party + '_seats'] = sign + Q['change_' + party + '_seats']
+    }
+}
+
+for (var party of Q.parties) {
+    Q['old_' + party + '_r'] = Q[party + '_r'] || 0;
+    Q['old_' + party + '_seats'] = Q[party + '_seats'] || 0;
 }
 
 // get change arrows and signs
@@ -156,59 +271,53 @@ Q.election_records.push(election_result);
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and fe_jons_r >= 15)
 on-display: {!
 data = [
-   {
-        "id": "cnt_fai",
-        "legend": "CNT_FAI",
-        "name": "CNT_FAI",
-        "seats": Math.round(Q.cnt_fai_r = 0),
-    },
     {
         "id": "pce",
         "legend": "PCE",
         "name": "PCE",
-        "seats": Math.round(Q.pce_r*5),
+        "seats": Math.round(Q.pce_r * (Q.total_seats / 100)),
     },
     {
         "id": "psoe",
         "legend": "PSOE",
         "name": "PSOE",
-        "seats": Math.round(Q.psoe_r*5),
+        "seats": Math.round(Q.psoe_r * (Q.total_seats / 100)),
     },
      {
         "id": "erc",
         "legend": "ERC",
         "name": "ERC",
-        "seats": Math.round(Q.erc_r * 5 * 0.7),
+        "seats": Math.round(Q.erc_r * (Q.total_seats / 100) * 0.7),
     },
     {
         "id": "izqd_rep",
-        "legend": izqd_rep_name,
-        "name": izqd_rep_name,
-        "seats": Math.round(Q.izqd_rep_r*5),
+        "legend": "IR",
+        "name": "IR",
+        "seats": Math.round(Q.izqd_rep_r * (Q.total_seats / 100)),
     },
     {
         "id": "prp",
         "legend": "PRP",
         "name": "PRP",
-        "seats": Math.round(Q.prp_r*5),
+        "seats": Math.round(Q.prp_r * (Q.total_seats / 100)),
     },
     {
         "id": "prr",
         "legend": "PRR",
         "name": "PRR",
-        "seats": Math.round(Q.prr_r*5),
+        "seats": Math.round(Q.prr_r * (Q.total_seats / 100)),
     },
     {
         "id": "pnv",
         "legend": "PNV",
         "name": "PNV",
-        "seats": Math.round(Q.erc_r * 5 * 0.3),
+        "seats": Math.round(Q.erc_r * (Q.total_seats / 100) * 0.3),
     },
     {
         "id": "ceda",
-        "legend": ceda_name,
-        "name": ceda_name,
-        "seats": Math.round(Q.ceda_r*5),
+        "legend": "CEDA",
+        "name": "CEDA",
+        "seats": Math.round(Q.ceda_r * (Q.total_seats / 100)),
     },
 ];
 if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
@@ -216,7 +325,7 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
         "id": "ren_esp",
         "legend": "RE",
         "name": "RE",
-        "seats": Math.round(Q.ren_esp_r * 5),
+        "seats": Math.round(Q.ren_esp_r * (Q.total_seats / 100)),
     });
 }
     data = data.concat([
@@ -224,13 +333,13 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
             "id": "com_trad",
             "legend": "CT",
             "name": "CT",
-            "seats": Math.round(Q.com_trad_r * 5),
+            "seats": Math.round(Q.com_trad_r * (Q.total_seats / 100)),
         },
         {
             "id": "fe_jons",
             "legend": "FE_JONS",
             "name": "FE_JONS",
-            "seats": Math.round(Q.fe_jons_r * 5),
+            "seats": Math.round(Q.fe_jons_r * (Q.total_seats / 100)),
         },
     ]);
 if (window && d3) {
@@ -248,6 +357,25 @@ if (window && d3) {
     parliament.enter.fromCenter(true).smallToBig(true);
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#cortes").datum(data).call(parliament);
+
+    var lines = d3.linegraph(false, false,
+            Q.parties,
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prp': '#4caf2c', 'prr': '#6e3aa3', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prp': 'PRP', 'prr': 'PRR', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
+    lines.width(width).height(400);
+    //var svg = lines(Q.election_records);
+    d3.select("#election_history").datum(Q.election_records).call(lines);
+    //document.getElementById('election_history').innerHTML = svg.outerHTML;
+
+    // party support records should not have so many ticks
+    if (!Q.historical_mode) {
+        var lines_2 = d3.linegraph(true, true,
+            Q.parties,
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prp': '#4caf2c', 'prr': '#6e3aa3', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prp': 'PRP', 'prr': 'PRR', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
+        lines_2.width(width).height(400);
+        d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
+    }
 }
 !}
 go-to: coalition_menu
@@ -257,31 +385,133 @@ go-to: coalition_menu
 {!<svg id="cortes" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!} 
-{!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **PSOE:** {!</td><td>!} **[+ psoe_r +]%** {!</td><td>!} **[+ str_change_psoe +]** {!</td></tr>!}
+{!<tr><td>Party</td><td>Seats</td><td>Change</td><td>Seat Share</td><td>% Change</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000000'> </div> !}CNT_FAI: {!</td><td>!} [+ cnt_fai_r +]% {!</td><td>!} [+ str_change_cnt_fai +] {!</td></tr>!}
+<tr><td colspan="5" style="text-align: center;"><strong>Marxist Left</strong></td></tr>
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}PCE: {!</td><td>!} [+ pce_r +]% {!</td><td>!} [+ str_change_pce +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#c31818; outline: 2px; outline-style: solid;'> </div> !} **PSOE:** {!</td><td>!} **[+ psoe_seats +]** {!</td><td>!} **[+ str_change_psoe_seats +]** {!</td><td>!} **[+ psoe_r +]%** {!</td><td>!} **[+ str_change_psoe +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#fd5304'> </div> !} ERC: {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8f1a1a'> </div> !}PCE: {!</td><td>!} [+ pce_seats +] {!</td><td>!} [+ str_change_pce_seats +] {!</td><td>!} [+ pce_r +]% {!</td><td>!} [+ str_change_pce +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ff9100'> </div> !} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td><td>!} [+ str_change_izqd_rep +] {!</td></tr>!}
+<tr><td colspan="5" style="text-align: center;"><strong>Nationalists</strong></td></tr>
 
-{!<tr><td><div class="box" style='background-color:#4ad527'> </div> !} PRP: {!</td><td>!} [+ prp_r +]% {!</td><td>!} [+ str_change_prp +] {!</td></tr>!}
- 
-{!<tr><td><div class="box" style='background-color:#8300a7'> </div> !} PRR: {!</td><td>!} [+ prr_r +] % {!</td><td>!} [+ str_change_prr +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#d66a1a'> </div> !} ERC: {!</td><td>!} [+ erc_seats +] {!</td><td>!} [+ str_change_erc_seats +] {!</td><td>!} [+ erc_r +]% {!</td><td>!} [+ str_change_erc +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#147800'> </div> !} PNV: {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1a7a1a'> </div> !} PNV: {!</td><td>!} [+ pnv_seats +] {!</td><td>!} [+ str_change_pnv_seats +] {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#003878'> </div> !} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td><td>!} [+ str_change_ceda +] {!</td></tr>!}
+<tr><td colspan="5" style="text-align: center;"><strong>Republican Left</strong></td></tr>
 
-{!<tr><td><div class="box" style='background-color:#120051'> </div> !} CT: {!</td><td>!} [+ com_trad_r +]% {!</td><td>!} [+ str_change_com_trad +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#e98c1f'> </div> !} [+ izqd_rep_name +]: {!</td><td>!} [+ izqd_rep_seats +] {!</td><td>!} [+ str_change_izqd_rep_seats +] {!</td><td>!} [+ izqd_rep_r +]% {!</td><td>!} [+ str_change_izqd_rep +] {!</td></tr>!}
 
-[? if ren_esp_formed == 1: {!<tr><td><div class="box" style='background-color:#120051'> </div> !} RE: {!</td><td>!} [+ ren_esp_r +]% {!</td><td>!} [+ str_change_ren_esp +] {!</td></tr>!} ?]
+<tr><td colspan="5" style="text-align: center;"><strong>Republicans of the Center and Right</strong></td></tr>
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} FE_JONS: {!</td><td>!} [+ fe_jons_r +]% {!</td><td>!} [+ str_change_fe_jons +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#4caf2c'> </div> !} PRP: {!</td><td>!} [+ prp_seats +] {!</td><td>!} [+ str_change_prp_seats +] {!</td><td>!} [+ prp_r +]% {!</td><td>!} [+ str_change_prp +] {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#6e3aa3'> </div> !} PRR: {!</td><td>!} [+ prr_seats +] {!</td><td>!} [+ str_change_prr_seats +] {!</td><td>!} [+ prr_r +]% {!</td><td>!} [+ str_change_prr +] {!</td></tr>!}
+
+<tr><td colspan="5" style="text-align: center;"><strong>Parties of the Right</strong></td></tr>
+
+{!<tr><td><div class="box" style='background-color:#204d91'> </div> !} [+ ceda_name +]: {!</td><td>!} [+ ceda_seats +] {!</td><td>!} [+ str_change_ceda_seats +] {!</td><td>!} [+ ceda_r +]% {!</td><td>!} [+ str_change_ceda +] {!</td></tr>!}
+
+<tr><td colspan="5" style="text-align: center;"><strong>Monarchist Parties of the Right</strong></td></tr>
+
+{!<tr><td><div class="box" style='background-color:#B32D34'> </div> !} CT: {!</td><td>!} [+ com_trad_seats +] {!</td><td>!} [+ str_change_com_trad_seats +] {!</td><td>!} [+ com_trad_r +]% {!</td><td>!} [+ str_change_com_trad +] {!</td></tr>!}
+
+[? if ren_esp_formed == 1: {!<tr><td><div class="box" style='background-color:#1d7e1d'> </div> !} RE: {!</td><td>!} [+ ren_esp_seats +] {!</td><td>!} [+ str_change_ren_esp_seats +] {!</td><td>!} [+ ren_esp_r +]% {!</td><td>!} [+ str_change_ren_esp +] {!</td></tr>!} ?]
+
+<tr><td colspan="5" style="text-align: center;"><strong>Fascist Parties</strong></td></tr>
+
+{!<tr><td><div class="box" style='background-color:#5C1321'> </div> !} FE-JONS: {!</td><td>!} [+ fe_jons_seats +] {!</td><td>!} [+ str_change_fe_jons_seats +] {!</td><td>!} [+ fe_jons_r +]% {!</td><td>!} [+ str_change_fe_jons +] {!</td></tr>!}
 {!</table>!}
+
+{!<button class="tab_button" id="demographics_tab" onclick="window.toggleStates();">State Results</button>!} {!<button class="tab_button" id="election_tab" onclick="window.toggleElectionGraph();">Previous Elections Graph</button>!} {!<button class="tab_button" id="graph_tab" onclick="window.toggleGraph();">Party Support Graph</button>!}
+
+{!<div id="results" style="display: none;">!}
+    {!<div style="overflow-x:auto;">!}
+    {!<table style="text-align:center; border-spacing: 0.2em;">!}
+        {!<tr>!}
+            {!<th>List</th>!}
+            {!<th>Left-wing List Seats</th>!}
+            {!<th>Center List Seats</th>!}
+            {!<th>Right-wing List Seats</th>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Galicia</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ galicia_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ galicia_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ galicia_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Asturias</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ asturias_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ asturias_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ asturias_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Castile-Leon</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ castile_leon_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ castile_leon_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ castile_leon_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Basque-Navarre</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ basque_navarre_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ basque_navarre_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ basque_navarre_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Aragon</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ aragon_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ aragon_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ aragon_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Catalonia-Balearic</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ catalonia_balearic_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ catalonia_balearic_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ catalonia_balearic_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Levante</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ levante_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ levante_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ levante_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Castile</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ castile_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ castile_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ castile_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Extremadura</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ extremadura_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ extremadura_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ extremadura_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Andalusia</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ andalusia_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ andalusia_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ andalusia_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Canary Islands</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ andalusia_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ andalusia_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ andalusia_right_list_seats +]{!</td>!}
+        {!</tr>!}
+        {!<tr>!}
+            {!<td><b>Ceuta and Melilla</b></td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ morocco_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ morocco_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ morocco_right_list_seats +]{!</td>!}
+        {!</tr>!}
+    {!</table>!}
+    {!</div>!}
+{!</div>!}
+{!<svg id="election_history" style="width: 500px; height: 400px; display: none;"> </svg>!}
+{!<svg id="party_support_history" style="width: 500px; height: 400px; display: none;"> </svg>!}
 
 **Potential coalitions:**
 
@@ -792,7 +1022,7 @@ on-arrival: erc_no_confidence = 1 if erc_relation < 45; pce_no_confidence = 1 if
 
 The FE_JONS and CEDA will vote against us, of course. The other parties vote their conscience.
 
-In total, [+ no_confidence_votes +]% of the Cortes is against us. [? if no_confidence_succeeds : We have lost the vote of no confidence. ?]
+In total, [+ no_confidence_seats +] of the Cortes is against us. [? if no_confidence_succeeds : We have lost the vote of no confidence. ?]
 
 - @no_confidence_elections_new: There will be new elections, which we will try to delay.
 - @no_confidence_win: We have won, for now.

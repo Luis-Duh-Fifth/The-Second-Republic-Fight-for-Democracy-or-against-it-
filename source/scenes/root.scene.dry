@@ -293,6 +293,80 @@ Q.minorities_ceda = 5;
 Q.minorities_com_trad = 10;
 Q.minorities_fe_jons = 0;
 
+Q.states = ['galicia', 'asturias', 'castile_leon', 'basque_navarre', 'aragon', 'catalonia_balearic', 'levante', 'castile', 'extremadura', 'andalusia', 'canary', 'morocco'];
+
+Q.galicia_seats = 47;
+Q.galicia_left_list_weight = 1;
+Q.galicia_center_list_weight = 1;
+Q.galicia_right_list_weight = 1;
+
+Q.asturias_seats = 23;
+Q.asturias_left_list_weight = 1;
+Q.asturias_center_list_weight = 1;
+Q.asturias_right_list_weight = 1;
+
+Q.castile_leon_seats = 52;
+Q.castile_leon_left_list_weight = 1;
+Q.castile_leon_center_list_weight = 1;
+Q.castile_leon_right_list_weight = 1;
+
+Q.basque_navarre_seats = 24;
+Q.basque_navarre_left_list_weight = 1;
+Q.basque_navarre_center_list_weight = 1;
+Q.basque_navarre_right_list_weight = 1;
+
+Q.aragon_seats = 25;
+Q.aragon_left_list_weight = 1;
+Q.aragon_center_list_weight = 1;
+Q.aragon_right_list_weight = 1;
+
+Q.catalonia_balearic_seats = 60;
+Q.catalonia_balearic_left_list_weight = 1;
+Q.catalonia_balearic_center_list_weight = 1;
+Q.catalonia_balearic_right_list_weight = 1;
+
+Q.levante_seats = 57;
+Q.levante_left_list_weight = 1;
+Q.levante_center_list_weight = 1;
+Q.levante_right_list_weight = 1;
+
+Q.castile_seats = 57;
+Q.castile_left_list_weight = 1;
+Q.castile_center_list_weight = 1;
+Q.castile_right_list_weight = 1;
+
+Q.extremadura_seats = 23;
+Q.extremadura_left_list_weight = 1;
+Q.extremadura_center_list_weight = 1;
+Q.extremadura_right_list_weight = 1;
+
+Q.andalusia_seats = 89;
+Q.andalusia_left_list_weight = 1;
+Q.andalusia_center_list_weight = 1;
+Q.andalusia_right_list_weight = 1;
+
+Q.canary_seats = 11;
+Q.canary_left_list_weight = 1;
+Q.canary_center_list_weight = 1;
+Q.canary_right_list_weight = 1;
+
+Q.morocco_seats = 2;
+Q.morocco_left_list_weight = 1;
+Q.morocco_center_list_weight = 1;
+Q.morocco_right_list_weight = 1;
+
+Q.psoe_list_weight = 1;
+Q.pce_list_weight = 0.2;
+Q.erc_list_weight = 1;
+Q.izqd_rep_list_weight = 0.5;
+Q.prr_list_weight = 1;
+Q.prp_list_weight = 0.7;
+Q.pnv_list_weight = 1;
+Q.ceda_list_weight = 1;
+Q.com_trad_list_weight = 0.05;
+Q.fe_jons_list_weight = 0.02;
+
+Q.total_seats = 470;
 
 // Current Cortes composition
 // % of Cortes in Jan 1931
@@ -301,6 +375,7 @@ Q.minorities_fe_jons = 0;
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.psoe_r = 26;
+Q.cnt_fai_r = 0;
 Q.pce_r = 0;
 Q.erc_r = 9;
 Q.izqd_rep_r = 26;
@@ -310,6 +385,17 @@ Q.pnv_r = 4;
 Q.ceda_r = 2;
 Q.com_trad_r = 2;
 Q.fe_jons_r = 0;
+
+Q.psoe_seats = 26;
+Q.pce_seats = 0;
+Q.erc_seats = 9;
+Q.izqd_rep_seats = 26;
+Q.prr_seats = 19;
+Q.prp_seats = 11;
+Q.pnv_seats = 4;
+Q.ceda_seats = 2;
+Q.com_trad_seats = 2;
+Q.fe_jons_seats = 0;
 
 // diff from prev
 Q.old_psoe_r = 26;
@@ -322,6 +408,17 @@ Q.old_ceda_r = 20;
 Q.old_com_trad_r = 2;
 Q.old_fe_jons_r = 1;
 
+Q.old_psoe_seats = 26;
+Q.old_pce_seats = 0;
+Q.old_erc_seats = 9;
+Q.old_izqd_rep_seats = 26;
+Q.old_prr_seats = 19;
+Q.old_prp_seats = 11;
+Q.old_pnv_seats = 4;
+Q.old_ceda_seats = 2;
+Q.old_com_trad_seats = 2;
+Q.old_fe_jons_seats = 0;
+
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
@@ -329,8 +426,8 @@ Q.ren_esp_r = 0;
 Q.ren_esp_r = 0;
 
 // for changing the DDP's name to the DStP
-Q.izqd_rep_name = "AR and PRRS";
-Q.ceda_name = "AP and other Conservatives"
+Q.izqd_rep_name = "AR & PRRS";
+Q.ceda_name = "AP & Conservatives"
 
 // array of objects of the form {date: Date(), psoe: 10, pce: 12, ...} for each election
 Q.election_records = [];
@@ -342,6 +439,7 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Alcala Zamora";
+Q.president_party = "PRP"
 // starting chancellor: Azaña
 Q.chancellor = "Azaña";
 Q.chancellor_party = 'IR';

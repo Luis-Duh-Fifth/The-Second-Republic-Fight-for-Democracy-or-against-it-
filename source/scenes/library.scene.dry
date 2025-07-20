@@ -21,11 +21,11 @@ Herein contains relevant information about the government and politics of the Sp
 @government
 go-to: menu
 
-The Spanish Republic, called by some the "Second Republic", is a semipresidential republic with both a strong President and Parliment, called the Council of Deputies or the Cortes. The Cortes are responsible for governing, while the President partially ceremonial but also has some important governing powers and responsibilities.
+The Spanish Republic, called by some the "Second Republic", is a semi-presidential republic with both a strong President and Parliment, called the Council of Deputies or the Cortes. The Cortes are responsible for governing, while the President partially ceremonial but also has some important governing powers and responsibilities.
 
-The Cortes are elected based on a mixed representation system, giving bigger electoral lists in each electoral district more seats while making sure that the less voted lists are still represented. The President then elects a President of Council of Ministers, sometimes referred to as President of Goverment. The Cortes than vote on wether to accept the goverment or not. A majority vote-of-no-confidence can remove the current government.
+The Cortes are elected based on a mixed representation system, giving bigger electoral lists in each electoral district more seats while making sure that the less voted lists are still represented. The President then elects a President of Council of Ministers, sometimes referred to as President of Government. The Cortes than vote on wether to accept the government or not. A majority vote-of-no-confidence can remove the current government.
 
-The President is elected by a the Cortes and a equal number of delegates elected specifiaclly for the occasion. The role of the president is mostly to represent Spain, but he also has governing powers. The President can veto laws that are not voted by 2/3rds of the Cortes and send them back for one revision if they do have 2/3ds of the Cortes. The President of the Republic also chooses the President of Goverment and is able to dissolve the Cortes twice, and can thus influence the formation of a government, however, after the second use dissolution the newly formed Cortes must do a vote of confidence on the President of the Republic, if more than half of the Cortes reject the necesity of the dissolution the President must step down.
+The President is elected by a the Cortes and a equal number of delegates elected specifically for the occasion. The role of the president is mostly to represent Spain, but he also has governing powers. The President can veto laws that are not voted by 2/3rds of the Cortes and send them back for one revision if they do have 2/3ds of the Cortes. The President of the Republic also chooses the President of Government and is able to dissolve the Cortes twice, and can thus influence the formation of a government, however, after the second use dissolution the newly formed Cortes must do a vote of confidence on the President of the Republic, if more than half of the Cortes reject the necessity of the dissolution the President must step down.
 
 Spain is an integral nation, this means that while the majority of the country is unitarian, some states have autonomies each of which have their own governments with a number of responsibilities. While currently no autonomies have been approved it is known that the Catalans and Basque wish for one.
 
@@ -34,15 +34,15 @@ go-to: menu
 
 **Demographic Groups**
 
-**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the PSOE or CNT-FAI. They make up 25% of the population.
+**Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the <span style="color: #c31818;">**PSOE**</span> or <span style="color: #000000;">**CNT-FAI**</span>. They make up 25% of the population.
 
 **Middle Class**: The new middle class consists of white-collar workers and government employees, they mainly back the liberals. The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative. 15% of the population.
 
 **Rural Landholders**: Small and large landowners, the large landowners are concentrated in the south while the small landowners are mainly in the north. They tend to be conservative. 25% of the population.
 
-**Rural Peasents**:  The independent rural workers and field hands. Usually support the revolutionary left but also have conservative sectors. 25% of the population.
+**Rural Peasants**:  The independent rural workers and field hands. Usually support the revolutionary left but also have conservative sectors. 25% of the population.
 
-**Regional Minorities** Various cultural and ethnic groups with ambitions of autonomy or independence, mainly the Basques and Catalans, aproximatly 10% of the population. They disproportionately support ERC in Cataluña and PNV in the Basque Country.
+**Regional Minorities** Various cultural and ethnic groups with ambitions of autonomy or independence, mainly the Basques and Catalans, approximately 10% of the population. They disproportionately support <span style="color: #d66a1a;">**ERC**</span> in Catalonia and <span style="color: #1a7a1a;">**PNV**</span> in the Basque Country.
 
 **Catholics** The majority of the population of Spain country is Catholic, distributed amongst these groups, we must be careful on our policies related to them, lest we anger them and the Catholic Church.
 
@@ -73,69 +73,68 @@ go-to: menu
 **Projected election results** (if the election were to be held now):
 
 # 1928: 30, 1930: 25, 1932: 22
-PSOE: [+ psoe_votes +]%
+<span style="color: #c31818;">**PSOE**</span>: [+ psoe_votes +]%
 
-CNT_FAI: [+ cnt_fai_votes +]%
+<span style="color: #000000;">**CNT-FAI**</span>: [+ cnt_fai_votes +]%
 
 # 1928: 10, 1930: 13
-PCE: [+ pce_votes +]%
+<span style="color: #8f1a1a;">**PCE**</span>: [+ pce_votes +]%
 
 # 1928: 15, 1930: 15, 1932: 
-ERC + PNV: [+ erc_votes +]%
+<span style="color: #d66a1a;">**ERC**</span> + <span style="color: #1a7a1a;">**PNV**</span>: [+ erc_votes +]%
 
 # 1928: 5, 1930: 4 (as DstP)
-IR: [+ izqd_rep_votes +]%
+<span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ izqd_rep_votes +]%
 
 # 1928: 9, 1930: 5
-PRP: [+ prp_votes +]%
+<span style="color: #4caf2c;">**PRP**</span>: [+ prp_votes +]%
+
+# 1928: 9, 1930: 10
+<span style="color: #6e3aa3;">**PRR**</span>: [+ prr_votes +]%
 
 # 1928: 14, 1930: 7
-CEDA: [+ ceda_votes +]%
+<span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ ceda_votes +]%
 
 [? if ren_esp_formed == 1: RE: [+ ren_esp_votes +]% ?]
 
 # 1928: 2, 1930: 5
-CT: [+ com_trad_votes +]%
+<span style="color: #B32D34;">**CT**</span>: [+ com_trad_votes +]%
 
 # 1928: 3, 1930: 18
-FE_JONS: [+ fe_jons_votes +]%
-
-# 1928: 9, 1930: 10
-PRR: [+ prr_votes +]%
+<span style="color: #5C1321;">**FE-JONS**</span>: [+ fe_jons_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: PSOE: [+ workers_psoe_normalized +]%, CNT_FAI: [+ workers_cnt_fai_normalized +]%, PCE: [+ workers_pce_normalized +]%, ERC: [+ workers_erc_normalized +]%, IR: [+ workers_izqd_rep_normalized +]%, PRR: [+ workers_prr_normalized +]%, PRP: [+ workers_prp_normalized +]%; CEDA: [+ workers_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ workers_ren_esp_normalized +]% ?], CT: [+ workers_com_trad_normalized +]%, FE_JONS: [+ workers_fe_jons_normalized +]%
+Workers: <span style="color: #c31818;">**PSOE**</span>: [+ workers_psoe_normalized +]%, CNT_FAI: [+ workers_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ workers_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ workers_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ workers_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ workers_prp_normalized +]%, PRR: [+ workers_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ workers_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ workers_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ workers_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ workers_fe_jons_normalized +]%
 
-Middle Class: PSOE: [+ new_middle_psoe_normalized +]%, CNT_FAI: [+ new_middle_cnt_fai_normalized +]%, PCE: [+ new_middle_pce_normalized +]%, ERC: [+ new_middle_erc_normalized +]%, IR: [+ new_middle_izqd_rep_normalized +]%, PRR: [+ new_middle_prr_normalized +]%, PRP: [+ new_middle_prp_normalized +]%; CEDA: [+ new_middle_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ new_middle_ren_esp_normalized +]% ?], CT: [+ new_middle_com_trad_normalized +]%, FE_JONS: [+ new_middle_fe_jons_normalized +]%
+Middle Class: <span style="color: #c31818;">**PSOE**</span>: [+ new_middle_psoe_normalized +]%, CNT_FAI: [+ new_middle_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ new_middle_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ new_middle_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ new_middle_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ new_middle_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ new_middle_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ new_middle_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ new_middle_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ new_middle_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ new_middle_fe_jons_normalized +]%
 
-Rural Landholders: PSOE: [+ landholders_psoe_normalized +]%, CNT_FAI: [+ landholders_cnt_fai_normalized +]%, PCE: [+ landholders_pce_normalized +]%, ERC: [+ landholders_erc_normalized +]%, IR: [+ landholders_izqd_rep_normalized +]%, PRR: [+ landholders_prr_normalized +]%, PRP: [+ landholders_prp_normalized +]%; CEDA: [+ landholders_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ landholders_ren_esp_normalized +]% ?], CT: [+ new_middle_com_trad_normalized +]%, FE_JONS: [+ landholders_fe_jons_normalized +]%
+Rural Landholders: <span style="color: #c31818;">**PSOE**</span>: [+ landholders_psoe_normalized +]%, CNT_FAI: [+ landholders_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ landholders_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ landholders_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ landholders_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ landholders_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ landholders_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ landholders_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ landholders_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ new_middle_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ landholders_fe_jons_normalized +]%
 
-Unlanded Peasents: PSOE: [+ rural_psoe_normalized +]%, CNT_FAI: [+ rural_cnt_fai_normalized +]%, PCE: [+ rural_pce_normalized +]%, ERC: [+ rural_erc_normalized +]%, IR: [+ rural_izqd_rep_normalized +]%, PRR: [+ rural_prr_normalized +]%, PRP: [+ rural_prp_normalized +]%; CEDA: [+ rural_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ rural_ren_esp_normalized +]% ?], CT: [+ rural_com_trad_normalized +]%, FE_JONS: [+ rural_fe_jons_normalized +]%
+Unlanded Peasents: <span style="color: #c31818;">**PSOE**</span>: [+ rural_psoe_normalized +]%, CNT_FAI: [+ rural_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ rural_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ rural_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ rural_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ rural_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ rural_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ rural_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ rural_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ rural_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ rural_fe_jons_normalized +]%
 
-Unemployed: PSOE: [+ unemployed_psoe_normalized +]%, CNT_FAI: [+ unemployed_cnt_fai_normalized +]%, PCE: [+ unemployed_pce_normalized +]%, ERC: [+ unemployed_erc_normalized +]%, IR: [+ unemployed_izqd_rep_normalized +]%, PRR: [+ unemployed_prr_normalized +]%, PRP: [+ unemployed_prp_normalized +]%; CEDA: [+ unemployed_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ unemployed_ren_esp_normalized +]% ?], CT: [+ unemployed_com_trad_normalized +]%, FE_JONS: [+ unemployed_fe_jons_normalized +]%
+Unemployed: <span style="color: #c31818;">**PSOE**</span>: [+ unemployed_psoe_normalized +]%, CNT_FAI: [+ unemployed_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ unemployed_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ unemployed_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ unemployed_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ unemployed_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ unemployed_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ unemployed_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ unemployed_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ unemployed_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ unemployed_fe_jons_normalized +]%
 
-Minorities: PSOE: [+ minorities_psoe_normalized +]%, CNT_FAI: [+ minorities_cnt_fai_normalized +]%, PCE: [+ minorities_pce_normalized +]%, ERC: [+ minorities_erc_normalized +]%, IR: [+ minorities_izqd_rep_normalized +]%, PRR: [+ minorities_prr_normalized +]%, PRP: [+ minorities_prp_normalized +]%; CEDA: [+ minorities_ceda_normalized +]%, [? if ren_esp_formed == 1: RE: [+ minorities_ren_esp_normalized +]% ?], CT: [+ minorities_com_trad_normalized +]%, FE_JONS: [+ minorities_fe_jons_normalized +]%
-
+Minorities: <span style="color: #c31818;">**PSOE**</span>: [+ minorities_psoe_normalized +]%, CNT_FAI: [+ minorities_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ minorities_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ minorities_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ minorities_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ minorities_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ minorities_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ minorities_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ minorities_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ minorities_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ minorities_fe_jons_normalized +]%
 
 @parties
 go-to: menu
 
-**CNT_FAI** - *Confederation Nacional de Trabajo_Federacion Anarquista Iberica* (National Confederation of Labour_Anarchist Federation of Iberia) - The CNT is the second biggest trade union in this country after our UGT. It is a militantly anarcho syndicalist organization, being probably the biggest anarchist movement in europe. They are frontally against any concessions to what they consider the "burgois republic", this of course strains their relationship with us and many others. Given their anarchist idiology they absolutly refuse to participate in parlamentarian politics, nontheless, if they are happy with us they might be open to encouraging their members to vote our lists. 
+**CNT_FAI** - *Confederation Nacional de Trabajo_Federacion Anarquista Iberica* (National Confederation of Labour_Anarchist Federation of Iberia) - The CNT is the second biggest trade union in this country after our UGT. It is a militantly anarcho-syndicalist organization, being probably the biggest anarchist movement in europe. They are frontally against any concessions to what they consider the "bourgeois republic", this of course strains their relationship with us and many others. Given their anarchist ideology they absolutely refuse to participate in parliamentarian politics, nonetheless, if they are happy with us they might be open to encouraging their members to vote our lists. 
 
 Current relations: [+ cnt_fai_relation : relationships +]
 
-**PCE** - *Partido Comunista Español* (Spanish Comunist Party) - A split from us from the days of October, the PCE is mostly irrelevant in national politics, being very small. Nontheless, it is a incredibly well organized and disciplined party. A Marxist Leninist party, they follow the path of Moscow most loyally.
+**PCE** - *Partido Comunista Español* (Spanish Comunist Party) - A split from us from the days of October, the PCE is mostly irrelevant in national politics, being very small. Nonetheless, it is a incredibly well organized and disciplined party. A Marxist Leninist party, they follow the path of Moscow most loyally.
 
 Current relations: [+ pce_relation : relationships +]
 
 **PSOE** - *Partido Socialista Obrero Español* (Spanish Socialist Workers Party) - this is us. We are a socialist party of the working class. We are the heirs of the legacy of Marx and Pablo Iglesias.
 
-**ERC** - *Esquerra Republicana Catalana* (Catalan Republican Left) - center left to left Catalan party that supports the Republic. They wish for independence, but for now advocate for autnomy.
+**ERC** - *Esquerra Republicana Catalana* (Catalan Republican Left) - center left to left Catalan party that supports the Republic. They wish for independence, but for now advocate for autonomy.
 
 Current relations: [+ erc_relation : relationships +]
 
-**[+ izqd_rep_name +]**  - *Izquierda Republicana* (Republican Left) - a center-left liberal party, popular among the intelligensia and educated middle class. We have worked together closely for the creation and constitution of the Republic.
+**[+ izqd_rep_name +]** - *Izquierda Republicana* (Republican Left) - a center-left liberal party, popular among the intelligensia and educated middle class. We have worked together closely for the creation and constitution of the Republic.
 
 Current relations: [+ izqd_rep_relation : relationships +]
 
@@ -143,15 +142,15 @@ Current relations: [+ izqd_rep_relation : relationships +]
 
 Current relations: [+ prp_relation : relationships +]
 
-**PRR** - *Partido Republicano Radical* (Republican Radical Party) - The PRR is a center right Republican party, strangely enough it began as a leftist revolutionary anticlerical burgoise party. They collabrated with us on the overthrow of the Monarchy but our relations have rapidly cooled. 
+**PRR** - *Partido Republicano Radical* (Republican Radical Party) - The PRR is a center right Republican party, strangely enough it began as a leftist revolutionary anticlerical burgoise party. They collaborated with us on the overthrow of the Monarchy but our relations have rapidly cooled. 
 
 Current relations: [+ prr_relation : relationships +]
 
-**PNV** - *Partido Nacionalista Vasco* (Basque Nationalist Party) - A nationalist Basque party, they are catholic conservatives, while more open to working with us due to their autonomist ambitions, they are nontheless hostile to us.
+**PNV** - *Partido Nacionalista Vasco* (Basque Nationalist Party) - A nationalist Basque party, they are catholic conservatives, while more open to working with us due to their autonomist ambitions, they are nonetheless hostile to us.
 
 Current relations: [+ pnv_relation : relationships +]
 
-**[+ ceda_name +]**  - *Confederacion Española de Derechas Autonomas* (Spanish Confederation of Autonomous Rights) - a right-wing catholic-conservative party, with authoritarian, monarchist, and racist elements. It is supported by parts pf the middle class, big and small landowners, peasents and Catholics in general. They mantain an ambigious position on form of state, refusing to declare themselves Republicans while not calling themselves monarchists. They have strong backing of the old order, having very close ties to the church and landowners.
+**[+ ceda_name +]**  - *Confederacion Española de Derechas Autonomas* (Spanish Confederation of Autonomous Rights) - a right-wing catholic-conservative party, with authoritarian, monarchist, and racist elements. It is supported by parts pf the middle class, big and small landowners, peasants and Catholics in general. They maintain an ambiguous position on form of state, refusing to declare themselves Republicans while not calling themselves monarchists. They have strong backing of the old order, having very close ties to the church and landowners.
 
 Current relations: [+ ceda_relation : relationships +]
 
@@ -159,7 +158,7 @@ Current relations: [+ ceda_relation : relationships +]
 
 [? if ren_esp_formed == 1: Current relations: [+ ren_esp_relation : relationships +] ?]
 
-CT  - *Comunion Tradicionalista* - (Traditionalist Comunion) - The explicitly monarchist and reactionary parties. Heavly authonritarian, they are strongly preatorianist, being in favour of coups and a violent overthrow of the Republic. 
+CT  - *Comunion Tradicionalista* - (Traditionalist Comunion) - The explicitly monarchist and reactionary parties. Heavily authoritarian, they are strongly praetorianism, being in favour of coups and a violent overthrow of the Republic. 
 
 Current relations: [+ com_trad_relation : relationships +]
 
@@ -215,7 +214,7 @@ Loyalty: [+ assault_guard_loyalty : loyalty +]
 
 @factions
 
-**Internal factions of the PSOE**
+**Internal factions of the <span style="color: #c31818;">**PSOE**</span>**
 
 Overall dissent: [+ dissent_percent : dissent +]
 
@@ -229,7 +228,7 @@ Dissent: [+ left_dissent : dissent +]
 
 **Centrists**
 
-Centrists in the PSOE are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
+Centrists in the <span style="color: #c31818;">**PSOE**</span> are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
 
 Strength: [+ center_strength : strength +]
 
@@ -267,8 +266,8 @@ data = [
     },
     {
         "id": "izqd_rep",
-        "legend": izqd_rep_name,
-        "name": izqd_rep_name,
+        "legend": "IR",
+        "name": "IR",
         "seats": Math.round(Q.izqd_rep_r*5),
     },
     {
@@ -291,8 +290,8 @@ data = [
     },
     {
         "id": "ceda",
-        "legend": ceda_name,
-        "name": ceda_name,
+        "legend": "CEDA",
+        "name": "CEDA",
         "seats": Math.round(Q.ceda_r*5),
     },
 ];
@@ -335,7 +334,9 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
     parliament.exit.toCenter(false).bigToSmall(true);
     d3.select("#cortes").datum(data).call(parliament);
 
-    var lines = d3.linegraph();
+    var lines = d3.linegraph(false, false, Q.parties,
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prp': '#4caf2c', 'prr': '#6e3aa3', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prp': 'PRP', 'prr': 'PRR', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     d3.select("#election_history").datum(Q.election_records).call(lines);
@@ -343,7 +344,9 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
 
     // party support records should not have so many ticks
     if (!Q.historical_mode) {
-        var lines_2 = d3.linegraph(true, true);
+    var lines_2 = d3.linegraph(false, false, Q.parties,
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prp': '#4caf2c', 'prr': '#6e3aa3', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prp': 'PRP', 'prr': 'PRR', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -365,29 +368,27 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
 {!<svg id="cortes" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div></td><td>!} **PSOE:** {!</td><td>!} **[+ psoe_r +]%** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#c31818; outline: 2px; outline-style: solid;'> </div></td><td>!} **<span style="color: #c31818;">**PSOE**</span>:** {!</td><td>!} **[+ psoe_r +]%** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#00000'> </div></td> <td>!}CNT_FAI: {!</td><td>!} [+ cnt_fai_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#8f1a1a'> </div></td> <td>!} <span style="color: #8f1a1a;">**PCE**</span>: {!</td><td>!} [+ pce_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div></td> <td>!}PCE: {!</td><td>!} [+ pce_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#d66a1a'> </div></td><td>!} <span style="color: #d66a1a;">**ERC**</span>: {!</td><td>!} [+ erc_minus_pnv_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div></td><td>!} ERC: {!</td><td>!} [+ erc_minus_pnv_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#e98c1f'> </div></td><td>!} <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: {!</td><td>!} [+ izqd_rep_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div></td><td>!} IR: {!</td><td>!} [+ izqd_rep_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#4caf2c'> </div></td><td>!} <span style="color: #4caf2c;">**PRP**</span>: {!</td><td>!} [+ prp_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} PRP: {!</td><td>!} [+ prp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#6e3aa3'> </div></td><td>!} <span style="color: #6e3aa3;">**PRR**</span>: {!</td><td>!} [+ prr_r +] % {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} PRR: {!</td><td>!} [+ prr_r +] % {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#1a7a1a'> </div></td><td>!} <span style="color: #1a7a1a;">**PNV**</span>: {!</td><td>!} [+ pnv_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} PNV: {!</td><td>!} 3% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#204d91'> </div></td><td>!} <span style="color: #204d91;">**[+ ceda_name +]**</span>: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div></td><td>!} CEDA: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
+[? if ren_esp_formed == 1: {!<tr><td><div class="box" style='background-color:#0B3D0B'> </div></td><td>!} <span style="color: #0B3D0B;">**RE**</span>: {!</td><td>!} [+ ren_esp_r +]% {!</td></tr>!} ?]
 
-[? if ren_esp_formed == 1: {!<tr><td><div class="box" style='background-color:##053f08'> </div></td><td>!} RE: {!</td><td>!} [+ ren_esp_r +]% {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#B32D34'> </div></td><td>!} <span style="color: #B32D34;">**CT**</span>: {!</td><td>!} [+ com_trad_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:##000'> </div></td><td>!} CT: {!</td><td>!} [+ com_trad_r +]% {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#954B00'> </div></td><td>!} FE_JONS: {!</td><td>!} [+ fe_jons_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#5C1321'> </div></td><td>!} <span style="color: #5C1321;">**FE-JONS**</span>: {!</td><td>!} [+ fe_jons_r +]% {!</td></tr>!}
 {!</table>!}
 
 = Election history

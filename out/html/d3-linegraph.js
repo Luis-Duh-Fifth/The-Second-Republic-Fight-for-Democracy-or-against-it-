@@ -16,7 +16,7 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['psoe', 'cnt_fai', 'pce', 'izqd_rep', 'erc', 'prp', 'ceda', 'ren_esp', 'com_trad', 'fe_jons', 'prr'];
+        parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'ceda', 'com_trad', 'fe_jons'];
     }
     if (!partyColors) {
         partyColors = {'psoe': '#E3000F', 'pce': '#8B0000', 'izqd_rep': '#DCCA4A', 'erc': '#000', 'prp': '#D5AC27', 'ceda': '#3f7bc1', 'ren_esp': '#053f08', 'com_trad': '#000000da', 'fe_jons': '#954B00', 'prr': '#a0a0a0'};
@@ -44,7 +44,7 @@ d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataM
 
       // Declare the x (horizontal position) scale.
       const maxDate = d3.max(dates);
-      const xScale = d3.scaleUtc([new Date(1928, 0), addMonths(maxDate, additionalMonths)], [marginLeft, width - marginRight]);
+      const xScale = d3.scaleUtc([new Date(1931, 0), addMonths(maxDate, additionalMonths)], [marginLeft, width - marginRight]);
 
       var xaxis = d3.axisBottom()
         .tickFormat(d3.timeFormat('%b %Y'))

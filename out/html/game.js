@@ -166,6 +166,32 @@
       window.updateSidebar();
   };
 
+  window.toggleStates = function toggleStatesTable() {
+      const resultsDiv = document.getElementById('results');
+
+      if (resultsDiv.style.display === 'none' || resultsDiv.style.display === '') {
+          resultsDiv.style.display = 'block';
+      } else {
+          resultsDiv.style.display = 'none';
+      }
+  };
+  window.toggleGraph = function toggleGraph() {
+      const svgElement = document.getElementById('party_support_history');
+      if (svgElement.style.display === 'none' || svgElement.style.display === '') {
+          svgElement.style.display = 'block';
+      } else {
+          svgElement.style.display = 'none';
+      }
+  };
+  window.toggleElectionGraph = function toggleElectionGraph() {
+      const svgElement = document.getElementById('election_history');
+      if (svgElement.style.display === 'none' || svgElement.style.display === '') {
+          svgElement.style.display = 'block';
+      } else {
+          svgElement.style.display = 'none';
+      }
+  };
+
   /*
    * This function copied from the code for Infinite Space Battle Simulator
    *
