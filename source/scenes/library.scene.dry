@@ -154,7 +154,7 @@ Current relations: [+ pnv_relation : relationships +]
 
 Current relations: [+ ceda_relation : relationships +]
 
-[? if ren_esp_formed == 1: ***RE*** (Renovacion Espanola) - a party recently formed in a split from the CEDA, the RE represents the uncompromising hardline monarchist Alfonsine party. Corporatist and dictatorial they frontally attack both the republic and her democratic parlamentarian sistem. It is supported by monarchists and reactionary hardliners and intelectuals.]
+[? if ren_esp_formed == 1: **RE** (Renovacion Espanola) - a party recently formed in a split from the CEDA, the RE represents the uncompromising hardline monarchist Alfonsine party. Corporatist and dictatorial they frontally attack both the republic and her democratic parlamentarian sistem. It is supported by monarchists and reactionary hardliners and intelectuals.]
 
 [? if ren_esp_formed == 1: Current relations: [+ ren_esp_relation : relationships +] ?]
 
