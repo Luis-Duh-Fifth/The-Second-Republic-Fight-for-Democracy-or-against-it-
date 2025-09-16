@@ -86,16 +86,20 @@ go-to: menu
 # 1928: 5, 1930: 4 (as DstP)
 <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ izqd_rep_votes +]%
 
+# 1928: 9, 1930: 10
+<span style="color: #6e3aa3;">**PRR**</span>: [+ prr_votes +]%
+
 # 1928: 9, 1930: 5
 <span style="color: #4caf2c;">**PRP**</span>: [+ prp_votes +]%
 
-# 1928: 9, 1930: 10
-<span style="color: #6e3aa3;">**PRR**</span>: [+ prr_votes +]%
+# 1928: 9, 1930: 5
+<span style="color: #b26a13ff;">**PAE**</span>: [+ pae_votes +]%
+
 
 # 1928: 14, 1930: 7
 <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ ceda_votes +]%
 
-[? if ren_esp_formed == 1: RE: [+ ren_esp_votes +]% ?]
+[? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ ren_esp_votes +]% ?]
 
 # 1928: 2, 1930: 5
 <span style="color: #B32D34;">**CT**</span>: [+ com_trad_votes +]%
@@ -107,15 +111,15 @@ go-to: menu
 
 Workers: <span style="color: #c31818;">**PSOE**</span>: [+ workers_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ workers_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ workers_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ workers_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ workers_izqd_rep_normalized +]%,  <span style="color: #6e3aa3;">**PRR**</span>: [+ workers_prr_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ workers_prp_normalized +]%, <span style="color: #b26a13ff;">**PAE**</span>: [+ workers_pae_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ workers_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ workers_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ workers_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ workers_fe_jons_normalized +]%
 
-Middle Class: <span style="color: #c31818;">**PSOE**</span>: [+ new_middle_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ new_middle_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ new_middle_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ new_middle_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ new_middle_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ new_middle_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ new_middle_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ new_middle_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ new_middle_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ new_middle_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ new_middle_fe_jons_normalized +]%
+Middle Class: <span style="color: #c31818;">**PSOE**</span>: [+ new_middle_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ new_middle_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ new_middle_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ new_middle_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ new_middle_izqd_rep_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ new_middle_prr_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ new_middle_prp_normalized +]%, <span style="color: #b26a13ff;">**PAE**</span>: [+ new_middle_pae_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ new_middle_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ new_middle_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ new_middle_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ new_middle_fe_jons_normalized +]%
 
-Rural Landholders: <span style="color: #c31818;">**PSOE**</span>: [+ landholders_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ landholders_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ landholders_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ landholders_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ landholders_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ landholders_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ landholders_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ landholders_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ landholders_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ new_middle_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ landholders_fe_jons_normalized +]%
+Rural Landholders: <span style="color: #c31818;">**PSOE**</span>: [+ landholders_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ landholders_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ landholders_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ landholders_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ landholders_izqd_rep_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ landholders_prr_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ landholders_prp_normalized +]%, <span style="color: #b26a13ff;">**PAE**</span>: [+ landholders_pae_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ landholders_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ landholders_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ new_middle_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ landholders_fe_jons_normalized +]%
 
-Unlanded Peasents: <span style="color: #c31818;">**PSOE**</span>: [+ rural_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ rural_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ rural_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ rural_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ rural_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ rural_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ rural_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ rural_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ rural_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ rural_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ rural_fe_jons_normalized +]%
+Unlanded Peasents: <span style="color: #c31818;">**PSOE**</span>: [+ rural_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ rural_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ rural_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ rural_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ rural_izqd_rep_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ rural_prr_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ rural_prp_normalized +]%, <span style="color: #b26a13ff;">**PAE**</span>: [+ rural_pae_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ rural_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ rural_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ rural_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ rural_fe_jons_normalized +]%
 
-Unemployed: <span style="color: #c31818;">**PSOE**</span>: [+ unemployed_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ unemployed_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ unemployed_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ unemployed_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ unemployed_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ unemployed_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ unemployed_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ unemployed_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ unemployed_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ unemployed_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ unemployed_fe_jons_normalized +]%
+Unemployed: <span style="color: #c31818;">**PSOE**</span>: [+ unemployed_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ unemployed_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ unemployed_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ unemployed_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ unemployed_izqd_rep_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ unemployed_prr_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ unemployed_prp_normalized +]%, <span style="color: #b26a13ff;">**PAE**</span>: [+ unemployed_pae_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ unemployed_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ unemployed_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ unemployed_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ unemployed_fe_jons_normalized +]%
 
-Minorities: <span style="color: #c31818;">**PSOE**</span>: [+ minorities_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ minorities_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ minorities_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ minorities_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ minorities_izqd_rep_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ minorities_prp_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ minorities_prr_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ minorities_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ minorities_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ minorities_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ minorities_fe_jons_normalized +]%
+Minorities: <span style="color: #c31818;">**PSOE**</span>: [+ minorities_psoe_normalized +]%, <span style="color: #000000;">**CNT-FAI**</span>: [+ minorities_cnt_fai_normalized +]%, <span style="color: #8f1a1a;">**PCE**</span>: [+ minorities_pce_normalized +]%, <span style="color: #d66a1a;">**ERC**</span>: [+ minorities_erc_normalized +]%, <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ minorities_izqd_rep_normalized +]%, <span style="color: #6e3aa3;">**PRR**</span>: [+ minorities_prr_normalized +]%, <span style="color: #4caf2c;">**PRP**</span>: [+ minorities_prp_normalized +]%, <span style="color: #b26a13ff;">**PAE**</span>: [+ minorities_pae_normalized +]%, <span style="color: #204d91;">**[+ ceda_name +]**</span>: [+ minorities_ceda_normalized +]%, [? if ren_esp_formed == 1: <span style="color: #0B3D0B;">**RE**</span>: [+ minorities_ren_esp_normalized +]%, ?] <span style="color: #B32D34;">**CT**</span>: [+ minorities_com_trad_normalized +]%, <span style="color: #5C1321;">**FE-JONS**</span>: [+ minorities_fe_jons_normalized +]%
 
 @parties
 go-to: menu
@@ -138,17 +142,21 @@ Current relations: [+ erc_relation : relationships +]
 
 Current relations: [+ izqd_rep_relation : relationships +]
 
-**PRP** - *Partido Republicano Progresista* (Republican Progressive Party) - a conservative republican party, with support of the middle classes, bourgeoisie and small landholders. We woked together to establish the Republic but later broke with us over religious issues and economic reform.
-
-Current relations: [+ prp_relation : relationships +]
-
 **PRR** - *Partido Republicano Radical* (Republican Radical Party) - The PRR is a center right Republican party, strangely enough it began as a leftist revolutionary anticlerical burgoise party. They collaborated with us on the overthrow of the Monarchy but our relations have rapidly cooled. 
 
 Current relations: [+ prr_relation : relationships +]
 
+**PRP** - *Partido Republicano Progresista* (Republican Progressive Party) - a conservative republican party, with support of the middle classes, bourgeoisie and small landholders. We woked together to establish the Republic but later broke with us over religious issues and economic reform.
+
+Current relations: [+ prp_relation : relationships +]
+
 **PNV** - *Partido Nacionalista Vasco* (Basque Nationalist Party) - A nationalist Basque party, they are catholic conservatives, while more open to working with us due to their autonomist ambitions, they are nonetheless hostile to us.
 
 Current relations: [+ pnv_relation : relationships +]
+
+**PAE** - *Partido Agrario Español* (Spanish Agrarian Party) - a conservative agrarian party, it stands for the small and medium farmers and opposes land reform. Suprisingly enough it declares itself fully republican but it nontheless prefers to join together with the CEDA and its fellow conservatives.
+
+Current relations: [+ pae_relation : relationships +]
 
 **[+ ceda_name +]**  - *Confederacion Española de Derechas Autonomas* (Spanish Confederation of Autonomous Rights) - a right-wing catholic-conservative party, with authoritarian, monarchist, and racist elements. It is supported by parts pf the middle class, big and small landowners, peasants and Catholics in general. They maintain an ambiguous position on form of state, refusing to declare themselves Republicans while not calling themselves monarchists. They have strong backing of the old order, having very close ties to the church and landowners.
 
@@ -271,12 +279,6 @@ data = [
         "seats": Math.round(Q.izqd_rep_r*5),
     },
     {
-        "id": "prp",
-        "legend": "PRP",
-        "name": "PRP",
-        "seats": Math.round(Q.prp_r*5),
-    },
-    {
         "id": "prr",
         "legend": "PRR",
         "name": "PRR",
@@ -287,6 +289,18 @@ data = [
         "legend": "PNV",
         "name": "PNV",
         "seats": Math.round(Q.erc_r * 5 * 0.3),
+    },
+    {
+        "id": "prp",
+        "legend": "PRP",
+        "name": "PRP",
+        "seats": Math.round(Q.prp_r*5),
+    },
+    {
+        "id": "pae",
+        "legend": "PAE",
+        "name": "PAE",
+        "seats": Math.round(Q.pae_r*5),
     },
     {
         "id": "ceda",
@@ -335,8 +349,8 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
     d3.select("#cortes").datum(data).call(parliament);
 
     var lines = d3.linegraph(false, false, Q.parties,
-            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prp': '#4caf2c', 'prr': '#6e3aa3', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
-            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prp': 'PRP', 'prr': 'PRR', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     d3.select("#election_history").datum(Q.election_records).call(lines);
@@ -345,8 +359,8 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
     // party support records should not have so many ticks
     if (!Q.historical_mode) {
     var lines_2 = d3.linegraph(false, false, Q.parties,
-            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prp': '#4caf2c', 'prr': '#6e3aa3', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
-            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prp': 'PRP', 'prr': 'PRR', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -376,11 +390,13 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
 
 {!<tr><td><div class="box" style='background-color:#e98c1f'> </div></td><td>!} <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: {!</td><td>!} [+ izqd_rep_r +]% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#4caf2c'> </div></td><td>!} <span style="color: #4caf2c;">**PRP**</span>: {!</td><td>!} [+ prp_r +]% {!</td></tr>!}
-
 {!<tr><td><div class="box" style='background-color:#6e3aa3'> </div></td><td>!} <span style="color: #6e3aa3;">**PRR**</span>: {!</td><td>!} [+ prr_r +] % {!</td></tr>!}
 
+{!<tr><td><div class="box" style='background-color:#4caf2c'> </div></td><td>!} <span style="color: #4caf2c;">**PRP**</span>: {!</td><td>!} [+ prp_r +]% {!</td></tr>!}
+
 {!<tr><td><div class="box" style='background-color:#1a7a1a'> </div></td><td>!} <span style="color: #1a7a1a;">**PNV**</span>: {!</td><td>!} [+ pnv_r +]% {!</td></tr>!}
+
+{!<tr><td><div class="box" style='background-color:#4caf2c'> </div></td><td>!} <span style="color: #d66a1a;">**PAE**</span>: {!</td><td>!} [+ pae_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#204d91'> </div></td><td>!} <span style="color: #204d91;">**[+ ceda_name +]**</span>: {!</td><td>!} [+ ceda_r +]% {!</td></tr>!}
 

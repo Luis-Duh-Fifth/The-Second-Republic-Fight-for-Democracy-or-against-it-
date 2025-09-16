@@ -536,12 +536,16 @@ table {
   fill: #e98c1f;
 }
 
+.seat.prr {
+  fill: #6e3aa3;
+}
+
 .seat.prp {
   fill: #4caf2c;
 }
 
-.seat.prr {
-  fill: #6e3aa3;
+.seat.pae {
+  fill: #d66a1a;
 }
 
 .seat.pnv {

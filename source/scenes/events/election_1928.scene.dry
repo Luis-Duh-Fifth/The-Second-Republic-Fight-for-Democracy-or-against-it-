@@ -43,7 +43,7 @@ var total_sum = 0;
 
 Q.left_list = ['psoe', 'pce', 'izqd_rep', 'erc'];
 Q.center_list = ['prr', 'prp'];
-Q.right_list = ['ceda', 'com_trad', 'fe_jons'];
+Q.right_list = ['pae', 'ceda', 'com_trad', 'fe_jons'];
 
 Q.lists = ['left_list', 'center_list', 'right_list'];
 
@@ -198,9 +198,9 @@ if (Q.pce_r >= Q.psoe_r && Q.pce_r >= Q.ceda_r) {
 Q.socialist_republican_coalition = Q.psoe_r + Q.izqd_rep_r;
 Q.grand_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r;
 Q.bourgeois_coalition = Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.prr_r;
-Q.center_republican_coalition = Q.erc_r + Q.izqd_rep_r + Q.prp_r + Q.prr_r + Q.ceda_r;
-Q.right_coalition =  Q.prp_r + Q.prr_r + Q.ceda_r;
-Q.authoritarian_right_coalition = Q.ceda_r + Q.ren_esp_r + Q.com_trad_r + Q.fe_jons_r;
+Q.center_republican_coalition = Q.erc_r + Q.izqd_rep_r + Q.prp_r + Q.prr_r + Q.pae_r;
+Q.right_coalition =  Q.prp_r + Q.prr_r + Q.pae_r + Q.ceda_r;
+Q.authoritarian_right_coalition = Q.pae_r + Q.ceda_r + Q.ren_esp_r + Q.com_trad_r + Q.fe_jons_r;
 Q.left_coalition = Q.psoe_r + Q.pce_r;
 // this is an absurd concept lol
 Q.popular_front_coalition = Q.psoe_r + Q.pce_r + Q.erc_r + Q.izqd_rep_r;
@@ -314,6 +314,12 @@ data = [
         "seats": Math.round(Q.erc_r * (Q.total_seats / 100) * 0.3),
     },
     {
+        "id": "pae",
+        "legend": "PAE",
+        "name": "PAE",
+        "seats": Math.round(Q.pae_r * (Q.total_seats / 100)),
+    },
+    {
         "id": "ceda",
         "legend": "CEDA",
         "name": "CEDA",
@@ -360,8 +366,8 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prp': '#4caf2c', 'prr': '#6e3aa3', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
-            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prp': 'PRP', 'prr': 'PRR', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     d3.select("#election_history").datum(Q.election_records).call(lines);
@@ -371,8 +377,8 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prp': '#4caf2c', 'prr': '#6e3aa3', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
-            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prp': 'PRP', 'prr': 'PRR', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -410,6 +416,8 @@ go-to: coalition_menu
 {!<tr><td><div class="box" style='background-color:#6e3aa3'> </div> !} PRR: {!</td><td>!} [+ prr_seats +] {!</td><td>!} [+ str_change_prr_seats +] {!</td><td>!} [+ prr_r +]% {!</td><td>!} [+ str_change_prr +] {!</td></tr>!}
 
 <tr><td colspan="5" style="text-align: center;"><strong>Parties of the Right</strong></td></tr>
+
+{!<tr><td><div class="box" style='background-color:#d66a1a'> </div> !} [+ pae_name +]: {!</td><td>!} [+ pae_seats +] {!</td><td>!} [+ str_change_pae_seats +] {!</td><td>!} [+ pae_r +]% {!</td><td>!} [+ str_change_pae +] {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#204d91'> </div> !} [+ ceda_name +]: {!</td><td>!} [+ ceda_seats +] {!</td><td>!} [+ str_change_ceda_seats +] {!</td><td>!} [+ ceda_r +]% {!</td><td>!} [+ str_change_ceda +] {!</td></tr>!}
 
