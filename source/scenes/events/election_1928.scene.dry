@@ -390,7 +390,7 @@ if (window && d3) {
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
 }
-!}
+}
 go-to: coalition_menu
 
 **Election results:**
