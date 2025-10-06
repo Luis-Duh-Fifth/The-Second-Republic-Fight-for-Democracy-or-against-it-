@@ -32,4 +32,4 @@ Agriculture: [+ agriculture_minister_party +]
 
 @shuffle
 on-arrival: coalition_dissent += 1
-go-to: ministries
+go-to: election_1928.ministries
