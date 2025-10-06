@@ -544,12 +544,16 @@ table {
   fill: #4caf2c;
 }
 
-.seat.pae {
-  fill: #d66a1a;
+.seat.pnv {
+  fill: #257f22ff;
 }
 
-.seat.pnv {
-  fill: #1a7a1a;
+.seat.lig_cat {
+  fill: #fbff00ff;
+}
+
+.seat.pae {
+  fill: #d66a1a;
 }
 
 .seat.ceda {
@@ -557,7 +561,7 @@ table {
 }
 
 .seat.ren_esp {
-  fill: #1d7e1d;
+  fill: #085308;
 }
 
 .seat.com_trad {

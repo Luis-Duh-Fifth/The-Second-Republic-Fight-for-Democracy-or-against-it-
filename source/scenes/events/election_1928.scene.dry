@@ -199,7 +199,7 @@ Q.socialist_republican_coalition = Q.psoe_r + Q.izqd_rep_r;
 Q.grand_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r;
 Q.bourgeois_coalition = Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.prr_r;
 Q.center_republican_coalition = Q.erc_r + Q.izqd_rep_r + Q.prp_r + Q.prr_r + Q.pae_r;
-Q.right_coalition =  Q.prp_r + Q.prr_r + Q.pae_r + Q.ceda_r;
+Q.right_coalition =  Q.prr_r + Q.prp_r + Q.lig_cat Q.pae_r + Q.ceda_r;
 Q.authoritarian_right_coalition = Q.pae_r + Q.ceda_r + Q.ren_esp_r + Q.com_trad_r + Q.fe_jons_r;
 Q.left_coalition = Q.psoe_r + Q.pce_r;
 // this is an absurd concept lol
@@ -287,7 +287,7 @@ data = [
         "id": "erc",
         "legend": "ERC",
         "name": "ERC",
-        "seats": Math.round(Q.erc_r * (Q.total_seats / 100) * 0.7),
+        "seats": Math.round(Q.erc_r * (Q.total_seats / 100)),
     },
     {
         "id": "izqd_rep",
@@ -311,7 +311,13 @@ data = [
         "id": "pnv",
         "legend": "PNV",
         "name": "PNV",
-        "seats": Math.round(Q.erc_r * (Q.total_seats / 100) * 0.3),
+        "seats": Math.round(Q.erc_r * (Q.total_seats / 100)),
+    }, 
+    {
+        "id": "lig_cat",
+        "legend": "LC",
+        "name": "LC",
+        "seats": Math.round(Q.lig_cat_r * (Q.total_seats / 100)),
     },
     {
         "id": "pae",
@@ -366,8 +372,8 @@ if (window && d3) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
-            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pnv': '#257f22ff', 'lig_cat': '#fbff00ff', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pnv': 'PNV', 'lig_cat': 'LC', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     d3.select("#election_history").datum(Q.election_records).call(lines);
@@ -377,8 +383,8 @@ if (window && d3) {
     if (!Q.historical_mode) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
-            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
+            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'prp': '#000', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pnv': '#257f22ff', 'lig_cat': '#fbff00ff', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
+            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pnv': 'PNV', 'lig_cat': 'LC', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -405,6 +411,10 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#1a7a1a'> </div> !} PNV: {!</td><td>!} [+ pnv_seats +] {!</td><td>!} [+ str_change_pnv_seats +] {!</td><td>!} [+ pnv_r +]% {!</td><td>!} 0 {!</td></tr>!}
 
+{!<tr><td><div class="box" style='background-color:#1a7a1a'> </div> !} LC: {!</td><td>!} [+ lig_cat_seats +] {!</td><td>!} [+ str_change_lig_cat_seats +] {!</td><td>!} [+ lig_cat_r +]% {!</td><td>!} 0 {!</td></tr>!}
+
+
+
 <tr><td colspan="5" style="text-align: center;"><strong>Republican Left</strong></td></tr>
 
 {!<tr><td><div class="box" style='background-color:#e98c1f'> </div> !} [+ izqd_rep_name +]: {!</td><td>!} [+ izqd_rep_seats +] {!</td><td>!} [+ str_change_izqd_rep_seats +] {!</td><td>!} [+ izqd_rep_r +]% {!</td><td>!} [+ str_change_izqd_rep +] {!</td></tr>!}
@@ -425,7 +435,7 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#B32D34'> </div> !} CT: {!</td><td>!} [+ com_trad_seats +] {!</td><td>!} [+ str_change_com_trad_seats +] {!</td><td>!} [+ com_trad_r +]% {!</td><td>!} [+ str_change_com_trad +] {!</td></tr>!}
 
-[? if ren_esp_formed == 1: {!<tr><td><div class="box" style='background-color:#1d7e1d'> </div> !} RE: {!</td><td>!} [+ ren_esp_seats +] {!</td><td>!} [+ str_change_ren_esp_seats +] {!</td><td>!} [+ ren_esp_r +]% {!</td><td>!} [+ str_change_ren_esp +] {!</td></tr>!} ?]
+[? if ren_esp_formed == 1: {!<tr><td><div class="box" style='background-color:#085308'> </div> !} RE: {!</td><td>!} [+ ren_esp_seats +] {!</td><td>!} [+ str_change_ren_esp_seats +] {!</td><td>!} [+ ren_esp_r +]% {!</td><td>!} [+ str_change_ren_esp +] {!</td></tr>!} ?]
 
 <tr><td colspan="5" style="text-align: center;"><strong>Fascist Parties</strong></td></tr>
 

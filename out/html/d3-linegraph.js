@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'pae', 'ceda', 'com_trad', 'fe_jons'];
+        parties = ['psoe', 'cnt_fai', 'pce', 'erc', 'izqd_rep', 'prp', 'prr', 'pnv', 'lig_cat', 'pae', 'ceda', 'com_trad', 'fe_jons'];
     }
     if (!partyColors) {
-        partyColors = {'psoe': '#E3000F', 'pce': '#8B0000', 'izqd_rep': '#DCCA4A', 'erc': '#000', 'prp': '#D5AC27', 'pae': '#b26a13ff', 'ceda': '#3f7bc1', 'ren_esp': '#053f08', 'com_trad': '#000000da', 'fe_jons': '#954B00', 'prr': '#a0a0a0'};
+        partyColors = {'psoe': '#E3000F', 'pce': '#8B0000', 'izqd_rep': '#DCCA4A', 'erc': '#000', 'prp': '#D5AC27', 'pnv': '#257f22ff', 'lig_cat': '#fbff00ff', 'pae': '#b26a13ff', 'ceda': '#3f7bc1', 'ren_esp': '#0c600c', 'com_trad': '#000000da', 'fe_jons': '#954B00', 'prr': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'psoe': 'PSOE', 'cnt_fai': 'CNT_FAI', 'pce': 'PCE', 'izqd_rep': 'IR', 'erc': 'ERC + PNV', 'prp': 'PRP', 'pae': 'PAE', 'ceda': 'CEDA', 'ren_esp': 'RE', 'com_trad': 'CT', 'fe_jons': 'FE_JONS', 'prr': 'PRR'};
+        partyNames = {'psoe': 'PSOE', 'cnt_fai': 'CNT_FAI', 'pce': 'PCE', 'izqd_rep': 'IR', 'erc': 'ERC', 'prp': 'PRP', 'pnv': 'PNV', 'lig_cat': 'LC', 'pae': 'PAE', 'ceda': 'CEDA', 'ren_esp': 'RE', 'com_trad': 'CT', 'fe_jons': 'FE_JONS', 'prr': 'PRR'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
