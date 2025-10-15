@@ -199,7 +199,7 @@ Q.socialist_republican_coalition = Q.psoe_r + Q.izqd_rep_r;
 Q.grand_coalition = Q.psoe_r + Q.izqd_rep_r + Q.erc_r + Q.prp_r;
 Q.bourgeois_coalition = Q.izqd_rep_r + Q.erc_r + Q.prp_r + Q.prr_r;
 Q.center_republican_coalition = Q.erc_r + Q.izqd_rep_r + Q.prp_r + Q.prr_r + Q.pae_r;
-Q.right_coalition =  Q.prr_r + Q.prp_r + Q.lig_cat Q.pae_r + Q.ceda_r;
+Q.right_coalition =  Q.prr_r + Q.prp_r + Q.lig_cat + Q.pae_r + Q.ceda_r;
 Q.authoritarian_right_coalition = Q.pae_r + Q.ceda_r + Q.ren_esp_r + Q.com_trad_r + Q.fe_jons_r;
 Q.left_coalition = Q.psoe_r + Q.pce_r;
 // this is an absurd concept lol
