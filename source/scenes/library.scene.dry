@@ -174,7 +174,7 @@ Current relations: [+ ceda_relation : relationships +]
 
 [? if ren_esp_formed == 1: Current relations: [+ ren_esp_relation : relationships +] ?]
 
-CT  - *Comunion Tradicionalista* - (Traditionalist Comunion) - The Carlist monarchist and reactionary party. Heavily authoritarian, they are strongly preatorian, being in favour of coups and a violent overthrow of the Republic. 
+**CT**  - *Comunion Tradicionalista* - (Traditionalist Comunion) - The Carlist monarchist and reactionary party. Heavily authoritarian, they are strongly preatorian, being in favour of coups and a violent overthrow of the Republic. 
 
 Current relations: [+ com_trad_relation : relationships +]
 
