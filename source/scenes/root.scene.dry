@@ -422,31 +422,31 @@ Q.com_trad_seats = 2;
 Q.fe_jons_seats = 0;
 
 // diff from prev
-Q.psoe_r = 26;
-Q.cnt_fai_r = 0;
-Q.pce_r = 0;
-Q.erc_r = 9;
-Q.izqd_rep_r = 26;
-Q.prr_r = 19;
-Q.prp_r = 8;
-Q.pnv_r = 4;
-Q.pae_r = 3;
-Q.ceda_r = 2;
-Q.com_trad_r = 2;
-Q.fe_jons_r = 0;
+Q.old_psoe_r = 26;
+Q.old_cnt_fai_r = 0;
+Q.old_pce_r = 0;
+Q.old_erc_r = 9;
+Q.old_izqd_rep_r = 26;
+Q.old_prr_r = 19;
+Q.old_prp_r = 8;
+Q.old_pnv_r = 4;
+Q.old_pae_r = 3;
+Q.old_ceda_r = 2;
+Q.old_com_trad_r = 2;
+Q.old_fe_jons_r = 0;
 
-Q.psoe_seats = 26;
-Q.pce_seats = 0;
-Q.erc_seats = 9;
-Q.izqd_rep_seats = 26;
+Q.old_psoe_seats = 26;
+Q.old_pce_seats = 0;
+Q.old_erc_seats = 9;
+Q.old_izqd_rep_seats = 26;
 Q.prr_seats = 19;
-Q.prp_seats = 8;
-Q.pnv_seats = 3;
-Q.lig_cat_seats = 1;
-Q.pae_seats = 3;
-Q.ceda_seats = 2;
-Q.com_trad_seats = 2;
-Q.fe_jons_seats = 0;
+Q.old_prp_seats = 8;
+Q.old_pnv_seats = 3;
+Q.old_lig_cat_seats = 1;
+Q.old_pae_seats = 3;
+Q.old_ceda_seats = 2;
+Q.old_com_trad_seats = 2;
+Q.old_fe_jons_seats = 0;
 
 // sapd isn't formed yet, but it may be formed
 Q.sapd_r = 0;
