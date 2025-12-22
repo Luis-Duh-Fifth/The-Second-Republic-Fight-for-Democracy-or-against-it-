@@ -367,27 +367,6 @@ if (window && d3) {
     var parliament = d3.parliament();
     parliament.width(width).height(height).innerRadiusCoef(0.4);
     parliament.enter.fromCenter(true).smallToBig(true);
-    parliament.exit.toCenter(false).bigToSmall(true);
-    d3.select("#cortes").datum(data).call(parliament);
-
-    var lines = d3.linegraph(false, false,
-            Q.parties,
-            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pnv': '#257f22ff', 'lig_cat': '#fbff00ff', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
-            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pnv': 'PNV', 'lig_cat': 'LC', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
-    lines.width(width).height(400);
-    //var svg = lines(Q.election_records);
-    d3.select("#election_history").datum(Q.election_records).call(lines);
-    //document.getElementById('election_history').innerHTML = svg.outerHTML;
-
-    // party support records should not have so many ticks
-    if (!Q.historical_mode) {
-        var lines_2 = d3.linegraph(true, true,
-            Q.parties,
-            {'psoe': '#c31818', 'cnt_fai': '#000000', 'CNT-FAI': '#8f1a1a', 'erc': '#d66a1a', 'izqd_rep': '#e98c1f', 'prr': '#6e3aa3', 'prp': '#4caf2c', 'pnv': '#257f22ff', 'lig_cat': '#fbff00ff', 'pae': '#d66a1a', 'ceda': '#204d91', 'com_trad': '#B32D34', 'fe_jons': '#5C1321'},
-            {'psoe': 'PSOE', 'cnt_fai': 'CNT-FAI', 'pce': 'PCE', 'erc': 'ERC', 'izqd_rep': Q.izqd_rep_name, 'prr': 'PRR', 'prp': 'PRP', 'pnv': 'PNV', 'lig_cat': 'LC', 'pae': 'PAE', 'ceda': 'CEDA', 'com_trad': 'CT', 'fe_jons': 'FE-JONS'});
-        lines_2.width(width).height(400);
-        d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
-    }
 }
 !}
 go-to: coalition_menu
