@@ -640,6 +640,7 @@ Q.no_majority_elections = 0;
 Q.in_election = 1;
 Q.next_election_year = 1934;
 Q.next_election_month = 5;
+Q.next_election_time = 5;
 // government affairs timers
 Q.agricultural_policy_timer = 0;
 Q.domestic_enemies_timer = 0;
