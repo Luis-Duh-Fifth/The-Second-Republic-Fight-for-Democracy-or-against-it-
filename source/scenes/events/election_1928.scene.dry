@@ -43,7 +43,7 @@ var total_sum = 0;
 
 Q.left_list = ['psoe', 'pce', 'izqd_rep', 'erc'];
 Q.center_list = ['prr', 'prp'];
-Q.right_list = ['pae', 'ceda', 'com_trad', 'fe_jons'];
+Q.right_list = ['lig_cat', 'pae', 'ceda', 'com_trad', 'fe_jons'];
 
 Q.lists = ['left_list', 'center_list', 'right_list'];
 
@@ -332,14 +332,32 @@ data = [
         "legend": "PNV",
         "name": "PNV",
         "seats": Math.round(Q.erc_r * (Q.total_seats / 100) * 0.3),
-    },
-    {
+    }
+];
+if (Q.lig_cat_r) {
+    data.push({
+        "id": "lig_cat",
+        "legend": "LC",
+        "name": "LC",
+        "seats": Math.round(Q.lig_cat_r * (Q.total_seats / 100)),
+    });
+}
+if (Q.pae_r) {
+    data.push({
+        "id": "pae",
+        "legend": "PAE",
+        "name": "PAE",
+        "seats": Math.round(Q.pae_r * (Q.total_seats / 100)),
+    });
+}
+if (Q.ceda_r) {
+    data.push({
         "id": "ceda",
         "legend": "CEDA",
         "name": "CEDA",
         "seats": Math.round(Q.ceda_r * (Q.total_seats / 100)),
-    },
-];
+    });
+}
 if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
     data.push({
         "id": "ren_esp",
@@ -348,20 +366,20 @@ if (Q.ren_esp_formed === 1 && Q.ren_esp_r) {
         "seats": Math.round(Q.ren_esp_r * (Q.total_seats / 100)),
     });
 }
-    data = data.concat([
-        {
-            "id": "com_trad",
-            "legend": "CT",
-            "name": "CT",
-            "seats": Math.round(Q.com_trad_r * (Q.total_seats / 100)),
-        },
-        {
-            "id": "fe_jons",
-            "legend": "FE_JONS",
-            "name": "FE_JONS",
-            "seats": Math.round(Q.fe_jons_r * (Q.total_seats / 100)),
-        },
-    ]);
+data = data.concat([
+    {
+        "id": "com_trad",
+        "legend": "CT",
+        "name": "CT",
+        "seats": Math.round(Q.com_trad_r * (Q.total_seats / 100)),
+    },
+    {
+        "id": "fe_jons",
+        "legend": "FE_JONS",
+        "name": "FE_JONS",
+        "seats": Math.round(Q.fe_jons_r * (Q.total_seats / 100)),
+    },
+]);
 if (window && d3) {
     var width = 500; 
     var height = 500;
@@ -523,9 +541,9 @@ go-to: coalition_menu
         {!</tr>!}
         {!<tr>!}
             {!<td><b>Canary Islands</b></td>!}
-            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ andalusia_left_list_seats +]{!</td>!}
-            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ andalusia_center_list_seats +]{!</td>!}
-            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ andalusia_right_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(192, 0, 0, 0.1); font-size: 0.85em; padding: 10px">!}[+ canary_left_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(60, 179, 113, 0.1); font-size: 0.85em;">!}[+ canary_center_list_seats +]{!</td>!}
+            {!<td style="background-color: rgba(0, 0, 200, 0.1); font-size: 0.85em;">!}[+ canary_right_list_seats +]{!</td>!}
         {!</tr>!}
         {!<tr>!}
             {!<td><b>Ceuta and Melilla</b></td>!}
