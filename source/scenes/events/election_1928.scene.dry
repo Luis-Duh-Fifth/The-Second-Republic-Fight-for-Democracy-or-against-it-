@@ -136,27 +136,22 @@ for (var party of Q.parties) {
 
 for (var state of Q.states) {
     for (var list of Q.lists) {
-        var listSeats = Q[state + '_' + list + '_seats'];
-        var list_weight_total = 0;
+        var listSeats = Q[state + '_' + list + '_seats'] || 0;
+        if (listSeats <= 0) continue;
+
+        var totalWeight = 0;
+
         for (var party of Q[list]) {
-            let national = Q[party + '_list_weight'] || 0;
-            let state_weight = Q[state + '_' + party + '_list_weight'] || 0;
-
-            let combined = national * state_weight;
-
-            list_weight_total += combined;
+            totalWeight += Q[state + '_' + party + '_list_weight'] || 0;
         }
-        if (list_weight_total > 0) {
-            for (var party of Q[list]) {
-                let national = Q[party + '_list_weight'] || 0;
-                let state_weight = Q[state + '_' + party + '_list_weight'] || 0;
 
-                let combined = national * state_weight;
+        if (totalWeight <= 0) continue;
 
-                let normalized = combined / list_weight_total;
+        for (var party of Q[list]) {
+            let weight = Q[state + '_' + party + '_list_weight'] || 0;
+            let share = weight / totalWeight;
 
-                Q[party + '_seats'] += listSeats * normalized;
-            }
+            Q[party + '_seats'] += listSeats * share;
         }
     }
 }
