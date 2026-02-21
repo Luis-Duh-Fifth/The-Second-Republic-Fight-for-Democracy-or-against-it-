@@ -32,7 +32,7 @@ Cortes composition:
 
 <span style="color: #c31818;">**PSOE**</span>: [+ psoe_r +]%
 <span style="color: #8f1a1a;">**PCE**</span>: [+ pce_r +]%
-<span style="color: #d66a1a;">**ERC**</span> + <span style="color: #1a7a1a;">**PNV**</span>: [+ erc_r + pnv_r +]%
+<span style="color: #d66a1a;">**ERC**</span>:[+ erc_r +]
 <span style="color: #e98c1f;">**[+ izqd_rep_name +]**</span>: [+ izqd_rep_r +]%
 <span style="color: #6e3aa3;">**PRR**</span>: [+ prr_r +]%
 <span style="color: #4caf2c;">**PRP**</span>: [+ prp_r +]%
