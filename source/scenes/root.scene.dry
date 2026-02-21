@@ -469,7 +469,7 @@ Q.extremadura_com_trad_list_weight = 1;
 Q.extremadura_fe_jons_list_weight = 1;
 
 Q.andalusia_seats = 89;
-Q.andalusia_left_list_weight = 2;
+Q.andalusia_left_list_weight = 1;
 Q.andalusia_center_list_weight = 1;
 Q.andalusia_right_list_weight = 1;
 Q.andalusia_psoe_list_weight = 1;
@@ -520,7 +520,7 @@ Q.morocco_com_trad_list_weight = 1;
 Q.morocco_fe_jons_list_weight = 1;
 
 Q.psoe_list_weight = 1;
-Q.pce_list_weight = 0.2;
+Q.pce_list_weight = 1;
 Q.erc_list_weight = 1;
 Q.izqd_rep_list_weight = 1;
 Q.prr_list_weight = 1;
