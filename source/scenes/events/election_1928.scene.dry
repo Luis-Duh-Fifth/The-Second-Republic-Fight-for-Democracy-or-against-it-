@@ -144,12 +144,14 @@ for (var state of Q.states) {
         var totalWeight = 0;
 
         for (var party of Q[list]) {
+            if ((Q[state + '_' + party + '_list_weight'] + Q[party + '_list_weight']) <= -1) break;
             totalWeight += (Q[state + '_' + party + '_list_weight'] + Q[party + '_list_weight']) || 0;
         }
 
         if (totalWeight <= 0) continue;
 
         for (var party of Q[list]) {
+            if ((Q[state + '_' + party + '_list_weight'] + Q[party + '_list_weight']) <= -1) break;
             let weight = (Q[state + '_' + party + '_list_weight'] + Q[party + '_list_weight']) || 0;
             let share = weight / totalWeight;
 
