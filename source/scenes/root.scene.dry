@@ -831,8 +831,8 @@ Q.seydewitz_advisor = 0; // Max Seydewitz
 Q.pfulf_advisor = 0; // Antonie Pfülf
 Q.breitscheid_advisor = 0; // Rudolf Breitscheid
 
-// Reformist advisors
-Q.severing_advisor = 0; // Carl Severing
+// Left Lib advisors
+Q.quiroga_advisor = 0; // Casares Quiroga
 Q.azana_advisor = 1; // Manuel Azaña
 Q.juchacz_advisor = 0; // Marie Juchacz
 Q.baade_advisor = 0; // Fritz Baade

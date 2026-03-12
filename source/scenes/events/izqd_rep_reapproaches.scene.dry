@@ -3,7 +3,7 @@ new-page: true
 subtitle: Our eforts to regain IRs trust have suceeded.
 tags: event
 view-if: izqd_rep_relation >= 54 and izqd_rep_rejects = 1
-on-arrival:   azana_advisor = 1; severing_advisor = 1; izqd_rep_rejects = 0
+on-arrival:   azana_advisor = 1; quiroga_advisor = 1; izqd_rep_rejects = 0
 
 = IR reassumes cooperation with us.
 

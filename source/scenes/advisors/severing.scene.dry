@@ -1,13 +1,13 @@
-title: Carl Severing
+title: Casares Quiroga
 is-pinned-card: true
 tags: advisor, reformist
-card-image: img/portraits/SeveringCarl.jpg
-view-if: severing_advisor = 1
+card-image: img/portraits/Casares_Quiroga.jpg
+view-if: quiroga_advisor = 1
 new-page: true 
 
-= Carl Severing
+= Casares Quiroga
 
-Severing has been Interior Minister for both the German Republic and for the state of Prussia, and his priority is using the security services to target the enemies of the republic.
+Casares Quiroga is a up and coming Galician Republican and Close friend of Azaña as well as a regionalist-
 
 - @prussian_bulwark
 - @police_affairs
@@ -15,7 +15,7 @@ Severing has been Interior Minister for both the German Republic and for the sta
 
 @prussian_bulwark
 title: Prussian Bulwark
-subtitle: Severing has influence over Prussian politics.
+subtitle: Quiroga has influence over the security apparatus.
 choose-if: advisor_action_timer <= 0 and psoe_prussia = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not psoe_prussia : The PSOE is not in control of Prussia. ?]
 on-arrival: advisor_action_timer = 6; security_affairs_timer -= 6
