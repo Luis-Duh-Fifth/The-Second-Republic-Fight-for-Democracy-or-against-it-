@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_advisor, leftilib, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: center_advisor, left_advisor, leftrep, labor_advisor, neorev_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -73,7 +73,7 @@ Breitscheid has been removed as an advisor. The Centrist faction disapproves.
 # reformists
 
 
-@remove_severing
+@remove_quiroga
 title: Remove Quiroga
 view-if: quiroga_advisor = 1
 tags: remove_advisor
@@ -266,7 +266,7 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, left_advisor, leftilib, labor_advisor, neorev_advisor, nonfactional_advisor
+tags: center_advisor, left_advisor, leftrep, labor_advisor, neorev_advisor, nonfactional_advisor
 frequency: 1
 
 
@@ -287,7 +287,7 @@ view-if: n_advisors < 3
 @left_republicans
 view-if: izqd_rep_rejects = 0 and n_advisors < 3
 
-- #leftilib
+- #leftrep
 
 @left
 view-if: n_advisors < 3
@@ -360,24 +360,24 @@ Rudolf Breitscheid is now an advisor.
 # reformist
 
 
-@add_severing
-title: Carl Severing
-subtitle: Carl Severing is a one-time Prussian interior minister and police reformer.
+@add_quiroga
+title: Casares Quiroga
+subtitle: Casares  is a Republican, close friends with Azaña and Galician reformist. He is militantly republican a and police reformer.
 is-card: true
-card-image: img/portraits/SeveringCarl.jpg
-tags: leftilib
+card-image: img/portraits/Casares_Quiroga.jpg
+tags: leftrep
 view-if: quiroga_advisor = 0 and n_advisors < 3
 on-arrival: quiroga_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
 
-Carl Severing is now an advisor.
+Casares Quiroga is now an advisor.
 
 @add_azana
 title: Manuel Azaña
 subtitle: Manuel Azaña is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders.
 is-card: true
 card-image: img/portraits/AzañaManuel.jpg
-tags: leftilib
+tags: leftrep
 view-if: azana_advisor = 0 and n_advisors < 3
 on-arrival: azana_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
@@ -392,7 +392,7 @@ card-image: img/portraits/JuchaczMarie.jpg
 view-if: juchacz_advisor = 0 and n_advisors < 3
 on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
-tags: leftilib
+tags: leftrep
 
 Marie Juchacz is now an advisor.
 
@@ -404,7 +404,7 @@ card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 0 and n_advisors < 3
 on-arrival: pfulf_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: leftilib
+tags: leftrep
 
 Antonie Pfülf is now an advisor.
 
