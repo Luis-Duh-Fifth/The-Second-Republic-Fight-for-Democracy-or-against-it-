@@ -334,16 +334,16 @@ go-to: advisor_menu
 Otto Wels is now an advisor.
 
 @add_prieto
-title: Hermann Prieto
-subtitle: Hermann Prieto is the last Social Democratic Chancellor.
+title: Indalecio Prieto
+subtitle: Indalecio Prieto is a pragmatic Republican Socialsit, he is the leader of the PSOE moderetes.
 is-card: true
-card-image: img/portraits/PrietoHermann.jpg
+card-image: img/portraits/indalecio_prieto.jpg
 tags: center_advisor
 view-if: prieto_advisor = 0 and prieto_dead = 0 and n_advisors < 3 and centrists_resign = 0
 on-arrival: prieto_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Hermann Prieto is now an advisor.
+Indalecio Prieto is now an advisor.
 
 @add_breitscheid
 title: Rudolf Breitscheid
