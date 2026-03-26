@@ -284,7 +284,7 @@ go-to: advisor_menu
 
 @advisor_menu
 title: Add other advisors.
-tags: center_advisor, left_advisor, leftrep, labor_advisor, neorev_advisor, nonfactional_advisor
+tags: center_advisor, left_advisor, leftrep, labor_advisor, neorev_advisor, besteirist_advisor
 frequency: 1
 
 
@@ -293,7 +293,7 @@ frequency: 1
 - @left_republicans: Add Left Republicans
 - @anarcho_syndicalists: Add Anarcho Syndicalists
 - @communists: Add Communists
-- @nonfactional: Add non-factional advisors
+- @besteirist: Add besteirist advisors
 - @add_confidants: Add confidants
 - @rm_main: Remove advisors instead.
 - @rc_main: Remove confidants
@@ -415,7 +415,7 @@ tags: left_advisor
 
 Max Seydewitz is now an advisor.
 
-# besteirista
+# besteirists
 
 @add_baade
 title: Fritz Baade
@@ -425,7 +425,7 @@ card-image: img/portraits/BaadeFritz.jpg
 view-if: baade_advisor = 0 and n_advisors < 3
 on-arrival: baade_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: nonfactional_advisor
+tags: besteirist_advisor
 
 Fritz Baade is now an advisor.
 
@@ -438,7 +438,7 @@ card-image: img/portraits/HirschfeldMagnus.jpg
 view-if: hirschfeld_advisor = 0 and n_advisors < 3
 on-arrival: hirschfeld_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: nonfactional_advisor
+tags: besteirist_advisor
 
 Magnus Hirschfeld is now an advisor.
 
@@ -452,7 +452,7 @@ card-image: img/portraits/RadbruchGustav.jpg
 view-if: radbruch_advisor = 0 and n_advisors < 3
 on-arrival: radbruch_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: nonfactional_advisor
+tags: besteirist_advisor
 
 Gustav Radbruch is now an advisor.
 
@@ -465,7 +465,7 @@ card-image: img/portraits/StampferFriedrich.jpg
 view-if: stampfer_advisor = 0 and n_advisors < 3
 on-arrival: stampfer_advisor = 1; n_advisors += 1
 go-to: confidant_menu
-tags: nonfactional_advisor
+tags: besteirist_advisor
 
 Friedrich Stampfer is now an advisor.
 
