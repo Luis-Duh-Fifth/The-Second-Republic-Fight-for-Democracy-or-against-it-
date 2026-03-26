@@ -172,11 +172,6 @@ frequency: 1
 - @rm_main:Remove advisors
 - @add_advisors: Add advisors
 
-@remove_none
-title: Stop changing advisors.
-go-to: root
-tags: remove_confidant
-
 # pce
 
 @remove_mierendorff
