@@ -1,11 +1,11 @@
-title: Centrist leaders resign
+title: Prietist leaders resign
 new-page: true 
-subtitle: Centrist disagreements with our policies have grown too severe.
+subtitle: Prietists disagreements with our policies have grown too severe.
 tags: event
-view-if: center_dissent >= 60
-on-arrival: center_strength *= 0.3; workers_psoe -= 5; n_advisors -= 1 if wels_advisor == 1; n_advisors -= 1 if hilferding_advisor == 1; n_advisors -= 1 if prieto_advisor == 1; wels_advisor = 0; hilferding_advisor = 0; prieto_advisor = 0; rb_strength -= 100; centrists_resign = 1
+view-if: prietist_dissent >= 60
+on-arrival: prietist_strength *= 0.3; workers_psoe -= 5; n_advisors -= 1 if wels_advisor == 1; n_advisors -= 1 if hilferding_advisor == 1; n_advisors -= 1 if prieto_advisor == 1; wels_advisor = 0; hilferding_advisor = 0; prieto_advisor = 0; rb_strength -= 100; `prietists`_resign = 1
 max-visits: 1
 
-= Centrist leaders resign
+= Prietists leaders resign
 
-Our policy choices have greatly offended the Centrist faction. Many of our most experienced leaders have resigned.
+Our policy choices have greatly offended the Prietists faction. Many of our most experienced leaders have resigned.

@@ -1,8 +1,8 @@
 title: Manuel Azaña
 is-pinned-card: true
-tags: advisor, reformist
+tags: confidant, left_republican
 card-image: img/portraits/AzañaManuel.jpg
-view-if: azana_advisor = 1
+view-if: azana_confidant = 1
 new-page: true 
 
 = Manuel Azaña
@@ -17,25 +17,25 @@ Azaña [? if psoe_prussia = 1 : is ?][? if psoe_prussia = 0 : was ?] the Ministe
 @coalition
 title: Negotiating with the Coalition
 subtitle: Azaña can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Cortes.
-choose-if: advisor_action_timer <= 0 and (psoe_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if not psoe_prussia : The psoe does not control the Prussian government. ?]
-on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if psoe_in_government = 1; erc_relation += 6; izqd_rep_relation += 6; prp_relation += 2; prp_relation += 3 if in_grand_coalition
+choose-if: confidant_action_timer <= 0 and (psoe_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
+unavailable-subtitle: [? if confidant_action_timer > 0 : [+ confidant_action_timer +] months before next confidant action. ?] [? if not psoe_prussia : The psoe does not control the Prussian government. ?]
+on-arrival: confidant_action_timer = 6; coalition_dissent -= 1 if psoe_in_government = 1; erc_relation += 6; izqd_rep_relation += 6; prp_relation += 2; prp_relation += 3 if in_grand_coalition
 
 We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, IR, and PRP, ?][? if not in_grand_coalition: Center (Zentrum) Party and IR, ?] and reduced tensions with the coalition.
 
 @prussian_bulwark
 title: The Prussian Bulwark
 subtitle: As the Minister-President of Prussia, Azaña has power over the Prussian bureaucracy and security services.
-choose-if: advisor_action_timer <= 0 and psoe_prussia = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if psoe_prussia == 0 : The PSOE does not control Prussia. ?]
-on-arrival: advisor_action_timer = 6; security_affairs_timer -= 6
+choose-if: confidant_action_timer <= 0 and psoe_prussia = 1
+unavailable-subtitle: [? if confidant_action_timer > 0 : [+ confidant_action_timer +] months before next confidant action. ?][? if psoe_prussia == 0 : The PSOE does not control Prussia. ?]
+on-arrival: confidant_action_timer = 6; security_affairs_timer -= 6
 go-to: security_affairs
 
 @snap_election
 title: Snap Election
 subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Azaña" and president != "Azaña" : Azaña must be Chancellor or President. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if president = "Azaña" and presidential_powers : We have removed this power from the president with a constitutional reform. ?]
-choose-if: advisor_action_timer == 0 and (chancellor == "Azaña" or (president == "Azaña" and not presidential_powers))
-on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+unavailable-subtitle: [? if chancellor != "Azaña" and president != "Azaña" : Azaña must be Chancellor or President. ?][? if confidant_action_timer > 0 : [+ confidant_action_timer +] months before next confidant action. ?] [? if president = "Azaña" and presidential_powers : We have removed this power from the president with a constitutional reform. ?]
+choose-if: confidant_action_timer == 0 and (chancellor == "Azaña" or (president == "Azaña" and not presidential_powers))
+on-arrival: confidant_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
 
 We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].

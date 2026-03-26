@@ -9,6 +9,13 @@ if (Q.advisor_action_timer <= 0) {
 } else {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
 }
+if (Q.confidants_action_timer <= 0) {
+    Q.pinnedCardsDescription = 'Confidants - an action is available.';
+} else if (Q.confidants_action_timer == 1) {
+    Q.pinnedCardsDescription = 'Confidants - next action available in 1 month.';
+} else {
+    Q.pinnedCardsDescription = 'Confidants - next action available in ' + Q.confidants_action_timer + ' months.';
+}
 !}
 max-cards: 3
 
@@ -31,6 +38,13 @@ if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Advisors - next action available in 1 month.';
 } else {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
+}
+if (Q.confidants_action_timer <= 0) {
+    Q.pinnedCardsDescription = 'Confidants - an action is available.';
+} else if (Q.confidants_action_timer == 1) {
+    Q.pinnedCardsDescription = 'Confidants - next action available in 1 month.';
+} else {
+    Q.pinnedCardsDescription = 'Confidants - next action available in ' + Q.confidants_action_timer + ' months.';
 }
 !}
 max-cards: 4

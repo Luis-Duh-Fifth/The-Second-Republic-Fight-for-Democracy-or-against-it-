@@ -3,7 +3,7 @@ new-page: true
 subtitle: The CNT FAI has approached us in a conciliatory manner.
 tags: event
 view-if: cnt_fai_relation >= 60 and cnt_fai_rejects = 1
-on-arrival: cnt_fai_rejects = 0; woytinsky_advisor = 1; leipart_advisor = 1;
+on-arrival: cnt_fai_rejects = 0; woytinsky_confidant = 1; leipart_confidant = 1;
 
 = CNT FAI has declared us allies in the fight for socialism.
 

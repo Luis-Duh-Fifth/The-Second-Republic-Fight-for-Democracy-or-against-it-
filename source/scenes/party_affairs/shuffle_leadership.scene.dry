@@ -12,7 +12,9 @@ Changing the leadership of the party is painful, but perhaps it is necessary to 
 Removing advisors will increase dissent from their faction of the party, while selecting advisors will increase a faction's strength and reduce their dissent.
 
 - @rm_main: Remove advisors
+- @rc_main: Remove Confidants
 - @add_advisors: Add advisors
+- @add_confidants: Add confidants
 - @remove_none: Don't change advisors.
 - @easy_discard
 
@@ -21,17 +23,20 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_advisor, leftrep, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: prietist_advisor, caballerist_advisor, besteirist_advisor 
 frequency: 1
 
 - #remove_advisor
 - @add_advisors: Add advisors
+- @rc_main: Remove confidants
+- @add_confidants
 
 @remove_none
 title: Stop changing advisors.
 go-to: root
 tags: remove_advisor
 
+# Prietists
 
 @remove_hilferding
 title: Remove Hilferding
@@ -70,74 +75,6 @@ go-to: rm_main
 
 Breitscheid has been removed as an advisor. The Centrist faction disapproves.
 
-# reformists
-
-
-@remove_quiroga
-title: Remove Quiroga
-view-if: quiroga_advisor = 1
-tags: remove_advisor
-on-arrival: quiroga_advisor = 0; reformist_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Quiroga has been removed as an advisor. The Left Republicans disapprove.
-
-@remove_azana
-title: Remove Azaña
-view-if: azana_advisor = 1
-tags: remove_advisor
-on-arrival: azana_advisor = 0; reformist_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Azaña has been removed as an advisor. The Left Republicans disapprove.
-
-@remove_juchacz
-title: Remove Juchacz
-view-if: juchacz_advisor = 1
-tags: remove_advisor
-on-arrival: juchacz_advisor = 0; reformist_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Juchacz has been removed as an advisor. The Reformist faction disapproves.
-
-@remove_pfulf
-title: Remove Pfülf
-view-if: pfulf_advisor = 1
-tags: remove_advisor
-on-arrival: pfulf_advisor = 0; reformist_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Pfülf has been removed as an advisor. The Reformist faction disapproves.
-
-
-# labor
-
-@remove_leipart
-title: Remove Leipart
-view-if: leipart_advisor = 1
-tags: remove_advisor
-on-arrival: leipart_advisor = 0; labor_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Leipart has been removed as an advisor. The Labor faction disapproves.
-
-@remove_aufhauser
-title: Remove Aufhäuser
-view-if: aufhauser_advisor = 1
-tags: remove_advisor
-on-arrival: aufhauser_advisor = 0; labor_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Aufhäuser has been removed as an advisor. The Labor faction disapproves.
-
-@remove_woytinsky
-title: Remove Woytinsky
-view-if: woytinsky_advisor = 1
-tags: remove_advisor
-on-arrival: woytinsky_advisor = 0; labor_dissent += 3; n_advisors -= 1
-go-to: rm_main
-
-Woytinsky has been removed as an advisor. The Labor faction disapproves.
 
 # left
 
@@ -177,39 +114,7 @@ go-to: rm_main
 
 Seydewitz has been removed as an advisor. The Leftist faction disapproves.
 
-
-
-# neorevisionists
-
-@remove_mierendorff
-title: Remove Mierendorff
-view-if: mierendorff_advisor = 1
-tags: remove_advisor
-on-arrival: mierendorff_advisor = 0; neorevisionist_dissent += 5; n_advisors -= 1
-go-to: rm_main
-
-Mierendorff has been removed as an advisor. The Neorevisionist faction disapproves.
-
-@remove_leber
-title: Remove Leber
-view-if: leber_advisor = 1
-tags: remove_advisor
-on-arrival: leber_advisor = 0; neorevisionist_dissent += 3; n_advisors -= 1
-go-to: rm_main
-
-Leber has been removed as an advisor. The Neorevisionist faction disapproves.
-
-@remove_schumacher
-title: Remove Schumacher
-view-if: schumacher_advisor = 1
-tags: remove_advisor
-on-arrival: schumacher_advisor = 0; neorevisionist_dissent += 3; n_advisors -= 1
-go-to: rm_main
-
-Schumacher has been removed as an advisor. The Neorevisionist faction disapproves.
-
-
-## nonfactional
+## Besteirist
 
 # tbh I'm not sure if Baade should be a reformist or nonfactional. same for stampfer. they were vaguely reformist-aligned but had pretty different ideas from the other reformists here. so they're non-factional.
 
@@ -255,6 +160,124 @@ Radbruch has been removed as an advisor.
 
 
 
+###################### removing confidants
+
+@rc_main
+title: Remove confidants.
+tags: izq_rep_confidant, cnt_fai_confidant, pce_confidant 
+frequency: 1
+
+- #remove_confidant
+- @add_confidants: Add confidants
+- @rm_main:Remove advisors
+- @add_advisors: Add advisors
+
+@remove_none
+title: Stop changing advisors.
+go-to: root
+tags: remove_confidant
+
+# pce
+
+@remove_mierendorff
+title: Remove Mierendorff
+view-if: mierendorff_confidant = 1
+tags: remove_confidant
+on-arrival: mierendorff_confidanr = 0; neorevisionist_dissent += 5; n_confidants -= 1
+go-to: rm_main
+
+Mierendorff has been removed as an confidant. The Neorevisionist faction disapproves.
+
+@remove_leber
+title: Remove Leber
+view-if: leber_confidant = 1
+tags: remove_confidant
+on-arrival: leber_confidant = 0; neorevisionist_dissent += 3; n_confidants -= 1
+go-to: rm_main
+
+Leber has been removed as an confidant. The Neorevisionist faction disapproves.
+
+@remove_schumacher
+title: Remove Schumacher
+view-if: schumacher_confidant = 1
+tags: remove_confidant
+on-arrival: schumacher_confidant = 0; neorevisionist_dissent += 3; n_confidants -= 1
+go-to: rm_main
+
+Schumacher has been removed as an confidant. The Neorevisionist faction disapproves.
+
+# cnt_fai
+
+@remove_leipart
+title: Remove Leipart
+view-if: leipart_confidant = 1
+tags: remove_confidant
+on-arrival: leipart_confidant = 0; labor_dissent += 5; n_confidants -= 1
+go-to: rm_main
+
+Leipart has been removed as an confidant. The Labor faction disapproves.
+
+@remove_aufhauser
+title: Remove Aufhäuser
+view-if: aufhauser_confidant = 1
+tags: remove_confidant
+on-arrival: aufhauser_confidant = 0; labor_dissent += 5; n_confidants -= 1
+go-to: rm_main
+
+Aufhäuser has been removed as an confidant. The Labor faction disapproves.
+
+@remove_woytinsky
+title: Remove Woytinsky
+view-if: woytinsky_confidant = 1
+tags: remove_confidant
+on-arrival: woytinsky_confidant = 0; labor_dissent += 3; n_confidants -= 1
+go-to: rm_main
+
+Woytinsky has been removed as an confidant. The Labor faction disapproves.
+
+# izqd_rep
+
+
+@remove_quiroga
+title: Remove Quiroga
+view-if: quiroga_confidant = 1
+tags: remove_confidant
+on-arrival: quiroga_confidant = 0; reformist_dissent += 5; n_confidants -= 1
+go-to: rm_main
+
+Quiroga has been removed as an confidant. The Left Republicans disapprove.
+
+@remove_azana
+title: Remove Azaña
+view-if: azana_confidant = 1
+tags: remove_confidant
+on-arrival: azana_confidant = 0; reformist_dissent += 5; n_confidants -= 1
+go-to: rm_main
+
+Azaña has been removed as an confidant. The Left Republicans disapprove.
+
+@remove_juchacz
+title: Remove Juchacz
+view-if: juchacz_confidant = 1
+tags: remove_confidant
+on-arrival: juchacz_confidant = 0; reformist_dissent += 5; n_confidants -= 1
+go-to: rm_main
+
+Juchacz has been removed as an confidant. The Reformist faction disapproves.
+
+@remove_pfulf
+title: Remove Pfülf
+view-if: pfulf_confidant = 1
+tags: remove_confidant
+on-arrival: pfulf_confidant = 0; reformist_dissent += 5; n_confidants -= 1
+go-to: rm_main
+
+Pfülf has been removed as an confidant. The Reformist faction disapproves.
+
+
+
+
+
 
 ####################### adding advisors
 
@@ -270,44 +293,33 @@ tags: center_advisor, left_advisor, leftrep, labor_advisor, neorev_advisor, nonf
 frequency: 1
 
 
-- @centrist: Add Centrists
-- @left: Add Leftists
+- @prietists: Add Prietists
+- @caballerists: Add Caballerist
 - @left_republicans: Add Left Republicans
 - @anarcho_syndicalists: Add Anarcho Syndicalists
 - @communists: Add Communists
 - @nonfactional: Add non-factional advisors
+- @add_confidants: Add confidants
 - @rm_main: Remove advisors instead.
+- @rc_main: Remove confidants
 - @remove_none: Stop changing advisors.
 
-@centrist
+@prietists
 view-if: n_advisors < 3
 
-- #center_advisor
+- #prietist_advisor
 
-@left_republicans
-view-if: izqd_rep_rejects = 0 and n_advisors < 3
-
-- #leftrep
-
-@left
+@caballerists
 view-if: n_advisors < 3
 
-- #left_advisor
+- #caballerist_advisor
 
-@anarcho_syndicalists
-view-if: cnt_fai_rejects = 0 and n_advisors < 3
-
-- #labor_advisor
-
-@communists
-view-if: pce_rejects = 0 and n_advisors < 3
-
-- #neorev_advisor
-
-@nonfactional
+@besteirists
 view-if: n_advisors < 3
 
-- #nonfactional_advisor
+- #besteirist_advisor
+
+# prietist
 
 @add_hilferding
 title: Rudolf Hilferding
@@ -357,64 +369,12 @@ tags: center_advisor
 
 Rudolf Breitscheid is now an advisor.
 
-# reformist
 
-
-@add_quiroga
-title: Casares Quiroga
-subtitle: Casares  is a Republican, close friends with Azaña and Galician reformist. He is militantly republican a and police reformer.
-is-card: true
-card-image: img/portraits/Casares_Quiroga.jpg
-tags: leftrep
-view-if: quiroga_advisor = 0 and n_advisors < 3
-on-arrival: quiroga_advisor = 1; n_advisors += 1; reformist_strength += 5
-go-to: advisor_menu
-
-Casares Quiroga is now an advisor.
-
-@add_azana
-title: Manuel Azaña
-subtitle: Manuel Azaña is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders.
-is-card: true
-card-image: img/portraits/AzañaManuel.jpg
-tags: leftrep
-view-if: azana_advisor = 0 and n_advisors < 3
-on-arrival: azana_advisor = 1; n_advisors += 1; reformist_strength += 5
-go-to: advisor_menu
-
-Manuel Azaña is now an advisor.
-
-@add_juchacz
-title: Marie Juchacz
-subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organization.
-is-card: true
-card-image: img/portraits/JuchaczMarie.jpg
-view-if: juchacz_advisor = 0 and n_advisors < 3
-on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5
-go-to: advisor_menu
-tags: leftrep
-
-Marie Juchacz is now an advisor.
-
-@add_pfulf
-title: Antonie Pfülf
-subtitle: Antonie Pfülf is a leader in social policy and women's rights.
-is-card: true
-card-image: img/portraits/PfülfAntonie.jpg
-view-if: pfulf_advisor = 0 and n_advisors < 3
-on-arrival: pfulf_advisor = 1; n_advisors += 1
-go-to: advisor_menu
-tags: leftrep
-
-Antonie Pfülf is now an advisor.
-
-
-
-# left
+# caballerist
 
 @add_largo_caballero
 title: Francisco Largo Caballero
-subtitle: Francisco Largo Caballero is a former pce leader who was purged for criticizing Communist policies.
+subtitle: Francisco Largo Caballero is the leader of the Left of our party, who is radicalizing rapidly.
 is-card: true
 card-image: img/portraits/LeviPaul.jpg
 view-if: largo_caballero_advisor = 0 and largo_caballero_dead = 0 and n_advisors < 3 and sapd_formed = 0
@@ -460,85 +420,7 @@ tags: left_advisor
 
 Max Seydewitz is now an advisor.
 
-
-# labor
-
-@add_leipart
-title: Theodor Leipart
-subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation.
-is-card: true
-card-image: img/portraits/LeipartTheodor.jpg
-tags: labor_advisor
-view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5
-go-to: advisor_menu
-
-Theodor Leipart is now an advisor.
-
-@add_aufhauser
-title: Siegfried Aufhäuser
-subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation.
-is-card: true
-card-image: img/portraits/AufhäuserSiegfried.jpg
-tags: labor_advisor
-view-if: aufhauser_advisor = 0 and n_advisors < 3
-on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5
-go-to: advisor_menu
-
-Siegfried Aufhäuser is now an advisor.
-
-@add_woytinsky
-title: Wladimir Woytinsky
-subtitle: Wladimir Woytinsky is a former Russian Menshevik who is now the lead trade union economist.
-is-card: true
-card-image: img/portraits/WoytinskyWladimir.jpg
-tags: labor_advisor
-view-if: woytinsky_advisor = 0 and n_advisors < 3 and unions_independent = 0
-on-arrival: woytinsky_advisor = 1; n_advisors += 1; labor_strength += 3
-go-to: advisor_menu
-
-Wladimir Woytinsky is now an advisor.
-
-
-# neorevisionist leaders
-
-@add_mierendorff
-title: Carlo Mierendorff
-subtitle: Carlo Mierendorff is one of the youngest members of the Cortes, and the originator of the "Neo-Revisionist" movement. He is an anti-Nazi strategist.
-is-card: true
-card-image: img/portraits/MierendorffCarlo.jpg
-view-if: mierendorff_advisor = 0 and n_advisors < 3
-on-arrival: mierendorff_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
-go-to: advisor_menu
-tags: neorev_advisor
-
-Carlo Mierendorff is now an advisor.
-
-@add_schumacher
-title: Kurt Schumacher
-subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the social-democratic cause, and favors reformist policies.
-is-card: true
-card-image: img/portraits/SchumacherKurt.jpg
-tags: neorev_advisor
-view-if: schumacher_advisor = 0 and n_advisors < 3
-on-arrival: schumacher_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
-go-to: advisor_menu
-
-Kurt Schumacher is now an advisor.
-
-@add_leber
-title: Julius Leber
-subtitle: Julius Leber is a former Reichswehr officer who resigned in opposition to the Kapp coup attempt.
-is-card: true
-card-image: img/portraits/LeberJulius.jpg
-view-if: leber_advisor = 0 and n_advisors < 3
-on-arrival: leber_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
-go-to: advisor_menu
-tags: neorev_advisor
-
-Julius Leber is now an advisor.
-
-# Nonfactional advisors
+# besteirista
 
 @add_baade
 title: Fritz Baade
@@ -587,9 +469,174 @@ is-card: true
 card-image: img/portraits/StampferFriedrich.jpg
 view-if: stampfer_advisor = 0 and n_advisors < 3
 on-arrival: stampfer_advisor = 1; n_advisors += 1
-go-to: advisor_menu
+go-to: confidant_menu
 tags: nonfactional_advisor
 
 Friedrich Stampfer is now an advisor.
 
+
+####################### adding confidants
+
+@add_confidants
+title: Add confidants
+choose-if: n_confidants < 3
+unavailable-subtitle: Maximum of 3 confidants.
+go-to: confidant_menu
+
+@confidant_menu
+title: Add other confidants.
+tags: leftrep_confidant, cnt_fai_confidant, pce_confidant,
+frequency: 1
+
+
+- @left_republicans: Add Left Republicans
+- @anarcho_syndicalists: Add Anarcho Syndicalists
+- @communists: Add Communists
+- @add_advisors: Add advisors
+- @rc_main: Remove confidants instead.
+- @rm_main: Remove advisors.
+- @remove_none: Stop changing confidants.
+
+@left_republicans
+view-if: izqd_rep_rejects = 0 and n_advisors < 3
+
+- #left_republican_confidant
+
+@anarcho_syndicalists
+view-if: cnt_fai_rejects = 0 and n_advisors < 3
+
+- #anarcho_syndicalist_confindant
+
+@communists
+view-if: pce_rejects = 0 and n_advisors < 3
+
+- #communist_confidant
+
+# leftrep
+
+
+@add_quiroga
+title: Casares Quiroga
+subtitle: Casares  is a Republican, close friends with Azaña and Galician reformist. He is militantly republican a and police reformer.
+is-card: true
+card-image: img/portraits/Casares_Quiroga.jpg
+tags: izq_rep_confidant
+view-if: quiroga_advisor = 0 and n_advisors < 3
+on-arrival: quiroga_advisor = 1; n_advisors += 1; reformist_strength += 5
+go-to: advisor_menu
+
+Casares Quiroga is now an advisor.
+
+@add_azana
+title: Manuel Azaña
+subtitle: Manuel Azaña is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders.
+is-card: true
+card-image: img/portraits/AzañaManuel.jpg
+tags: izq_rep_confidant
+view-if: azana_advisor = 0 and n_advisors < 3
+on-arrival: azana_advisor = 1; n_advisors += 1; reformist_strength += 5
+go-to: advisor_menu
+
+Manuel Azaña is now an advisor.
+
+@add_juchacz
+title: Marie Juchacz
+subtitle: Marie Juchacz is the founder of Worker's Welfare, a mutual-aid organization.
+is-card: true
+card-image: img/portraits/JuchaczMarie.jpg
+view-if: juchacz_advisor = 0 and n_advisors < 3
+on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5
+go-to: advisor_menu
+tags: izq_rep_confidant
+
+Marie Juchacz is now an advisor.
+
+@add_pfulf
+title: Antonie Pfülf
+subtitle: Antonie Pfülf is a leader in social policy and women's rights.
+is-card: true
+card-image: img/portraits/PfülfAntonie.jpg
+view-if: pfulf_advisor = 0 and n_advisors < 3
+on-arrival: pfulf_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+tags: izq_rep_confidant
+
+Antonie Pfülf is now an advisor.
+
+# anarcho_syndicalists
+
+@add_leipart
+title: Theodor Leipart
+subtitle: Theodor Leipart is the leader of the ADGB, the German Trade Union Federation.
+is-card: true
+card-image: img/portraits/LeipartTheodor.jpg
+tags: cnt_fai_confidant
+view-if: leipart_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: leipart_advisor = 1; n_advisors += 1; labor_strength += 5
+go-to: advisor_menu
+
+Theodor Leipart is now an advisor.
+
+@add_aufhauser
+title: Siegfried Aufhäuser
+subtitle: Siegfried Aufhäuser is the leader of the AfA-Bund, the white-collar trade union federation.
+is-card: true
+card-image: img/portraits/AufhäuserSiegfried.jpg
+tags: cnt_fai_confidant
+view-if: aufhauser_advisor = 0 and n_advisors < 3
+on-arrival: aufhauser_advisor = 1; n_advisors += 1; labor_strength += 5
+go-to: advisor_menu
+
+Siegfried Aufhäuser is now an advisor.
+
+@add_woytinsky
+title: Wladimir Woytinsky
+subtitle: Wladimir Woytinsky is a former Russian Menshevik who is now the lead trade union economist.
+is-card: true
+card-image: img/portraits/WoytinskyWladimir.jpg
+tags: cnt_fai_confidant
+view-if: woytinsky_advisor = 0 and n_advisors < 3 and unions_independent = 0
+on-arrival: woytinsky_advisor = 1; n_advisors += 1; labor_strength += 3
+go-to: advisor_menu
+
+Wladimir Woytinsky is now an advisor.
+
+
+# communist leaders
+
+@add_mierendorff
+title: Carlo Mierendorff
+subtitle: Carlo Mierendorff is one of the youngest members of the Cortes, and the originator of the "Neo-Revisionist" movement. He is an anti-Nazi strategist.
+is-card: true
+card-image: img/portraits/MierendorffCarlo.jpg
+view-if: mierendorff_advisor = 0 and n_advisors < 3
+on-arrival: mierendorff_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
+go-to: advisor_menu
+tags: pce_confidant
+
+Carlo Mierendorff is now an advisor.
+
+@add_schumacher
+title: Kurt Schumacher
+subtitle: Kurt Schumacher is a Great War veteran and energetic speaker for the social-democratic cause, and favors reformist policies.
+is-card: true
+card-image: img/portraits/SchumacherKurt.jpg
+tags: pce_confidant
+view-if: schumacher_advisor = 0 and n_advisors < 3
+on-arrival: schumacher_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
+go-to: advisor_menu
+
+Kurt Schumacher is now an advisor.
+
+@add_leber
+title: Julius Leber
+subtitle: Julius Leber is a former Reichswehr officer who resigned in opposition to the Kapp coup attempt.
+is-card: true
+card-image: img/portraits/LeberJulius.jpg
+view-if: leber_advisor = 0 and n_advisors < 3
+on-arrival: leber_advisor = 1; n_advisors += 1; neorevisionist_strength += 5
+go-to: advisor_menu
+tags: pce_confidant
+
+Julius Leber is now an advisor.
 

@@ -3,7 +3,7 @@ new-page: true
 subtitle: The PCEs misgivings with us have lead them to decide they were wrong on cooperation with us.
 tags: event
 view-if: pce_relation <= 40 and pce_rejects = 0
-on-arrival:   n_advisors -= 1 if schumacher_advisor == 1; n_advisors -= 1 if mierendorff_advisor == 1; schumacher_advisor = 0; mierendorff_advisor = 0; pce_rejects = 1
+on-arrival:   n_confidants -= 1 if schumacher_confidant == 1; n_confidants -= 1 if mierendorff_confidant == 1; schumacher_confidant = 0; mierendorff_confidant = 0; pce_rejects = 1
 
 = PCE stops working with us.
 
