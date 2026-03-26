@@ -309,7 +309,7 @@ view-if: n_advisors < 3
 
 - #caballerist_advisor
 
-@besteirists
+@besteirist
 view-if: n_advisors < 3
 
 - #besteirist_advisor
@@ -415,7 +415,7 @@ tags: left_advisor
 
 Max Seydewitz is now an advisor.
 
-# besteirists
+# besteirist
 
 @add_baade
 title: Fritz Baade
