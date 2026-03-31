@@ -507,7 +507,7 @@ view-if: pce_rejects = 0 and n_advisors < 3
 
 - #communist_confidant
 
-# leftrep
+# left_republicans_confidant
 
 
 @add_quiroga
@@ -558,7 +558,7 @@ tags: izq_rep_confidant
 
 Antonie Pfülf is now an advisor.
 
-# anarcho_syndicalists
+# anarcho_syndicalist_confindant
 
 @add_leipart
 title: Theodor Leipart
@@ -597,7 +597,7 @@ go-to: advisor_menu
 Wladimir Woytinsky is now an advisor.
 
 
-# communist leaders
+# communist_confidant
 
 @add_mierendorff
 title: Carlo Mierendorff
