@@ -500,7 +500,7 @@ view-if: izqd_rep_rejects = 0 and n_advisors < 3
 @anarcho_syndicalists
 view-if: cnt_fai_rejects = 0 and n_advisors < 3
 
-- #anarcho_syndicalist_confindant
+- #anarcho_syndicalist_confidant
 
 @communists
 view-if: pce_rejects = 0 and n_advisors < 3
@@ -558,7 +558,7 @@ tags: izq_rep_confidant
 
 Antonie Pfülf is now an advisor.
 
-# anarcho_syndicalist_confindant
+# anarcho_syndicalist_confidant
 
 @add_leipart
 title: Theodor Leipart
