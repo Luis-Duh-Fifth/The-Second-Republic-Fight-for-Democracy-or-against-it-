@@ -495,7 +495,7 @@ frequency: 1
 @left_republicans
 view-if: izqd_rep_rejects = 0 and n_advisors < 3
 
-- #left_republicans
+- #left_republicans_confidant
 
 @anarcho_syndicalists
 view-if: cnt_fai_rejects = 0 and n_advisors < 3
