@@ -495,7 +495,7 @@ frequency: 1
 @left_republicans
 view-if: izqd_rep_rejects = 0 and n_advisors < 3
 
-- #left_republicans_confidant
+- #left_republican_confidant
 
 @anarcho_syndicalists
 view-if: cnt_fai_rejects = 0 and n_advisors < 3
@@ -507,7 +507,7 @@ view-if: pce_rejects = 0 and n_advisors < 3
 
 - #pce_confidant
 
-# left_republicans_confidant
+# left_republican_confidant
 
 
 @add_quiroga
