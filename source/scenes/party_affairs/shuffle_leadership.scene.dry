@@ -164,7 +164,7 @@ Radbruch has been removed as an advisor.
 
 @rc_main
 title: Remove confidants.
-tags: izq_rep_confidant, cnt_fai_confidant, pce_confidant 
+tags: left_republican_confidant, cnt_fai_confidant, pce_confidant 
 frequency: 1
 
 - #remove_confidant
@@ -500,12 +500,12 @@ view-if: izqd_rep_rejects = 0 and n_advisors < 3
 @anarcho_syndicalists
 view-if: cnt_fai_rejects = 0 and n_advisors < 3
 
-- #anarcho_syndicalist_confidant
+- #cnt_fai_confidant
 
 @communists
 view-if: pce_rejects = 0 and n_advisors < 3
 
-- #communist_confidant
+- #pce_confidant
 
 # left_republicans_confidant
 
@@ -515,7 +515,7 @@ title: Casares Quiroga
 subtitle: Casares  is a Republican, close friends with Azaña and Galician reformist. He is militantly republican a and police reformer.
 is-card: true
 card-image: img/portraits/Casares_Quiroga.jpg
-tags: izq_rep_confidant
+tags: left_republican_confidant
 view-if: quiroga_advisor = 0 and n_advisors < 3
 on-arrival: quiroga_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
@@ -527,7 +527,7 @@ title: Manuel Azaña
 subtitle: Manuel Azaña is the Minister-President of Prussia, and one of the most recognizable and well-known Social Democratic leaders.
 is-card: true
 card-image: img/portraits/AzañaManuel.jpg
-tags: izq_rep_confidant
+tags: left_republican_confidant
 view-if: azana_advisor = 0 and n_advisors < 3
 on-arrival: azana_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
@@ -542,7 +542,7 @@ card-image: img/portraits/JuchaczMarie.jpg
 view-if: juchacz_advisor = 0 and n_advisors < 3
 on-arrival: juchacz_advisor = 1; n_advisors += 1; reformist_strength += 5
 go-to: advisor_menu
-tags: izq_rep_confidant
+tags: left_republican_confidant
 
 Marie Juchacz is now an advisor.
 
@@ -554,11 +554,11 @@ card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 0 and n_advisors < 3
 on-arrival: pfulf_advisor = 1; n_advisors += 1
 go-to: advisor_menu
-tags: izq_rep_confidant
+tags: left_republican_confidant
 
 Antonie Pfülf is now an advisor.
 
-# anarcho_syndicalist_confidant
+# cnt_fai_confidant
 
 @add_leipart
 title: Theodor Leipart
@@ -597,7 +597,7 @@ go-to: advisor_menu
 Wladimir Woytinsky is now an advisor.
 
 
-# communist_confidant
+# pce_confidant
 
 @add_mierendorff
 title: Carlo Mierendorff
