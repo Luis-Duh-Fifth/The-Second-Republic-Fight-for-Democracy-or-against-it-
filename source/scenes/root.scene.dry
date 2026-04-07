@@ -735,7 +735,7 @@ Q.psoe_no_confidence = 0;
 Q.no_confidence_against_psoe = 0;
 
 // Advisors/Leaders
-Q.n_advisors = 3;
+Q.n_advisors = 2;
 // timer - this decrements by 1 every turn, and is set to 5 whenever an advisor action is used, so that you can only use one advisor action every 5 months.
 // let's just put all of the timers here...
 // most party affairs and government affairs cards are on a timer.
