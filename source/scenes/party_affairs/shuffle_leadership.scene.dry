@@ -490,17 +490,17 @@ frequency: 1
 - @remove_none: Stop changing confidants.
 
 @left_republicans
-view-if: izqd_rep_rejects = 0 and n_advisors < 3
+view-if: izqd_rep_rejects = 0 and n_confidants < 3
 
 - #left_republican_confidant
 
 @anarcho_syndicalists
-view-if: cnt_fai_rejects = 0 and n_advisors < 3
+view-if: cnt_fai_rejects = 0 and n_confidants < 3
 
 - #cnt_fai_confidant
 
 @communists
-view-if: pce_rejects = 0 and n_advisors < 3
+view-if: pce_rejects = 0 and n_confidants < 3
 
 - #pce_confidant
 
