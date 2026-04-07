@@ -290,10 +290,7 @@ frequency: 1
 
 - @prietists: Add Prietists
 - @caballerists: Add Caballerist
-- @left_republicans: Add Left Republicans
-- @anarcho_syndicalists: Add Anarcho Syndicalists
-- @communists: Add Communists
-- @besteirist: Add besteirist advisors
+- @besteirist: Add Besteirist advisors
 - @add_confidants: Add confidants
 - @rm_main: Remove advisors instead.
 - @rc_main: Remove confidants
