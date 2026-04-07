@@ -761,7 +761,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             'high_inflation', 'banking_crisis'];
 Q.advisor_action_timer = 0;
 // Confidants/Leaders
-Q.n_confidants = 3;
+Q.n_confidants = 1;
 // timer - this decrements by 1 every turn, and is set to 5 whenever an confidants action is used, so that you can only use one confidant action every 5 months.
 // let's just put all of the timers here...
 // most party affairs and government affairs cards are on a timer.
