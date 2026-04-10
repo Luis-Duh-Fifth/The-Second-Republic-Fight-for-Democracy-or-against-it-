@@ -26,7 +26,7 @@ As we have control over the Interior Ministry, we can direct police and intellig
 
 @ban_sa
 view-if: nazi_urgency >= 3 and sa_banned == 0
-on-arrival: sa_strength *= 0.85; sa_strength *= 0.7 if police_loyalty >= 0.7; sa_banned = 1; prp_relation -= 3; assault_guard_loyalty -= 0.05; police_loyalty -= 0.05; sa_militancy -= 0.05; sa_ban_timer = 6;
+on-arrival: sa_strength *= 0.85; sa_strength *= 0.7 if assault_guard_loyalty >= 0.7; sa_banned = 1; prp_relation -= 3; assault_guard_loyalty -= 0.05; police_loyalty -= 0.05; sa_militancy -= 0.05; sa_ban_timer = 6;
 
 As it turns out, the Nazi SA has many allies in the police and bureaucracy. Our relationship with the police weakens, and the SA can still organize illegally, right under the police's noses. [? if police_loyalty >= 0.7 : Nevertheless, the SA is substantially weakend by our ban. ?]
 

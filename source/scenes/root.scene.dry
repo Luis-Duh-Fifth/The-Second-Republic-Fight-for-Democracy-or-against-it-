@@ -143,9 +143,10 @@ Q.rfb_militancy = 0.5;
 Q.rfb_banned = 0;
 Q.rfb_banned_prussia = 0;
 
-Q.police_strength = 50;
-Q.police_militancy = 1;
-Q.police_loyalty = 0.45;
+Q.carabineros_strength = 30;
+Q.carabineros_militancy = 1;
+Q.carabineros_loyalty = 0.60;
+Q.carabineros_interior = 9;
 
 Q.assault_guard_strength = 90;
 Q.assault_guard_militancy = 1;
