@@ -25,7 +25,7 @@ With the ministry of Gobernation can enact policies onto the institutions of ord
 - @easy_discard
 
 @Carabineros_loyalty
-view-if: carabineros_loyalty < 1, carabineros_interior = 1
+view-if: carabineros_loyalty < 1 and carabineros_interior = 1
 on-arrival: carabineros_loyalty += 0.1;
 
 # increase carabinero loyalty
