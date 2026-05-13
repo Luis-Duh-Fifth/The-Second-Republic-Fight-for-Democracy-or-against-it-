@@ -234,21 +234,30 @@ Loyalty: [+ assault_guard_loyalty : loyalty +]
 
 Overall dissent: [+ dissent_percent : dissent +]
 
-**Leftists**
+**Caballerists**
 
-Many leftists are former members of the USPD (the left-wing, anti-war Independent Social Democratic Party), or are young radicals. Many are interested in closer cooperation with the PCE, and some support extraparliamentary action.
+Caballerists are the left of the party (gotta elaborate later). Many are interested in closer cooperation with the PCE, and some support extraparliamentary action.
 
 Strength: [+ left_strength : strength +]
 
 Dissent: [+ left_dissent : dissent +]
 
-**Centrists**
+**Prietists**
 
-Centrists in the <span style="color: #c31818;">**PSOE**</span> are followers of the doctrine of orthodox Marxism as expounded by Karl Kautsky and later Rudolf Hilferding. They seek a middle course between reform and revolution, while defending the democratic state.
+Prietists are the center of the party. They seek a middle course between reform and revolution, while defending the democratic state.
 
 Strength: [+ center_strength : strength +]
 
 Dissent: [+ center_dissent : dissent +]
+
+**Besteirists**
+
+
+
+Strength: [+ right_strength : strength +]
+
+Dissent: [+ right_dissent : dissent +]
+
 
 @figures
 title: Figures and Charts

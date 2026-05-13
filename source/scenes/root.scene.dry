@@ -43,12 +43,14 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center'];
+Q.factions = ['left', 'center', 'right'];
 // should this be normalized to 100%?
 Q.left_strength = 15;
 Q.left_dissent = 20;
 Q.center_strength = 30;
 Q.center_dissent = 0;
+Q.right_dissent = 0;
+Q.right_strength = 20;
 
 // If other parties collaborate with us and if we have split
 Q.cnt_fai_rejects = 1;
