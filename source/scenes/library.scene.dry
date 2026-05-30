@@ -236,7 +236,7 @@ Overall dissent: [+ dissent_percent : dissent +]
 
 **Caballerists**
 
-Caballerists are the left of the party (gotta elaborate later). Many are interested in closer cooperation with the PCE, and some support extraparliamentary action.
+Caballerists are the left of the party [?if spanish_lenin == 0: even if their leaders previous advocacy for toleration of the may make them seem moderete the current toleration of the Caballerists for the Republic is strongly tied to what they think the proletariat can get from it, should the Republic fail to live up to the workers expectations and radicalize them the Caballerists will rapidly follow. ?] [? if spanish_lenin == 1: The Caballerist have fully embraced their revolutionary tendencies and call loudly for a Proletarian Revolution.They are now interested in closer cooperation with the PCE and support extraparliamentary action to bring down the "bourgoise republic". ?] They are led by Largo Caballero [? if spanish_lenin == 1: commonly referred to as "The Spanish Lenin" ?].
 
 Strength: [+ left_strength : strength +]
 
@@ -244,14 +244,14 @@ Dissent: [+ left_dissent : dissent +]
 
 **Prietists**
 
-Prietists are the center of the party. They seek a middle course between reform and revolution, while defending the democratic state.
+Prietists are the center to center right of the party. They are pragmatic reformists that wish to particpate in goverment to better the Republic. They are however suprisingly intransigent and have shown willing to break ranks with their bourgoise allies previously.  Under certain circumstances they are even willing to use mass movements and even violence in defence of the Republic and working class. They are grouped around Indalecio Prieto.
 
 Strength: [+ center_strength : strength +]
 
 Dissent: [+ center_dissent : dissent +]
 
 **Besteirists**
-
+Besterists are commited ethical reformist republicans, completly legalistic and commited to collaboration with the Left Republicans they think that the Republic must be safeguarded together with them. Though the most theoretically advanced section of the PSOE, they are undautably also the rightmost rejecting extraparlamentary confrontations and preferring to keep to parliment. They are led by Indalecio Besteiro, often referred to as "The Spanish Menshevick".
 
 
 Strength: [+ right_strength : strength +]
