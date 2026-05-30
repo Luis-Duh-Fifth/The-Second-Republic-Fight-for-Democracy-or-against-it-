@@ -4,21 +4,21 @@
   "description": "Building the game:",
   "main": "out/html/index.html",
   "scripts": {
-    "dendrynexus": "dendrynexus"
+    "dendrynexus-experimentados": "dendrynexus-experimentados"
   },
   "repository": {
     "type": "git",
     "url": "git+https://aucchen@github.com/aucchen/social_democracy_alternate_history.git"
   },
   "keywords": [],
-  "author": "Autumn Chen",
+  "author": "Luis Duh Fifth, Base game Autumn Chen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aucchen/social_democracy_alternate_history/issues"
+    "url": https://github.com/Luis-Duh-Fifth/The-Second-Republic-Fight-for-Democracy-or-against-it/issues"
   },
-  "homepage": "https://github.com/aucchen/social_democracy_alternate_history",
+  "homepage": "https://github.com/Luis-Duh-Fift/The-Second-Republic-Fight-for-Democracy-or-against-it",
   "dependencies": {
-    "dendrynexus": "github:aucchen/dendrynexus",
+    "dendrynexus-experimentados": github:Luis-Duh-Fifth/dendrynexus-experimentados",
     "parliament-svg": "^3.0.0"
   }
 }

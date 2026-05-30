@@ -10,8 +10,8 @@
 
 ## Building the game
 
-1. Install [dendrynexus](https://github.com/aucchen/dendrynexus)
+1. Install [dendrynexus-experimentados](https://github.com/Luis-Duh-Fifth/dendrynexus-experimentados)
 
-2. Run `dendrynexus make-html` in this folder.
+2. Run `dendrynexus-experimentados make-html` in this folder.
 
-To update dendrynexus in `package-lock.json`, run `npm install --upgrade https://github.com/aucchen/dendrynexus`
+To update dendrynexus-experimentados in `package-lock.json`, run `npm install --upgrade https://github.com/Luis-Duh-Fifth/dendrynexus-experimentados`
