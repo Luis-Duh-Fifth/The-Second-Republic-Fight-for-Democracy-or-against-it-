@@ -1,5 +1,5 @@
 title: Manuel Azaña
-is-pinned-2-card: true
+is-pinned2-card: true
 tags: confidant, left_republican
 card-image: img/portraits/AzañaManuel.jpg
 view-if: azana_confidant = 1
