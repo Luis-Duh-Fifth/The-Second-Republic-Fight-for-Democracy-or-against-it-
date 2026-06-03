@@ -1,5 +1,5 @@
 title: Casares Quiroga
-isPinned2Type: true
+is-my-new-row-type: true
 tags: advisor, reformist
 card-image: img/portraits/Casares_Quiroga.jpg
 view-if: quiroga_advisor = 1

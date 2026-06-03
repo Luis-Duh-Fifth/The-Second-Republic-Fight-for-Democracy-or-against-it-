@@ -10,11 +10,11 @@ if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
 }
 if (Q.confidants_action_timer <= 0) {
-    Q.pinned2CardsDescription = 'Confidants - an action is available.';
+    Q.myRowDescription = 'Confidants' - an action is available.';
 } else if (Q.confidants_action_timer == 1) {
-    Q.pinned2CardsDescription = 'Confidants - next action available in 1 month.';
+    Q.myRowDescription = 'Confidants' - next action available in 1 month.';
 } else {
-    Q.pinned2CardsDescription = 'Confidants - next action available in ' + Q.confidants_action_timer + ' months.';
+    Q.myRowDescription = 'Confidants' - next action available in ' + Q.confidants_action_timer + ' months.';
 }
 !}
 max-cards: 3
@@ -40,11 +40,11 @@ if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
 }
 if (Q.confidants_action_timer <= 0) {
-    Q.pinned2Cards2Description = 'Confidants - an action is available.';
+    Q.myRowDescription = 'Confidants' - an action is available.';
 } else if (Q.confidants_action_timer == 1) {
-    Q.pinned2Cards2Description = 'Confidants - next action available in 1 month.';
+    Q.myRowDescription = 'Confidants' - next action available in 1 month.';
 } else {
-    Q.pinned2Cards2Description = 'Confidants - next action available in ' + Q.confidants_action_timer + ' months.';
+    Q.myRowDescription = 'Confidants' - next action available in ' + Q.confidants_action_timer + ' months.';
 }
 !}
 max-cards: 4
