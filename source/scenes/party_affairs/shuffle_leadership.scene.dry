@@ -513,8 +513,8 @@ subtitle: Casares  is a Republican, close friends with Azaña and Galician refor
 is-card: true
 card-image: img/portraits/Casares_Quiroga.jpg
 tags: left_republican_confidant
-view-if: quiroga_advisor = 0 and n_advisors < 3
-on-arrival: quiroga_advisor = 1; n_advisors += 1; reformist_strength += 5
+view-if: quiroga_confidant = 0 and n_confidants < 3
+on-arrival: quiroga_confidant = 1; n_confidants += 1; reformist_strength += 5
 go-to: advisor_menu
 
 Casares Quiroga is now an advisor.
@@ -525,8 +525,8 @@ subtitle: Manuel Azaña is the Minister-President of Prussia, and one of the mos
 is-card: true
 card-image: img/portraits/AzañaManuel.jpg
 tags: left_republican_confidant
-view-if: azana_advisor = 0 and n_advisors < 3
-on-arrival: azana_advisor = 1; n_advisors += 1; reformist_strength += 5
+view-if: azana_confidant = 0 and n_confidants < 3
+on-arrival: azana_confidant = 1; n_confidants += 1; reformist_strength += 5
 go-to: advisor_menu
 
 Manuel Azaña is now an advisor.
