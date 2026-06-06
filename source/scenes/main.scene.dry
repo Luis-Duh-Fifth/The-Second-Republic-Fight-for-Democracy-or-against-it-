@@ -26,6 +26,7 @@ max-cards: 3
 - @party
 - @govt
 - #advisor
+- #confidante
 - @shuffle_leadership_pinned
 
 @main_easy
@@ -56,6 +57,7 @@ max-cards: 4
 - @party
 - @govt
 - #advisor
+- #confidante
 - @shuffle_leadership_pinned
 
 
