@@ -1,6 +1,6 @@
 title: Manuel Azaña
 is-my-new-row-type: true
-tags: confidant, left_republican
+tags: advisor, left_republican
 card-image: img/portraits/AzañaManuel.jpg
 view-if: azana_confidant = 1
 new-page: true 
