@@ -865,9 +865,9 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 // Confidants 
 
 // Left Lib confidants
-Q.quiroga_confidant = 0; // Casares Quiroga
+Q.quiroga_confidant = 1; // Casares Quiroga
 Q.azana_confidant = 1; // Manuel Azaña
-Q.juchacz_confidant = 0; // Marie Juchacz
+Q.juchacz_confidant = 1; // Marie Juchacz
 Q.baade_confidant = 0; // Fritz Baade
 
 // CNT-FAI confidants
