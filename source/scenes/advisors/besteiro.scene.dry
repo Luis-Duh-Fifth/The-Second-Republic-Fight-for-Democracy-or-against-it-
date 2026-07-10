@@ -1,0 +1,22 @@
+title: Julian Besteiro
+is-pinned-card: true
+tags: advisor, right
+card-image: img/portraits/AzañaManuel.jpg
+view-if: besteiro_advisor = 1
+new-page: true 
+
+= Julian Besteiro
+
+Besteiro
+
+- @coalition
+- @root: Return to main
+
+@coalition
+title: Negotiating with the Coalition
+subtitle: Azaña can improve our relationships with our centrist and center-right coalition partners in Prussia as well as in the Cortes.
+choose-if: confidant_action_timer <= 0 and (psoe_prussia or in_weimar_coalition or in_grand_coalition or in_popular_front)
+unavailable-subtitle: [? if confidant_action_timer > 0 : [+ confidant_action_timer +] months before next confidant action. ?] [? if not psoe_prussia : The psoe does not control the Prussian government. ?]
+on-arrival: confidant_action_timer = 6; coalition_dissent -= 1 if psoe_in_government = 1; erc_relation += 6; izqd_rep_relation += 6; prp_relation += 2; prp_relation += 3 if in_grand_coalition
+
+We have improved our relations with the [? if in_grand_coalition : Center (Zentrum) Party, IR, and PRP, ?][? if not in_grand_coalition: Center (Zentrum) Party and IR, ?] and reduced tensions with the coalition.
